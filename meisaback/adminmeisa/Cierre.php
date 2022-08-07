@@ -1,0 +1,10 @@
+<?php 
+session_start();
+if($_SESSION['identificador']){	
+	session_destroy();
+	header("location:../index");
+}
+else{
+	header("location:../index");
+}
+?>

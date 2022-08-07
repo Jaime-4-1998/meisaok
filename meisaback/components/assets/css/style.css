@@ -1,0 +1,149 @@
+:root{
+    --red:#bf1520;
+    --bl:#000;
+    --wh:#fff;
+ }
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+/* ==========
+    header
+========== */
+header img{
+    width: 25% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    margin: auto;
+    display: block;
+    padding: 1rem;
+}
+/* ==========
+    Lines
+========== */
+.color__red{
+    border: none;
+    width: 100%;
+    background: var(--bl);
+    height: 0.4rem;
+}
+.color__white{
+    border: none;
+    width: 100%;
+    background: var(--wh);
+    height: 0.4rem;
+}
+.color__black{
+    border: none;
+    width: 100%;
+    background: var(--red);
+    height: 0.4rem;
+}
+/* ==========
+    section h1
+========== */
+main{
+    margin-top: 1rem;
+}
+section{
+    width: 100% !important;
+}
+section h1{
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+/* ==========
+    form
+========== */
+form{
+    border:transparent;
+    width: 50% !important;
+    display: block;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 3.5rem;
+}
+label{
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: var(--bl);
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+.input__form{
+    display: block;
+    margin: auto;
+    width: 60% !important;
+    border: 1px solid var(--bl);
+    border-radius: 10px;
+    padding: 0.5rem;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+.form__center{
+    display: block;
+    margin: auto;
+}
+.form__input{
+    display: block;
+    margin: auto;
+}
+.form__input a{
+    text-align: center;
+    display: block;
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: var(--bl);
+    font-weight: 600;
+    font-size: 1rem;
+    font-style: italic;
+}
+button{
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 40% !important;
+    border: 1px solid var(--red);
+    background: var(--red);
+    color: var(--wh);
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s all ease-in-out;
+}
+button:hover{
+    border: 1px solid var(--red);
+    background: transparent;
+    color: var(--bl);
+    cursor: pointer;
+}
+@media screen and (max-width:900px) {
+    header img{
+        width: 90% !important;
+    }
+    section h1{
+        font-size: 1.6rem;
+    }
+    form{
+        width: 100% !important;
+    }
+    .input__form{
+        width: 90% !important;
+        font-size: 1.2rem;
+    }
+    button{
+        width: 90% !important;
+        font-size: 1.2rem;
+    }
+}
