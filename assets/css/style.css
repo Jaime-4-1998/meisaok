@@ -311,3 +311,107 @@ footer{
         width: 15% !important;
     }
 }
+/* ==========
+    content of the homme 
+========== */
+.content__homme{
+    padding: 1rem;
+}
+.title__homme{
+    text-align: center !important;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.parr__homme{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 2;
+}
+/* Carrusel */
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-slide img {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    border-radius: 2% !important;
+}
+.swiper-button-next, .swiper-button-prev {
+    color:var(--wh);
+    background-color: #000;
+    border-radius: 100px !important;
+}
+.swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: var(--red) !important;
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-size:1rem !important;
+  }
+/* end of the Carrusel */
+/* grid column */
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 1.5rem;
+    grid-gap:2rem;
+}
+.flex__col{
+    display: grid;
+    text-align: center;
+}
+.flex__title{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.flex__parr{
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+.imgh {
+    width: 35% !important;
+    height: auto !important;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+@media screen and (max-width:900px) {
+    .content__homme{
+        padding: 0.5rem;
+    }
+    .grid{
+        grid-template-columns: 1fr 1fr;
+        padding: 2rem;
+        grid-gap:1rem;
+    }
+    .parr__homme{
+        line-height: 1.5 !important;
+        text-align: center;
+    }
+}
+/* ==========
+    end content of the homme 
+========== */
