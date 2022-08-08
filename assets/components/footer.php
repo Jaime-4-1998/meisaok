@@ -12,20 +12,20 @@
 </div>
 <div class="footer__four">
    <div class="footer__social__line movil__footer">
-      <a href="">
+      <a href="https://www.facebook.com/" title="Res Social" target="_blank">
       <img src="../assets/img/social/facebook.svg" loading="lazy" alt="@meisaequip" title="@meisaequip" /> @meisaequip
       </a>
-      <a href="">
+      <a href="https://www.facebook.com/" title="Res Social" target="_blank">
       <img src="../assets/img/social/facebook.svg" loading="lazy" alt="@meisa_mex" title="@meisa_mex" /> @meisa_mex
       </a>
    </div>
    <div class="footer__social__line">
-      <a href="">
+      <a href="https://www.facebook.com/" title="Res Social" target="_blank">
       <img src="../assets/img/social/facebook.svg" loading="lazy" class="social__media__img" alt="@meisa_mex" title="@meisa_mex" /> @meisamex
       </a>
-      <a href="">
+      <a href="https://www.facebook.com/" title="Res Social" target="_blank">
       <img src="../assets/img/social/facebook.svg" loading="lazy" class="social__media__img" alt="@meisa_mex" title="@meisa_mex" /> @Meisa Mex</a>
-      <a href="">
+      <a href="https://www.facebook.com/" title="Res Social" target="_blank">
       <img src="../assets/img/social/facebook.svg" loading="lazy" class="social__media__img" alt="@meisa_mex" title="@meisa_mex" /> @MEISA Mex
       </a>
    </div>

@@ -101,11 +101,11 @@
                   <?php echo $result -> title_one; ?>  
                </div>
             </h1>
-            <p>
+            
             <div class="parr__homme">
                <?php echo $result -> desc_one; ?>
             </div>
-            </p>
+            
             <?php
                }
                }
@@ -128,11 +128,11 @@
                   <?php echo $result -> titlesec; ?>  
                </div>
             </h2>
-            <p>
+           
             <div class="parr__homme">
                <?php echo $result -> editorsecond; ?>
             </div>
-            </p>
+            
             <?php
                }
                }
@@ -164,11 +164,13 @@
                 </div>
             </h2>
             <img class="imgh" loading="lazy" src="meisaback/adminmeisa/assets/<?php echo $result -> img; ?>" alt="<?php echo $result -> title; ?>" title="<?php echo $result -> title; ?>" width="35" height="35" />
-            <p>
+            
                 <div class="flex__parr">
+                    
                     <?php echo $result -> content; ?>
+                    
                 </div>
-            </p>
+            
          </div>
          <?php
             }

@@ -2,22 +2,22 @@
 <div class="navbar__menu">
    <ul>
       <li>
-         <a href="https://frontmentor-jimmy.vercel.app/" class="navbar__link">Inicio</a>
+         <a href="http://localhost/meisa/" class="navbar__link">Inicio</a>
       </li>
       <li>
-         <a href="https://frontmentor-jimmy.vercel.app/" class="navbar__link">Inventario de Equipo</a>
+         <a href="http://localhost/meisa/Inventario/" class="navbar__link">Inventario de Equipo</a>
       </li>
       <li>
-         <a href="https://frontmentor-jimmy.vercel.app/" class="navbar__link">Maniobra</a>
+         <a href="http://localhost/meisa/Maniobra/" class="navbar__link">Maniobra</a>
       </li>
       <li>
-         <a href="https://frontmentor-jimmy.vercel.app/" class="navbar__link">Renta de Equipos</a>
+         <a href="http://localhost/meisa/PlantasdeLuz/" class="navbar__link">Renta de Equipos</a>
       </li>
       <li>
-         <a href="https://frontmentor-jimmy.vercel.app/" class="navbar__link">Plantas de Luz</a>
+         <a href="http://localhost/meisa/RentadeEquipos/" class="navbar__link">Plantas de Luz</a>
       </li>
       <li>
-         <a href="https://frontmentor-jimmy.vercel.app/" class="navbar__link">Contacto</a>
+         <a href="http://localhost/meisa/Contacto/" class="navbar__link">Contacto</a>
       </li>
    </ul>
 </div>
@@ -29,12 +29,12 @@
    </i>
    <div class="moblie__nav__menu">
       <div class="moblie__nav__menu__links">
-         <a href="https://frontmentor-jimmy.vercel.app/" class="moblie__nav__menu__links__link">Inicio</a>
-         <a href="https://frontmentor-jimmy.vercel.app/" class="moblie__nav__menu__links__link">Inventario de Equipo</a>
-         <a href="https://frontmentor-jimmy.vercel.app/" class="moblie__nav__menu__links__link">Maniobra</a>
-         <a href="https://frontmentor-jimmy.vercel.app/" class="moblie__nav__menu__links__link">Renta de Equipos</a>
-         <a href="https://frontmentor-jimmy.vercel.app/" class="moblie__nav__menu__links__link">Plantas de Luz</a>
-         <a href="https://frontmentor-jimmy.vercel.app/" class="moblie__nav__menu__links__link">Contacto</a>
+         <a href="http://localhost/meisa/" class="moblie__nav__menu__links__link">Inicio</a>
+         <a href="http://localhost/meisa/Inventario/" class="moblie__nav__menu__links__link">Inventario de Equipo</a>
+         <a href="http://localhost/meisa/Maniobra/" class="moblie__nav__menu__links__link">Maniobra</a>
+         <a href="http://localhost/meisa/RentadeEquipos/" class="moblie__nav__menu__links__link">Renta de Equipos</a>
+         <a href="http://localhost/meisa/PlantasdeLuz/" class="moblie__nav__menu__links__link">Plantas de Luz</a>
+         <a href="http://localhost/meisa/Contacto/" class="moblie__nav__menu__links__link">Contacto</a>
       </div>
    </div>
 </div>
