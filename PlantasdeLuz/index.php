@@ -47,7 +47,74 @@
          <img src="../assets/img/art/whatsappsvg.svg" loading="lazy" alt="Contacto de Meisa MX" title="Contacto de Meisa MX" class="icon__wh" width="4" height="100" />
          </a>
     </section>
-    
+    <!--Content-->
+    <section>
+         <div class="content__homme">
+            <?php
+               include '../meisaback/adminmeisa/assets/components/backend/conexion.php';
+               $sql = "SELECT id_luz,titleluz,contentluz
+               FROM pageluz ORDER BY id_luz ASC"; 
+               $query = $mbd -> prepare($sql); 
+               $query -> execute(); 
+               $results = $query -> fetchAll(PDO::FETCH_OBJ); 
+                   if($query -> rowCount() > 0){ 
+                       foreach($results as $result) { 
+                           $data = $result -> id_luz."||".
+                           $result -> titleluz."||".
+                           $result -> contentluz; 
+            ?>
+            <h1>
+               <div class="title__homme">
+                  <?php echo $result -> titleluz; ?>  
+               </div>
+            </h1>
+            
+            <div class="parr__homme">
+               <?php echo $result -> contentluz; ?>
+            </div>
+            
+            <?php
+               }
+               }
+            ?>
+            
+         </div>
+    </section>
+    <!--End-->
+    <!--Columns-->
+    <div class="grid__rent">
+            <?php
+                include '../meisaback/adminmeisa/assets/components/backend/conexion.php';
+                $sql = "SELECT id_col,prioridad,img,title,content
+                FROM columnluz ORDER BY prioridad ASC"; 
+                $query = $mbd -> prepare($sql); 
+                $query -> execute(); 
+                $results = $query -> fetchAll(PDO::FETCH_OBJ); 
+                    if($query -> rowCount() > 0){ 
+                        foreach($results as $result) { 
+                            $data = $result -> id_col."||".
+                            $result -> prioridad."||".
+                            $result -> img."||".
+                            $result -> title."||".
+                            $result -> content; 
+            ?>
+         <div class="flex__col esp__rent">
+            <h2>
+                <div class="flex__title">
+                    <?php echo $result -> title; ?>
+                </div>
+            </h2>
+            <img class="img__rent" loading="lazy" src="../meisaback/adminmeisa/assets/<?php echo $result -> img; ?>" alt="<?php echo $result -> title; ?>" title="<?php echo $result -> title; ?>" width="50" height="50" />
+                <div class="flex__parr">
+                    <?php echo $result -> content; ?>
+                </div>
+         </div>
+         <?php
+            }
+            }
+            ?>
+    </div>
+    <!--End-->
     <section>
         <iframe title="Ubicación de Meisa MX" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3765.560208665229!2d-99.56701140850782!3d19.30148236724018!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd8abd8654e1a1%3A0xc0dbdbabbf1a84bf!2sSegunda%205%20de%20Mayo%2020%2C%20Reforma%2C%20Delegaci%C3%B3n%20Santa%20Mar%C3%ADa%20Totoltepec%2C%2052100%20Toluca%20de%20Lerdo%2C%20M%C3%A9x.!5e0!3m2!1ses!2smx!4v1658210888350!5m2!1ses!2smx" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
