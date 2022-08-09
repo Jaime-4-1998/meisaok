@@ -142,21 +142,21 @@
     <!--End-->
     <!--Columns-->
     <div class="grid">
-         <?php
-            include 'meisaback/adminmeisa/assets/components/backend/conexion.php';
-            $sql = "SELECT id_col,prioridad,img,title,content
-            FROM columnfour ORDER BY prioridad ASC"; 
-            $query = $mbd -> prepare($sql); 
-            $query -> execute(); 
-            $results = $query -> fetchAll(PDO::FETCH_OBJ); 
-                if($query -> rowCount() > 0){ 
-                    foreach($results as $result) { 
-                        $data = $result -> id_col."||".
-                        $result -> prioridad."||".
-                        $result -> img."||".
-                        $result -> title."||".
-                        $result -> content; 
-                    ?>
+            <?php
+                include 'meisaback/adminmeisa/assets/components/backend/conexion.php';
+                $sql = "SELECT id_col,prioridad,img,title,content
+                FROM columnfour ORDER BY prioridad ASC"; 
+                $query = $mbd -> prepare($sql); 
+                $query -> execute(); 
+                $results = $query -> fetchAll(PDO::FETCH_OBJ); 
+                    if($query -> rowCount() > 0){ 
+                        foreach($results as $result) { 
+                            $data = $result -> id_col."||".
+                            $result -> prioridad."||".
+                            $result -> img."||".
+                            $result -> title."||".
+                            $result -> content; 
+            ?>
          <div class="flex__col">
             <h2>
                 <div class="flex__title">

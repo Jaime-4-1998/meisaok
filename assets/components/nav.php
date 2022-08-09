@@ -1,4 +1,4 @@
-<img src="assets/img/lg/9800mei039087053.svg" loading="lazy" alt="Meisa Mx" title="Meisa Mx" width="70" height="100" />
+<img src="https://meisamex.com.mx/assets/img/lg/9800mei039087053.svg" loading="lazy" alt="Meisa Mx" title="Meisa Mx" width="70" height="100" />
 <div class="navbar__menu">
    <ul>
       <li>

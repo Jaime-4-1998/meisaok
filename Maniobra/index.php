@@ -47,7 +47,60 @@
          <img src="../assets/img/art/whatsappsvg.svg" loading="lazy" alt="Contacto de Meisa MX" title="Contacto de Meisa MX" class="icon__wh" width="4" height="100" />
          </a>
     </section>
-    
+    <!--Content-->
+    <section>
+         <div class="content__homme">
+            <?php
+               include '../meisaback/adminmeisa/assets/components/backend/conexion.php';
+               $sql = "SELECT id_mani,titlemani,contentmani
+               FROM maniobrameisa ORDER BY id_mani ASC"; 
+               $query = $mbd -> prepare($sql); 
+               $query -> execute(); 
+               $results = $query -> fetchAll(PDO::FETCH_OBJ); 
+                   if($query -> rowCount() > 0){ 
+                       foreach($results as $result) { 
+                           $data = $result -> id_mani."||".
+                           $result -> titlemani."||".
+                           $result -> contentmani; 
+            ?>
+            <h1>
+               <div class="title__homme">
+                  <?php echo $result -> titlemani; ?>  
+               </div>
+            </h1>
+            
+            <div class="parr__homme">
+               <?php echo $result -> contentmani; ?>
+            </div>
+            
+            <?php
+               }
+               }
+            ?>
+         </div>
+    </section>
+    <!--End-->
+    <!--Content-->
+    <section>
+            <?php
+                include '../meisaback/adminmeisa/assets/components/backend/conexion.php';
+                $sql = "SELECT id_img,seo_extra,img
+                FROM imgextra ORDER BY id_img ASC"; 
+                $query = $mbd -> prepare($sql); 
+                $query -> execute(); 
+                $results = $query -> fetchAll(PDO::FETCH_OBJ); 
+                    if($query -> rowCount() > 0){ 
+                        foreach($results as $result) { 
+                            $data = $result -> id_img ."||".
+                            $result -> seo_extra."||".
+                            $result -> img; 
+            ?>
+             <img class="mani__img" loading="lazy" src="../meisaback/adminmeisa/assets/<?php echo $result -> img; ?>" alt="<?php echo $result -> seo_extra; ?>" title="<?php echo $result -> seo_extra; ?>" width="100" height="100" />
+            <?php }
+        }
+        ?>
+    </section>
+    <!--End-->
     <section>
         <iframe title="Ubicación de Meisa MX" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3765.560208665229!2d-99.56701140850782!3d19.30148236724018!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd8abd8654e1a1%3A0xc0dbdbabbf1a84bf!2sSegunda%205%20de%20Mayo%2020%2C%20Reforma%2C%20Delegaci%C3%B3n%20Santa%20Mar%C3%ADa%20Totoltepec%2C%2052100%20Toluca%20de%20Lerdo%2C%20M%C3%A9x.!5e0!3m2!1ses!2smx!4v1658210888350!5m2!1ses!2smx" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>

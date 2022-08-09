@@ -415,3 +415,19 @@ footer{
 /* ==========
     end content of the homme 
 ========== */
+/* ==========
+    content of the maniobra 
+========== */
+.mani__img{
+    width: 50%;
+    height: auto !important;
+    display: block;
+    margin: auto;
+    object-fit: cover;
+    margin-bottom: 3rem !important;
+}
+@media screen and (max-width:900px) {
+    .mani__img{
+        width: 100% !important;
+    }
+}
