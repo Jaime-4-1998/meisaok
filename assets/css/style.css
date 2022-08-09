@@ -462,3 +462,131 @@ footer{
         height: auto !important;
     }
 }
+/* ==========
+    content of the form 
+========== */
+.form__data{
+    display: flex;
+    flex-direction: column;
+}
+.form__control{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: 2px solid var(--red);
+    margin-bottom: 1rem !important;
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding: 1rem;
+    color: #000;
+}
+.form__label{
+    margin-bottom: 1rem !important;
+    display: flex;
+    margin-left: 8rem;
+    color: #000;
+    font-weight: 600;
+}
+textarea{
+    resize: none;
+}
+select{
+    background-color: transparent;
+    color: #000;
+    font-size: 1rem;
+    font-weight: inherit !important;
+}
+:focus{
+    color: #000;
+}
+::placeholder{
+    color: #000 !important;
+    font-size: 1rem;
+}
+.buton__form{
+    width: 20%;
+    display: block;
+    margin: auto;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+    color: #000;
+    border: 3px solid var(--red);
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+}
+.ok{
+    color: green;
+    margin: auto;
+    display: block;
+}
+.fail,.correo{
+    color: red;
+    margin: auto;
+    display: block;
+}
+.text__cont{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+@media screen and (max-width:1000px) {
+    .contact__form{
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    }
+    .form__label{
+        margin-bottom: 1rem !important;
+        display: block !important;
+        margin: auto !important;
+        color: #000;
+        margin-bottom: 1rem !important;
+    }
+    .form__title{
+        text-align: left;
+        margin-top: 2rem;
+        margin-bottom: 0rem;
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+    .form__subtitle{
+        text-align: left;
+        margin-bottom: 2rem;
+        padding: 1rem;
+    }
+    .form__text,.form__data{
+        text-align: left;
+    }
+    .form__text{
+        padding: 0rem !important;
+    }
+    .form__text__contc{
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+    }
+    .form__subtext__contc{
+        color: #000;
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+    }
+    .form__control{
+        width: 80%;
+    }
+    .buton__form{
+        width: 80%;
+    }
+    .text__cont{
+        font-size: 1.5rem;
+    }
+}
