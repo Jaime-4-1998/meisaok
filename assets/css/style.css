@@ -431,3 +431,34 @@ footer{
         width: 100% !important;
     }
 }
+/* ==========
+    content of the renta 
+========== */
+/* grid column */
+.grid__rent{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1.5rem;
+    grid-gap:2rem;
+}
+.img__rent{
+    width: 50% !important;
+    height: auto !important;
+    display: block;
+    margin: auto;
+    object-fit: cover;
+}
+.esp__rent{
+    margin-bottom: 3rem;
+}
+@media screen and (max-width:900px) {
+    .grid__rent{
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        grid-gap:1rem;
+    }
+    .img__rent{
+        width: 100% !important;
+        height: auto !important;
+    }
+}

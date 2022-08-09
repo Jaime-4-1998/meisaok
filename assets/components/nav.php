@@ -11,10 +11,10 @@
          <a href="http://localhost/meisa/Maniobra/" class="navbar__link">Maniobra</a>
       </li>
       <li>
-         <a href="http://localhost/meisa/PlantasdeLuz/" class="navbar__link">Renta de Equipos</a>
+         <a href="http://localhost/meisa/RentadeEquipos/" class="navbar__link">Renta de Equipos</a>
       </li>
       <li>
-         <a href="http://localhost/meisa/RentadeEquipos/" class="navbar__link">Plantas de Luz</a>
+         <a href="http://localhost/meisa/PlantasdeLuz/" class="navbar__link">Plantas de Luz</a>
       </li>
       <li>
          <a href="http://localhost/meisa/Contacto/" class="navbar__link">Contacto</a>
