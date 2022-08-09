@@ -12,21 +12,22 @@
 </div>
 <div class="footer__four">
    <div class="footer__social__line movil__footer">
-      <a href="https://www.facebook.com/" title="Res Social" target="_blank">
-      <img src="../assets/img/social/facebook.svg" loading="lazy" alt="@meisaequip" title="@meisaequip" /> @meisaequip
+      <a href="https://www.facebook.com/meisaequip" title="Facebook" target="_blank">
+      <img src="https://meisamex.com.mx/assets/img/social/facebook.svg" loading="lazy" alt="Facebook @meisaequip" title="Facebook @meisaequip" width="6" height="6" /> @meisaequip
       </a>
-      <a href="https://www.facebook.com/" title="Res Social" target="_blank">
-      <img src="../assets/img/social/facebook.svg" loading="lazy" alt="@meisa_mex" title="@meisa_mex" /> @meisa_mex
+      <a href="https://www.instagram.com/meisa_mex/" title="Instagram" target="_blank">
+      <img src="https://meisamex.com.mx/assets/img/social/insta.svg" loading="lazy" alt="Instagram @meisa_mex" title="Instagram @meisa_mex" width="6" height="6" /> @meisa_mex
       </a>
    </div>
    <div class="footer__social__line">
-      <a href="https://www.facebook.com/" title="Res Social" target="_blank">
-      <img src="../assets/img/social/facebook.svg" loading="lazy" class="social__media__img" alt="@meisa_mex" title="@meisa_mex" /> @meisamex
+      <a href="https://twitter.com/meisamex" title="Twitter" target="_blank">
+      <img src="https://meisamex.com.mx/assets/img/social/tw.svg" loading="lazy" class="social__media__img" alt="Twitter @meisa_mex" title="Twitter @meisa_mex" width="6" height="6" /> @meisamex
       </a>
-      <a href="https://www.facebook.com/" title="Res Social" target="_blank">
-      <img src="../assets/img/social/facebook.svg" loading="lazy" class="social__media__img" alt="@meisa_mex" title="@meisa_mex" /> @Meisa Mex</a>
-      <a href="https://www.facebook.com/" title="Res Social" target="_blank">
-      <img src="../assets/img/social/facebook.svg" loading="lazy" class="social__media__img" alt="@meisa_mex" title="@meisa_mex" /> @MEISA Mex
+      <a href="https://www.youtube.com/user/meisaequipos" title="Youtube" target="_blank">
+      <img src="https://meisamex.com.mx/assets/img/social/you.svg" loading="lazy" class="social__media__img" alt="Youtube @meisa_mex" title="Youtube @meisa_mex" width="6" height="6" /> Meisa Mex
+      </a>
+      <a href="https://www.linkedin.com/in/meisamex/" title="Linkedin" target="_blank">
+      <img src="https://meisamex.com.mx/assets/img/social/lin.svg" loading="lazy" class="social__media__img" alt="Linkedin @meisa_mex" title="Linkedin @meisa_mex" width="6" height="6" /> @meisamex
       </a>
    </div>
 </div>

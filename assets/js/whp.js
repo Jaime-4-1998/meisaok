@@ -4,7 +4,7 @@ document.querySelector("#submit").addEventListener("click", e => {
 		var corrok = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 		return corrok.test(mail);
 	}  
-    let telefono = "5215529170621";
+    let telefono = "521555535688727";
     let cliente = document.querySelector("#name").value;
     let mail = document.querySelector("#mail").value;
     let tel = document.querySelector("#tel").value;
