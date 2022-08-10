@@ -37,9 +37,6 @@
 .content__header{
     display: grid;
 }
-.content__header span{
-    margin-bottom: 0.5rem;
-}
 .content__header a{
     margin-bottom: 0.5rem;
     text-decoration: none;
