@@ -203,17 +203,19 @@ iframe{
 /* ==========
     whats 
 ========== */
-.icon__wh{
-    width: 4% !important;
+.icon__wh {
+    width: 3% !important;
     height: auto !important;
     object-fit: cover !important;
     margin-left: 1rem;
     position: fixed;
     z-index: 100;
+    margin-top: 15rem;
 }
 @media screen and (max-width:1200px) {
     .icon__wh{
-        width: 13% !important;
+        width: 10% !important;
+        margin-top: 12rem;
     }
 }
 /* ==========
