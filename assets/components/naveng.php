@@ -2,22 +2,22 @@
 <div class="navbar__menu">
    <ul>
       <li>
-         <a href="http://localhost/meisa/en/" class="navbar__link">Inicio</a>
+         <a href="http://localhost/meisa/en/" class="navbar__link">Home</a>
       </li>
       <li>
-         <a href="http://localhost/meisa/en/Inventario/" class="navbar__link">Inventario de Equipo</a>
+         <a href="http://localhost/meisa/en/Inventario/" class="navbar__link">Equipment Inventory</a>
       </li>
       <li>
-         <a href="http://localhost/meisa/en/Maniobra/" class="navbar__link">Maniobra</a>
+         <a href="http://localhost/meisa/en/Maniobra/" class="navbar__link">Maneuver</a>
       </li>
       <li>
-         <a href="http://localhost/meisa/en/RentadeEquipos/" class="navbar__link">Renta de Equipos</a>
+         <a href="http://localhost/meisa/en/RentadeEquipos/" class="navbar__link">Equipment Rental</a>
       </li>
       <li>
-         <a href="http://localhost/meisa/en/PlantasdeLuz/" class="navbar__link">Plantas de Luz</a>
+         <a href="http://localhost/meisa/en/PlantasdeLuz/" class="navbar__link">Light plants</a>
       </li>
       <li>
-         <a href="http://localhost/meisa/en/Contacto/" class="navbar__link">Contacto</a>
+         <a href="http://localhost/meisa/en/Contacto/" class="navbar__link">Contact</a>
       </li>
    </ul>
 </div>
@@ -29,12 +29,12 @@
    </i>
    <div class="moblie__nav__menu">
       <div class="moblie__nav__menu__links">
-         <a href="http://localhost/meisa/en/" class="moblie__nav__menu__links__link">Inicio</a>
-         <a href="http://localhost/meisa/en/Inventario/" class="moblie__nav__menu__links__link">Inventario de Equipo</a>
-         <a href="http://localhost/meisa/en/Maniobra/" class="moblie__nav__menu__links__link">Maniobra</a>
-         <a href="http://localhost/meisa/en/RentadeEquipos/" class="moblie__nav__menu__links__link">Renta de Equipos</a>
-         <a href="http://localhost/meisa/en/PlantasdeLuz/" class="moblie__nav__menu__links__link">Plantas de Luz</a>
-         <a href="http://localhost/meisa/en/Contacto/" class="moblie__nav__menu__links__link">Contacto</a>
+         <a href="http://localhost/meisa/en/" class="moblie__nav__menu__links__link">Home</a>
+         <a href="http://localhost/meisa/en/Inventario/" class="moblie__nav__menu__links__link">Equipment Inventory</a>
+         <a href="http://localhost/meisa/en/Maniobra/" class="moblie__nav__menu__links__link">Maneuver</a>
+         <a href="http://localhost/meisa/en/RentadeEquipos/" class="moblie__nav__menu__links__link">Equipment Rental</a>
+         <a href="http://localhost/meisa/en/PlantasdeLuz/" class="moblie__nav__menu__links__link">Light plants</a>
+         <a href="http://localhost/meisa/en/Contacto/" class="moblie__nav__menu__links__link">Contact</a>
       </div>
    </div>
 </div>

@@ -23,7 +23,7 @@
             </div>
             <div class="second__column__head">
                <div class="content__header">
-                  <span>English Version</span>
+                  <a href="en/">English Version</a>
                   <a href="tel:8006347269">800-634-7269</a>
                   <input type="text" name="" id="" class="input__content">
                </div>

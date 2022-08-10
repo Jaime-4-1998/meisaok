@@ -1,6 +1,6 @@
 <div class="footer__first">
    <div class="footer__hr">
-      <img src="../assets/img/art/cloc.svg" loading="lazy" alt="Horarios de Meisa MX" title="Horarios de Meisa MX" width="28" height="100">
+      <img src="https://meisamex.com.mx/assets/img/art/cloc.svg" loading="lazy" alt="Horarios de Meisa MX" title="Horarios de Meisa MX" width="28" height="100">
       <p>Lunes a viernes de 9:00am - 18:00pm</p>
    </div>
    <p>Sábados de 9:00am - 14:00pm</p>

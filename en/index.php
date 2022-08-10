@@ -4,7 +4,7 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" type="image/png" sizes="32x32" href="assets/img/lg/icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/lg/icon.png">
       <meta name="theme-color" content="#bf1520"/>
       <meta name="description" content="Meisa ofrece un amplio catálogo de productos de maquinaria, equipo y accesorios de cualquier ramo de la industria" />
       <title>Meisa</title>
@@ -24,7 +24,7 @@
             </div>
             <div class="second__column__head">
                <div class="content__header">
-                  <a href="en/">English Version</a>
+                  <a href="../">Version Español (Clic Aquí)</a>
                   <a href="tel:8006347269">800-634-7269</a>
                   <input type="text" name="" id="" class="input__content">
                </div>
