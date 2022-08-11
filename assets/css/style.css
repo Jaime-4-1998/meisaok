@@ -612,3 +612,67 @@ select{
         font-size: 1.5rem;
     }
 }
+/* ==========
+    content of the filter
+========== */
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+}
+@media screen and (max-width:900px) {
+    .container{
+        grid-template-columns: 1fr;
+    }
+}
+/* filter column */
+.col-md-3{
+    width: 90%;
+    position: relative;
+}
+.list-group{
+    width: 90%;
+    padding: 1rem;
+}
+#price_range {
+   width: 90%;
+   display: block;
+   margin: auto;
+}
+@media screen and (max-width:900px) {
+    .col-md-3{
+        width: 70%;
+        position: relative;
+    }
+}
+/* product column */
+.col-md-9 {
+    width:  50rem !important;
+    margin: auto;
+    display: block;
+    position: relative;
+}
+.filter_data{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    width: 100%;
+}
+@media screen and (max-width:900px) {
+    .col-md-9{
+        width:  30rem !important;
+        position: relative;
+    }
+    .filter_data{
+        grid-template-columns: 1fr;
+        width: 70%;
+    }
+}
+.img_responsive{
+    width: 100%;
+    height: auto !important;
+    display: block;
+    margin: auto;
+    object-fit: cover;
+}
+   

@@ -8,8 +8,8 @@
       <meta name="theme-color" content="#bf1520"/>
       <meta name="description" content="Meisa ofrece un amplio catálogo de productos de maquinaria, equipo y accesorios de cualquier ramo de la industria" />
       <title>Meisa - Inventario de Equipos</title>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
       <link rel="preload" href="../assets/css/style.css" as="style" onload="this.rel='stylesheet'">
+      <link rel="stylesheet" href="../assets/css/jquery-ui.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" as="style" onload="this.rel='stylesheet'"> 
@@ -47,7 +47,86 @@
          <img src="../assets/img/art/whatsappsvg.svg" loading="lazy" alt="Contacto de Meisa MX" title="Contacto de Meisa MX" class="icon__wh" width="4" height="100" />
          </a>
     </section>
-    
+   <!--Filtro-->
+   <section>
+        <div class="container">
+        	
+            <div class="col-md-3">                				
+				<div class="list-group">
+					<h3>Precio</h3>
+					<input type="hidden" id="hidden_minimum_price" value="0" />
+                    <input type="hidden" id="hidden_maximum_price" value="65000" />
+                    <p id="price_show">100 - 1000</p>
+                    <div id="price_range"></div>
+                </div>				
+                <div class="list-group">
+					<h3>Categorias</h3>
+                    <div style=" overflow-y: auto; overflow-x: hidden;">
+					<?php
+                    $connect = new PDO("mysql:host=localhost;dbname=u557675164_titulacion", "root", "");
+                    $query = "SELECT DISTINCT(inve_catego) FROM inventario WHERE inve_estatus = 'Disponible' ORDER BY inve_id DESC";
+                    $statement = $connect->prepare($query);
+                    $statement->execute();
+                    $result = $statement->fetchAll();
+                    foreach($result as $row)
+                    {
+                    ?>
+                    <div class="list-group-item checkbox">
+                        <label><input type="checkbox" class="common_selector brand" value="<?php echo $row['inve_catego']; ?>"  > <?php echo $row['inve_catego']; ?></label>
+                    </div>
+                    <?php
+                    }
+
+                    ?>
+                    </div>
+                </div>
+
+				<div class="list-group">
+					<h3>Marca</h3>
+                    <?php
+
+                    $query = "SELECT DISTINCT(inve_marca) FROM inventario WHERE inve_estatus = 'Disponible' ORDER BY inve_id DESC";
+                    $statement = $connect->prepare($query);
+                    $statement->execute();
+                    $result = $statement->fetchAll();
+                    foreach($result as $row)
+                    {
+                    ?>
+                    <div class="list-group-item checkbox">
+                        <label><input type="checkbox" class="common_selector ram" value="<?php echo $row['inve_marca']; ?>" > <?php echo $row['inve_marca']; ?></label>
+                    </div>
+                    <?php    
+                    }
+
+                    ?>
+                </div>
+				
+				<div class="list-group">
+					<h3>Año</h3>
+					<?php
+                    $query = "SELECT DISTINCT(inve_year) FROM inventario WHERE inve_estatus = 'Disponible' ORDER BY inve_id DESC";
+                    $statement = $connect->prepare($query);
+                    $statement->execute();
+                    $result = $statement->fetchAll();
+                    foreach($result as $row)
+                    {
+                    ?>
+                    <div class="list-group-item checkbox">
+                        <label><input type="checkbox" class="common_selector storage" value="<?php echo $row['inve_year']; ?>"  > <?php echo $row['inve_year']; ?></label>
+                    </div>
+                    <?php
+                    }
+                    ?>	
+                </div>
+            </div>
+            <div class="col-md-9">
+            	<br />
+                <div class="row filter_data">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section>
         <iframe title="Ubicación de Meisa MX" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3765.560208665229!2d-99.56701140850782!3d19.30148236724018!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd8abd8654e1a1%3A0xc0dbdbabbf1a84bf!2sSegunda%205%20de%20Mayo%2020%2C%20Reforma%2C%20Delegaci%C3%B3n%20Santa%20Mar%C3%ADa%20Totoltepec%2C%2052100%20Toluca%20de%20Lerdo%2C%20M%C3%A9x.!5e0!3m2!1ses!2smx!4v1658210888350!5m2!1ses!2smx" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
@@ -57,7 +136,8 @@
         ?>
     </footer>
     <script src="../assets/js/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script src="../assets/js/carru.js"></script>
+    <script src="../assets/js/jquery-1.10.2.min.js"></script>
+    <script src="../assets/js/jquery-ui.js"></script>
+    <script src="../assets/js/filt.js"></script>
 </body>
 </html>
