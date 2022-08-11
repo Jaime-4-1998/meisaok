@@ -120,7 +120,6 @@
                 </div>
             </div>
             <div class="col-md-9">
-            	<br />
                 <div class="row filter_data">
                 </div>
             </div>
