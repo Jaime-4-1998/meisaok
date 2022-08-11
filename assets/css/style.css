@@ -222,15 +222,15 @@ iframe{
     footer 
 ========== */
 footer{
-    background: var(--red);
+    background: var(--wh);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     padding: 1rem;
 }
 .footer__first{
-    border-right: 2px solid var(--wh);
+    border-right: 2px solid var(--bl);
     text-align: center;
-    color: var(--wh);
+    color: var(--bl);
 }
 .footer__hr{
     display: inline-flex;
@@ -251,11 +251,11 @@ footer{
     margin-top: -3rem;
 }   
 .footer__second{
-    border-right: 2px solid var(--wh);
+    border-right: 2px solid var(--bl);
     display: block !important;
 }
 .footer__third{
-    border-right: 2px solid var(--wh);
+    border-right: 2px solid var(--bl);
     padding: 1rem;
 }
 .footer__four{
@@ -267,17 +267,18 @@ footer{
 }
 .footer__social__line a{
     text-decoration: none;
-    color: var(--wh);
+    color: var(--bl);
     font-size: 1rem;
 }
 .footer__social__line a img{
-    width: 6%;
+    width: 10% !important;
+    height: auto !important;
     margin: auto !important;
     margin-left: 0.3rem !important;
 }
 .footer__second a{
     text-decoration: none;
-    color: var(--wh);
+    color: var(--bl);
     display: block !important;
     text-align: center;
     margin-bottom: 0.5rem;
@@ -287,8 +288,8 @@ footer{
         padding: 1rem;
     }
     .footer__first{
-        border-right: 0px solid var(--wh);
-        border-bottom: 2px solid var(--wh);
+        border-right: 0px solid var(--bl);
+        border-bottom: 2px solid var(--bl);
         padding: 1rem;
     }
     .footer__hr p{
@@ -307,8 +308,8 @@ footer{
         object-fit: cover;
     }
     .footer__second{
-        border-right: 0px solid var(--wh);
-        border-bottom: 2px solid var(--wh);
+        border-right: 0px solid var(--bl);
+        border-bottom: 2px solid var(--bl);
         padding: 1rem;
     }
     .footer__second a{
@@ -322,15 +323,11 @@ footer{
     .movil__footer{
         display: block;
         margin: auto;
-        margin-bottom: 1rem;
         margin-top: 1rem !important;
     }
     .footer__social__line a img{
-        width: 5%;
+        width: 10% !important;
         margin-left: 0.2rem !important;
-    }
-    .social__media__img{
-        width: 15% !important;
     }
 }
 /* ==========
