@@ -6,9 +6,11 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="icon" type="image/png" sizes="32x32" href="https://meisamex.com.mx/assets/img/lg/icon.png">
       <meta name="theme-color" content="#bf1520"/>
-      <meta name="description" content="Meisa ofrece un amplio cat��logo de productos de maquinaria, equipo y accesorios de cualquier ramo de la industria" />
+      <meta name="description" content="Meisa ofrece un amplio catalogo de productos de maquinaria, equipo y accesorios de cualquier ramo de la industria" />
       <title>Meisa - Contacto</title>
       <link rel="preload" href="https://meisamex.com.mx/assets/css/style.css" as="style" onload="this.rel='stylesheet'">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="http://localhost/meisa/assets/css/inve.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" as="style" onload="this.rel='stylesheet'"> 
@@ -101,10 +103,56 @@
             {
             extract($row);
         ?>
-        <p class="card-text"> <i class="fas fa-thumbtack iconos"></i> Categoria: <?php echo $inve_nombre; ?></p>
+        <p class="card-text"> <i class="fas fa-thumbtack iconos"></i><?php echo str_replace("-", " ", $row['inve_nombre']); ?></p>
+        <p class="card-text"> <i class="fas fa-thumbtack iconos"></i> description: <?php echo $inve_desc; ?></p>
+                <?php 
+                    if($inve_youtube == '0'){
+                        echo ' ';
+                    }else{
+                        $output = '<div class="frame__youtube">'. $row['inve_youtube'] .'</div>'; echo $output;
+                    }
+                ?>
+        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+        <div class="swiper-wrapper">
+        <div class="swiper-slide img__inveget">
+          <img data-enlargable src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_img; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
+        </div>
+        <div class="swiper-slide img__inveget">
+          <img data-enlargable src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_imgtrasera; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
+        </div>
+        <div class="swiper-slide img__inveget">
+          <img data-enlargable src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_imgldderecho; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
+        </div>
+        <div class="swiper-slide img__inveget">
+          <img data-enlargable src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_imgldizq; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <div thumbsSlider="" class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_img; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
+        </div>
+        <div class="swiper-slide">
+          <img src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_imgtrasera; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
+        </div>
+        <div class="swiper-slide">
+          <img src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_imgldderecho; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
+        </div>
+        <div class="swiper-slide">
+          <img src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_imgldizq; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
+        </div>
+      </div>
+    </div>
         <?php } } else { ?>
             Datos no encontrados ... 
         <?php } ?>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script src="http://localhost/meisa/assets/js/swipinve.js"></script>
     <section>
         <iframe title="Ubicacion de Meisa MX" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3765.560208665229!2d-99.56701140850782!3d19.30148236724018!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd8abd8654e1a1%3A0xc0dbdbabbf1a84bf!2sSegunda%205%20de%20Mayo%2020%2C%20Reforma%2C%20Delegaci%C3%B3n%20Santa%20Mar%C3%ADa%20Totoltepec%2C%2052100%20Toluca%20de%20Lerdo%2C%20M%C3%A9x.!5e0!3m2!1ses!2smx!4v1658210888350!5m2!1ses!2smx" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
@@ -144,5 +192,7 @@
         </div>
     </footer>
     <script src="https://meisamex.com.mx/assets/js/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://localhost/meisa/assets/js/invecarru.js"></script>
 </body>
 </html>
