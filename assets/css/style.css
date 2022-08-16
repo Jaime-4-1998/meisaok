@@ -78,6 +78,13 @@ html::-webkit-scrollbar-thumb {
     border: 1px solid var(--bl);
     border-radius: 7px;
 }
+@media screen and (max-width:1500px) {
+    .img__head img{
+        width: 40% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+}
 @media screen and (max-width:900px) {
     .header{
         display: grid;
