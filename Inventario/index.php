@@ -26,7 +26,13 @@
                <div class="content__header">
                   <a href="en/">English Version</a>
                   <a href="tel:8006347269">800-634-7269</a>
-                  <input type="text" name="" id="" class="input__content">
+                  <form id="head-search" class="head-search" action="/search/">
+                        <div class="form-row">
+                            <label class="sr-only labele" for="head-search-keyword">Search</label>
+                            <input id="head-search-keyword" class="form-control input-lg" type="text" requiered placeholder="Search a Machine">
+                            <button id="btn-head-search" type="button" class="btn btn-lg"><img src="https://meisamex.com.mx/assets/img/art/bi_search.svg" alt=""><span class="sr-only">Search</span></button>
+                        </div>
+                     </form>
                </div>
             </div>
          </div>
