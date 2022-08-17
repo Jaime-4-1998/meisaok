@@ -33,11 +33,24 @@ if (isset($_POST["action"])) {
         while ($result = $statement->fetch(PDO::FETCH_ASSOC)) {
             extract($result);
 		?>
-       		<div style="border:1px solid #ccc; border-radius:5px; padding:16px; margin-bottom:16px; height:450px;">
-                <img loading="lazy" src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $result['inve_img'];?>" alt="<?phpecho $inve_nombre;?>" class="img_responsive" >
-                <h4 style="text-align:center;" class="text-danger" ><?php echo str_replace("-", " ", $result['inve_nombre']); ?></h4>
-                <a href="../Maquina/<?php echo strtolower($result['inve_nombre']);?>/" title="click para ver más">Ver Más</a>
-        	</div>
+       		<section>
+                <div class="card">
+                    <div class="img_responsive">
+                        <img loading="lazy" src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $result['inve_img'];?>" alt="<?php echo str_replace("-", " ", $result['inve_nombre']); ?>" title="<?php echo str_replace("-", " ", $result['inve_nombre']); ?>" width="100" height="100" / >
+                    </div>
+                    <div class="body_card">
+                        <h2><?php echo str_replace("-", " ", $result['inve_nombre']); ?></h2>
+                            <div class="content__par">
+                                <p>Modelo: <strong><?php echo $inve_modelo;?></strong></p>
+                                <p>Serie: <strong><?php echo $inve_serie;?></strong></p>
+                                <p>Corriente: <strong><?php echo $inve_corriente;?></strong></p>
+                                <p>Capacidad: <strong><?php echo $inve_capacidad;?></strong></p>
+                            </div>
+
+                        <a href="../Maquina/<?php echo strtolower($result['inve_nombre']);?>/" title="click para ver más">Ver Más</a>
+                    </div>
+                </div>
+            </section>
 		<?php
 				}
 			} else {

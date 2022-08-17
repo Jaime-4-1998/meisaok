@@ -55,10 +55,21 @@
     </section>
    <!--Filtro-->
    <section>
+        <div class="title_inve">
+            <h1>
+              Inventario de equipo Meisa MEX
+            </h1>
+        </div>
+        <div class="parr_inve">
+            <p>
+            Ofrecemos un amplio catálogo de productos de maquinaria, equipo y accesorios de cualquier ramo de la industria.
+            Hemos apoyado a cientos de empresas y clientes, cubriendo sus necesidades urgentes de equipo y refacciones en
+            excelentes condiciones de operación, a precios bajos y de entrega inmediata.
+            </p>
+        </div>
         <div class="container">
-        	
-            <div class="col-md-3">                				
-				<div class="list-group">
+           <div class="filtrado">
+           <div class="list-group">
 					<h3>Precio</h3>
 					<input type="hidden" id="hidden_minimum_price" value="0" />
                     <input type="hidden" id="hidden_maximum_price" value="65000" />
@@ -106,7 +117,20 @@
 
                     ?>
                 </div>
-				
+				<ul class="list-group">
+                    <li>Item One
+                        <span class="badge">2</span>
+                    </li>
+                    <li>Item Two
+                        <span class="badge">11</span>
+                    </li>
+                    <li>Item Three
+                        <span class="badge">4</span>
+                    </li>
+                    <li>Item Four
+                        <span class="badge">5</span>
+                    </li>
+                </ul>
 				<div class="list-group">
 					<h3>Año</h3>
 					<?php
@@ -124,11 +148,10 @@
                     }
                     ?>	
                 </div>
-            </div>
-            <div class="col-md-9">
-                <div class="row filter_data">
-                </div>
-            </div>
+           </div>
+           <div class="products">
+                <div class="filter_data"></div>
+           </div>
         </div>
     </section>
     <footer>

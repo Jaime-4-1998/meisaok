@@ -645,71 +645,6 @@ select{
     }
 }
 /* ==========
-    content of the filter
-========== */
-.container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 1rem;
-}
-@media screen and (max-width:900px) {
-    .container{
-        grid-template-columns: 1fr;
-    }
-}
-/* filter column */
-.col-md-3{
-    width: 90%;
-    position: relative;
-}
-.list-group{
-    width: 90%;
-    padding: 1rem;
-}
-#price_range {
-   width: 90%;
-   display: block;
-   margin: auto;
-}
-@media screen and (max-width:900px) {
-    .col-md-3{
-        width: 70%;
-        position: relative;
-    }
-}
-/* product column */
-.col-md-9 {
-    width:  50rem !important;
-    margin: auto;
-    display: block;
-    position: relative;
-}
-.filter_data{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1rem;
-    width: 100%;
-}
-@media screen and (max-width:900px) {
-    .col-md-9{
-        width:  30rem !important;
-        position: relative;
-    }
-    .filter_data{
-        grid-template-columns: 1fr;
-        width: 70%;
-    }
-}
-/* porduct desc */
-.img_responsive{
-    width: 100%;
-    height: auto !important;
-    display: block;
-    margin: auto;
-    object-fit: cover;
-}
-
-/* ==========
     Product of inventary
 ========== */
 /* Product container */
@@ -849,3 +784,159 @@ select{
         margin-left: auto;
     }
 }
+/* ==========
+    card product 
+========== */
+.card{
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    height: auto;
+    background: #fff;
+}
+/* porduct img */
+.img_responsive img{
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    display: block;
+    margin: auto;
+    border-radius: 5px 5px 0rem 0rem;
+}
+/* porduct desc */
+.body_card{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+.body_card h2{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+.body_card .content__par{
+    padding: 0.5rem;
+}
+.body_card a{
+    background: var(--red);
+    color: var(--wh);
+    text-align: center;
+    padding: 0.6rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: var(--red) 0px 3px 8px;
+    margin-bottom: 2rem;
+}
+@media screen and (max-width:900px){
+    .card {
+        height: auto !important;
+      }
+}
+/* ==========
+    content of the filter
+========== */
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+}
+.title_inve h1{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+.parr_inve p{
+    padding: 3rem;
+    margin-top: -2rem;
+    line-height: 1.5;
+}
+@media screen and (max-width:900px) {
+    .container{
+        grid-template-columns: 1fr;
+    }
+    .title_inve h1{
+        padding: 0.5rem;
+    }
+    .parr_inve p{
+        padding: 1.5rem;
+        margin-top: -2rem;
+        line-height: 1.5;
+    }
+}
+/* filter column */
+.filtrado{
+    width: 60%;
+}
+.list-group{
+    width: 90%;
+    padding: 1rem;
+}
+#price_range {
+   width: 90%;
+   display: block;
+   margin: auto;
+}
+/* product column */
+.products{
+    width: 100% !important;
+    margin-left: -10rem;
+}
+.filter_data{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    width: 800px !important;
+}
+@media screen and (max-width:900px) {
+    .filtrado{
+        width: 100%;
+        margin-bottom: 2rem
+    }
+    .filter_data{
+        grid-template-columns: 1fr;
+        width: 100% !important;
+    }
+    .products{
+        margin-left: 0rem;
+    }
+}
+
+
+
+
+.list-group {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+    width: 100%;
+  }
+  .list-group li {
+    border-top: 1px solid #ccc;
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .list-group li:first-child {
+    border-top: 0;
+  }
+  .list-group .badge {
+    background-color: rgb(71, 73, 84);
+    color: #fff;
+    font-weight: bold;
+    font-size: 80%;
+    border-radius: 10em;
+    min-width: 1.5em;
+    padding: 0.25em;
+    text-align: center;
+  }
+  @media screen and (max-width:900px){
+      .list-group li {
+      display: flex;
+        flex-direction:column;
+      justify-content:center;
+    }
+  }
