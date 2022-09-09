@@ -1,3 +1,4 @@
+    <div class="header head__contc">
             <div class="burgr-box" id="meisa">
                 <div class="meisa__logo desk">
                     <img src="https://meisamex.com.mx/assets/img/lg/meisa/22meisa879234789423.svg" alt="logo of Blogr">
@@ -33,7 +34,7 @@
                            <a href="https://meisamex.com.mx/" class="link__text__menu">Maniobras</a>
                         </li>
                         <li>
-                            <a href="https://meisamex.com.mx/" class="link__text__menu">Contacto</a>
+                            <a href="https://meisamex.com.mx/Contacto/" class="link__text__menu">Contacto</a>
                         </li>
                     </ul>
                   </nav>
@@ -44,3 +45,4 @@
                   </div>
                 </div>
             </div>
+    </div>

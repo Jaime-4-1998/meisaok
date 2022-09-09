@@ -55,10 +55,10 @@
                                 ?>
                         </div>
                         <div class="swiper-button-next">
-                            <img src="assets/img/lg/meisa/22arrow3890890.svg" loading="lazy" alt="Meisa Mex" title="Meisa Mex">
+                            <img src="../assets/img/lg/meisa/22arrow3890890.svg" loading="lazy" alt="Meisa Mex" title="Meisa Mex">
                         </div>
                         <div class="swiper-button-prev">
-                            <img src="assets/img/lg/meisa/22rrow54897423789.svg" loading="lazy" alt="Meisa Mex" title="Meisa Mex">
+                            <img src="../assets/img/lg/meisa/22rrow54897423789.svg" loading="lazy" alt="Meisa Mex" title="Meisa Mex">
                         </div>
                     </div>
                 </section>

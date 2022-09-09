@@ -11,7 +11,7 @@
     font-family: 'Roboto', sans-serif;
 }
 /* ========== header developed by Lamm Solucionaes Digitales Jaime Ramirez ========== */
-header{
+.header{
     background-image: url(../img/bg/22back9867868732432.svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -19,7 +19,7 @@ header{
     height: 100vh;
 }
 @media screen and (max-width:900px) {
-    header{
+    .header{
         background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url(../img/bg/350.svg);
         background-repeat: no-repeat;
         background-position: center;
@@ -488,6 +488,7 @@ textarea{
     opacity: 1;
     color: #000000 !important;
     font-weight: 700;
+    font-size: 0.8rem;
 }
 @media screen and (max-width:900px) {
     textarea{
@@ -714,7 +715,7 @@ footer {
   transition: all 0.35s ease-in-out;
 }
 .ih-item.square.effect10 .info {
-  background-image: url(../img/bg/cam.png);
+  background-image: url(https://meisamex.com.mx/assets/img/bg/cam.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size:cover;
@@ -820,3 +821,177 @@ footer {
       .main__line {display: none;}
 }
 /* Parte de los servicios desarrollado por lamm soluciones digitales Jaime Ramirez*/
+
+
+/*Pagina de Contacto*/
+header .head__contc{
+    background-image: none !important;
+    height: auto !important;
+}
+.burgr-box {
+    background: var(--black) !important;
+}
+/*Contacto Flex*/
+.meisa_contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    gap: 10rem;
+}
+@media screen and (max-width:1400px) {
+    .meisa_contact{
+        gap: 2rem;
+        margin-top: 0rem;
+    }
+}
+@media screen and (max-width:900px) {
+    .meisa_contact{
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 0rem;
+    }
+}
+/*Contacto Form*/
+.meisa__data{
+    width: 50%;
+    padding: 1rem;
+}
+.meisa__data h1{
+    color: var(--black);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.meisa__data p{
+    color: var(--black);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+}
+.meisa__data h2{
+    color: var(--black);
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+@media screen and (max-width:900px) {
+    .meisa__data {
+        width: 100%;
+        padding: 0rem;
+    }
+    .meisa__data h1{
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .meisa__data h2{
+        font-size: 1.5rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+}
+.meisa__line {
+    position: absolute;
+    width: 12.5%;
+    height: 2px;
+    opacity:1;
+    border-radius: 1rem;
+    margin: 0;
+    padding: 0;
+    left: 9%;
+    top: 18rem;
+    transform: translateX(-4%);
+    z-index: -1;
+    background: var(--red);
+}
+.meisa__data h2 .meisa__line{
+    top: 28rem;
+    width: 20.5%;
+    left: 9%;
+}
+@media screen and (max-width:1400px) {
+    .meisa__line {
+        width: 19%;
+        left: 5.5%;
+        top: 14rem;
+    }
+    .meisa__data h2 .meisa__line{
+        width: 32.5%;
+        top: 26rem;
+        left: 6%;
+    }
+}
+@media screen and (max-width:900px) {
+    .meisa__line {
+        width: 51.5%;
+        left: 8.5%;
+        top: 12rem;
+    }
+    .meisa__data h2 .meisa__line{
+        width: 82%;
+        left: 10%;
+    }
+}
+.form__data{
+    display: flex;
+    flex-direction: column;
+}
+.form__control{
+    border-radius: 10px;
+    border: 1px solid var(--red);
+    padding: 0.5rem;
+    color: var(--black);
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.form__label{
+    display: none;
+}
+.buton__form{
+    margin: 0 !important;
+}
+/*Contacto ubi*/
+.meisa__ubi{
+    margin-top: -10rem;
+}
+@media screen and (max-width:1400px) {
+    .meisa__ubi{
+        margin-top: 5rem;
+    }
+}
+@media screen and (max-width:900px) {
+    .meisa__ubi{
+        margin-top: 1rem;
+    }
+}
+.meisa__img_cont{
+    margin-bottom: 2rem;
+}
+.meisa__img_cont img{
+    width: 100% !important;
+    height: 100%;
+    object-fit: cover;
+}
+iframe{
+    border: none;
+    width: 100%;
+    height: 50%;
+    height: 230px;
+}
+.meisa__tels{
+    display: flex;
+    flex-direction: column;
+}
+.meisa__tels h3{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.meisa__tels a{
+    text-align: center;
+    color: #000000;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
