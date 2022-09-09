@@ -1,8 +1,8 @@
-            <div class="logo__foter">
+<div class="logo__foter">
               <img src="https://meisamex.com.mx/assets/img/lg/meisa/22meisa879234789423.svg" loading="lazy" alt="Meisa Mex" title="Meisa Mex">
             </div>
             <div class="head__footer">
-                <h3>Contacto</h3>
+                <h3>Contact</h3>
                 <div class="link__footer">
                     <div class="link__footer__lg">
                         <img src="https://meisamex.com.mx/assets/img/lg/foot/22loca78943879342897.svg" loading="lazy" alt="Ubicación de Meisa Mex" title="Ubicación de Meisa Mex">
@@ -23,17 +23,17 @@
                 </div>
             </div>
             <div class="head__footer__one">
-                <h3>Acera de Meisa</h3>
+                <h3>About of Meisa</h3>
                 <div class="link__footer">
-                    <a href="https://meisamex.com.mx/">Inicio</a>
-                    <a href="https://meisamex.com.mx/">Compra</a>
-                    <a href="https://meisamex.com.mx/">Venta</a>
-                    <a href="https://meisamex.com.mx/">Maniobras</a>
-                    <a href="https://meisamex.com.mx/">Contacto</a>
+                    <a href="https://meisamex.com.mx/">Home</a>
+                    <a href="https://meisamex.com.mx/">Purchase</a>
+                    <a href="https://meisamex.com.mx/">Sale</a>
+                    <a href="https://meisamex.com.mx/">Maneuvers</a>
+                    <a href="https://meisamex.com.mx/">Contact</a>
                 </div>
             </div>
             <div class="head__footer__two">
-                <h3>Redes Socilaes</h3>
+                <h3>Follow us</h3>
                 <div class="link__social__footer">
                     <div class="link__social__red">
                         <a href="https://www.facebook.com/meisaequip">

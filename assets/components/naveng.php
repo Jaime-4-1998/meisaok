@@ -1,40 +1,46 @@
-<img src="https://meisamex.com.mx/assets/img/lg/9800mei039087053.svg" loading="lazy" alt="Meisa Mx" title="Meisa Mx" width="70" height="100" />
-<div class="navbar__menu">
-   <ul>
-      <li>
-         <a href="http://localhost/meisa/en/" class="navbar__link">Home</a>
-      </li>
-      <li>
-         <a href="http://localhost/meisa/en/Inventario/" class="navbar__link">Equipment Inventory</a>
-      </li>
-      <li>
-         <a href="http://localhost/meisa/en/Maniobra/" class="navbar__link">Maneuver</a>
-      </li>
-      <li>
-         <a href="http://localhost/meisa/en/RentadeEquipos/" class="navbar__link">Equipment Rental</a>
-      </li>
-      <li>
-         <a href="http://localhost/meisa/en/PlantasdeLuz/" class="navbar__link">Light plants</a>
-      </li>
-      <li>
-         <a href="http://localhost/meisa/en/Contacto/" class="navbar__link">Contact</a>
-      </li>
-   </ul>
-</div>
-<div class="nav__moblie">
-   <i id="show__menu">
-      <svg width="24" height="18" xmlns="http://www.w3.org/2000/svg">
-         <path d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z" fill="#000" fill-rule="evenodd"/>
-      </svg>
-   </i>
-   <div class="moblie__nav__menu">
-      <div class="moblie__nav__menu__links">
-         <a href="http://localhost/meisa/en/" class="moblie__nav__menu__links__link">Home</a>
-         <a href="http://localhost/meisa/en/Inventario/" class="moblie__nav__menu__links__link">Equipment Inventory</a>
-         <a href="http://localhost/meisa/en/Maniobra/" class="moblie__nav__menu__links__link">Maneuver</a>
-         <a href="http://localhost/meisa/en/RentadeEquipos/" class="moblie__nav__menu__links__link">Equipment Rental</a>
-         <a href="http://localhost/meisa/en/PlantasdeLuz/" class="moblie__nav__menu__links__link">Light plants</a>
-         <a href="http://localhost/meisa/en/Contacto/" class="moblie__nav__menu__links__link">Contact</a>
-      </div>
-   </div>
-</div>
+            <div class="burgr-box" id="meisa">
+                <div class="meisa__logo desk">
+                    <img src="https://meisamex.com.mx/assets/img/lg/meisa/22meisa879234789423.svg" alt="logo of Blogr">
+                </div>
+                <img src="https://meisamex.com.mx/assets/img/lg/meisa/icon-hamburger.svg" id="burgr-icon" alt="Meisa Mex" title="Meisa Mex" />
+                
+                <div id="burgr-menu" class="nave">
+                    <div class="meisa__logo mobi">
+                        <img src="https://meisamex.com.mx/assets/img/lg/meisa/22meisa879234789423.svg" alt="Meisa Mex">
+                      </div>
+                  <nav>
+                    <ul>
+                        <li>
+                            <a href="https://meisamex.com.mx/" class="link__text__menu">Home</a>
+                        </li>
+                        <li>
+                            <a href="https://meisamex.com.mx/" class="link__text__menu">Purchase / Sale</a>
+                        </li>
+                        <li>
+                            <div class="drpdwn-box">
+                            <div class="drpdwn-btn" id="drpdwn-btn">
+                                <a href="#" class="link__text__menu">Light plants</a> <span class="drpdwn-icon"><i class="fa"><img src="https://meisamex.com.mx/assets/img/lg/meisa/icon-arrow-light.svg" alt="Meisa Mex" title="Meisa Mex" /></i></span>
+                            </div>
+                            <div class="drpdwn">
+                                <ul class="drpdwn-list">
+                                <li><a href="https://meisamex.com.mx/">Sale</a></li>
+                                <li><a href="https://meisamex.com.mx/">Rent</a></li>
+                                </ul>
+                            </div>
+                            </div>
+                        </li>
+                        <li>
+                           <a href="https://meisamex.com.mx/" class="link__text__menu">Maneuvers</a>
+                        </li>
+                        <li>
+                            <a href="https://meisamex.com.mx/" class="link__text__menu">Contac</a>
+                        </li>
+                    </ul>
+                  </nav>
+                  <div id="rght-nav">
+                    <ul>
+                      <li><a href="https://meisamex.com.mx/" class="big-btn solid link__text__menus">Spanish Version</a></li>
+                    </ul>
+                  </div>
+                </div>
+            </div>

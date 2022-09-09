@@ -1,16 +1,37 @@
-const menu = document.getElementById('show__menu');
-const moblie = document.querySelector('.moblie__nav__menu');
+const menu = document.getElementById('burgr-icon');
+const moblie = document.querySelector('.nave');
+
+const swp = document.querySelector('.swiper');
 let isShown = false
 menu.addEventListener('click',()=>{
     if (!isShown) 
     {
-        moblie.style.transform = 'translateX(-50%) scale(1)'
+        moblie.style.display = 'flex'
+        const swpir = document.getElementById('swpi');
+        swpir.style.zIndex  = '-1'
         isShown = true;
     } 
     else if (isShown)
     {
-        moblie.style.transform = 'translateX(-50%) scale(0)'
+        moblie.style.display = 'none'
+        swp.style.zIndex  = '1'
         isShown = false;
     }
 })
 
+
+
+const drpdwnBtns = document.getElementById("drpdwn-btn");
+const drpdwns = document.querySelector(".drpdwn");
+drpdwnBtns.addEventListener('click',()=>{
+    if (!isShown) 
+    {
+        drpdwns.style.display = 'block'
+        isShown = true;
+    } 
+    else if (isShown)
+    {
+        drpdwns.style.display = 'none'
+        isShown = false;
+    }
+})

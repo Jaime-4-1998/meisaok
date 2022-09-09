@@ -1,403 +1,619 @@
 :root{
-   --red:#bf1520;
-   --bl:#000;
-   --wh:#fff;
+    --red:#BE0412;
+    --whi:#fff;
+    --black:#000000;
 }
-/* ==========
-    General Tools 
-========== */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
+/* Box sizing rules */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
-html{
-    scrollbar-color: var(--red) #000;
-    scrollbar-width: auto;
-  }
-  /*Webkit*/
-html::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+/* ========== header developed by Lamm Solucionaes Digitales Jaime Ramirez ========== */
+header{
+    background-image: url(../img/bg/22back9867868732432.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
 }
-html::-webkit-scrollbar-track {
-    background-color: var(--red);
+@media screen and (max-width:900px) {
+    header{
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url(../img/bg/350.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: auto !important;
+   }
 }
-html::-webkit-scrollbar-thumb {
-    background-color: #000;
+/* ========== nav developed by Lamm Solucionaes Digitales Jaime Ramirez ========== */
+.meisa__logo img{
+    padding:0rem;
+    margin-left: 1rem;
+    width: 80% !important;
 }
-::selection {
-	color: #fff;
-	background-color: var(--red);
+.desk{
+   display: none;
 }
-::-moz-selection {
-	color: #fff;
-	background-color: var(--red);
+.mobi{
+   display: block;
 }
-/* ==========
-    Header
-========== */
-.header{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 1rem 1rem 0.5rem;
-}
-.img__head{
-    width: 100%;
-}
-.img__head img{
-    margin-top: 1.5rem;
-    width: 35% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-}
-.second__column__head{
-    text-align: end;
-}
-.content__header{
-    display: grid;
-}
-.content__header a{
-    margin-bottom: 0.5rem;
+.link__text__menu{
+    color: #fff;
     text-decoration: none;
-    color: var(--bl);
-    font-weight: 550;
-    font-size: 1.2rem;
 }
-.input__content{
-    width: 50%;
-    display: flex;
-    justify-self: end;
-    height: 150%;
-    border: 1px solid var(--bl);
-    border-radius: 7px;
+a{
+    text-decoration: none;
+}
+@media screen and (max-width:900px) {
+    .desk{
+       display: block;
+   }
+    .mobi{
+       display: none;
+   }
+    .meisa__logo img{
+        margin-top: 1rem;
+        width: 60% !important;
+        object-fit: cover;
+   }
 }
 
-@media screen and (max-width:900px) {
-    .header{
-        display: grid;
-        grid-template-columns: 1fr;
-        padding: 1rem 1rem 0.5rem;
-    }
-    .first__column__head{
-        display: none !important;
-    }
-    .second__column__head {
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-    .input__content{
-        width: 100%;
-    }
-}
-/* ==========
-    Lines
-========== */
-.color__red{
-    border: none;
-    width: 100%;
-    background: var(--bl);
-    height: 0.4rem;
-}
-.color__white{
-    border: none;
-    width: 100%;
-    background: var(--wh);
-    height: 0.4rem;
-}
-.color__black{
-    border: none;
-    width: 100%;
-    background: var(--red);
-    height: 0.4rem;
-}
-/* ==========
-    nav 
-========== */
-nav{
-    padding: 1rem;
+.burgr-box {
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(4px);
+    padding: 2rem;
+    height: 15vh;
     display: flex;
-    justify-content: end;
     align-items: center;
     position: relative;
 }
-li{
+@media screen and (max-width:900px) {
+    #meisa {
+        background: var(--black);
+        backdrop-filter: blur(4px);
+        position: relative;
+        right: 0;
+        top: 0;
+        padding-top: 0.5rem;
+        display: grid;
+   }
+    #burgr-icon {
+        margin-top: -4rem;
+        margin-left: 18rem;
+   }
+    ul.drpdwn-list a {
+        color: var(--whi) !important;
+        display: block;
+        text-align: center !important;
+   }
+}
+.nave{
+    display: none;
+    transition: 0.3s all ease-in-out;
+    flex-direction: column;
+    width: 100%;
+    padding: 32px;
+    background-color: var(--black);
+    border-radius: 8px;
+    box-shadow: 0px 0px 30px 0px rgba(166, 161, 161, 0.49);
+    margin-top: 2rem;
+    z-index: 99;
+    margin-left: -0.5rem;
+}
+nav {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+nav > ul > li {
+    margin-bottom: 24px;
+}
+#rght-nav > ul > li {
+    margin-bottom: 16px;
+}
+:is(nav, #rght-nav) > ul > li:last-of-type {
+    margin-bottom: 0;
+}
+ul {
     list-style: none;
-    display: inline-flex;
 }
-nav img{display: none;}
-.navbar__link{
-    color: var(--white);
-    text-decoration: none; 
-    margin-right: 1rem;
-    margin-left: 3rem;
+.drpdwn {
+    display: none;
 }
-.nav__moblie{
-    display: none !important;
+ul.drpdwn-list {
+    padding:2rem;
+    margin-top:2rem;
+    background-color: var(--red) !important;
+    border-radius: 17px;
+}
+ul.drpdwn-list a {
+    color: var(--whi) !important;
+    display: block;
+    text-align: start;
+}
+ul.drpdwn-list li {
+    margin-bottom: 16px;
+}
+ul.drpdwn-list li:last-of-type {
+    margin-bottom: 0;
+}
+a.big-btn {
+    display: inline-block;
+    min-width: 8.75em;
+    width: 8.75em;
+    padding: 0.81em;
+    border-radius:10px;
+    text-align: center;
+    background-color: var(--red) !important;
+    margin-right: 5rem;
+    text-decoration: none;
+}
+@media screen and (max-width:800px) {
+    a.big-btn {
+        min-width: 8.75em;
+        width:100%;
+    }
+}
+.link__text__menus{
+    text-decoration: none;
+    color: var(--whi);
+}
+@media only screen and (min-width: 62rem) {
+    #burgr-icon {
+        display: none;
+   }
+    .nave {
+        padding: 1rem;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        background-color: transparent;
+        border-radius: 0;
+        box-shadow: none;
+        position: relative;
+   }
+    nav, #rght-nav {
+        padding: 0;
+        margin: 0;
+        display: block;
+   }
+    :is(nav, #rght-nav) > ul {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        height: 100%;
+   }
+    nav {
+        border: none;
+   }
+    :is(nav, #rght-nav) > ul > li {
+        margin: 0;
+   }
+    .link__text__menu:hover, .link__text__menu:focus {
+        color: var(--whi);
+        border-bottom: 3px solid var(--red);
+   }
+    .drpdwn-box:hover .drpdwn {
+        display: block;
+   }
+    .drpdwn-box:hover > a {
+        border-bottom: 2px solid black;
+   }
+    .drpdwn-icon {
+        cursor: pointer;
+   }
+    .drpdwn {
+        display: none;
+        position: absolute;
+        padding-top:1rem;
+   }
+    ul.drpdwn-list {
+        display: block;
+        min-width: 168px;
+        margin: 0;
+        padding: 36px 24px;
+        background-color: var(--whi);
+        border-radius: 8px;
+        box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.5);
+        z-index: 99;
+   }
+    ul.drpdwn-list a {
+        color:#fff;
+        display: block;
+   }
+    ul.drpdwn-list li {
+        margin-bottom: 1em;
+   }
+    ul.drpdwn-list li:last-of-type {
+        margin-bottom: 0;
+   }
+    .drpdwn-list li a:hover {
+        text-decoration: none;
+   }
+}
+/* ========== acerca developed by Lamm Solucionaes Digitales Jaime Ramirez ========== */
+.acerca__meisa{
+    display: flex;
+    flex-direction: row;
+}
+.acerca__meisa__text{
+    padding: 3rem;
+    width: 60%;
+}
+/*Text first of about*/
+.acerca__meisa__text h1{
+    color: var(--red);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+.acerca__meisa__text p{
+    width: 80%;
+    color: var(--black);
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 26px;
+    display: block;
+    margin: auto;
+    text-align: justify;
+    margin-bottom: 1.5rem;
+}
+.acerca__btn{
+    background: var(--red);
+    color: var(--whi);
+    padding: 0.8rem;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 30%;
+    margin-top: 5rem !important;
+    font-weight: 700;
+}
+/*Img of about*/
+.acerca__imagen{
+    margin-top: 4rem;
+    margin-right: 2rem;
+    margin-bottom: 4rem;
+}
+.acerca__imagen img{
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+/*Text plus of about*/
+.acerca__text__plus{
+    display: block;
+    margin: auto;
+    margin-bottom: 4rem !important;
+}
+.acerca__text__plus p{
+    text-align: center;
+    font-weight: 500;
+    line-height: 26px;
+    font-size: 1.1rem;
+}
+/*Responsive of about*/
+@media screen and (max-width:1400px) {
+    .acerca__meisa__text h1{
+        margin-bottom: 3rem;
+    }
+    .acerca__btn{
+        margin-top: 3rem !important;
+    }
 }
 @media screen and (max-width:900px) {
-    .navbar__menu{
-        display: none !important;
+    .acerca__meisa{
+        flex-direction: column;
+        padding: 0rem;
+        margin-top: 1rem !important;
+   }
+    .acerca__meisa__text{
+        padding: 0rem !important;
+        margin-left: 0rem !important;
+        width: 100% !important;
+   }
+    .acerca__meisa__text h1{
+        font-size: 2rem;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+   }
+    .acerca__btn{
+        width: 80%;
+        margin-top: 2rem !important;
+        margin-bottom: 2rem;
+   }
+   .acerca__imagen{
+        margin-top: 1rem;
+        margin-right: 0rem;
+        margin-bottom: 0rem;
     }
-    .nav__moblie{
-        display: block !important;
-    }
-    nav{
-        padding: 1rem;
-        justify-content: end;
-        align-items: center;
-        position: relative;
-        display: inline-flex;
-    }
-    nav img{
+    .acerca__imagen img{
+        width: 80%;
+        height: 80%;
+        margin-bottom: 0rem;
+   }
+   /*Text plus of about*/
+    .acerca__text__plus{
         display: block;
-        width: 70% !important;
-        object-fit: cover !important;
-        height: 100% !important;
         margin: auto;
-        margin-left: -0.5rem;
-    }
-    .moblie__nav__menu {
-        position: absolute;
-        background-color: var(--bl);
-        padding: 4rem 5.1rem;
-        width: 95%;
-        top: 90%;
-        left: 50%;
-        transform: translateX(-50%) scale(0);
-        transition: 0.3s ease-in-out;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        z-index: 100;
-        border-radius: 10px;
-    }
-    .moblie__nav__menu__links{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 2rem;
-        text-align: center;
-    }
-    .moblie__nav__menu__links__link{
-        text-decoration: none; 
-        cursor: pointer;
-        color: var(--wh);
-        font-size: 1.3rem;
-    }
+        margin-bottom: 1rem !important;
+        padding: 2rem;
+   }
+    .acerca__text__plus p{
+        text-align: justify;
+        margin-bottom: 1rem;
+   }
 }
-/* ==========
-    map 
-========== */
-iframe{
-    display: block;
-    margin: auto;
-    width: 100% !important;
-    height: 50vh !important;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 1rem;
+/* ========== Clientes developed by Lamm Solucionaes Digitales Jaime Ramirez ========== */
+.clientes__meisa{
+    background: var(--black);
+    padding: 3rem;
 }
-/* ==========
-    whats 
-========== */
-.icon__wh {
-    width: 3% !important;
-    height: auto !important;
-    object-fit: cover !important;
-    margin-left: 1rem;
-    position: fixed;
-    z-index: 100;
-    margin-top: 15rem;
-}
-@media screen and (max-width:1200px) {
-    .icon__wh{
-        width: 10% !important;
-        margin-top: 12rem;
-    }
-}
-/* ==========
-    footer 
-========== */
-
-footer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    background:#fff;
-    padding: 5rem;
-    margin-top: 4rem;
-}
-.padd__esp{
+.clientes__meisa h2{
+    color: #fff;
     text-align: center;
-    padding: 4rem;
+    font-size: 2rem;
 }
-.logo__foter{
-    margin-bottom: 2rem;
+.logos__clientes__meisa{
+    padding: 2rem;
+    margin-top: 3rem;
 }
-.logo__foter img{
-    width: 50% !important;
-    height: auto !important;
-    object-fit: cover !important;
+.clientes__filas__logos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5rem;
+    gap: 4rem;
 }
-.li__footer{
-    display: grid;
-}
-.li__footer > a{
-    color:#000;
-    display: inline-block;
-    margin-bottom: 1rem;
-    cursor: pointer;
-    text-decoration: none;
-}
-.li__footer > a:hover{
-    text-decoration: 2px underline #000;
-}
-.li__footer > p{
-    color: #000;
-    margin-bottom: 1rem;
-    width: 70%;
-}
-div.li__footer:nth-child(2) {
-    width: 115%;
+.logos__cards{
+    width: auto !important;
+    display: block;
     margin: auto;
+}
+.logos__cards img{
+    width: 100%;
+    height: 100%;
     display: block;
-}
-div.li__footer:nth-child(1) > p:nth-child(2) > img:nth-child(1) {
-    margin-right: 0.5rem;
-    background: #000;
-}   
-.padd{
-    padding: 4rem;
-}
-.footer__social{
-    display: block;
-    margin-left: -1rem;
-}
-.footer__social a{
-    text-decoration: none;
-    margin-left: 1rem;
-}
-.footer__social a img{
-    width: 10% !important;
-    height: auto !important;
+    margin: auto;
     object-fit: cover;
 }
-.copy{
-    margin-top: -4rem;
-    margin-left: 60%;
+/*Responsive design of clientes*/
+@media screen and (max-width:1000px) {
+    .logos__clientes__meisa {
+        padding: 0rem !important;
+   }
+    .clientes__filas__logos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+        padding: 2rem;
+   }
+    .logos__cards{
+        display: block;
+        margin: auto;
+   }
+    .logos__cards img{
+        width: 80% !important;
+        height: 80% !important;
+        display: block;
+        margin: auto;
+   }
+}
+/* ========== Atención developed by Lamm Solucionaes Digitales Jaime Ramirez ========== */
+.atencion__meisa{
     display: flex;
-    text-align: end;
-    color: #fff;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem;
+}
+.atencion__meisa__textos{
+    width: 45%;
+}
+.atencion__meisa__textos h2{
+    color: var(--red);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+.atencion__meisa__textos p{
+    color: var(--black);
+    font-weight: 700;
+    font-size: 1.3rem;
+    width: 90%;
+}
+.atencion__meisa__form{
+    width: 40%;
+}
+.atencion__meisa__form form{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
 }
 @media screen and (max-width:900px) {
-    footer{
-        grid-template-columns: 1fr;
-        padding: 2rem;
-        margin-top: 0rem !important;
-    }
-    .logo__foter{
-        margin-top: 3rem;
-        margin-bottom: 1rem;
-    }
-    .logo__foter img{
-        width: 100% !important;
-        height: auto !important;
-        object-fit: cover !important;
-    }
-    div.li__footer:nth-child(2) {
-        margin-bottom: 2rem;
-        margin-top: 2rem;
-    }
-    .li__footer > p{
-        color: #000;
-        margin-bottom: 1rem;
+    .atencion__meisa{
+        display: flex;
+        flex-direction: column;
+   }
+    .atencion__meisa__textos,.atencion__meisa__form{
         width: 100%;
-    }
-    .footer__social{
-        display: block !important;
-        margin: auto !important;
-        margin-top: 1rem !important;
-        margin-bottom: 3rem !important;
-        margin-left: -1rem !important;
-    }
-    .copy{
-        margin-top: -2rem !important;
-        margin-left: 0%;
-        margin: auto;
-        display: block;
-        text-align: center;
-    }
-    div.li__footer:nth-child(2) {
-        width: 100% !important;
-        margin: auto;
-        display: block;
-    }
-    .padd__esp {
-        text-align: left;
-        padding: 0rem;
-        margin-top: 2rem;
-    }
+   }
+    .atencion__meisa__textos p{
+        width: 100%;
+        text-align: justify;
+        font-size: 1.1rem;
+   }
+    .atencion__meisa__textos h2{
+        font-size: 2rem;
+   }
 }
-/* ==========
-    content of the homme 
-========== */
-body > section:nth-child(4) {
-    margin-top: 4rem;
-}  
-@media screen and (max-width:900px){
-    body > section:nth-child(4) {
-        margin-top: 0rem !important;
-    }  
-    .content__homme{
-        margin-top: 2rem;
-    }
-    .title__homme{
-        margin-top: 1rem !important;
-        margin-bottom: 1rem !important;
-    }
-    .parr__homme{
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-} 
-.content__homme{
-    padding: 1rem;
-    margin-top: 4rem;
-}
-.title__homme{
-    text-align: center !important;
-    font-size: 2rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-}
-.parr__homme{
-    text-align: center;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+/*diseño de inputs*/
+.atencion__mail{
+    border-radius: 10px;
+    border: 1px solid var(--red);
+    padding: 0.5rem;
+    color: var(--black);
+    font-weight: 700;
     font-size: 1rem;
-    line-height: 2;
+}
+button{
+    border-radius: 10px;
+    border: none;
+    background: var(--red);
+    color: var(--whi);
+    width: 30%;
+    display: block;
+    margin: auto;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+textarea{
+    border-radius: 10px;
+    border: 1px solid var(--red);
+    padding: 0.5rem;
+    color: var(--black);
+    font-weight: 700;
+    resize: none;
+}
+::placeholder{
+    opacity: 1;
+    color: #000000 !important;
+    font-weight: 700;
+}
+@media screen and (max-width:900px) {
+    textarea{
+        font-size: 1rem;
+   }
+    button{
+        width: 100%;
+   }
+}
+/*end diseño de inputs*/
+/* ========== footer developed by Lamm Solucionaes Digitales Jaime Ramirez ========== */
+footer {
+    background: var(--black);
+    padding: 4rem;
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+    justify-content: space-around;
+}
+@media screen and (max-width:1400px) {
+    footer {
+        gap: 4rem;
+    }
+}
+.logo__foter{
+    margin-top: 3rem;
+}
+.head__footer h3{
+    color: var(--whi);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.head__footer__one h3{
+    color: var(--whi);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.head__footer__two h3{
+    color: var(--whi);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+/*Link of Footer*/
+/*end Link of Footer 1*/
+.link__footer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.link__footer a{
+    color: #fff;
+    text-decoration: none;
+}
+/*end Link of Footer 1*/
+/*Link of Footer 2*/
+.link__footer__lg{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+.link__footer__lg img{
+    width: 7% !important;
+}
+.link__footer__lg p{
+    color: var(--whi);
+    margin-left: 1rem;
+    width: 16rem;
+}
+.link__footer__lg a{
+    color: var(--whi);
+    margin-left: 1rem;
+    text-decoration: none;
+    display: block;
+}
+/*end Link of Footer 2*/
+/*Link of Footer 3*/
+.link__social__footer{
+    display: flex;
+    flex-direction: column;
+}
+.link__social__red {
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+}
+/* End Link of Footer*/
+.copy__lamm{
+    background: var(--red);
+    padding: 1.5rem;
+}
+.copy__lamm{
+    color: var(--whi);
+    text-align: center;
+}
+@media screen and (max-width:1000px) {
+    footer {
+        padding: 2rem;
+        flex-direction: column;
+        gap: 5rem;
+        justify-content:center;
+   }
+    .head__footer__two{
+        margin-bottom: 3rem;
+   }
 }
 /* Carrusel */
 .swiper {
     width: 100%;
     height: 100%;
-  }
+    margin-top: 10rem !important;
+}
+@media screen and (max-width:1400px) {
+    .swiper {
+        margin-top: 7rem !important;
+   }
+}
+@media screen and (max-width:800px) {
+    .swiper {
+        margin-top: 1rem !important;
+   }
+}
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
+    display: grid;
 }
 .swiper-slide img {
     display: block;
@@ -405,538 +621,202 @@ body > section:nth-child(4) {
     height: auto !important;
     object-fit: cover !important;
     border-radius: 2% !important;
+    height: 90vh;
+}
+@media screen and (max-width:900px) {
+    .swiper-slide img {
+        height: 100vh;
+    }
 }
 .swiper-button-next, .swiper-button-prev {
     color:var(--wh);
-    background-color: #000;
-    border-radius: 100px !important;
+    background-color:transparent !important;
+    border-radius: none !important;
 }
 .swiper-pagination-bullet-active {
     opacity: var(--swiper-pagination-bullet-opacity, 1);
     background: var(--red) !important;
 }
 .swiper-button-next::after, .swiper-button-prev::after {
-    font-size:1rem !important;
-  }
+    font-size:0rem !important;
+}
+.swiper-button-next img{
+    margin-right: 3rem !important;
+}
+.swiper-button-prev img{
+    margin-left: 3rem !important;
+}
+@media screen and (max-width:900px) {
+    .swiper-button-next img{
+        margin-right: 1rem !important;
+    }
+    .swiper-button-prev img{
+        margin-left: 1rem !important;
+    }
+}
 /* end of the Carrusel */
-/* grid column */
-.grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 1.5rem;
-    grid-gap:2rem;
-    margin-top: 4rem;
-}
-.flex__col{
-    display: grid;
-    text-align: center;
-}
-.flex__title{
-    font-size: 1.5rem;
-    margin-bottom: 3rem;
-}
-.flex__parr{
-    font-size: 1rem;
-    margin-top: 3rem;
-}
-.imgh {
-    width: 35% !important;
-    height: auto !important;
-    object-fit: cover;
-    display: block;
-    margin: auto;
-}
-@media screen and (max-width:900px) {
-    .content__homme{
-        padding: 0.5rem;
-        margin-top: 1rem !important;
-    }
-    .grid{
-        grid-template-columns: 1fr;
-        padding: 2rem;
-        grid-gap:1rem;
-        margin-top: 0rem !important;
-    }
-    .parr__homme{
-        line-height: 1.5 !important;
-        text-align: center;
-    }
-    .flex__title {
-        margin-bottom: 2rem !important;
-        margin-top: 2rem !important;
-    }
-}
-/* ==========
-    end content of the homme 
-========== */
-/* ==========
-    content of the maniobra 
-========== */
-.mani__img{
-    width: 50%;
-    height: auto !important;
-    display: block;
-    margin: auto;
-    object-fit: cover;
-    margin-bottom: 3rem !important;
-}
-@media screen and (max-width:900px) {
-    .mani__img{
-        width: 100% !important;
-    }
-}
-/* ==========
-    content of the renta 
-========== */
-/* grid column */
-.grid__rent{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 1.5rem;
-    grid-gap:2rem;
-}
-.img__rent{
-    width: 50% !important;
-    height: auto !important;
-    display: block;
-    margin: auto;
-    object-fit: cover;
-}
-.esp__rent{
-    margin-bottom: 3rem;
-}
-@media screen and (max-width:900px) {
-    .grid__rent{
-        grid-template-columns: 1fr;
-        padding: 2rem;
-        grid-gap:1rem;
-    }
-    .img__rent{
-        width: 100% !important;
-        height: auto !important;
-    }
-}
-/* ==========
-    content of the form 
-========== */
-.form__data{
+/* Parte de los servicios desarrollado por lamm soluciones digitales Jaime Ramirez*/
+.row{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 4rem;
 }
-.form__control{
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    border: 2px solid var(--red);
-    margin-bottom: 1rem !important;
-    width: 80%;
-    display: block;
-    margin: auto;
-    padding: 1rem;
-    color: #000;
-}
-.form__label{
-    margin-bottom: 1rem !important;
-    display: flex;
-    margin-left: 8rem;
-    color: #000;
-    font-weight: 600;
-}
-textarea{
-    resize: none;
-}
-select{
-    background-color: transparent;
-    color: #000;
-    font-size: 1rem;
-    font-weight: inherit !important;
-}
-:focus{
-    color: #000;
-}
-::placeholder{
-    color: #000 !important;
-    font-size: 1rem;
-}
-.buton__form{
-    width: 20%;
-    display: block;
-    margin: auto;
-    margin-top: 2rem !important;
-    margin-bottom: 2rem !important;
-    color: #000;
-    border: 3px solid var(--red);
-    padding: 0.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    background: transparent;
-    cursor: pointer;
-}
-.ok{
-    color: green;
-    margin: auto;
-    display: block;
-}
-.fail,.correo{
-    color: red;
-    margin: auto;
-    display: block;
-}
-.text__cont{
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    font-size: 3rem;
-}
-@media screen and (max-width:1000px) {
-    .contact__form{
-    grid-template-columns: 1fr;
-    padding: 1rem;
-    }
-    .form__label{
-        margin-bottom: 1rem !important;
-        display: block !important;
-        margin: auto !important;
-        color: #000;
-        margin-bottom: 1rem !important;
-    }
-    .form__title{
-        text-align: left;
-        margin-top: 2rem;
-        margin-bottom: 0rem;
-        font-size: 1.5rem;
-        padding: 1rem;
-    }
-    .form__subtitle{
-        text-align: left;
-        margin-bottom: 2rem;
-        padding: 1rem;
-    }
-    .form__text,.form__data{
-        text-align: left;
-    }
-    .form__text{
-        padding: 0rem !important;
-    }
-    .form__text__contc{
-        font-size: 1.5rem;
-        margin-bottom: 3rem;
-    }
-    .form__subtext__contc{
-        color: #000;
-        font-size: 1.2rem;
-        margin-bottom: 3rem;
-    }
-    .form__control{
-        width: 80%;
-    }
-    .buton__form{
-        width: 80%;
-    }
-    .text__cont{
-        font-size: 1.5rem;
-    }
-}
-/* ==========
-    Product of inventary
-========== */
-/* Product container */
-.product__meisa{
-    padding:3rem;
-}
-@media screen and (max-width:800px) {
-    .product__meisa{
-        padding:1rem;
-    }
-}
-.product__meisa h1{
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-}
-.product__meisa h2{
-    font-size: 1rem;
-    font-weight: inherit;
-    line-height: 2;
-    margin-bottom: 2rem;
-}
-@media screen and (max-width:800px) {
-    .product__meisa h1{
-        font-size: 1.5rem;
-        margin-bottom: 1.7rem;
-    }
-    .product__meisa h2{
-        line-height: 1;
-        margin-bottom: 1.7rem;
-    }
-}
-/* Product desciption */
-.product_des_miesa{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 2rem;
-    margin-top: -2rem;
-}
-.product_esp h3{
-    margin-bottom: 1rem;
-}
-.product_esp p{
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-@media screen and (max-width:900px){
-    .product_des_miesa{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-}
-/* form desciption */
-.form__pro{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 2rem;
-}
-@media screen and (max-width:900px){
-    .form__pro{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-}
-/* ==========
-    input de search
-========== */
-.head-search{
-    width: 70%;
-    margin-left: auto;
-}
-.form-row {
+.ih-item {
     position: relative;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
 }
-.sr-only {
+.ih-item, .ih-item * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.ih-item .meisa__hover {
+    color: #333;
+}
+.ih-item .meisa__hover:hover {
+    text-decoration: none;
+}
+.ih-item img {
+    width: 100%;
+    height: auto !important;
+    object-fit: cover;
+}
+.ih-item.square {
+    position: relative;
+    width: 250px;
+    height: 700px !important;
+}
+.ih-item.square:hover {
+    width:30rem;
+    height:100vh!important;
+}
+.ih-item.square .info {
     position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    border: 0;
-}
-.labele{
-    display: inline-block;
-    max-width: 100%;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-.input-lg {
-    width: 100% !important;
-    height: 3rem;
-    padding: 1rem 3rem;
-    line-height: 1.33;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-.form-control {
-    display: block;
-    color: #000;
-    background-color: transparent;
-    background-image: none;
-    border: 2px solid #000;
-    border-radius: 4px;
-}
-.head-search .btn {
-    position: absolute;
-    left: 0;
+    width: 100%;
     top: 0;
     bottom: 0;
-    background: transparent;
+    left: 0;
+    right: 0;
+    text-align: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
-.btn {
-    display: inline-block;
-    margin-bottom: 0;
-    touch-action: manipulation;
-    cursor: pointer;
-    border: 1px solid transparent;
-    white-space: nowrap;
-    padding: 6px 12px;
-    line-height: 1.42857143;
-    border-radius: 4px;
-    user-select: none;
+.ih-item.square.effect10 {
+  overflow: hidden;
 }
-#btn-head-search > img:nth-child(1) {
-    width: 100%;
-    background: var(--red);
-    padding: 0.4rem;
-    display: block;
-    margin: auto;
-    border-radius: 5px;
+.ih-item.square.effect10 .img {
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+.ih-item.square.effect10 .info {
+  background-image: url(../img/bg/cam.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  object-fit: cover;
+  height:63vh;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+@media screen and (max-width:1400px) {
+    .ih-item.square.effect10 .info {
+        height:100vh;
+    }
+}
+.ih-item.square.effect10 .info h3 {
+  color: #fff !important;
+  text-align: left;
+  font-size: 1.2rem;
+  padding: 3rem;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%) !important;
+  margin-top: 30.5rem;
+}
+.main__line {
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  opacity:1;
+  border-radius: 1rem;
+  margin: 0;
+  padding: 0;
+  left: 10%;
+  top: 94%;
+  transform: translateX(-4%);
+  z-index: 1;
+  background: var(--red);
+}
+.ih-item.square.effect10 .meisa__hover:hover .info {
+  visibility: visible;
+  opacity: 1;
+}
+.ih-item.square.effect10.left_to_right .img {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+.ih-item.square.effect10.left_to_right .info {
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.ih-item.square.effect10.left_to_right .meisa__hover:hover .img {
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.ih-item.square.effect10.left_to_right .meisa__hover:hover .info {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
 }
 @media screen and (max-width:900px) {
-    .head-search{
-        width: 100% !important;
-        margin-left: auto;
+    .row{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 2rem;
+        grid-gap: 1rem;
+        margin-bottom: 1rem !important;
+        margin-top: -4rem;
     }
-}
-/* ==========
-    card product 
-========== */
-.card{
-    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    height: auto;
-    background: #fff;
-}
-/* porduct img */
-.img_responsive img{
-    width: 100% !important;
-    height: auto !important;
-    object-fit: cover !important;
-    display: block;
-    margin: auto;
-    border-radius: 5px 5px 0rem 0rem;
-}
-/* porduct desc */
-.body_card{
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem;
-}
-.body_card h2{
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
-.body_card .content__par{
-    padding: 0.5rem;
-}
-.body_card a{
-    background: var(--red);
-    color: var(--wh);
-    text-align: center;
-    padding: 0.6rem;
-    margin-top: 2rem;
-    border-radius: 10px;
-    text-decoration: none;
-    box-shadow: var(--red) 0px 3px 8px;
-    margin-bottom: 2rem;
-}
-@media screen and (max-width:900px){
-    .card {
-        height: auto !important;
-      }
-}
-/* ==========
-    content of the filter
-========== */
-.container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 1rem;
-}
-.title_inve h1{
-    text-align: center;
-    margin-bottom: 1rem;
-    font-size: 2rem;
-}
-.parr_inve p{
-    padding: 3rem;
-    margin-top: -2rem;
-    line-height: 1.5;
-}
-@media screen and (max-width:900px) {
-    .container{
-        grid-template-columns: 1fr;
-    }
-    .title_inve h1{
-        padding: 0.5rem;
-    }
-    .parr_inve p{
-        padding: 1.5rem;
-        margin-top: -2rem;
-        line-height: 1.5;
-    }
-}
-/* filter column */
-.filtrado{
-    width: 60%;
-}
-.list-group{
-    width: 90%;
-    padding: 1rem;
-}
-#price_range {
-   width: 90%;
-   display: block;
-   margin: auto;
-}
-/* product column */
-.products{
-    width: 100% !important;
-    margin-left: -10rem;
-}
-.filter_data{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1rem;
-    width: 800px !important;
-}
-@media screen and (max-width:900px) {
-    .filtrado{
+    .ih-item img {
         width: 100%;
-        margin-bottom: 2rem
+        height: auto !important;
+        object-fit: cover;
     }
-    .filter_data{
-        grid-template-columns: 1fr;
+    .ih-item.square {
+        position: relative;
         width: 100% !important;
+        height: auto !important;
     }
-    .products{
-        margin-left: 0rem;
+    .ih-item.square:hover {
+        width:100% !important;
+        height:auto !important;
     }
+    .ih-item.square.effect10 .info {
+        height:auto !important;
+    }
+    .ih-item.square.effect10 .info h3 {
+        padding: 0.3rem;
+        font-size: 1rem;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%) !important;
+        margin-top: 24.2rem;
+      }
+      .main__line {display: none;}
 }
-
-
-
-
-.list-group {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    border: 1px solid #ccc;
-    border-radius: 0.5em;
-    width: 100%;
-  }
-  .list-group li {
-    border-top: 1px solid #ccc;
-    padding: 0.5em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .list-group li:first-child {
-    border-top: 0;
-  }
-  .list-group .badge {
-    background-color: rgb(71, 73, 84);
-    color: #fff;
-    font-weight: bold;
-    font-size: 80%;
-    border-radius: 10em;
-    min-width: 1.5em;
-    padding: 0.25em;
-    text-align: center;
-  }
-  @media screen and (max-width:900px){
-      .list-group li {
-      display: flex;
-        flex-direction:column;
-      justify-content:center;
-    }
-  }
+/* Parte de los servicios desarrollado por lamm soluciones digitales Jaime Ramirez*/

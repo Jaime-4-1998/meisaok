@@ -69,7 +69,7 @@
         </div>
         <div class="container">
            <div class="filtrado">
-           <div class="list-group">
+                <div class="list-group">
 					<h3>Precio</h3>
 					<input type="hidden" id="hidden_minimum_price" value="0" />
                     <input type="hidden" id="hidden_maximum_price" value="65000" />
