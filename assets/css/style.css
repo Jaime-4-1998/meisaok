@@ -38,6 +38,13 @@ html::-webkit-scrollbar-thumb {
     background-size: cover;
     height: 100vh;
 }
+.head__mani{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/bg/mani/22mani897432789324978.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+}
 @media screen and (max-width:900px) {
     .headere{
         background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url(../img/bg/350.svg);
@@ -46,6 +53,13 @@ html::-webkit-scrollbar-thumb {
         background-size: cover;
         height: auto !important;
    }
+   .head__mani{
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/bg/mani/35045r42334234.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: auto !important;
+    }
 }
 /* ========== nav developed by Lamm Solucionaes Digitales Jaime Ramirez ========== */
 .meisa__logo img{
@@ -120,7 +134,7 @@ a{
     box-shadow: 0px 0px 30px 0px rgba(166, 161, 161, 0.49);
     margin-top: 2rem;
     z-index: 99;
-    margin-left: -0.5rem;
+    margin-left: 0rem;
 }
 nav {
     padding-bottom: 24px;
@@ -997,4 +1011,199 @@ iframe{
     color: #000000;
     margin-bottom: 1rem;
     font-weight: 500;
+}
+/* Parte de maniobra desarrollado por lamm soluciones digitales Jaime Ramirez*/
+.mani__meisa{
+    display: block;
+    margin: auto;
+    margin-top: 7rem !important;
+    padding: 4rem;
+}
+@media screen and (max-width:1400px){
+    .mani__meisa{
+        margin-top: 3rem !important;
+    }
+}
+@media screen and (max-width:900px){
+    .mani__meisa{
+        padding: 1rem;
+        margin-top: 1rem !important;
+    }
+}
+.mani__meisa h1{
+    color: var(--whi);
+    text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.45);
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 64px;
+    display: flex;
+    align-items: center;
+}
+.mani__parr{
+    color: var(--whi);
+    text-shadow: 5px 3px 5px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    line-height: 33px;
+    width: 999px;
+    font-size: 1.2rem;
+}
+@media screen and (max-width:900px){
+    .mani__meisa h1{
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-bottom: 2rem;
+    }
+    .mani__parr{
+        line-height: 33px;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+.meisa__manifon{
+    background:linear-gradient(100.91deg, #000000 0%, rgba(0, 0, 0, 0) 83.81%), url(../img/bg/mani/22manides78394978954789.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+}
+.meisa__centro{
+    display: flex;
+    padding: 7rem;
+    justify-content: center;
+    flex-direction: column;
+}
+@media screen and (max-width:1400px) {
+    .meisa__manifon{
+        height: 50vh;
+    }
+}
+@media screen and (max-width:900px) {
+    .meisa__manifon{
+       background: #000 !important;
+       height: auto !important;
+    }
+    .meisa__centro{
+        padding: 2rem;
+    }
+}
+.manio__line{
+    position: absolute;
+    width: 230px;
+    height: 5%;
+    margin: 0;
+    padding: 0;
+    left:36%;
+    top: 2.5rem;
+    transform: translateX(-4%);
+    z-index: -1;
+    background: var(--red);
+}
+@media screen and (max-width:1400px) {
+    .manio__line{
+        left:27%;
+        top: 2.5rem;
+    }
+}
+@media screen and (max-width:900px) {
+    .manio__line{
+        position: absolute;
+        width: 230px;
+        height: 5%;
+        left:20%;
+        top: 5.5rem;
+    }
+}
+.meisa__manifon h2{
+    color: var(--whi);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 0;
+    text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.35);
+    text-align: center;
+}
+.meisa__manifon p{
+    font-weight: 700;
+    color: var(--whi);
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 1.1rem;
+}
+/* Parte de maniobra from desarrollado por lamm soluciones digitales Jaime Ramirez*/
+.formu__mani{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem;
+}
+.formu__partone{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 2rem;
+}
+.formu__partone h2{
+    display: block;
+    margin: auto;
+    color: var(--red);
+    font-size: 2rem;
+}
+.formu__partwo{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.form__mani{
+    width: 50%;
+}
+@media screen and (max-width:900px) {
+    .formu__mani{
+        padding: 2rem;
+    }
+    .btn__mani{
+        width: 60%;
+    }
+    .formu__partone h2{
+        display: block;
+        margin: auto;
+        color: var(--red);
+        font-size: 1.1rem;
+        text-align: center;
+    }
+}
+/* Parte de maniobra cards desarrollado por lamm soluciones digitales Jaime Ramirez*/
+.cards__mani{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem;
+}
+.content__cards{
+    display: grid;grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.cards__manis{
+    display: flex;
+    padding: 1.5rem;
+}
+.card__data{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.card__img__data img{
+    width: 100%;
+    height: 100%;
+}
+.card__data__text{
+    margin-top: -1rem;
+    background: var(--red);
+    height: 5rem;
+}
+.card__data__text h2{
+    color: var(--whi);
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 0.5rem;
 }

@@ -31,7 +31,7 @@
                                 </div>
                             </li>
                             <li>
-                            <a href="https://meisamex.com.mx/" class="link__text__menu">Maneuvers</a>
+                            <a href="https://meisamex.com.mx/Maneuvers/" class="link__text__menu">Maneuvers</a>
                             </li>
                             <li>
                                 <a href="https://meisamex.com.mx/Contac/" class="link__text__menu">Contac</a>

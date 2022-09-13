@@ -31,7 +31,7 @@
                             </div>
                         </li>
                         <li>
-                           <a href="https://meisamex.com.mx/" class="link__text__menu">Maniobras</a>
+                           <a href="https://meisamex.com.mx/Maniobras/" class="link__text__menu">Maniobras</a>
                         </li>
                         <li>
                             <a href="https://meisamex.com.mx/Contacto/" class="link__text__menu">Contacto</a>
