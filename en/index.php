@@ -17,6 +17,7 @@
 <body>
     <main>
         <header>
+            <div class="headere">
             <?php
                 include '../assets/components/naveng.php';
             ?>
@@ -63,6 +64,7 @@
                     </div>
                 </section>
             <!--End-->
+            </div>
         </header>
          <!--Acerca-->
          <section>
@@ -127,7 +129,7 @@
             <div class="row">
                 <?php
                     include '../meisaback/adminmeisa/assets/components/backend/conexion.php';
-                    $sql = "SELECT id_col,prioridad,img,title,content
+                    $sql = "SELECT id_col,prioridad,img,engtitle,content
                     FROM columnfour ORDER BY prioridad ASC"; 
                     $query = $mbd -> prepare($sql); 
                     $query -> execute(); 
@@ -137,18 +139,18 @@
                                 $data = $result -> id_col."||".
                                 $result -> prioridad."||".
                                 $result -> img."||".
-                                $result -> title."||".
+                                $result -> engtitle."||".
                                 $result -> content; 
                 ?>
                 <div class="ih-item square effect10 left_to_right">
                     <span class="meisa__hover">
                         <div class="img">
-                            <img loading="lazy" src="../meisaback/adminmeisa/assets/<?php echo $result -> img; ?>" alt="<?php echo $result -> title; ?>" title="<?php echo $result -> title; ?>" width="100" />
+                            <img loading="lazy" src="../meisaback/adminmeisa/assets/<?php echo $result -> img; ?>" alt="<?php echo $result -> engtitle; ?>" title="<?php echo $result -> engtitle; ?>" width="100" />
                         </div>
                         <div class="info cam">
                             <h3>
                                 <span class="main__line"></span>
-                                <?php echo $result -> title; ?>
+                                <?php echo $result -> engtitle; ?>
                             </h3>
                         </div>
                     </span>

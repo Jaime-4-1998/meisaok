@@ -17,9 +17,10 @@
 <body>
     <main>
         <header>
-            <?php
-                include 'assets/components/nav.php';
-            ?>
+            <div class="headere">
+                <?php
+                    include 'assets/components/nav.php';
+                ?>
             <!--Carrusel-->
                 <?php include_once "assets/func/func.php"; ?>
                 <section>
@@ -56,6 +57,7 @@
                     </div>
                 </section>
             <!--End-->
+            </div>
         </header>
         <!--Acerca-->
         <section>

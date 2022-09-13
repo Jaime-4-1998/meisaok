@@ -15,16 +15,18 @@
     </head>
 <body>
     <header>
+        <div class="head__black__miesa">
             <?php
                 include '../assets/components/nav.php';
             ?>
+        </div>
     </header>
     <section>
         <div class="meisa_contact">
             <div class="meisa__data">
                 <h1>
                     CONTÁCTANOS
-                    <span class="meisa__line"></span>
+                    <span class="maine__line"></span>
                 </h1>
                 <p>
                     Queremos saber como ayudarte en implementar la mejor opción para tu negocio.
@@ -34,7 +36,7 @@
                 </p>
                 <h2>
                     SOLICITA TU COTIZACIÓN
-                    <span class="meisa__line"></span>
+                    <span class="maine__line"></span>
                 </h2>
                 <form class="form__data" id="form">
                     <label class="form__label">Nombre Completo</label>

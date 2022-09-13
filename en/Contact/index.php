@@ -15,16 +15,18 @@
     </head>
 <body>
     <header>
+        <div class="head__black__miesa">
             <?php
                 include '../../assets/components/naveng.php';
             ?>
+        </div>  
     </header>
     <section>
         <div class="meisa_contact">
             <div class="meisa__data">
                 <h1>
                     CONTACT US
-                    <span class="meisa__line"></span>
+                    <span class="maine__line"></span>
                 </h1>
                 <p>
                     We want to know how to help you implement the best option for your business.
@@ -34,7 +36,7 @@
                 </p>
                 <h2>
                     REQUEST YOUR QUOTE
-                    <span class="meisa__line"></span>
+                    <span class="maine__line"></span>
                 </h2>
                 <form class="form__data" id="form">
                     <label class="form__label">Name</label>

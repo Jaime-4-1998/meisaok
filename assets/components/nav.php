@@ -1,4 +1,4 @@
-    <div class="header head__contc">
+    <div class="header">
             <div class="burgr-box" id="meisa">
                 <div class="meisa__logo desk">
                     <img src="https://meisamex.com.mx/assets/img/lg/meisa/22meisa879234789423.svg" alt="logo of Blogr">
