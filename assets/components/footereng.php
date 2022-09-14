@@ -25,11 +25,12 @@
             <div class="head__footer__one">
                 <h3>About of Meisa</h3>
                 <div class="link__footer">
-                    <a href="https://meisamex.com.mx/">Home</a>
-                    <a href="https://meisamex.com.mx/">Purchase</a>
-                    <a href="https://meisamex.com.mx/">Sale</a>
-                    <a href="https://meisamex.com.mx/">Maneuvers</a>
-                    <a href="https://meisamex.com.mx/">Contact</a>
+                    <a href="https://meisamex.com.mx/en/">Home</a>
+                    <a href="https://meisamex.com.mx/en/">Purchase</a>
+                    <a href="https://meisamex.com.mx/en/">Sale</a>
+                    <a href="https://meisamex.com.mx/en/Lightplants/">Light plants</a>
+                    <a href="https://meisamex.com.mx/en/Maneuvers/">Maneuvers</a>
+                    <a href="https://meisamex.com.mx/en/Contac/">Contact</a>
                 </div>
             </div>
             <div class="head__footer__two">

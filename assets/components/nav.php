@@ -14,13 +14,11 @@
                         <li>
                             <a href="https://meisamex.com.mx/" class="link__text__menu">Inicio</a>
                         </li>
-                        <li>
-                            <a href="https://meisamex.com.mx/" class="link__text__menu">Compra / Venta</a>
-                        </li>
+                        
                         <li>
                             <div class="drpdwn-box">
                             <div class="drpdwn-btn" id="drpdwn-btn">
-                                <a href="#" class="link__text__menu">Plantas de Luz</a> <span class="drpdwn-icon"><i class="fa"><img src="https://meisamex.com.mx/assets/img/lg/meisa/icon-arrow-light.svg" alt="Meisa Mex" title="Meisa Mex" /></i></span>
+                                <a href="#" class="link__text__menu">Compra / Venta</a> <span class="drpdwn-icon"><i class="fa"><img src="https://meisamex.com.mx/assets/img/lg/meisa/icon-arrow-light.svg" alt="Meisa Mex" title="Meisa Mex" /></i></span>
                             </div>
                             <div class="drpdwn">
                                 <ul class="drpdwn-list">
@@ -29,6 +27,9 @@
                                 </ul>
                             </div>
                             </div>
+                        </li>
+                        <li>
+                            <a href="https://meisamex.com.mx/PlantasdeLuz/" class="link__text__menu">Plantas de Luz</a>
                         </li>
                         <li>
                            <a href="https://meisamex.com.mx/Maniobras/" class="link__text__menu">Maniobras</a>
