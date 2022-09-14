@@ -45,6 +45,13 @@ html::-webkit-scrollbar-thumb {
     background-size: cover;
     height: 70vh;
 }
+.head__plan{
+    background: linear-gradient(18.21deg, rgba(0, 0, 0, 0.5) 13.87%, rgba(0, 0, 0, 0) 72.55%),url(../img/bg/plan/22plan54879547894.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: auto !important;
+}
 @media screen and (max-width:900px) {
     .headere{
         background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url(../img/bg/350.svg);
@@ -59,6 +66,13 @@ html::-webkit-scrollbar-thumb {
         background-position: center;
         background-size: cover;
         height: auto !important;
+    }
+    .head__plan{
+        background: linear-gradient(18.21deg, rgba(0, 0, 0, 0.5) 13.87%, rgba(0, 0, 0, 0) 72.55%),url(../img/bg/plan/3504545454543uky32678.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 40vh !important;
     }
 }
 /* ========== nav developed by Lamm Solucionaes Digitales Jaime Ramirez ========== */
@@ -1206,4 +1220,196 @@ iframe{
     text-align: center;
     font-size: 1.1rem;
     padding: 0.5rem;
+}
+/* Pagina de Plantaz de Luz desarrollado por lamm soluciones digitales Jaime Ramirez*/
+.plan__meisa{
+    display: block;
+    margin: auto;
+    margin-top: 3rem !important;
+    padding: 11rem;
+}
+@media screen and (max-width:1400px){
+    .plan__meisa{
+        padding: 8rem;
+    }
+}
+@media screen and (max-width:900px){
+    .plan__meisa{
+        padding: 1rem;
+        margin-top: 1rem !important;
+    }
+}
+.plan__meisa h1{
+    color: var(--whi);
+    text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.35);
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 64px;
+    text-align: center;
+    margin-top: -6rem;
+}
+@media screen and (max-width:900px){
+    .plan__meisa h1{
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-bottom: 2rem;
+        margin-top: 3rem !important;
+    }
+}
+/*Second sectioon of plantaz*/
+strong{
+    color: var(--red) !important; 
+}
+.planta__meisa{
+    padding: 2rem;
+}
+.planta__meisa h2{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+.plan__parr{
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-weight: 700;
+    line-height: 26px;
+    font-size: 1rem;
+}
+@media screen and (max-width:900px) {
+    .planta__meisa{
+        padding: 3rem;
+    }
+    .planta__meisa h2{
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        font-weight: 700;
+        font-size: 2rem;
+    }
+}
+/*third sectioon of plantaz*/
+.cards__plan{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem;
+    margin-top: -4rem;
+}
+.content__cards__plan{
+    display: grid;grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.cards__plant{
+    display: flex;
+    padding: 1.5rem;
+}
+.card__data__plan{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.card__img__data__plan img{
+    width: 100%;
+    height: 100%;
+}
+.card__data__text__plan{
+    margin-top: -1rem;
+    background: var(--red);
+    height: 5rem;
+}
+.card__data__text__plan h2{
+    color: var(--whi);
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 1.5rem;
+}
+/*four sectioon of plantaz*/
+.meisa__plan__red{
+    padding: 1rem;
+    background-color: var(--red);
+    text-align: center;
+}
+.meisa__plan__red a{
+    color: var(--whi);
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+}
+.meisa__plan__red p{
+    color: var(--whi);
+    font-weight: 700;
+    margin-top: 1rem;
+}
+/*five sectioon of plantaz*/
+.meisa__manifon__plan{
+    background:linear-gradient(100.91deg, #000000 0%, rgba(0, 0, 0, 0) 83.81%), url(../img/bg/plan/22planfon78979584789.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+}
+.meisa__centro__plan{
+    display: flex;
+    padding: 7rem;
+    justify-content: center;
+    flex-direction: column;
+}
+@media screen and (max-width:1400px) {
+    .meisa__manifon__plan{
+        height: 50vh;
+    }
+}
+@media screen and (max-width:900px) {
+    .meisa__manifon__plan{
+       background: #000 !important;
+       height: auto !important;
+       margin-bottom: 4rem;
+    }
+    .meisa__centro__plan{
+        padding: 2rem;
+    }
+}
+.manio__line__plan{
+    position: absolute;
+    width: 230px;
+    height: 5%;
+    margin: 0;
+    padding: 0;
+    left:31%;
+    top: 2.5rem;
+    transform: translateX(-4%);
+    z-index: -1;
+    background: var(--red);
+}
+@media screen and (max-width:1400px) {
+    .manio__line__plan{
+        left:19.5%;
+        top: 2.5rem;
+    }
+}
+@media screen and (max-width:900px) {
+    .manio__line__plan{
+        position: absolute;
+        width: 230px;
+        height: 5%;
+        left:20%;
+        top: 5.5rem;
+    }
+}
+.meisa__manifon__plan h2{
+    color: var(--whi);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 0;
+    text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.35);
+    text-align: center;
+}
+.meisa__manifon__plan p{
+    font-weight: 700;
+    color: var(--whi);
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 1.1rem;
 }

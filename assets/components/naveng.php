@@ -1,4 +1,4 @@
-    <div class="header head__contc">
+<div class="header head__contc">
         <div class="burgr-box" id="meisa">
                     <div class="meisa__logo desk">
                         <img src="https://meisamex.com.mx/assets/img/lg/meisa/22meisa879234789423.svg" alt="logo of Blogr">
@@ -12,10 +12,10 @@
                     <nav>
                         <ul>
                             <li>
-                                <a href="https://meisamex.com.mx/" class="link__text__menu">Home</a>
+                                <a href="https://meisamex.com.mx/en/" class="link__text__menu">Home</a>
                             </li>
                             <li>
-                                <a href="https://meisamex.com.mx/" class="link__text__menu">Purchase / Sale</a>
+                                <a href="https://meisamex.com.mx/en/" class="link__text__menu">Purchase / Sale</a>
                             </li>
                             <li>
                                 <div class="drpdwn-box">
@@ -24,17 +24,17 @@
                                 </div>
                                 <div class="drpdwn">
                                     <ul class="drpdwn-list">
-                                    <li><a href="https://meisamex.com.mx/">Sale</a></li>
-                                    <li><a href="https://meisamex.com.mx/">Rent</a></li>
+                                    <li><a href="https://meisamex.com.mx/en/">Sale</a></li>
+                                    <li><a href="https://meisamex.com.mx/en/">Rent</a></li>
                                     </ul>
                                 </div>
                                 </div>
                             </li>
                             <li>
-                            <a href="https://meisamex.com.mx/Maneuvers/" class="link__text__menu">Maneuvers</a>
+                            <a href="https://meisamex.com.mx/en/Maneuvers/" class="link__text__menu">Maneuvers</a>
                             </li>
                             <li>
-                                <a href="https://meisamex.com.mx/Contac/" class="link__text__menu">Contac</a>
+                                <a href="https://meisamex.com.mx/en/Contac/" class="link__text__menu">Contac</a>
                             </li>
                         </ul>
                     </nav>

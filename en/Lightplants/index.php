@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#bf1520"/>
     <meta name="description" content="Meisa ofrece un amplio catálogo de productos de maquinaria, equipo y accesorios de cualquier ramo de la industria" />
-    <title>Meisa - Plantas de Luz</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/lg/meisa/sh.png">
-    <link rel="preload" href="../assets/css/style.css" as="style" onload="this.rel='stylesheet'">
+    <title>Meisa - Light plants</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/lg/meisa/sh.png">
+    <link rel="preload" href="../../assets/css/style.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" as="style" onload="this.rel='stylesheet'"> 
@@ -18,13 +18,13 @@
         <header>
             <div class="head__plan">
                 <?php
-                    include '../assets/components/nav.php';
+                    include '../../assets/components/naveng.php';
                 ?>
                  <!--First Text-->
                 <section>
                    <div class="plan__meisa">
                         <h1>
-                           PLANTAS DE LUZ
+                        LIGHT PLANTS
                         </h1>
                    </div>
                 </section>
@@ -34,8 +34,8 @@
         <section>
             <div class="planta__meisa">
                         <?php
-                           include '../meisaback/adminmeisa/assets/components/backend/conexion.php';
-                           $sql = "SELECT id_luz,titleluz,contentluz
+                           include '../../meisaback/adminmeisa/assets/components/backend/conexion.php';
+                           $sql = "SELECT id_luz,titleluzeng,contentluzeng
                            FROM pageluz ORDER BY id_luz ASC"; 
                            $query = $mbd -> prepare($sql); 
                            $query -> execute(); 
@@ -43,14 +43,14 @@
                               if($query -> rowCount() > 0){ 
                                  foreach($results as $result) { 
                                        $data = $result -> id_luz."||".
-                                       $result -> titleluz."||".
-                                       $result -> contentluz; 
+                                       $result -> titleluzeng."||".
+                                       $result -> contentluzeng; 
                         ?>
                         <h2>
-                           <?php echo $result -> titleluz; ?>  
+                           <?php echo $result -> titleluzeng; ?>  
                         </h2>
                         <div class="plan__parr">
-                           <?php echo $result -> contentluz; ?>  
+                           <?php echo $result -> contentluzeng; ?>  
                         </div>
                         <?php }} ?>
             </div>
@@ -60,28 +60,28 @@
             <div class="cards__plan">
                 <div class="content__cards__plan">
                      <?php
-                        include '../meisaback/adminmeisa/assets/components/backend/conexion.php';
-                        $sql = "SELECT id_col,prioridad,img,title,content
+                        include '../../meisaback/adminmeisa/assets/components/backend/conexion.php';
+                        $sql = "SELECT id_col,prioridad,img,engtitle,engcont
                         FROM columnluz ORDER BY prioridad ASC"; 
                         $query = $mbd -> prepare($sql); 
                         $query -> execute(); 
                         $results = $query -> fetchAll(PDO::FETCH_OBJ); 
-                           if($query -> rowCount() > 0){ 
-                                 foreach($results as $result) { 
+                            if($query -> rowCount() > 0){ 
+                                foreach($results as $result) { 
                                     $data = $result -> id_col."||".
                                     $result -> prioridad."||".
                                     $result -> img."||".
-                                    $result -> title."||".
-                                    $result -> content; 
+                                    $result -> engtitle."||".
+                                    $result -> engcont; 
                      ?>
                     <div class="cards__plant">
                         <div class="card__data__plan">
                             <div class="card__img__data__plan">
-                                <img src="../meisaback/adminmeisa/assets/<?php echo $result -> img; ?>" loading="lazy" alt="Meisa Mex <?php echo $result -> title; ?>" title="Meisa Mex <?php echo $result -> title; ?>" width="100" height="100">
+                                <img src="../../meisaback/adminmeisa/assets/<?php echo $result -> img; ?>" loading="lazy" alt="Meisa Mex <?php echo $result -> engtitle; ?>" title="Meisa Mex <?php echo $result -> engtitle; ?>" width="100" height="100">
                             </div>
                             <div class="card__data__text__plan">
                                 <h2>
-                                    <?php echo $result -> title; ?>
+                                    <?php echo $result -> engtitle; ?>
                                 </h2>
                             </div>
                         </div>
@@ -93,30 +93,30 @@
         <!--fondo-->
         <section>
             <div class="meisa__plan__red">
-               <a href="https://meisamex.com.mx/Contacto/">COTIZA AQUÍ</a>
-               <p>tus equipos nuevos y usados tenemos inventario disponible</p>
+               <a href="https://meisamex.com.mx/en/Contac/">QUOTE HERE</a>
+               <p>your new and used equipment we have inventory available</p>
             </div>
             <div class="meisa__manifon__plan">        
                 <div class="meisa__centro__plan">
                     <h2>
-                        LA MEJOR OPCIÓN, LA TENEMOS NOSOTROS
+                        THE BEST OPTION, WE HAVE IT
                         <span class="manio__line__plan"></span>
                     </h2>     
                     <p>
-                    Contámos con maquinaria en desuso, supervisamos a detalle para ofrecer una compra. 
+                    We have disused machinery, we supervise in detail to offer a purchase.
                     </p>        
                 </div>
             </div>
         </section>
         <footer>
             <?php
-                include '../assets/components/footer.php';
+                include '../../assets/components/footereng.php';
             ?>
         </footer>
     </main>
     <div class="copy__lamm">
         <p>Copyright 2022, Todos los derechos reservados, desarrollado por Lamm Soluciones Digitales</p>
     </div>
-    <script src="../assets/js/menu.js"></script>
+    <script src="../../assets/js/menu.js"></script>
 </body>
 </html>
