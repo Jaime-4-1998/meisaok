@@ -59,15 +59,15 @@ session_start();
                 <div class="container-fluid">
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-meisa-red">Dashboard of the Page Renta </h1>
-                        <button class="btn btn-meisa" data-toggle="modal" data-target="#modalColumn"><i class="fas fa-plus"></i> Columnas Renta</button>
+                        <h1 class="h3 mb-0 text-meisa-red">Dashboard of the Page Compra </h1>
+                        <button class="btn btn-meisa" data-toggle="modal" data-target="#modalColumn"><i class="fas fa-plus"></i> Columnas Compra</button>
                         <a href="#image" class="btn btn-meisa">Tools de Imagen</a>
                     </div>
                     <p class="alert alert-primary"><?php echo $statusMsg;?></p>
                     <form method="POST" enctype="multipart/form-data">
                         <div class="row"> 
                             <h2 class="text-center" style="disply:block !important; margin:auto !important; margin-bottom:1rem !important;">
-                                Titulo y Contenido a la primer parte de Renta de Equiupos
+                                Titulo y Contenido a la primer parte de Compra de Equiupos
                             </h2>
                            
                                 <div class="col-md-6">
@@ -194,7 +194,7 @@ session_start();
                                         </a>
                                     </div>
                                     <div class="card-body bg-meisa-dark">
-                                        <button class="btn btn-link text-warning col-5" type="button" data-toggle="modal" data-target="#modalColuEditar" onclick="EdiatarColutwo('<?php echo $datos ?>')"><i class="fas fa-edit"></i> Editar</button>
+                                        <button class="btn btn-link text-warning col-5" type="button" data-toggle="modal" data-target="#modalColuEditar" onclick="EdiatarColutwoo('<?php echo $datos ?>')"><i class="fas fa-edit"></i> Editar</button>
                                         <button class="btn btn-link text-danger col-5" type="button" onclick="SiNoColumntwo('<?php echo $result -> id_col; ?>')"><i class="fas fa-trash"></i> Eliminar</button>
                                     </div>
                                 </div>
@@ -224,7 +224,7 @@ session_start();
                 </button>
             </div>
             <div class="modal-body">
-                <form class="formBanner" id="formBannertwo"  method="POST" enctype="multipart/form-data">
+                <form class="formBanner" id="formBannertwoo"  method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                         <label class="text-meisa">Poscision</label>
                         <input class="form-control" type="number" placeholder="Prioridad" name="prioridad" id="prioridad" requiered>
@@ -276,7 +276,7 @@ session_start();
                 </button>
             </div>
             <div class="modal-body">
-                <form class="formBanner" id="formEditColtwoim"  method="POST" enctype="multipart/form-data">
+                <form class="formBanner" id="formEditColtwoimo"  method="POST" enctype="multipart/form-data">
                 <input type="hidden" id="idbanner" name="idbanner">
                     <div class="form-group">
                         <label class="text-meisa">Poscision</label>
@@ -334,10 +334,10 @@ session_start();
     <script>
         $(document).ready(function(){
             $("#btnAddCltw").click(function(e) {
-                addImgColumtwo();
+                addImgColumtwoo();
             });
             $("#btnEditColutw").click(function(e) {
-                editImgColutwo();
+                editImgColutwoo();
             });
         });
     </script>

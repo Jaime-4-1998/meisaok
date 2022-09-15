@@ -325,8 +325,8 @@ cadena="id=" + id;
     });
 }
 /*ADD IMG RENTAINF*/
-function addImgColumtwo(){
-    var Form = new FormData($('#formBannertwo')[0]); 
+function addImgColumtwoo(){
+    var Form = new FormData($('#formBannertwoo')[0]); 
     $.ajax({
         url:"http://localhost/meisa/meisaback/adminmeisa/assets/components/backrenta/addImgtwo.php", 
         type: 'post',
@@ -346,7 +346,7 @@ function addImgColumtwo(){
     });
 }
 /*EDIT IMG RENTAINF*/
-function EdiatarColutwo(datos){
+function EdiatarColutwoo(datos){
     d=datos.split('||');
     $('#idbanner').val(d[0]);
     $('#prioridadrdit').val(d[2]);
@@ -355,8 +355,8 @@ function EdiatarColutwo(datos){
     $('#contentrdit').val(d[5]);
     $('#contentengrdit').val(d[6]);
 }
-function editImgColutwo(){
-    var Form = new FormData($('#formEditColtwoim')[0]); 
+function editImgColutwoo(){
+    var Form = new FormData($('#formEditColtwoimo')[0]); 
     $.ajax({
         url:"http://localhost/meisa/meisaback/adminmeisa/assets/components/backrenta/editExt.php", 
         type: 'post',
