@@ -22,8 +22,8 @@
                             </div>
                             <div class="drpdwn">
                                 <ul class="drpdwn-list">
+                                <li><a href="https://meisamex.com.mx/">Compra</a></li>
                                 <li><a href="https://meisamex.com.mx/">Venta</a></li>
-                                <li><a href="https://meisamex.com.mx/">Renta</a></li>
                                 </ul>
                             </div>
                             </div>
