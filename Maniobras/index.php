@@ -173,11 +173,13 @@
                 <div class="formulario__mani">
                     <div class="formu__partone">
                             <h2>SOLICITA TU COTIZACIÓN</h2>
-                            <button type="submit" class="btn__mani">Enviar</button>
+                            <button type="submit" id="submit" class="btn__mani">Enviar</button>
+                            <small class="form__error ok fail" id="respuesta"></small>
+
                     </div>
                     <div class="formu__partwo">
-                            <input type="text" name="" id="" placeholder="Escribe Tu Email" class="atencion__mail form__mani">
-                            <input type="text" name="" id="" placeholder="Descripción de Maquinaria" class="atencion__mail form__mani">
+                            <input type="text" name="" id="mail" placeholder="Escribe Tu Email" class="atencion__mail form__mani">
+                            <input type="text" name="" id="tema" placeholder="Descripción de Maquinaria" class="atencion__mail form__mani">
                     </div>
                 </div>
             </div>
@@ -192,5 +194,6 @@
         <p>Copyright 2022, Todos los derechos reservados, desarrollado por Lamm Soluciones Digitales</p>
     </div>
     <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/form.js"></script> 
 </body>
 </html>

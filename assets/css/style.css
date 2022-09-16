@@ -52,6 +52,13 @@ html::-webkit-scrollbar-thumb {
     background-size: cover;
     height: auto !important;
 }
+.head__com{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/bg/com/22com897543897423.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 60 !important;
+}
 @media screen and (max-width:900px) {
     .headere{
         background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url(../img/bg/350.svg);
@@ -73,6 +80,11 @@ html::-webkit-scrollbar-thumb {
         background-position: center;
         background-size: cover;
         height: 40vh !important;
+    }
+    .head__com{
+        background-image: none;
+        background: #000 !important;
+        height: auto !important;
     }
 }
 /* ========== nav developed by Lamm Solucionaes Digitales Jaime Ramirez ========== */
@@ -1412,4 +1424,148 @@ strong{
     text-align: center;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 1.1rem;
+}
+/*Page of compra*/
+.com__parr{
+    color: var(--whi);
+    text-shadow: 5px 3px 5px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    line-height: 33px;
+    width: 830px;
+    font-size: 1.2rem;
+}
+@media screen and (max-width:900px){
+    .com__parr{
+        line-height: 33px;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+.cards__com{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem;
+    margin-top: 2rem;
+}
+.content__cards__com{
+    display: grid;grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.cards__comt{
+    display: flex;
+    padding: 1.5rem;
+}
+.card__data__com{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.card__img__data__com img{
+    width: 100%;
+    height: 100%;
+}
+.card__data__text__com{
+    margin-top: 0rem;
+}
+.card__data__text__com h2{
+    color: var(--black);
+    text-align: left;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    font-weight: 500;
+    
+}
+.card__data__text__com p{
+    color: var(--black);
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+.com__margin{
+    margin-top: 4rem !important;
+}
+.meisa__manifon__comp{
+    background:linear-gradient(100.91deg, #000000 0%, rgba(0, 0, 0, 0) 83.81%), url(../img/bg/com/22inve8905348904334.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+}
+
+.meisa__centro{
+    display: flex;
+    padding: 5rem;
+    justify-content: center;
+    flex-direction: column;
+}
+@media screen and (max-width:1400px) {
+    .meisa__manifon__comp{
+        height: 50vh;
+    }
+}
+@media screen and (max-width:900px) {
+    .meisa__manifon__comp{
+       background: #000 !important;
+       height: auto !important;
+    }
+    .meisa__centro{
+        padding: 2rem;
+    }
+}
+.manio__line__com{
+    position: absolute;
+    width: 230px;
+    height: 5%;
+    margin: 0;
+    padding: 0;
+    left: 0.5%;
+    top: 2.5rem;
+    transform: translateX(-4%);
+    z-index: -1;
+    background: var(--red);
+}
+@media screen and (max-width:1400px) {
+    .manio__line__com{
+        left:1%;
+        top: 2.5rem;
+    }
+}
+@media screen and (max-width:900px) {
+    .manio__line__com{
+        position: absolute;
+        width: 230px;
+        height: 5%;
+        left:20%;
+        top: 5.5rem;
+    }
+}
+.meisa__manifon__comp h2{
+    color: var(--whi);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 0;
+    text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.35);
+    text-align: left;
+}
+.meisa__manifon__comp p{
+    font-weight: 700;
+    color: var(--whi);
+    text-align: left;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 900;
+    width: 713px;
+}
+.meisa__img__com{
+    width: 15%;
+}
+.meisa__img__com img{
+    width: 100%;
+}
+@media screen and (max-width:900px) {
+    .meisa__manifon__comp p{
+        width: 100%;
+    }
 }

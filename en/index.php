@@ -285,10 +285,11 @@
                     </p>
                 </div>
                 <div class="atencion__meisa__form">
-                    <form action="" method="post">
-                        <input type="email" name="" id="" placeholder="Write your Email" class="atencion__mail">
-                        <textarea name="" id="" cols="10" rows="4" placeholder="Quote Description"></textarea>
-                        <button type="submit">Send</button>
+                    <form action="" method="post" id="form">
+                        <input type="email" name="" id="mail" placeholder="Write your Email" class="atencion__mail">
+                        <textarea name="" id="tema" cols="10" rows="4" placeholder="Quote Description"></textarea>
+                        <small class="form__error ok fail" id="respuesta"></small>
+                        <button id="submit" type="submit">Send</button>
                     </form>
                 </div>
             </div>
@@ -306,5 +307,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="../assets/js/carrul.js"></script>
     <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/form.js"></script>
 </body>
 </html>

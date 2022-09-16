@@ -43,5 +43,6 @@ document.querySelector("#submit").addEventListener("click", e => {
 	resp.classList.remove("fail");
 	resp.classList.remove("correo");
     resp.innerHTML = `Se enviaron tus datos, ${cliente}`;
+    document.getElementById("form").reset();
     window.open(url);
 });
