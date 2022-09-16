@@ -99,7 +99,7 @@
                         Motores, Moto reductores, Bombas, Compresores, Compresores de enfriamiento, Plantas de luz, Maquinas de inyección, Montacargas, etc.
                     </p>
                     <div class="meisa__img__com">
-                        <img src="../assets/img/bg/com/Icono.svg" alt="Meisa Mex Inventario" title="Meisa Mex Inventario">
+                        <img src="../assets/img/bg/com/22Icono90.svg" alt="Meisa Mex Inventario" title="Meisa Mex Inventario">
                     </div>
                 </div>
             </div>
