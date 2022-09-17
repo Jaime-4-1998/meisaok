@@ -268,8 +268,8 @@
                 </div>
             </div>
         </section>
-         <!--Atención-->
-         <section>
+        <!--Atención-->
+        <section>
             <div class="atencion__meisa">
                 <div class="atencion__meisa__textos">
                     <h2>Atención al cliente</h2>
@@ -286,7 +286,12 @@
                     </form>
                 </div>
             </div>
-         </section>
+        </section>
+        <section>
+            <?php
+                include 'assets/components/wh.php';
+            ?>
+        </section>
         <footer>
             <?php
                 include 'assets/components/footer.php';

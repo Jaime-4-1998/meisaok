@@ -1569,3 +1569,24 @@ strong{
         width: 100%;
     }
 }
+/*Wh contact*/
+.meisa__whatsapp{
+    width: 60%;
+}
+.meisa__whatsapp img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+}
+#btn-fixed {
+    position: fixed;
+    bottom: 0rem;
+    right: 2rem;
+}
+@media screen and (max-width:700px) {
+    #btn-fixed{
+        bottom: 1rem;
+        right: 0.5rem;
+    }
+}

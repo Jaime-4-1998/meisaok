@@ -8,49 +8,17 @@
       <meta name="theme-color" content="#bf1520"/>
       <meta name="description" content="Meisa ofrece un amplio catálogo de productos de maquinaria, equipo y accesorios de cualquier ramo de la industria" />
       <title>Meisa - Inventario de Equipos</title>
-      <link rel="preload" href="../assets/css/style.css" as="style" onload="this.rel='stylesheet'">
-      <link rel="stylesheet" href="../assets/css/jquery-ui.css">
+      <link rel="preload" href="../assetss/css/style.css" as="style" onload="this.rel='stylesheet'">
+      <link rel="stylesheet" href="../assetss/css/jquery-ui.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" as="style" onload="this.rel='stylesheet'"> 
     </head>
 <body>
-    <header>
-         <div class="header">
-            <div class="first__column__head">
-               <div class="img__head">
-                  <img src="../assets/img/lg/9800mei039087053.svg" loading="lazy" alt="Meisa MX" title="Meisa MX" width="50" height="100"/>
-               </div>
-            </div>
-            <div class="second__column__head">
-               <div class="content__header">
-                  <a href="en/">English Version</a>
-                  <a href="tel:8006347269">800-634-7269</a>
-                  <form id="head-search" class="head-search" action="/search/">
-                        <div class="form-row">
-                            <label class="sr-only labele" for="head-search-keyword">Search</label>
-                            <input id="head-search-keyword" class="form-control input-lg" type="text" requiered placeholder="Search a Machine">
-                            <button id="btn-head-search" type="button" class="btn btn-lg"><img src="https://meisamex.com.mx/assets/img/art/bi_search.svg" alt=""><span class="sr-only">Search</span></button>
-                        </div>
-                     </form>
-               </div>
-            </div>
-         </div>
-         <hr class="color__red">
-         </hr>
-         <hr class="color__white">
-         </hr>
-         <hr class="color__black">
-         </hr>
-    </header>
-    <nav>
-        <?php
-            include '../assets/components/nav.php';
-        ?>
-    </nav>
+    
     <section>
          <a href="https://api.whatsapp.com/send?phone=5215535688727&text=Hola!&nbsp;me&nbsp;pueden&nbsp;apoyar?" target="_blank">
-         <img src="../assets/img/art/whatsappsvg.svg" loading="lazy" alt="Contacto de Meisa MX" title="Contacto de Meisa MX" class="icon__wh" width="4" height="100" />
+         <img src="../assetss/img/art/whatsappsvg.svg" loading="lazy" alt="Contacto de Meisa MX" title="Contacto de Meisa MX" class="icon__wh" width="4" height="100" />
          </a>
     </section>
    <!--Filtro-->
@@ -154,14 +122,9 @@
            </div>
         </div>
     </section>
-    <footer>
-        <?php
-            include '../assets/components/footer.php';
-        ?>
-    </footer>
-    <script src="../assets/js/index.js"></script>
-    <script src="../assets/js/jquery-1.10.2.min.js"></script>
-    <script src="../assets/js/jquery-ui.js"></script>
-    <script src="../assets/js/filt.js"></script>
+    <script src="../assetss/js/index.js"></script>
+    <script src="../assetss/js/jquery-1.10.2.min.js"></script>
+    <script src="../assetss/js/jquery-ui.js"></script>
+    <script src="../assetss/js/filt.js"></script>
 </body>
 </html>

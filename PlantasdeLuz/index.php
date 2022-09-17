@@ -108,6 +108,11 @@
                 </div>
             </div>
         </section>
+        <section>
+            <?php
+                include '../assets/components/wh.php';
+            ?>
+        </section>
         <footer>
             <?php
                 include '../assets/components/footer.php';
