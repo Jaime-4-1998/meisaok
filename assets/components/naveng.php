@@ -1,13 +1,13 @@
 <div class="header head__contc">
         <div class="burgr-box" id="meisa">
                     <div class="meisa__logo desk">
-                        <img src="https://meisamex.com.mx/assets/img/lg/meisa/22meisa879234789423.svg" alt="logo of Blogr">
+                        <img src="https://meisamex.com.mx/assets/img/lg/meisa/22meisa879234789423.svg" alt="Meisa Mex" title="Meisa Mex">
                     </div>
                     <img src="https://meisamex.com.mx/assets/img/lg/meisa/icon-hamburger.svg" id="burgr-icon" alt="Meisa Mex" title="Meisa Mex" />
                     
                     <div id="burgr-menu" class="nave">
                         <div class="meisa__logo mobi">
-                            <img src="https://meisamex.com.mx/assets/img/lg/meisa/22meisa879234789423.svg" alt="Meisa Mex">
+                            <img src="https://meisamex.com.mx/assets/img/lg/meisa/22meisa879234789423.svg" alt="Meisa Mex" title="Meisa Mex">
                         </div>
                     <nav>
                         <ul>
@@ -18,12 +18,12 @@
                             <li>
                                 <div class="drpdwn-box">
                                 <div class="drpdwn-btn" id="drpdwn-btn">
-                                    <a href="#" class="link__text__menu">Purchase / Sale</a> <span class="drpdwn-icon"><i class="fa"><img src="https://meisamex.com.mx/assets/img/lg/meisa/icon-arrow-light.svg" alt="Meisa Mex" title="Meisa Mex" /></i></span>
+                                    <a href="#" class="link__text__menu">Purchase / Sales</a> <span class="drpdwn-icon"><i class="fa"><img src="https://meisamex.com.mx/assets/img/lg/meisa/icon-arrow-light.svg" alt="Meisa Mex" title="Meisa Mex" /></i></span>
                                 </div>
                                 <div class="drpdwn">
                                     <ul class="drpdwn-list">
                                     <li><a href="https://meisamex.com.mx/en/Purchase/">Purchase</a></li>
-                                    <li><a href="https://meisamex.com.mx/en/">Sale</a></li>
+                                    <li><a href="https://meisamex.com.mx/en/Sales/">Sale</a></li>
                                     </ul>
                                 </div>
                                 </div>

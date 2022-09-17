@@ -27,7 +27,7 @@
                 <div class="link__footer">
                     <a href="https://meisamex.com.mx/en/">Home</a>
                     <a href="https://meisamex.com.mx/en/Purchase/">Purchase</a>
-                    <a href="https://meisamex.com.mx/en/">Sale</a>
+                    <a href="https://meisamex.com.mx/en/Sales/">Sales</a>
                     <a href="https://meisamex.com.mx/en/Lightplants/">Light plants</a>
                     <a href="https://meisamex.com.mx/en/Maneuvers/">Maneuvers</a>
                     <a href="https://meisamex.com.mx/en/Contac/">Contact</a>
