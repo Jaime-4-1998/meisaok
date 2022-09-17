@@ -16,11 +16,6 @@
     </head>
 <body>
     
-    <section>
-         <a href="https://api.whatsapp.com/send?phone=5215535688727&text=Hola!&nbsp;me&nbsp;pueden&nbsp;apoyar?" target="_blank">
-         <img src="../assetss/img/art/whatsappsvg.svg" loading="lazy" alt="Contacto de Meisa MX" title="Contacto de Meisa MX" class="icon__wh" width="4" height="100" />
-         </a>
-    </section>
    <!--Filtro-->
    <section>
         <div class="title_inve">

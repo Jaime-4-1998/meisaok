@@ -59,6 +59,13 @@ html::-webkit-scrollbar-thumb {
     background-size: cover;
     height: 60 !important;
 }
+.head__venta{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/bg/ven/22vent890432809423089342.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: auto;
+}
 @media screen and (max-width:900px) {
     .headere{
         background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url(../img/bg/350.svg);
@@ -84,6 +91,13 @@ html::-webkit-scrollbar-thumb {
     .head__com{
         background-image: none;
         background: #000 !important;
+        height: auto !important;
+    }
+    .head__mani{
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/bg/ven/22vent890432809423089342.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
         height: auto !important;
     }
 }
@@ -1590,3 +1604,4 @@ strong{
         right: 0.5rem;
     }
 }
+/*Page Venta*/
