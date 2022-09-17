@@ -1213,6 +1213,9 @@ iframe{
         font-size: 1.1rem;
         text-align: center;
     }
+    .formu__partwo,.formu__partone{
+        gap: 1rem;
+    }
 }
 /* Parte de maniobra cards desarrollado por lamm soluciones digitales Jaime Ramirez*/
 .cards__mani{
@@ -1605,3 +1608,96 @@ strong{
     }
 }
 /*Page Venta*/
+.meisa__vent__text{
+    margin-bottom: 2rem;
+}
+.meisa__vent__text h2{
+    text-align: center;
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 0;
+}
+@media screen and (max-width:800px) {
+    .meisa__vent__text h2{
+        font-size: 1.5rem;
+    }
+}
+.manio__line__vent {
+    position: absolute;
+    width: 200px;
+    height: 5%;
+    margin: 0;
+    padding: 0;
+    left: 53.6%;
+    top: 2.5rem;
+    transform: translateX(-4%);
+    z-index: -1;
+    background: var(--red);
+    margin-top: 0.5rem;
+}
+@media screen and (max-width:1400px) {
+    .manio__line__vent{
+        width: 200px;
+        left: 55.6%;
+    }
+}
+@media screen and (max-width:800px) {
+    .manio__line__vent {
+        width: 29%;
+        left: 60.6%;
+        margin-top: 0rem;
+    }
+}
+.meisa__vent__imgs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+@media screen and (max-width:700px) {
+    .meisa__vent__imgs{
+        flex-direction: column;
+    }
+}
+.meisa__contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+.meisa__contenedor img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+    filter:brightness(0.6);
+}
+.meisa__contenedor span{
+    position: absolute;
+    top: 90%;
+    left: 80%;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 1rem;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: var(--whi);
+    display: flex;
+    flex-direction: row;
+}
+.hast{
+    color: #BE0412;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1rem;
+}
+.meisa__contenedor p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 900;
+    font-size: 1.5rem;
+    line-height: 47px;
+    color: var(--whi);
+}
