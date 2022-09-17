@@ -672,3 +672,80 @@ function addCat(){
                         }
     });
 }
+/*Img of Ventas*/
+function addImgvent(){
+    var Form = new FormData($('#formImgVentas')[0]); 
+    $.ajax({
+        url:"http://localhost/meisa/meisaback/adminmeisa/assets/components/backinve/addImgvt.php", 
+        type: 'post',
+        data: Form,
+        processData: false,
+        contentType:false,
+                        success:function(response){
+                            Swal.fire({
+                            icon: 'success',
+                            title: 'Imagen Agregada',
+                            confirmButtonColor: '#a20c19',
+                            text: 'Guardaste una Imagen, da un clic en "Seguir"',
+                            confirmButtonText:
+                                '<a class="text-white" href="http://localhost/meisa/meisaback/adminmeisa/Inventario/NewImage">SEGUIR</a> '
+                            })
+                        }
+    });
+}
+/*editar banner*/
+function verEdiatarImgvent(datos){
+    d=datos.split('||');
+    $('#idbanner').val(d[0]);
+    $('#previewBanerEdit').append('<img width="150px" src="'+(d[1])+'" alt="BANNER ASAVE"/>');
+    $('#prioridadEdit').val(d[2]);
+    $('#mensajeEdita').val(d[3]);
+    $('#mensajeEditeng').val(d[3]);
+    $('#seo').val(d[4]);
+}
+function editImgVEnt(){
+    var Form = new FormData($('#formImgVentEdit')[0]); 
+    $.ajax({
+        url:"http://localhost/meisa/meisaback/adminmeisa/assets/components/backinve/editImgventas.php", 
+        type: 'post',
+        data: Form,
+        processData: false,
+        contentType:false,
+        success:function(response){
+            Swal.fire({
+            icon: 'success',
+            title: 'Imagen Actualizada',
+            confirmButtonColor: '#a20c19',
+            text: 'Editaste una Imagen, da un clic en "Seguir"',
+            confirmButtonText:
+                '<a class="text-white" href="http://localhost/meisa/meisaback/adminmeisa/Inventario/NewImage">SEGUIR</a> '
+            })
+        }
+    });
+}
+/*eliminar banner*/
+function preguntarImgventa(id){
+	alertify.confirm('Eliminar Datos', '¿Esta seguro de eliminar esta Imagen?', 
+            function(){ eliminarImgvent(id) }
+        , function(){ alertify.error('Se cancelo')});
+}
+function eliminarImgvent(id){
+cadena="id=" + id;
+    $.ajax({
+        type:"POST",
+        url:"http://localhost/meisa/meisaback/adminmeisa/assets/components/backinve/deleteimgvt.php",
+        data:cadena,
+        success:function(response){
+            Swal.fire({
+            icon: 'success',
+            title: 'Imagen eliminada',
+            confirmButtonColor: '#a20c19',
+            text: 'Eliminaste una Imagen, da un clic en "Seguir"',
+            confirmButtonText:
+                '<a class="text-white" href="http://localhost/meisa/meisaback/adminmeisa/Inventario/NewImage">SEGUIR</a> '
+            })
+        }
+       
+    });
+}
+/*END OF BANNERS*/

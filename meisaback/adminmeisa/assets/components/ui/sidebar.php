@@ -110,7 +110,8 @@
     </a>
     <div id="collapEquip" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="http://localhost/meisa/meisaback/adminmeisa/Inventario/Ingresar">Ingresar</a>
+            <a class="collapse-item" href="http://localhost/meisa/meisaback/adminmeisa/Inventario/NewImage">Ingresar Imagenes</a>
+            <a class="collapse-item" href="http://localhost/meisa/meisaback/adminmeisa/Inventario/Ingresar">Ingresar Producto</a>
             <a class="collapse-item" href="http://localhost/meisa/meisaback/adminmeisa/Inventario/Categories">Categorias</a>
         </div>
     </div>
