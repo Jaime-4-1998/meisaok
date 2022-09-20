@@ -671,65 +671,6 @@ footer {
         margin-bottom: 3rem;
    }
 }
-/* Carrusel */
-.swiper {
-    width: 100%;
-    height: 100%;
-    margin-top: 10rem !important;
-}
-@media screen and (max-width:1400px) {
-    .swiper {
-        margin-top: 7rem !important;
-   }
-}
-@media screen and (max-width:800px) {
-    .swiper {
-        margin-top: 1rem !important;
-   }
-}
-.swiper-slide {
-    display: grid;
-}
-.swiper-slide img {
-    display: block;
-    width: 100% !important;
-    height: auto !important;
-    object-fit: cover !important;
-    border-radius: 2% !important;
-    height: 90vh;
-}
-@media screen and (max-width:900px) {
-    .swiper-slide img {
-        height: 100vh;
-    }
-}
-.swiper-button-next, .swiper-button-prev {
-    color:var(--wh);
-    background-color:transparent !important;
-    border-radius: none !important;
-}
-.swiper-pagination-bullet-active {
-    opacity: var(--swiper-pagination-bullet-opacity, 1);
-    background: var(--red) !important;
-}
-.swiper-button-next::after, .swiper-button-prev::after {
-    font-size:0rem !important;
-}
-.swiper-button-next img{
-    margin-right: 3rem !important;
-}
-.swiper-button-prev img{
-    margin-left: 3rem !important;
-}
-@media screen and (max-width:900px) {
-    .swiper-button-next img{
-        margin-right: 1rem !important;
-    }
-    .swiper-button-prev img{
-        margin-left: 1rem !important;
-    }
-}
-/* end of the Carrusel */
 /* Parte de los servicios desarrollado por lamm soluciones digitales Jaime Ramirez*/
 .row{
     display: flex;

@@ -1,0 +1,152 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+/*Titulo del producto*/
+.productdetails__meisa{
+  text-align: center;
+}
+.productdetails__meisa h1{
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: -1rem;
+  color: #000;
+}
+.productdetails__meisa h2{
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 3rem;
+  margin-bottom: 0rem;
+  color: #000;
+}
+.two__col__prod{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+/*Especificaiones d elos pord*/
+.details__prod h3{
+  margin-bottom: 2rem;
+}
+.details__prod > p:nth-child(3) {
+  margin-top: 2rem;
+ } 
+.details__prod p{
+  margin-top: 0.5rem;
+  color: #000;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.str__prod{
+  font-weight: bold;
+  color: #000 !important;
+}
+.pord__disp{
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.3rem;
+  background: var(--red);
+  padding: 1rem;
+}
+.liena{
+  border: 2px solid var(--red);
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.prod__price{
+  margin-top: 0;
+  font-size: 2rem;
+}
+.prod__info{
+  margin-bottom: 0.5rem !important;
+  text-align: end;
+}
+.flex__priceinfo{
+  display: flex;
+  flex-direction: row;
+  gap:2rem;
+}
+@media screen and (max-width:900px) {
+  .productdetails__meisa h1{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .productdetails__meisa h2{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+/*Detalles de los productos con carrusselen flex*/
+.props__prod{
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  gap: 2rem;
+  margin-top: -2rem;
+}
+.products__especific__miesa{
+  width: 50%;
+}
+.details__prod{
+  width: 50%;
+  padding: 1rem;
+  position: relative;
+}
+.img__inveget img{
+  width: 45% !important;
+  display: block;
+  margin: auto;
+  object-fit: cover;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3%;
+}
+.frame__youtube{
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+  margin: auto;
+  margin-top: 2rem !important;
+  border-radius: 5px !important;
+}
+.frame__youtube iframe{
+  border-radius: 1rem;
+  height: 250px;
+}
+@media screen and (max-width:900px) {
+  .props__prod{
+    flex-direction: column-reverse;
+    padding: 1rem;
+    gap: 1rem;
+    margin-top: -1rem;
+  }
+  .products__especific__miesa{
+    width: 100%;
+  }
+  .details__prod{
+    width: 100%;
+  }
+}

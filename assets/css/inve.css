@@ -1,0 +1,279 @@
+:root{
+    --red:#BE0412;
+    --whi:#fff;
+    --black:#000000;
+}
+.meisa__productos{
+   display: flex;
+   flex-direction: row;
+   padding: 3rem;
+   gap: 2rem;
+}
+.primero{
+    background: #D9D9D9;
+    width: 30%;
+    padding: 1.5rem;
+    border-radius: 25px;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+}
+.primero h2{
+    color: var(--red);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.segundo{
+    background: transparent;
+    width: 100%;
+    padding: 0rem;
+}
+.tercero__flex{
+    background: transparent;
+    width: 100%;
+    padding: 0rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1.2rem;
+}
+@media screen and (max-width:1400px) {
+    .meisa__productos{
+        padding: 2rem;
+     }
+     .primero{
+         width: 40%;
+     }
+    .tercero__flex{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media screen and (max-width:900px) {
+    .tercero__flex{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.card__flex{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+}
+.card__flex__head{
+    color: var(--whi);
+    background: rgba(217, 217, 217, 0.35);
+    border-radius: 10px 10px 0 0;
+}
+.card__flex__body{
+    background: rgba(217, 217, 217, 0.35);
+    padding: 0.5rem;
+    border-radius: 0 0 10px 10px;
+}
+.card__flex__head img{
+     width: 100%;
+     height: auto;
+     object-fit: cover;
+     border-radius: 10px 10px 0 0;
+}
+.card__flex__head h2{
+    color: #000;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.card__flex__body{
+    padding: 1rem;
+}
+.card__flex__body p{
+    color: #000;
+    margin-bottom: 1rem;
+    line-height: 24px;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.card__flex__body a{
+    color: #fff;
+    background: var(--red);
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+.esp__inv{
+    height: 1rem;
+}
+.not__found{
+    display: grid;
+    grid-template-columns: 1fr !important;
+}
+.alert__meisa p{
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
+}
+.meisa__view__mobile{
+    overflow-y: auto; overflow-x: hidden;
+}
+.meisa__view__dektop{
+    display: none;
+}
+@media screen and (max-width:900px) {
+    .meisa__view__dektop{
+        display: block;
+    }
+    .meisa__view__mobile{
+        overflow-y: auto; overflow-x: hidden;
+        display: none;
+    }
+}
+.strong{
+    background: #000;
+    padding: 0.5rem;
+    margin-top: 2rem !important;
+    color: #fff;
+}
+.navegacion{
+	position: absolute;
+	top: 0%;
+	left: 0;
+	width: 0%;
+	height: 100vh !important;
+	background: rgba(0,0,0,.0);
+    
+}
+.inicio{
+    display: flex;
+    flex-direction: column;
+}
+.navegacion ul{
+	width: 24%;
+	height: 100vh;
+	background: #fff;
+	list-style: none;
+
+	position: absolute;
+	top: 0;
+	left: -320px;
+
+	transition: left .3s;
+}
+
+.navegacion .menu li.title-menu{
+	padding: 20px;
+	background: #5F6F81;
+	color: #fff;
+	text-align: center;
+	font-size: 22px;
+}
+
+.navegacion .menu a{
+	display: block;
+	padding: 20px;
+	border-bottom: 1px solid #C6D0DA;
+
+	font-size: 22px;
+	font-weight: 200;
+	text-decoration: none;
+	color: #575D69;
+}
+
+.navegacion .menu a:hover{
+	background: #798DA3;
+	color: #fff;
+}
+
+.navegacion .menu li span.icon-menu{
+	margin-right: 12px;
+}
+
+
+
+
+.checkbox{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  opacity: 0.01;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 4.5em;
+  cursor: pointer;
+}
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before,
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '';
+  position: absolute;
+}
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  left: 0; top: -.1em;
+  width: 4em; height: 1.85em;
+  background: var(--red);
+  border-radius: 1em;
+  transition: ease-in 0.2s;
+}
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  width: 1.4em; height: 1.4em;
+  transition: all .2s;
+  border-radius: 50%;
+  background: #000;
+  top: .12em; left: .24em;
+}
+.text {
+  display: inline-block;
+  vertical-align: middle;
+  color: #000;
+  font-weight: 700;
+}
+
+/* on checked */
+[type="checkbox"]:checked + label:before {
+  background:#000; 
+}
+[type="checkbox"]:checked + label:after {
+  background: #BE0412;
+  left: 2.4em;
+}
+
+[type="checkbox"]:checked + label .ui,
+[type="checkbox"]:not(:checked) + label .ui:before,
+[type="checkbox"]:checked + label .ui:after {
+  position: absolute;
+  left: .6em;
+  width: 6em;
+  border-radius: 1em;
+  font-size: .875em;
+  font-weight: bold;
+  transition: all .2s;
+}
+[type="checkbox"]:not(:checked) + label .ui:before {
+  content: "No";
+  left: 2.35em;
+  top: .2em;
+  color: #fff;
+}
+[type="checkbox"]:checked + label .ui:after {
+  content: "Ver";
+  top: 0.5em;
+  left: .2em;
+  color: #fff;
+}
+[type="checkbox"]:focus + label:before {
+  box-sizing: border-box;
+  margin-top: -1px;
+}

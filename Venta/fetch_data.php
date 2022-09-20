@@ -30,23 +30,23 @@ if (isset($_POST["action"])) {
                                 <h2><?php echo str_replace("-", " ", $result['inve_nombre']); ?></h2>
                             </div>
                             <div class="card__flex__body">
-                                <h3>Ivan</h3>
-                                <p>Modelo: <strong><?php echo $inve_modelo;?></strong></p>
-                                <p>Serie: <strong><?php echo $inve_serie;?></strong></p>
-                                <p>Corriente: <strong><?php echo $inve_corriente;?></strong></p>
-                                <p>Capacidad: <strong><?php echo $inve_capacidad;?></strong></p>
-                                <a href="../Maquina/<?php echo strtolower($result['inve_nombre']);?>/" title="click para ver más">Ver Más</a>
+                                    <!--<p>Modelo: <strong>< echo $inve_modelo;></strong></p>-->
+                                    <p><?php echo $inve_desc; ?></p>
+                                    <a href="../Maquina/<?php echo strtolower($result['inve_nombre']);?>/" title="click para ver más">Ver Más</a>
+                                    <div class="esp__inv"></div>
                             </div>
                         </div>
                     </div>
-            
 		<?php
 				}
 			} else {
 		?>
-		<div class="col-xs-12">
-			<div class="alert alert-warning"> <span class="glyphicon glyphicon-info-sign"></span> &nbsp; Datos no encontrados ... </div>
-		</div>
+        <div class="not__found">
+            <div class="alert__meisa">
+                <p>Por el Momento no podemos mostrarte nuestras maquinas.</p>
+            </div>
+        </div>
+		
 <?php
     }
 }

@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/lg/meisa/sh.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="preload" href="assets/css/style.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/swpcarr.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" as="style" onload="this.rel='stylesheet'"> 
