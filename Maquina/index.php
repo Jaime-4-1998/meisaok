@@ -32,6 +32,7 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
       <link rel="stylesheet" href="http://localhost/meisa/assets/css/st.css">
       <link rel="preload" href="http://localhost/meisa/assets/css/style.css" as="style" onload="this.rel='stylesheet'">
+      <link rel="preload" href="http://localhost/meisa/assets/css/btn.css" as="style" onload="this.rel='stylesheet'">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" as="style" onload="this.rel='stylesheet'"> 
@@ -264,9 +265,13 @@
                 </div>
             </div>    
    </footer>
+   <span class="btn-scrolltop" id="btn_scrolltop">
+    <img src="https://meisamex.com.mx/assets/img/lg/meisa/icon-arrow-light.svg" loading="lazy" alt="Button UP Meisa" title="Button UP Meisa" width="100" height="100" class="btn__up">
+    </span>
    <div class="copy__lamm">
       <p>Copyright 2022, Todos los derechos reservados, desarrollado por Lamm Soluciones Digitales</p>
    </div> 
+   <script src="http://localhost/meisa/assets/js/btn.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
    <script src="http://localhost/meisa/assets/js/swipinve.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

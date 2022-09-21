@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="preload" href="assets/css/style.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="assets/css/swpcarr.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/btn.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" as="style" onload="this.rel='stylesheet'"> 
@@ -299,10 +300,13 @@
             ?>
         </footer>
     </main>
+    <?php
+        include 'assets/components/btn.php';
+    ?>
     <div class="copy__lamm">
         <p>Copyright 2022, Todos los derechos reservados, desarrollado por Lamm Soluciones Digitales</p>
     </div>
-    
+    <script src="assets/js/btn.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="assets/js/carrul.js"></script>
     <script src="assets/js/index.js"></script>
