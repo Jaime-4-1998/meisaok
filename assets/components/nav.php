@@ -1,14 +1,18 @@
     <div class="header">
             <div class="burgr-box" id="meisa">
                 <div class="meisa__logo desk">
-                    <img src="https://meisamex.com.mx/assets/img/lg/meisa/22meisa879234789423.svg" alt="Meisa Mex" title="Meisa Mex">
+                    <a href="https://meisamex.com.mx/" title="Meisa Mex">
+                        <img src="https://meisamex.com.mx/assets/img/lg/meisa/22meisa879234789423.svg" alt="Meisa Mex" title="Meisa Mex">
+                    </a>
                 </div>
                 <img src="https://meisamex.com.mx/assets/img/lg/meisa/icon-hamburger.svg" id="burgr-icon" alt="Meisa Mex" title="Meisa Mex" />
                 
                 <div id="burgr-menu" class="nave">
                     <div class="meisa__logo mobi">
-                        <img src="https://meisamex.com.mx/assets/img/lg/meisa/22meisa879234789423.svg" alt="Meisa Mex" title="Meisa Mex">
-                      </div>
+                        <a href="https://meisamex.com.mx/" title="Meisa Mex">
+                            <img src="https://meisamex.com.mx/assets/img/lg/meisa/22meisa879234789423.svg" alt="Meisa Mex" title="Meisa Mex">
+                        </a>
+                    </div>
                   <nav>
                     <ul>
                         <li>
