@@ -47,73 +47,41 @@
         <!--Venta-->
         <section>
             <div class="meisa__productos">
-                <div class="primero">
-                    <h2>Categoría</h2>
-                    <div class="meisa__view__mobile">
-                        <?php
-                            $connect = new PDO("mysql:host=localhost;dbname=u557675164_titulacion", "root", "");
-                            $query = "SELECT DISTINCT(inve_catego) FROM inventario WHERE inve_estatus = 'Disponible' ORDER BY inve_catego DESC";
-                            $statement = $connect->prepare($query);
-                            $statement->execute();
-                            $result = $statement->fetchAll();
-                            foreach($result as $row)
-                            {
-                        ?>
-                            <div class="checkbox">
-                                <input type="checkbox" class="common_selector brand" id="<?php echo $row['inve_catego']; ?>" value="<?php echo $row['inve_catego']; ?>"  />
-                                <label for="<?php echo $row['inve_catego']; ?>">
-                                    <span class="ui"></span>
-                                    <span class="text"><?php echo $row['inve_catego']; ?></span>
-                                </label>
-                            </div>
-                            <?php } ?>
-                    </div>
-                    <div class="meisa__view__dektop">
-                        <strong class="strong" id="menuy">menu</strong>
-                        <nav class="navegacion">
-                            <ul class="menu">
-                            <div class="inicio">
-                                <li class="title-menu" id="close">Cerrar</li>
-                            </div>
-                            <div style=" overflow-y: auto; overflow-x: hidden;">
-                                        <?php
-                                            $connect = new PDO("mysql:host=localhost;dbname=u557675164_titulacion", "root", "");
-                                            $query = "SELECT DISTINCT(inve_catego) FROM inventario WHERE inve_estatus = 'Disponible' ORDER BY inve_id DESC";
-                                            $statement = $connect->prepare($query);
-                                            $statement->execute();
-                                            $result = $statement->fetchAll();
-                                            foreach($result as $row)
-                                            {
-                                        ?>
-                                            <div class="checkbox">
-                                            
-                                                
-                                                    <input type="checkbox" class="common_selector brand" id="<?php echo $row['inve_catego']; ?>" value="<?php echo $row['inve_catego']; ?>"  />
-                                                    <label for="<?php echo $row['inve_catego']; ?>">
-                                                        <span class="ui"></span>
-                                                        <span class="text"><?php echo $row['inve_catego']; ?></span>
-                                                    </label>
-                                                
-        
-
-                                            </div>
-                                            
-                                        <?php
-                                            }
-                                        ?>
-                                </div>
-                            </ul>
-                        </nav>
+                <div class="meisa__prod__one">
+                    <div class="navbar">
+                        <div class="navbar__toggle" id="mobile-menu">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                        <div class="navbar__menu">
+                            <a href="/" class="navbar__link">Home</a>
+                            <a href="/Services.html" class="navbar__link">Services</a>
+                            <a href="/Plans.html" class="navbar__link">Plans</a>
+                            <a href="/Trainers.html" class="navbar__link">Trainers</a>
+                        </div>
                     </div>
                 </div>
-                <div class="segundo">
-                    <div class="products">
-                        <div class="filter_data tercero__flex"></div>
-                    </div>
+                <div class="meisa__prod__two">
+                    <p>klj</p>
                 </div>
             </div>
+            <script>
+                const menuu = document.querySelector('#mobile-menu');
+                    const menuLinks = document.querySelector('.navbar__menu');
+                    const navLogo = document.querySelector('#navbar__logo');
+                    const body = document.querySelector('body');
+
+                    const mobileMenu = () =>{
+                        menuu.classList.toggle('is-active');
+                        menuLinks.classList.toggle('active');
+                        body.classList.toggle('active');
+                    }
+
+                    menuu.addEventListener('click',mobileMenu);
+            </script>
         </section>
-         <!--Atención-->
+        <!--Atención-->
          <section>
             <div class="formu__mani">
                 <div class="formulario__mani">
@@ -181,8 +149,8 @@
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/form.js"></script> 
     <script src="../assets/js/invent.js"></script>
-    <script src="../assetss/js/jquery-1.10.2.min.js"></script>
-    <script src="../assetss/js/jquery-ui.js"></script>
-    <script src="../assetss/js/filt.js"></script>
+    <script src="../assets/js/jquery-1.10.2.min.js"></script>
+    <script src="../assets/js/jquery-ui.js"></script>
+    <script src="../assets/js/filt.js"></script>
 </body>
 </html>

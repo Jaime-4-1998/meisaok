@@ -1,3 +1,491 @@
 nombre bd: myronbowlingmex_meisa
 contra: 5^WXvJ&KO?Hw
 usu: myronbowlingmex_meisa20
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#bf1520"/>
+    <meta name="description" content="Meisa ofrece un amplio catálogo de productos de maquinaria, equipo y accesorios de cualquier ramo de la industria" />
+    <title>Meisa - Venta</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/lg/meisa/sh.png">
+    <link rel="preload" href="../assets/css/style.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/inve.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/btn.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="../assets/css/jquery-ui.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" as="style" onload="this.rel='stylesheet'"> 
+</head>
+<body>
+    <main>
+        <header>
+            <div class="head__venta">
+                <?php
+                    include '../assets/components/nav.php';
+                ?>
+                 <!--First Text-->
+                <section>
+                   <div class="mani__meisa">
+                        <h1>
+                            VENTA DE MAQUINARIA
+                        </h1>
+                        <p>
+                            <div class="mani__parr">
+                                Amplia gama de maquinaria para la industria (Nueva, Semi-nueva). 
+                            </div>
+                        </p>
+                        <p>
+                            <div class="mani__parr">
+                                Compra 100% segura, contámos con la mejor calidad y precios del mercado. 
+                            </div>
+                        </p>
+                   </div>
+                </section>
+            <!--End-->
+            </div>
+        </header>
+        <!--Venta-->
+        <section>
+            <div class="meisa__productos">
+                <div class="primero">
+                    <h2>Categoría</h2>
+                    <div class="meisa__view__mobile">
+                        <?php
+                            $connect = new PDO("mysql:host=localhost;dbname=u557675164_titulacion", "root", "");
+                            $query = "SELECT DISTINCT(inve_catego) FROM inventario WHERE inve_estatus = 'Disponible' ORDER BY inve_catego DESC";
+                            $statement = $connect->prepare($query);
+                            $statement->execute();
+                            $result = $statement->fetchAll();
+                            foreach($result as $row)
+                            {
+                        ?>
+                            <div class="checkbox">
+                                <input type="checkbox" class="common_selector brand" id="<?php echo $row['inve_catego']; ?>" value="<?php echo $row['inve_catego']; ?>"  />
+                                <label for="<?php echo $row['inve_catego']; ?>">
+                                    <span class="ui"></span>
+                                    <span class="text"><?php echo $row['inve_catego']; ?></span>
+                                </label>
+                            </div>
+                            <?php } ?>
+                    </div>
+                    <div class="meisa__view__dektop">
+                        <strong class="strong" id="menuy">
+                            <div class="mobile__nav__menu_prod">
+                                <img src="../assets/img/lg/meisa/menunav.svg" alt="">
+                            </div>  
+                        </strong>
+                        <div class="navegacion">
+                            <ul class="menu">
+                            <div class="inicio">
+                                <li class="title-menu" id="close">Cerrar</li>
+                            </div>
+                            <div style=" overflow-y: auto; overflow-x: hidden;">
+                                        <?php
+                                            $connect = new PDO("mysql:host=localhost;dbname=u557675164_titulacion", "root", "");
+                                            $query = "SELECT DISTINCT(inve_catego) FROM inventario WHERE inve_estatus = 'Disponible' ORDER BY inve_id DESC";
+                                            $statement = $connect->prepare($query);
+                                            $statement->execute();
+                                            $result = $statement->fetchAll();
+                                            foreach($result as $row)
+                                            {
+                                        ?>
+                                            <div class="checkbox">
+                                                    <input type="checkbox" class="common_selector brand" id="<?php echo $row['inve_catego']; ?>" value="<?php echo $row['inve_catego']; ?>"  />
+                                                    <label for="<?php echo $row['inve_catego']; ?>">
+                                                        <span class="ui"></span>
+                                                        <span class="text"><?php echo $row['inve_catego']; ?></span>
+                                                    </label>
+                                            </div>
+                                        <?php
+                                            }
+                                        ?>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="segundo">
+                    <div class="products">
+                        <div class="filter_data tercero__flex"></div>
+                    </div>
+                </div>
+                <div class="cuarto">
+                    <div class="products">
+                        <div class="filter_data tercero__flex"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Atención-->
+         <section>
+            <div class="formu__mani">
+                <div class="formulario__mani">
+                    <div class="formu__partone">
+                            <h2>SOLICITA TU COTIZACIÓN</h2>
+                            <button type="submit" id="submit" class="btn__mani">Enviar</button>
+                            <small class="form__error ok fail" id="respuesta"></small>
+
+                    </div>
+                    <div class="formu__partwo">
+                            <input type="text" name="" id="mail" placeholder="Escribe Tu Email" class="atencion__mail form__mani">
+                            <input type="text" name="" id="tema" placeholder="Descripción de Maquinaria" class="atencion__mail form__mani">
+                    </div>
+                </div>
+            </div>
+         </section>
+         <!--3 images-->
+         <section>
+            <div class="meisa__vent__text">
+                <h2>GRAN VARIEDAD <strong>DE EQUIPO</strong></h2>
+            </div>
+            <div class="meisa__vent__imgs">
+                
+                    <?php
+                        include '../meisaback/adminmeisa/assets/components/backend/conexion.php';
+                        $sql = "SELECT id_imgven,prioridad,img,title
+                        FROM imgvt ORDER BY prioridad ASC"; 
+                        $query = $mbd -> prepare($sql); 
+                        $query -> execute(); 
+                        $results = $query -> fetchAll(PDO::FETCH_OBJ); 
+                           if($query -> rowCount() > 0){ 
+                                 foreach($results as $result) { 
+                                    $data = $result -> id_imgven."||".
+                                    $result -> prioridad."||".
+                                    $result -> img."||".
+                                    $result -> title;
+                    ?>
+                <div class="meisa__contenedor">
+                    <img src="../meisaback/adminmeisa/assets/<?php echo $result -> img; ?>" loading="lazy" alt="Meisa Mex <?php echo $result -> title; ?>" title="Meisa Mex <?php echo $result -> title; ?>" width="100">
+                    <span><div class="hast">#</div>Meisa</span>
+                    <p><?php echo $result -> title; ?></p>
+                </div>
+                <?php }} ?>
+            </div>
+         </section>
+         <!--wh-->
+         <section>
+            <?php
+                include '../assets/components/wh.php';
+            ?>
+        </section>
+        <footer>
+            <?php
+                include '../assets/components/footer.php';
+            ?>
+        </footer>
+    </main>
+    <?php
+        include '../assets/components/btn.php';
+    ?>
+    <div class="copy__lamm">
+        <p>Copyright 2022, Todos los derechos reservados, desarrollado por Lamm Soluciones Digitales</p>
+    </div>
+    <script src="../assets/js/btn.js"></script>
+    <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/form.js"></script> 
+    <script src="../assets/js/invent.js"></script>
+    <script src="../assets/js/jquery-1.10.2.min.js"></script>
+    <script src="../assets/js/jquery-ui.js"></script>
+    <script src="../assets/js/filt.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root{
+    --red:#BE0412;
+    --whi:#fff;
+    --black:#000000;
+}
+.meisa__productos{
+   display: flex;
+   flex-direction: row;
+   padding: 3rem;
+   gap: 2rem;
+}
+.primero{
+    background: #D9D9D9;
+    width: 30%;
+    padding: 1.5rem;
+    border-radius: 25px;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+}
+.primero h2{
+    color: var(--red);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.segundo{
+    background: transparent;
+    width: 100%;
+    padding: 0rem;
+}
+.tercero__flex{
+    background: transparent;
+    width: 100%;
+    padding: 0rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1.2rem;
+}
+@media screen and (max-width:1400px) {
+    .meisa__productos{
+        padding: 2rem;
+     }
+    .primero{
+        width: 40%;
+    }
+    .tercero__flex{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media screen and (max-width:900px) {
+    .meisa__productos{
+        padding: 1rem;
+        gap: 1rem;
+        flex-direction: column;
+     }
+    .primero{
+        width: 30%;
+        border-radius: 5px;
+        height: 0%;
+    }
+    .tercero__flex{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.card__flex{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+}
+.card__flex__head{
+    color: var(--whi);
+    background: rgba(217, 217, 217, 0.35);
+    border-radius: 10px 10px 0 0;
+}
+.card__flex__body{
+    background: rgba(217, 217, 217, 0.35);
+    padding: 0.5rem;
+    border-radius: 0 0 10px 10px;
+}
+.card__flex__head img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+.card__flex__head h2{
+    color: #000;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.card__flex__body{
+    padding: 1rem;
+}
+.card__flex__body p{
+    color: #000;
+    margin-bottom: 1rem;
+    line-height: 24px;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.card__flex__body a{
+    color: #fff;
+    background: var(--red);
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+.esp__inv{
+    height: 1rem;
+}
+.not__found{
+    display: grid;
+    grid-template-columns: 1fr !important;
+}
+.alert__meisa p{
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
+}
+.meisa__view__mobile{
+    overflow-y: auto; overflow-x: hidden;
+}
+.meisa__view__dektop{
+    display: none;
+}
+@media screen and (max-width:900px) {
+    .meisa__view__dektop{
+        display: block;
+    }
+    .meisa__view__mobile{
+        overflow-y: auto; overflow-x: hidden;
+        display: none;
+    }
+}
+.navegacion{
+	position: absolute;
+	top: 0%;
+	left: 0;
+	width: 0%;
+	height: 100vh !important;
+	background: rgba(0,0,0,.0);
+}
+.inicio{
+    display: flex;
+    flex-direction: column;
+}
+.navegacion ul{
+	width: 24%;
+	height: 100vh;
+	background: #fff;
+	list-style: none;
+	position: absolute;
+	top: 0;
+	left: -320px;
+	transition: left .3s;
+}
+.navegacion .menu li.title-menu{
+	padding: 20px;
+	background: #5F6F81;
+	color: #fff;
+	text-align: center;
+	font-size: 22px;
+}
+.navegacion .menu a{
+	display: block;
+	padding: 20px;
+	border-bottom: 1px solid #C6D0DA;
+	font-size: 22px;
+	font-weight: 200;
+	text-decoration: none;
+	color: #575D69;
+}
+.navegacion .menu a:hover{
+	background: #798DA3;
+	color: #fff;
+}
+.navegacion .menu li span.icon-menu{
+	margin-right: 12px;
+}
+@media screen and (max-width:900px) {
+    .segundo{
+        display: none;
+    }
+    .primero h2{
+        display: none;
+    }
+}
+.checkbox{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  opacity: 0.01;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 4.5em;
+  cursor: pointer;
+}
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before,
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '';
+  position: absolute;
+}
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  left: 0; top: -.1em;
+  width: 4em; height: 1.85em;
+  background: var(--red);
+  border-radius: 1em;
+  transition: ease-in 0.2s;
+}
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  width: 1.4em; height: 1.4em;
+  transition: all .2s;
+  border-radius: 50%;
+  background: #000;
+  top: .12em; left: .24em;
+}
+.text {
+  display: inline-block;
+  vertical-align: middle;
+  color: #000;
+  font-weight: 700;
+}
+
+/* on checked */
+[type="checkbox"]:checked + label:before {
+  background:#000; 
+}
+[type="checkbox"]:checked + label:after {
+  background: #BE0412;
+  left: 2.4em;
+}
+
+[type="checkbox"]:checked + label .ui,
+[type="checkbox"]:not(:checked) + label .ui:before,
+[type="checkbox"]:checked + label .ui:after {
+  position: absolute;
+  left: .6em;
+  width: 6em;
+  border-radius: 1em;
+  font-size: .875em;
+  font-weight: bold;
+  transition: all .2s;
+}
+[type="checkbox"]:not(:checked) + label .ui:before {
+  content: "No";
+  left: 2.35em;
+  top: .2em;
+  color: #fff;
+}
+[type="checkbox"]:checked + label .ui:after {
+  content: "Ver";
+  top: 0.5em;
+  left: .2em;
+  color: #fff;
+}
+[type="checkbox"]:focus + label:before {
+  box-sizing: border-box;
+  margin-top: -1px;
+}
