@@ -3,63 +3,87 @@
     --whi:#fff;
     --black:#000000;
 }
-*{
-    color: #fff !important;
-}
 .meisa__productos{
    display: flex;
    flex-direction: row;
-   padding: 3rem;
-   gap: 2rem;
+   padding: 4rem 2rem;
+   gap: 1rem;
 }
 .meisa__prod__one{
-    background-color: #BE0412;
-    width: 30%;
+    width: 25%;
 }
 .meisa__prod__two{
-    background: #000000;
-    width: 70%;
+    width: 80%;
 }
-
-
 .navbar{
     display: flex;
     align-items: center;
     position: relative;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    padding: 1rem;
+    font-weight: 700;
+}
+.mob__text{
+    display: none;
 }
 .navbar__menu{
     display: flex;
     flex-direction: column;
 }
-
-
+.navbar__menu h2{
+    color: var(--red);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
 @media screen and (max-width:768px){
-    body.active{
-        overflow-y: hidden;
-        overflow-x: hidden;
-    }
     .meisa__productos{
         display: flex;
         flex-direction: column;
-     }
-.navbar__link{
-    margin-top: 3rem;
-}
+        padding: 2rem 2rem;
+    }
+    .meisa__prod__one{
+        width: 100%;
+    }
+    .meisa__prod__two{
+        width: 100%;
+    }
+    .navbar__link{
+        margin-top: 0rem;
+    }
+    .navbar{
+        display: flex;
+        align-items: center;
+        position: relative;
+        background-color: #D9D9D9;
+        border-radius: 5px 5px 0px 0px;
+        padding: 1rem;
+    }
+    .navbar h2{
+        display: block;
+        display: block;
+        font-size: 1.2rem;
+        margin-left: 2rem;
+        margin-top: -0.5rem;
+    }
     .navbar__menu{
         position: absolute;
         width: 100%;
         top: -1000px;
+        right: 0rem;
+        border-radius: 0px 0px 5px 5px;
+        padding: 1rem;
     }
     .navbar__menu.active{
         top: 100%;
         opacity: 1;
         z-index: 99;
-        height: 100vh;
-        font-size: 1.5rem;
-        background: red;
-        margin-top: 2rem;
+        height: auto !important;
+        font-size: 1.1rem;
+        background: #D9D9D9;
+        margin-top: 0rem;
     }
-
     .navbar__toggle .bar{
         width: 25px;
         height: 3px;
@@ -69,25 +93,24 @@
         -moz-transition: all 0.3s ease-in-out;
         -ms-transition: all 0.3s ease-in-out;
         -o-transition: all 0.3s ease-in-out;
-        background: #000;
+        background: var(--red);
         display: block;
         cursor: pointer;
+    }
+    .navbar__menu h2{
+       display: none;
     }
 
     #mobile-menu{
         position: absolute;
-        top: 20%;
-        right: 5%;
-        transform: translate(5%,20%) ;
-        -webkit-transform: translate(5%,20%) ;
-        -moz-transform: translate(5%,20%) ;
-        -ms-transform: translate(5%,20%) ;
-        -o-transform: translate(5%,20%) ;
+        top: 10%;
+        left: 0.7rem;
     }
     #mobile-menu.is-active .bar:nth-child(2){
         opacity: 0;
     }
     #mobile-menu.is-active .bar:nth-child(1){
+        margin-top: 15%;
         transform:translateY(8px) rotate(45deg);
         -webkit-transform:translateY(8px) rotate(45deg);
         -moz-transform:translateY(8px) rotate(45deg);
@@ -95,9 +118,113 @@
         -o-transform:translateY(8px) rotate(45deg);
     }
     #mobile-menu.is-active .bar:nth-child(3){
+        margin-top: 15%;
         transform: translateY(-8px) rotate(-45deg);
         -webkit-transform: translateY(-8px) rotate(-45deg);
         -moz-transform: translateY(-8px) rotate(-45deg);
         -ms-transform: translateY(-8px) rotate(-45deg);
         -o-transform: translateY(-8px) rotate(-45deg);
+    }
+}
+.tercero__flex{
+    background: transparent;
+    width: 100%;
+    padding: 0rem;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 1.2rem;
+}
+@media screen and (max-width:1400px) {
+    .tercero__flex{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media screen and (max-width:900px) {
+    .tercero__flex{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.card__flex{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+}
+.card__flex__head{
+    color: var(--whi);
+    background: rgba(217, 217, 217, 0.35);
+    border-radius: 10px 10px 0 0;
+}
+.card__flex__body{
+    background: rgba(217, 217, 217, 0.35);
+    padding: 0.5rem;
+    border-radius: 0 0 10px 10px;
+}
+.card__flex__head img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+.card__flex__head h2{
+    color: #000;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.card__flex__body{
+    padding: 1rem;
+}
+.card__flex__body p{
+    color: #000;
+    margin-bottom: 1rem;
+    line-height: 24px;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.card__flex__body a{
+    color: #fff;
+    background: var(--red);
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+input[type=checkbox] + label {
+    display: block;
+    cursor: pointer;
+}
+input[type=checkbox] {
+    display: none;
+}
+input[type=checkbox] + label:before {
+    content: "";
+    border: 0.1em solid #000;
+    border-radius: 0.2em;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    padding-left: 0.2em;
+    padding-bottom: 0.3em;
+    margin-right: 0.2em;
+    vertical-align: bottom;
+    color: transparent;
+    transition: .2s;
+}
+input[type=checkbox] + label:active:before {
+    transform: scale(0);
+}
+input[type=checkbox]:checked + label:before {
+    background-color: var(--red);
+    border-color: var(--red);
+}
+#loading{
+	text-align:center; 
+	background: url('../img/lg/meisa/loader.gif') no-repeat center; 
+	height: 150px;
 }

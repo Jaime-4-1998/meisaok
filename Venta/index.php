@@ -49,40 +49,44 @@
             <div class="meisa__productos">
                 <div class="meisa__prod__one">
                     <div class="navbar">
+                        <h2 class="mob__text">Categorías</h2>
                         <div class="navbar__toggle" id="mobile-menu">
                             <span class="bar"></span>
                             <span class="bar"></span>
                             <span class="bar"></span>
                         </div>
                         <div class="navbar__menu">
-                            <a href="/" class="navbar__link">Home</a>
-                            <a href="/Services.html" class="navbar__link">Services</a>
-                            <a href="/Plans.html" class="navbar__link">Plans</a>
-                            <a href="/Trainers.html" class="navbar__link">Trainers</a>
+                            <h2>Categorías</h2>
+                                        <?php
+                                            $connect = new PDO("mysql:host=localhost;dbname=u557675164_titulacion", "root", "");
+                                            $query = "SELECT DISTINCT(inve_catego) FROM inventario WHERE inve_estatus = 'Disponible' ORDER BY inve_id DESC";
+                                            $statement = $connect->prepare($query);
+                                            $statement->execute();
+                                            $result = $statement->fetchAll();
+                                            foreach($result as $row)
+                                            {
+                                        ?>
+                                            <div class="checkbox">
+                                                    <input type="checkbox" class="common_selector brand" id="<?php echo $row['inve_catego']; ?>" value="<?php echo $row['inve_catego']; ?>"  />
+                                                    <label for="<?php echo $row['inve_catego']; ?>">
+                                                        <span class="text"><?php echo $row['inve_catego']; ?></span>
+                                                    </label>
+                                            </div>
+                                        <?php
+                                            }
+                                        ?>
                         </div>
                     </div>
                 </div>
                 <div class="meisa__prod__two">
-                    <p>klj</p>
+                    <div class="products">
+                        <div class="filter_data tercero__flex"></div>
+                    </div>
                 </div>
             </div>
-            <script>
-                const menuu = document.querySelector('#mobile-menu');
-                    const menuLinks = document.querySelector('.navbar__menu');
-                    const navLogo = document.querySelector('#navbar__logo');
-                    const body = document.querySelector('body');
-
-                    const mobileMenu = () =>{
-                        menuu.classList.toggle('is-active');
-                        menuLinks.classList.toggle('active');
-                        body.classList.toggle('active');
-                    }
-
-                    menuu.addEventListener('click',mobileMenu);
-            </script>
         </section>
         <!--Atención-->
-         <section>
+        <section>
             <div class="formu__mani">
                 <div class="formulario__mani">
                     <div class="formu__partone">
@@ -97,9 +101,9 @@
                     </div>
                 </div>
             </div>
-         </section>
+        </section>
          <!--3 images-->
-         <section>
+        <section>
             <div class="meisa__vent__text">
                 <h2>GRAN VARIEDAD <strong>DE EQUIPO</strong></h2>
             </div>
@@ -126,9 +130,9 @@
                 </div>
                 <?php }} ?>
             </div>
-         </section>
+        </section>
          <!--wh-->
-         <section>
+        <section>
             <?php
                 include '../assets/components/wh.php';
             ?>
@@ -145,10 +149,10 @@
     <div class="copy__lamm">
         <p>Copyright 2022, Todos los derechos reservados, desarrollado por Lamm Soluciones Digitales</p>
     </div>
+    <script src="../assets/js/new.js"></script>
     <script src="../assets/js/btn.js"></script>
     <script src="../assets/js/menu.js"></script>
     <script src="../assets/js/form.js"></script> 
-    <script src="../assets/js/invent.js"></script>
     <script src="../assets/js/jquery-1.10.2.min.js"></script>
     <script src="../assets/js/jquery-ui.js"></script>
     <script src="../assets/js/filt.js"></script>
