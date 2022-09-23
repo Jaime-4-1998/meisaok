@@ -82,8 +82,12 @@
     margin-bottom: 1rem;
   }
   .productdetails__meisa h2{
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-top: 0rem;
+    margin-bottom: 0em;
+    padding: 2rem;
+  }
+  .prod__price{
+    font-size: 1.3rem !important;
   }
 }
 /*Detalles de los productos con carrusselen flex*/
@@ -152,6 +156,35 @@
     width: 100%;
   }
   .details__prod{
+    width: 100%;
+  }
+  .prod__info{
+    text-align: start;
+  }
+}
+.apartado__rel{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 2rem;
+}
+.prod__rela{
+  width: 50%;
+}
+.form__rel{
+  width: 50%;
+}
+@media screen and (max-width:900px) {
+  .apartado__rel{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  .prod__rela{
+    width: 100%;
+  }
+  .form__rel{
     width: 100%;
   }
 }

@@ -206,6 +206,56 @@
           <?php } ?>
       </div>
    </section>
+   <section>
+    <div class="apartado__rel">
+        <div class="prod__rela">
+            <h2>Aprtado de Relaciones</h2>
+        </div>
+        <div class="form__rel">
+                <?php
+                        try {
+                            $mbd = new PDO('mysql:host=localhost;dbname=u557675164_titulacion; charset=UTF8','root','');
+                        } catch (exception $e) {
+                            print "¡Error!: " . $e->getMessage() . "<br/>";
+                            die();
+                        }
+                ?>
+                <?php
+                        $maquina = $_GET['maquina'];
+                        $stmt = $mbd->prepare("SELECT * FROM inventario WHERE inve_nombre = '$maquina' ");
+                        $stmt->execute();
+                        if($stmt->rowCount() > 0)
+                        {
+                        while($row=$stmt->fetch(PDO::FETCH_ASSOC))
+                        {
+                        extract($row);
+                ?>
+                <form class="form__data" id="forme">
+                    <label class="form__label">Nombre Completo</label>
+                    <input class="form__control" type="text" disabled name="" value="Informes sobre: <?php echo str_replace("-", " ", $row['inve_nombre']); ?>" id="name" placeholder="Nombre Completo">
+                    
+                    <label class="form__label">Nombre Completo</label>
+                    <input class="form__control" type="text" name="" id="names" placeholder="Nombre Completo">
+                    
+
+                    <label class="form__label">Correo</label>
+                    <input class="form__control" type="email" name="" id="mail" placeholder="corre@example.com">
+                    
+                    <label class="form__label">Telefono</label>
+                    <input class="form__control" type="text" name="" id="tel" placeholder="Telefono de contacto">
+                    
+                    <label class="form__label">Comentarios</label>
+                    <textarea class="form__control" name="" id="tema" placeholder="Comentarios" rows="5" cols="12" ></textarea>
+                    <small class="form__error ok fail" id="respuesta"></small>
+                    <button id="submit" type="submit" class="buton__form">Enviar</button>
+                </form>
+                <?php } } else { ?>
+                    Datos no encontrados ... 
+                <?php } ?>
+                
+        </div>
+    </div>
+   </section>         
    <footer>
             <div class="logo__foter">
               <img src="https://meisamex.com.mx/assets/img/lg/meisa/22meisa879234789423.svg" loading="lazy" alt="Meisa Mex" title="Meisa Mex">
@@ -277,5 +327,6 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
    <script src="http://localhost/meisa/assets/js/invecarru.js"></script>
    <script src="http://localhost/meisa/assets/js/menu.js"></script>
+   <script src="http://localhost/meisa/assets/js/ventform.js"></script>
 </body>
 </html>
