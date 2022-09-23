@@ -9,7 +9,9 @@
     <title>Meisa - Sales</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/lg/meisa/sh.png">
     <link rel="preload" href="../../assets/css/style.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="../../assets/css/inve.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="../../assets/css/btn.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="../../assets/css/jquery-ui.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" as="style" onload="this.rel='stylesheet'"> 
@@ -42,6 +44,47 @@
             <!--End-->
             </div>
         </header>
+        <!--Venta-->
+        <section>
+            <div class="meisa__productos">
+                <div class="meisa__prod__one">
+                    <div class="navbar">
+                        <h2 class="mob__text">Categories</h2>
+                        <div class="navbar__toggle" id="mobile-menu">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                        <div class="navbar__menu">
+                            <h2>Categories</h2>
+                                        <?php
+                                            $connect = new PDO("mysql:host=localhost;dbname=u557675164_titulacion", "root", "");
+                                            $query = "SELECT DISTINCT(inve_catego) FROM inventario WHERE inve_estatus = 'Disponible' ORDER BY inve_id DESC";
+                                            $statement = $connect->prepare($query);
+                                            $statement->execute();
+                                            $result = $statement->fetchAll();
+                                            foreach($result as $row)
+                                            {
+                                        ?>
+                                            <div class="checkbox">
+                                                    <input type="checkbox" class="common_selector brand" id="<?php echo $row['inve_catego']; ?>" value="<?php echo $row['inve_catego']; ?>"  />
+                                                    <label for="<?php echo $row['inve_catego']; ?>">
+                                                        <span class="text"><?php echo $row['inve_catego']; ?></span>
+                                                    </label>
+                                            </div>
+                                        <?php
+                                            }
+                                        ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="meisa__prod__two">
+                    <div class="products">
+                        <div class="filter_data tercero__flex"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!--Atención-->
         <section>
             <div class="formu__mani">
@@ -105,8 +148,12 @@
     <div class="copy__lamm">
         <p>Copyright 2022, Todos los derechos reservados, desarrollado por Lamm Soluciones Digitales</p>
     </div>
+    <script src="../../assets/js/new.js"></script>
     <script src="../../assets/js/btn.js"></script>
     <script src="../../assets/js/menu.js"></script>
     <script src="../../assets/js/form.js"></script> 
+    <script src="../../assets/js/jquery-1.10.2.min.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/filt.js"></script>
 </body>
 </html>
