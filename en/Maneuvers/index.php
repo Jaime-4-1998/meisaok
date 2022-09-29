@@ -159,8 +159,7 @@
             <div class="meisa__manifon">        
                 <div class="meisa__centro">
                     <h2>
-                        DEVELOPMENT OF OPERATIONAL PLAN
-                        <span class="manio__line"></span>
+                        <span class="subrayado__meisa">DEVELOPMENT</span> OF OPERATIONAL PLAN
                     </h2>     
                     <p>
                         For the fulfillment of a safe maneuver with certified personnel guaranteeing its solution.

@@ -100,8 +100,7 @@
             <div class="meisa__manifon__plan">        
                 <div class="meisa__centro__plan">
                     <h2>
-                        THE BEST OPTION, WE HAVE IT
-                        <span class="manio__line__plan"></span>
+                        <span class="subrayado__meisa">THE BEST OPTION</span>, WE HAVE IT
                     </h2>     
                     <p>
                     We have disused machinery, we supervise in detail to offer a purchase.

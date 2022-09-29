@@ -26,8 +26,8 @@
         <div class="meisa_contact">
             <div class="meisa__data">
                 <h1>
-                    CONTACT US
-                    <span class="maine__line"></span>
+                    <span class="subrayado__meisa">CONTACT US</span>
+                    
                 </h1>
                 <p>
                     We want to know how to help you implement the best option for your business.
@@ -36,8 +36,7 @@
                     Leave us your data to provide you with better attention.
                 </p>
                 <h2>
-                    REQUEST YOUR QUOTE
-                    <span class="maine__line"></span>
+                    REQUEST YOUR <span class="subrayado__meisa">QUOTE</span>
                 </h2>
                 <form class="form__data" id="form">
                     <label class="form__label">Name</label>
@@ -77,7 +76,7 @@
                     <a href="tel:7222112931"><img src="../../assets/img/lg/meisa/22tel900.svg" loading="lazy" alt="Contacto de Meisa Mex" title="Contacto de Meisa Mex"> 722 211 2931</a>
 
                     <a href="https://api.whatsapp.com/send?phone=7228283858&text=Hola!&nbsp;me&nbsp;pueden&nbsp;apoyar?" target="_blank"><img src="../../assets/img/lg/meisa/22wh800.svg" loading="lazy" alt="Contacto de Meisa Mex" title="Contacto de Meisa Mex"> 722 828 3858</a>
-                    <a href="https://api.whatsapp.com/send?phone=5535688727&text=Hola!&nbsp;me&nbsp;pueden&nbsp;apoyar?" target="_blank"><img src="../assets/img/lg/meisa/22wh800.svg" loading="lazy" alt="Contacto de Meisa Mex" title="Contacto de Meisa Mex"> 55 35 68 87 27</a>                    <a href="mailto:contacto@meisamex.com.mx"><img src="../../assets/img/lg/meisa/22corr700.svg" loading="lazy" alt="Contacto de Meisa Mex" title="Contacto de Meisa Mex"> contacto@meisamex.com.mx</a>
+                    <a href="https://api.whatsapp.com/send?phone=5535688727&text=Hola!&nbsp;me&nbsp;pueden&nbsp;apoyar?" target="_blank"><img src="../../assets/img/lg/meisa/22wh800.svg" loading="lazy" alt="Contacto de Meisa Mex" title="Contacto de Meisa Mex"> 55 35 68 87 27</a>                    <a href="mailto:contacto@meisamex.com.mx"><img src="../../assets/img/lg/meisa/22corr700.svg" loading="lazy" alt="Contacto de Meisa Mex" title="Contacto de Meisa Mex"> contacto@meisamex.com.mx</a>
                 </div>
             </div>
         </div>

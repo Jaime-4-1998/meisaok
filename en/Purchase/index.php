@@ -92,8 +92,7 @@
             <div class="meisa__manifon__comp">        
                 <div class="meisa__centro">
                     <h2>
-                        MACHINERY INVENTORY
-                        <span class="manio__line__com"></span>
+                        MACHINERY <span class="subrayado__meisa">INVE</span>NTORY
                     </h2>     
                     <p>Wide variety of machinery:</p>        
                     <p>

@@ -104,7 +104,7 @@
          <!--3 images-->
          <section>
             <div class="meisa__vent__text">
-                <h2>GREAT VARIETY <strong>OF EQUIPMENT</strong></h2>
+                <h2>GREAT VARIETY <strong><span class="subrayado__meisa">OF EQUIPMENT</span></strong></h2>
             </div>
             <div class="meisa__vent__imgs">
                 
