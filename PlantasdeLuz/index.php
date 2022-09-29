@@ -100,8 +100,7 @@
             <div class="meisa__manifon__plan">        
                 <div class="meisa__centro__plan">
                     <h2>
-                        LA MEJOR OPCIÓN, LA TENEMOS NOSOTROS
-                        <span class="manio__line__plan"></span>
+                        <span class="subrayado__meisa">LA MEJOR O</span>PCIÓN, LA TENEMOS NOSOTROS
                     </h2>     
                     <p>
                     Contámos con maquinaria en desuso, supervisamos a detalle para ofrecer una compra. 

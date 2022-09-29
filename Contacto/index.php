@@ -26,8 +26,7 @@
         <div class="meisa_contact">
             <div class="meisa__data">
                 <h1>
-                    CONTÁCTANOS
-                    <span class="maine__line"></span>
+                    <span class="subrayado__meisa">CONTÁCTANOS</span>
                 </h1>
                 <p>
                     Queremos saber como ayudarte en implementar la mejor opción para tu negocio.
@@ -36,8 +35,7 @@
                     Déjanos tus datos para brindarte una mejor atención.
                 </p>
                 <h2>
-                    SOLICITA TU COTIZACIÓN
-                    <span class="maine__line"></span>
+                    SOLICITA TU COTIZA<span class="subrayado__meisa">CIÓN</span>
                 </h2>
                 <form class="form__data" id="form">
                     <label class="form__label">Nombre Completo</label>

@@ -756,20 +756,6 @@ footer {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%) !important;
   margin-top: 30.5rem;
 }
-.main__line {
-  position: absolute;
-  width: 120px;
-  height: 2px;
-  opacity:1;
-  border-radius: 1rem;
-  margin: 0;
-  padding: 0;
-  left: 10%;
-  top: 94%;
-  transform: translateX(-4%);
-  z-index: 1;
-  background: var(--red);
-}
 .ih-item.square.effect10 .meisa__hover:hover .info {
   visibility: visible;
   opacity: 1;
@@ -834,7 +820,6 @@ footer {
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%) !important;
         margin-top: 24.2rem;
       }
-      .main__line {display: none;}
 }
 /* Parte de los servicios desarrollado por lamm soluciones digitales Jaime Ramirez*/
 
@@ -871,31 +856,6 @@ footer {
 .meisa__data{
     width: 50%;
     padding: 1rem;
-}
-.maine__line{
-    position: absolute;
-    width: 230px;
-    height: 5%;
-    margin: 0;
-    padding: 0;
-    left: 1%;
-    top: 2.5rem;
-    transform: translateX(-4%);
-    z-index: -1;
-    background: var(--red);
-}
-h2 .maine__line{
-    width:380px;
-    left: 1.5%;
-} 
-@media screen and (max-width:1400px) {
-    .maine__line{
-        left: 2%;
-    }
-    h2 .maine__line{
-        width:375px;
-        left: 3%;
-    } 
 }
 .meisa__data h1{
     color: var(--black);
@@ -1066,33 +1026,6 @@ iframe{
     }
     .meisa__centro{
         padding: 2rem;
-    }
-}
-.manio__line{
-    position: absolute;
-    width: 230px;
-    height: 5%;
-    margin: 0;
-    padding: 0;
-    left:36%;
-    top: 2.5rem;
-    transform: translateX(-4%);
-    z-index: -1;
-    background: var(--red);
-}
-@media screen and (max-width:1400px) {
-    .manio__line{
-        left:27%;
-        top: 2.5rem;
-    }
-}
-@media screen and (max-width:900px) {
-    .manio__line{
-        position: absolute;
-        width: 230px;
-        height: 5%;
-        left:20%;
-        top: 5.5rem;
     }
 }
 .mani__parre{
@@ -1370,33 +1303,6 @@ strong{
         padding: 2rem;
     }
 }
-.manio__line__plan{
-    position: absolute;
-    width: 230px;
-    height: 5%;
-    margin: 0;
-    padding: 0;
-    left:31%;
-    top: 2.5rem;
-    transform: translateX(-4%);
-    z-index: -1;
-    background: var(--red);
-}
-@media screen and (max-width:1400px) {
-    .manio__line__plan{
-        left:19.5%;
-        top: 2.5rem;
-    }
-}
-@media screen and (max-width:900px) {
-    .manio__line__plan{
-        position: absolute;
-        width: 230px;
-        height: 5%;
-        left:20%;
-        top: 5.5rem;
-    }
-}
 .meisa__manifon__plan h2{
     color: var(--whi);
     font-size: 2rem;
@@ -1508,33 +1414,6 @@ strong{
         padding: 2rem;
     }
 }
-.manio__line__com{
-    position: absolute;
-    width: 230px;
-    height: 5%;
-    margin: 0;
-    padding: 0;
-    left: 0.5%;
-    top: 2.5rem;
-    transform: translateX(-4%);
-    z-index: -1;
-    background: var(--red);
-}
-@media screen and (max-width:1400px) {
-    .manio__line__com{
-        left:1%;
-        top: 2.5rem;
-    }
-}
-@media screen and (max-width:900px) {
-    .manio__line__com{
-        position: absolute;
-        width: 230px;
-        height: 5%;
-        left:20%;
-        top: 5.5rem;
-    }
-}
 .meisa__manifon__comp h2{
     color: var(--whi);
     font-size: 2rem;
@@ -1609,32 +1488,6 @@ strong{
         font-size: 1.5rem;
     }
 }
-.manio__line__vent {
-    position: absolute;
-    width: 200px;
-    height: 5%;
-    margin: 0;
-    padding: 0;
-    left: 53.6%;
-    top: 2.5rem;
-    transform: translateX(-4%);
-    z-index: -1;
-    background: var(--red);
-    margin-top: 0.5rem;
-}
-@media screen and (max-width:1400px) {
-    .manio__line__vent{
-        width: 200px;
-        left: 55.6%;
-    }
-}
-@media screen and (max-width:800px) {
-    .manio__line__vent {
-        width: 29%;
-        left: 60.6%;
-        margin-top: 0rem;
-    }
-}
 .meisa__vent__imgs{
     display: flex;
     flex-direction: row;
@@ -1687,4 +1540,7 @@ strong{
     font-size: 1.5rem;
     line-height: 47px;
     color: var(--whi);
+}
+.subrayado__meisa{
+    text-decoration: var(--red) underline solid 3px;
 }

@@ -92,8 +92,7 @@
             <div class="meisa__manifon__comp">        
                 <div class="meisa__centro">
                     <h2>
-                        INVENTARIO DE MAQUINARIA
-                        <span class="manio__line__com"></span>
+                        <span class="subrayado__meisa">INVE</span>NTARIO DE MAQUINARIA
                     </h2>     
                     <p>Gran variedad de maquinaria:</p>        
                     <p>

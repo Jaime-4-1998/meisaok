@@ -105,7 +105,7 @@
          <!--3 images-->
         <section>
             <div class="meisa__vent__text">
-                <h2>GRAN VARIEDAD <strong>DE EQUIPO</strong></h2>
+                <h2>GRAN VARIEDAD <strong><span class="subrayado__meisa">DE EQUIPO</span></strong></h2>
             </div>
             <div class="meisa__vent__imgs">
                 

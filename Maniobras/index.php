@@ -159,8 +159,7 @@
             <div class="meisa__manifon">        
                 <div class="meisa__centro">
                     <h2>
-                        DESARROLLO DE PLAN OPERATIVO 
-                        <span class="manio__line"></span>
+                        <span class="subrayado__meisa">DESARROLL</span>O DE PLAN OPERATIVO
                     </h2>     
                     <p>
                         Para el cumplimiento de una maniobra segura con el personal certificado garantizando su solución.
