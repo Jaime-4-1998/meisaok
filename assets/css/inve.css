@@ -131,13 +131,8 @@
     width: 100%;
     padding: 0rem;
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(4,1fr);
     gap: 1.2rem;
-}
-@media screen and (max-width:1400px) {
-    .tercero__flex{
-        grid-template-columns: repeat(3,1fr);
-    }
 }
 @media screen and (max-width:900px) {
     .tercero__flex{

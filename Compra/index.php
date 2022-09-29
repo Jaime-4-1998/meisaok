@@ -95,12 +95,14 @@
                         INVENTARIO DE MAQUINARIA
                         <span class="manio__line__com"></span>
                     </h2>     
-                    <p>zGran variedad de maquinaria:</p>        
+                    <p>Gran variedad de maquinaria:</p>        
                     <p>
                         Motores, Moto reductores, Bombas, Compresores, Compresores de enfriamiento, Plantas de luz, Maquinas de inyección, Montacargas, etc.
                     </p>
                     <div class="meisa__img__com">
-                        <img src="../assets/img/bg/com/22Icono90.svg" alt="Meisa Mex Inventario" title="Meisa Mex Inventario">
+                        <a href="https://meisamex.com.mx/Venta/">
+                            <img src="../assets/img/bg/com/22Icono90.svg" alt="Meisa Mex Inventario" title="Meisa Mex Inventario">
+                        </a>
                     </div>
                 </div>
             </div>

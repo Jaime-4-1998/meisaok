@@ -32,14 +32,14 @@ html::-webkit-scrollbar-thumb {
 }
 /* ========== header developed by Lamm Solucionaes Digitales Jaime Ramirez ========== */
 .headere{
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/bg/22backtwo548905543.svg);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/bg/28809432890342.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 100vh;
 }
-.head__mani{
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/bg/mani/22mani897432789324978.svg);
+.head__maniobras{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/bg/mani/2878934555454353.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -74,8 +74,8 @@ html::-webkit-scrollbar-thumb {
         background-size: cover;
         height: auto !important;
    }
-   .head__mani{
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/bg/mani/35045r42334234.svg);
+   .head__maniobras{
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/bg/mani/28888resp.svg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -369,6 +369,7 @@ a.big-btn {
     display: block;
     margin: auto;
     margin-bottom: 4rem !important;
+    width: 950px;
 }
 .acerca__text__plus p{
     text-align: center;
@@ -450,7 +451,7 @@ a.big-btn {
     gap: 4rem;
 }
 .logos__cards{
-    width: auto !important;
+    width: 180px !important;
     display: block;
     margin: auto;
 }
@@ -1026,7 +1027,7 @@ iframe{
     font-weight: 500;
     line-height: 33px;
     width: 999px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 @media screen and (max-width:900px){
     .mani__meisa h1{
@@ -1094,6 +1095,21 @@ iframe{
         top: 5.5rem;
     }
 }
+.mani__parre{
+    color: var(--whi);
+    text-shadow: 5px 3px 5px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    line-height: 33px;
+    width: 850px;
+    font-size: 1.5rem;
+}
+@media screen and (max-width:900px){
+    .mani__parre{
+        line-height: 33px;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
 .meisa__manifon h2{
     color: var(--whi);
     font-size: 2rem;
@@ -1109,6 +1125,14 @@ iframe{
     text-align: center;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 1.1rem;
+    display: block;
+    margin: auto;
+    width: 550px;
+}
+@media screen and (max-width:900px) {
+    .meisa__manifon p{
+        width: 100%;
+    }
 }
 /* Parte de maniobra from desarrollado por lamm soluciones digitales Jaime Ramirez*/
 .formu__mani{
@@ -1122,11 +1146,9 @@ iframe{
     display: flex;
     flex-direction: row;
     width: 100%;
-    gap: 2rem;
+    gap: 0rem;
 }
 .formu__partone h2{
-    display: block;
-    margin: auto;
     color: var(--red);
     font-size: 2rem;
 }
@@ -1139,6 +1161,10 @@ iframe{
 }
 .form__mani{
     width: 50%;
+}
+.btn__mani{
+    margin-left: auto !important;
+    margin: 0;
 }
 @media screen and (max-width:900px) {
     .formu__mani{
@@ -1247,8 +1273,12 @@ strong{
     font-weight: 700;
     line-height: 26px;
     font-size: 1rem;
+    width: 550px;
 }
 @media screen and (max-width:900px) {
+    .plan__parr{
+        width: 100%;
+    }
     .planta__meisa{
         padding: 3rem;
     }
@@ -1382,6 +1412,14 @@ strong{
     text-align: center;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 1.1rem;
+    display: block;
+    margin: auto;
+    width: 600px;
+}
+@media screen and (max-width:900px){
+    .meisa__manifon__plan p{
+        width: 100%;
+    }
 }
 /*Page of compra*/
 .com__parr{
@@ -1522,9 +1560,17 @@ strong{
 .meisa__img__com img{
     width: 100%;
 }
+@media screen and (max-width:1400px) {
+    .meisa__img__com{
+        width: 19%;
+    }
+}
 @media screen and (max-width:900px) {
     .meisa__manifon__comp p{
         width: 100%;
+    }
+    .meisa__img__com{
+        width: 80%;
     }
 }
 /*Wh contact*/

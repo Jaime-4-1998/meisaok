@@ -17,7 +17,7 @@
 <body>
     <main>
         <header>
-            <div class="head__mani">
+            <div class="head__maniobras">
                 <?php
                     include '../../assets/components/naveng.php';
                 ?>
@@ -40,7 +40,7 @@
                         <h1>
                             <?php echo $result -> titlemanieng; ?>  
                         </h1>
-                        <div class="mani__parr">
+                        <div class="mani__parre">
                             <?php echo $result -> contentmanieng; ?>  
                         </div>
                         <?php }} ?>

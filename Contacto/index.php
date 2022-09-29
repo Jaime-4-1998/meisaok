@@ -77,7 +77,7 @@
                     <a href="tel:7222112931"><img src="../assets/img/lg/meisa/22tel900.svg" loading="lazy" alt="Contacto de Meisa Mex" title="Contacto de Meisa Mex"> 722 211 2931</a>
 
                     <a href="https://api.whatsapp.com/send?phone=7228283858&text=Hola!&nbsp;me&nbsp;pueden&nbsp;apoyar?" target="_blank"><img src="../assets/img/lg/meisa/22wh800.svg" loading="lazy" alt="Contacto de Meisa Mex" title="Contacto de Meisa Mex"> 722 828 3858</a>
-                    <a href="https://api.whatsapp.com/send?phone=555535688727&text=Hola!&nbsp;me&nbsp;pueden&nbsp;apoyar?" target="_blank"><img src="../assets/img/lg/meisa/22wh800.svg" loading="lazy" alt="Contacto de Meisa Mex" title="Contacto de Meisa Mex"> 55 55 35 68 87 27</a>
+                    <a href="https://api.whatsapp.com/send?phone=5535688727&text=Hola!&nbsp;me&nbsp;pueden&nbsp;apoyar?" target="_blank"><img src="../assets/img/lg/meisa/22wh800.svg" loading="lazy" alt="Contacto de Meisa Mex" title="Contacto de Meisa Mex"> 55 35 68 87 27</a>
                     <a href="mailto:contacto@meisamex.com.mx"><img src="../assets/img/lg/meisa/22corr700.svg" loading="lazy" alt="Contacto de Meisa Mex" title="Contacto de Meisa Mex"> contacto@meisamex.com.mx</a>
                 </div>
             </div>

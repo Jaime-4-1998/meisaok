@@ -17,7 +17,7 @@
 <body>
     <main>
         <header>
-            <div class="head__mani">
+            <div class="head__maniobras">
                 <?php
                     include '../assets/components/nav.php';
                 ?>
@@ -40,7 +40,7 @@
                         <h1>
                             <?php echo $result -> titlemani; ?>  
                         </h1>
-                        <div class="mani__parr">
+                        <div class="mani__parre">
                             <?php echo $result -> contentmani; ?>  
                         </div>
                         <?php }} ?>
@@ -163,7 +163,7 @@
                         <span class="manio__line"></span>
                     </h2>     
                     <p>
-                        Para el cumplimiendo de una maniobra segura con el personal certificado garantizando su solución.
+                        Para el cumplimiento de una maniobra segura con el personal certificado garantizando su solución.
                     </p>        
                 </div>
             </div>
