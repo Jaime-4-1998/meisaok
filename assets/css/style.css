@@ -32,35 +32,35 @@ html::-webkit-scrollbar-thumb {
 }
 /* ========== header developed by Lamm Solucionaes Digitales Jaime Ramirez ========== */
 .headere{
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/bg/28809432890342.svg);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/bg/2968231432678.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 100vh;
 }
 .head__maniobras{
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/bg/mani/2878934555454353.svg);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/bg/mani/29786237861238.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 70vh;
 }
 .head__plan{
-    background: linear-gradient(18.21deg, rgba(0, 0, 0, 0.5) 13.87%, rgba(0, 0, 0, 0) 72.55%),url(../img/bg/plan/22plan54879547894.svg);
+    background: linear-gradient(18.21deg, rgba(0, 0, 0, 0.5) 13.87%, rgba(0, 0, 0, 0) 72.55%),url(../img/bg/plan/297846387234678.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: auto !important;
 }
 .head__com{
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/bg/com/22com897543897423.svg);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/bg/com/297866676783.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 60 !important;
 }
 .head__venta{
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/bg/ven/22vent890432809423089342.svg);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/bg/ven/296756758745.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
