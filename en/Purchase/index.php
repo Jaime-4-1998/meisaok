@@ -87,6 +87,24 @@
                 </div>
             </div>
         </section>
+        <!--Atención-->
+        <section>
+            <div class="atencion__meisa">
+                <div class="atencion__meisa__textos">
+                    <h2>WE BUY YOUR MACHINERY</h2>
+                    <p>
+                    Contact us for inquiries on Purchases of disused machinery, we supervise in detail to offer a purchase.
+                    </p>
+                </div>
+                <div class="atencion__meisa__form">
+                    <form action="" method="post">
+                        <input type="email" name="" id="" placeholder="Write your email" class="atencion__mail">
+                        <textarea name="" id="" cols="10" rows="4" placeholder="Quote Description"></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+         </section>
         <!--fondo-->
         <section>
             <div class="meisa__manifon__comp">        
@@ -104,24 +122,7 @@
                 </div>
             </div>
         </section>
-         <!--Atención-->
-         <section>
-            <div class="atencion__meisa">
-                <div class="atencion__meisa__textos">
-                    <h2>WE BUY YOUR MACHINERY</h2>
-                    <p>
-                    Contact us for inquiries on Purchases of disused machinery, we supervise in detail to offer a purchase.
-                    </p>
-                </div>
-                <div class="atencion__meisa__form">
-                    <form action="" method="post">
-                        <input type="email" name="" id="" placeholder="Write your email" class="atencion__mail">
-                        <textarea name="" id="" cols="10" rows="4" placeholder="Quote Description"></textarea>
-                        <button type="submit">Send</button>
-                    </form>
-                </div>
-            </div>
-         </section>
+         
          <section>
             <?php
                 include '../../assets/components/wh.php';

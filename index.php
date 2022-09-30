@@ -122,39 +122,55 @@
         <!--Servicios-->
         <section>
             <div class="row">
-                <?php
-                    include 'meisaback/adminmeisa/assets/components/backend/conexion.php';
-                    $sql = "SELECT id_col,prioridad,img,title,content
-                    FROM columnfour ORDER BY prioridad ASC"; 
-                    $query = $mbd -> prepare($sql); 
-                    $query -> execute(); 
-                    $results = $query -> fetchAll(PDO::FETCH_OBJ); 
-                        if($query -> rowCount() > 0){ 
-                            foreach($results as $result) { 
-                                $data = $result -> id_col."||".
-                                $result -> prioridad."||".
-                                $result -> img."||".
-                                $result -> title."||".
-                                $result -> content; 
-                ?>
                 <div class="ih-item square effect10 left_to_right">
                     <span class="meisa__hover">
                         <div class="img">
-                            <img loading="lazy" src="meisaback/adminmeisa/assets/<?php echo $result -> img; ?>" alt="<?php echo $result -> title; ?>" title="<?php echo $result -> title; ?>" width="100" />
+                            <img loading="lazy" src="meisaback/adminmeisa/assets/img/colu/f06f3d4c37bedd0757668288ec801620.jpg" alt="Compra / Venta" title="Compra / Venta" width="100" />
                         </div>
                         <div class="info cam">
                             <h3>
-                                <span class="main__line"></span>
-                                <?php echo $result -> title; ?>
+                                <a href="https://meisamex.com.mx/Compra/" class="link__meisa__nuevo">Compra / Venta</a>                            
                             </h3>
                         </div>
                     </span>
                 </div>
-                <?php
-                }
-                }
-                ?>
-            </div>
+                                <div class="ih-item square effect10 left_to_right">
+                    <span class="meisa__hover">
+                        <div class="img">
+                            <img loading="lazy" src="meisaback/adminmeisa/assets/img/colu/12bffcd155e95d3297f271d34190a378.jpg" alt="Plantas de Luz" title="Plantas de Luz" width="100" />
+                        </div>
+                        <div class="info cam">
+                            <h3>
+                                <a href="https://meisamex.com.mx/PlantasdeLuz/" class="link__meisa__nuevo">Plantas de Luz</a>                         
+                            </h3>
+                        </div>
+                    </span>
+                </div>
+                                <div class="ih-item square effect10 left_to_right">
+                    <span class="meisa__hover">
+                        <div class="img">
+                            <img loading="lazy" src="meisaback/adminmeisa/assets/img/colu/c61623eb5c366d767e5ce2178a7ea5ac.jpg" alt="Inventario" title="Inventario" width="100" />
+                        </div>
+                        <div class="info cam">
+                            <h3>
+                                <a href="https://meisamex.com.mx/Venta/" class="link__meisa__nuevo">Inventario</a>                         
+                            </h3>
+                        </div>
+                    </span>
+                </div>
+                <div class="ih-item square effect10 left_to_right">
+                        <span class="meisa__hover">
+                            <div class="img">
+                                <img loading="lazy" src="meisaback/adminmeisa/assets/img/colu/7b80e8f58347b0448a23998458e88c0c.jpg" alt="Maniobra" title="Maniobra" width="100" />
+                            </div>
+                            <div class="info cam">
+                                <h3>
+                                    <a href="https://meisamex.com.mx/Maniobras/" class="link__meisa__nuevo">Maniobra</a>                            
+                                </h3>
+                            </div>
+                        </span>
+                    </div>
+                </div>
         </section>
         <!--Clientes-->
         <section>

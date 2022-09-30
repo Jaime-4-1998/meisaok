@@ -1075,6 +1075,13 @@ iframe{
     justify-content: center;
     gap: 2rem;
     padding: 3rem;
+    width: 70%;
+    margin: auto;
+}
+@media screen and (max-width:900px){
+    .formu__mani{
+        width: 100%;
+    }
 }
 .formu__partone{
     display: flex;
@@ -1455,7 +1462,7 @@ strong{
 }
 /*Wh contact*/
 .meisa__whatsapp{
-    width: 60%;
+    width: 90%;
 }
 .meisa__whatsapp img{
     width: 100%;
@@ -1465,7 +1472,7 @@ strong{
 }
 #btn-fixed {
     position: fixed;
-    bottom: 0rem;
+    bottom: 18rem;
     right: 2rem;
 }
 @media screen and (max-width:700px) {
@@ -1544,4 +1551,8 @@ strong{
 }
 .subrayado__meisa{
     text-decoration: var(--red) underline solid 3px;
+}
+.link__meisa__nuevo{
+    color: var(--whi);
+    text-decoration: none;
 }

@@ -87,6 +87,24 @@
                 </div>
             </div>
         </section>
+        <!--Atención-->
+        <section>
+            <div class="atencion__meisa">
+                <div class="atencion__meisa__textos">
+                    <h2>TE COMPRAMOS TU MAQUINARÍA</h2>
+                    <p>
+                        Contáctanos para consultas de Compras de maquinaria en desuso, supervisamos a detalle para ofrecer una compra. 
+                    </p>
+                </div>
+                <div class="atencion__meisa__form">
+                    <form action="" method="post">
+                        <input type="email" name="" id="" placeholder="Escribe Tu Email" class="atencion__mail">
+                        <textarea name="" id="" cols="10" rows="4" placeholder="Descripción de Cotización"></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+         </section>
         <!--fondo-->
         <section>
             <div class="meisa__manifon__comp">        
@@ -106,24 +124,7 @@
                 </div>
             </div>
         </section>
-         <!--Atención-->
-         <section>
-            <div class="atencion__meisa">
-                <div class="atencion__meisa__textos">
-                    <h2>TE COMPRAMOS TU MAQUINARÍA</h2>
-                    <p>
-                        Contáctanos para consultas de Compras de maquinaria en desuso, supervisamos a detalle para ofrecer una compra. 
-                    </p>
-                </div>
-                <div class="atencion__meisa__form">
-                    <form action="" method="post">
-                        <input type="email" name="" id="" placeholder="Escribe Tu Email" class="atencion__mail">
-                        <textarea name="" id="" cols="10" rows="4" placeholder="Descripción de Cotización"></textarea>
-                        <button type="submit">Enviar</button>
-                    </form>
-                </div>
-            </div>
-         </section>
+         
          <section>
             <?php
                 include '../assets/components/wh.php';

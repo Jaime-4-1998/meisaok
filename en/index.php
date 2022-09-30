@@ -126,42 +126,57 @@
                 ?>
             </div>
          </section>
-        <!--Servicios-->
-        <section>
+         <section>
             <div class="row">
-                <?php
-                    include '../meisaback/adminmeisa/assets/components/backend/conexion.php';
-                    $sql = "SELECT id_col,prioridad,img,engtitle,content
-                    FROM columnfour ORDER BY prioridad ASC"; 
-                    $query = $mbd -> prepare($sql); 
-                    $query -> execute(); 
-                    $results = $query -> fetchAll(PDO::FETCH_OBJ); 
-                        if($query -> rowCount() > 0){ 
-                            foreach($results as $result) { 
-                                $data = $result -> id_col."||".
-                                $result -> prioridad."||".
-                                $result -> img."||".
-                                $result -> engtitle."||".
-                                $result -> content; 
-                ?>
                 <div class="ih-item square effect10 left_to_right">
                     <span class="meisa__hover">
                         <div class="img">
-                            <img loading="lazy" src="../meisaback/adminmeisa/assets/<?php echo $result -> img; ?>" alt="<?php echo $result -> engtitle; ?>" title="<?php echo $result -> engtitle; ?>" width="100" />
+                            <img loading="lazy" src="../assets/img/bg/home/Ventas.jpg" alt="Purchase" title="Purchase" width="100" />
                         </div>
                         <div class="info cam">
                             <h3>
-                                <span class="main__line"></span>
-                                <?php echo $result -> engtitle; ?>
+                                <a href="https://meisamex.com.mx/Purchase/" class="link__meisa__nuevo">Purchase / Sales</a>                            
                             </h3>
                         </div>
                     </span>
                 </div>
-                <?php
-                }
-                }
-                ?>
-            </div>
+                                <div class="ih-item square effect10 left_to_right">
+                    <span class="meisa__hover">
+                        <div class="img">
+                            <img loading="lazy" src="../assets/img/bg/home/PlantasdeLuz.jpg" alt="Lightplants" title="Lightplants" width="100" />
+                        </div>
+                        <div class="info cam">
+                            <h3>
+                                <a href="https://meisamex.com.mx/Lightplants/" class="link__meisa__nuevo">Light plants</a>                         
+                            </h3>
+                        </div>
+                    </span>
+                </div>
+                                <div class="ih-item square effect10 left_to_right">
+                    <span class="meisa__hover">
+                        <div class="img">
+                            <img loading="lazy" src="../assets/img/bg/home/Ventas.jpg" alt="Sales" title="Sales" width="100" />
+                        </div>
+                        <div class="info cam">
+                            <h3>
+                                <a href="https://meisamex.com.mx/Sales/" class="link__meisa__nuevo">Sales</a>                         
+                            </h3>
+                        </div>
+                    </span>
+                </div>
+                <div class="ih-item square effect10 left_to_right">
+                        <span class="meisa__hover">
+                            <div class="img">
+                                <img loading="lazy" src="../assets/img/bg/home/Maniobra.jpg" alt="Maneuvers" title="Maneuvers" width="100" />
+                            </div>
+                            <div class="info cam">
+                                <h3>
+                                    <a href="https://meisamex.com.mx/Maneuvers/" class="link__meisa__nuevo">Maneuvers</a>                            
+                                </h3>
+                            </div>
+                        </span>
+                    </div>
+                </div>
         </section>
         <!--Clientes-->
         <section>
