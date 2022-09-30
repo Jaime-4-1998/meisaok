@@ -1556,3 +1556,13 @@ strong{
     color: var(--whi);
     text-decoration: none;
 }
+@media screen and (max-width:1400px) {
+    .margen__maniobras{
+        margin-top: -1rem !important;
+    }
+}
+@media screen and (max-width:900px) {
+    .margen__maniobras{
+        margin-top: 0rem !important;
+    }
+}

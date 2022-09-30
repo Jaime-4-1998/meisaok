@@ -155,7 +155,7 @@
                                 <div class="ih-item square effect10 left_to_right">
                     <span class="meisa__hover">
                         <div class="img">
-                            <img loading="lazy" src="../assets/img/bg/home/Ventas.jpg" alt="Sales" title="Sales" width="100" />
+                            <img loading="lazy" src="../assets/img/bg/home/Inventario.jpg" alt="Sales" title="Sales" width="100" />
                         </div>
                         <div class="info cam">
                             <h3>

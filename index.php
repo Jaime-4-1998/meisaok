@@ -125,7 +125,7 @@
                 <div class="ih-item square effect10 left_to_right">
                     <span class="meisa__hover">
                         <div class="img">
-                            <img loading="lazy" src="meisaback/adminmeisa/assets/img/colu/f06f3d4c37bedd0757668288ec801620.jpg" alt="Compra / Venta" title="Compra / Venta" width="100" />
+                            <img loading="lazy" src="assets/img/bg/colu/f06f3d4c37bedd0757668288ec801620.jpg" alt="Compra / Venta" title="Compra / Venta" width="100" />
                         </div>
                         <div class="info cam">
                             <h3>
@@ -137,7 +137,7 @@
                                 <div class="ih-item square effect10 left_to_right">
                     <span class="meisa__hover">
                         <div class="img">
-                            <img loading="lazy" src="meisaback/adminmeisa/assets/img/colu/12bffcd155e95d3297f271d34190a378.jpg" alt="Plantas de Luz" title="Plantas de Luz" width="100" />
+                            <img loading="lazy" src="assets/img/bg/colu/12bffcd155e95d3297f271d34190a378.jpg" alt="Plantas de Luz" title="Plantas de Luz" width="100" />
                         </div>
                         <div class="info cam">
                             <h3>
@@ -149,7 +149,7 @@
                                 <div class="ih-item square effect10 left_to_right">
                     <span class="meisa__hover">
                         <div class="img">
-                            <img loading="lazy" src="meisaback/adminmeisa/assets/img/colu/c61623eb5c366d767e5ce2178a7ea5ac.jpg" alt="Inventario" title="Inventario" width="100" />
+                            <img loading="lazy" src="assets/img/bg/colu/c61623eb5c366d767e5ce2178a7ea5ac.jpg" alt="Inventario" title="Inventario" width="100" />
                         </div>
                         <div class="info cam">
                             <h3>
@@ -161,7 +161,7 @@
                 <div class="ih-item square effect10 left_to_right">
                         <span class="meisa__hover">
                             <div class="img">
-                                <img loading="lazy" src="meisaback/adminmeisa/assets/img/colu/7b80e8f58347b0448a23998458e88c0c.jpg" alt="Maniobra" title="Maniobra" width="100" />
+                                <img loading="lazy" src="assets/img/bg/colu/7b80e8f58347b0448a23998458e88c0c.jpg" alt="Maniobra" title="Maniobra" width="100" />
                             </div>
                             <div class="info cam">
                                 <h3>

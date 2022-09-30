@@ -23,7 +23,7 @@
                 ?>
                  <!--First Text-->
                 <section>
-                   <div class="mani__meisa">
+                   <div class="mani__meisa margen__maniobras">
                         <?php
                             include '../meisaback/adminmeisa/assets/components/backend/conexion.php';
                             $sql = "SELECT id_mani,titlemani,contentmani
