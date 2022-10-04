@@ -139,7 +139,7 @@
                         <div class="img">
                             <img loading="lazy" src="assets/img/bg/colu/12bffcd155e95d3297f271d34190a378.jpg" alt="Plantas de Luz" title="Plantas de Luz" width="100" />
                         </div>
-                        <div class="info cam">
+                        <div class="info plant">
                             <h3>
                                 <a href="https://meisamex.com.mx/PlantasdeLuz/" class="link__meisa__nuevo">Plantas de Luz</a>                         
                             </h3>
@@ -151,7 +151,7 @@
                         <div class="img">
                             <img loading="lazy" src="assets/img/bg/colu/c61623eb5c366d767e5ce2178a7ea5ac.jpg" alt="Inventario" title="Inventario" width="100" />
                         </div>
-                        <div class="info cam">
+                        <div class="info invet">
                             <h3>
                                 <a href="https://meisamex.com.mx/Venta/" class="link__meisa__nuevo">Inventario</a>                         
                             </h3>
@@ -163,7 +163,7 @@
                             <div class="img">
                                 <img loading="lazy" src="assets/img/bg/colu/7b80e8f58347b0448a23998458e88c0c.jpg" alt="Maniobra" title="Maniobra" width="100" />
                             </div>
-                            <div class="info cam">
+                            <div class="info manit">
                                 <h3>
                                     <a href="https://meisamex.com.mx/Maniobras/" class="link__meisa__nuevo">Maniobra</a>                            
                                 </h3>

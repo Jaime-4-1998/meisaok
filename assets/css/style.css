@@ -39,7 +39,7 @@ html::-webkit-scrollbar-thumb {
     height: 100vh;
 }
 .head__maniobras{
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/bg/mani/29786237861238.jpg);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/bg/mani/29786237861238.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -60,7 +60,7 @@ html::-webkit-scrollbar-thumb {
     height: 60 !important;
 }
 .head__venta{
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/bg/ven/296756758745.jpg);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/bg/ven/43876543895.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -744,6 +744,45 @@ footer {
   -moz-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
 }
+.ih-item.square.effect10 .plant {
+    background-image: url(https://meisamex.com.mx/assets/img/bg/planta.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    object-fit: cover;
+    height:63vh;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+.ih-item.square.effect10 .invet {
+    background-image: url(https://meisamex.com.mx/assets/img/bg/invet022.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    object-fit: cover;
+    height:63vh;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+.ih-item.square.effect10 .manit {
+    background-image: url(https://meisamex.com.mx/assets/img/bg/e37ad643-9928-47f9-b063-b7814120c34a.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    object-fit: cover;
+    height:63vh;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
 @media screen and (max-width:1400px) {
     .ih-item.square.effect10 .info {
         height:100vh;
@@ -959,7 +998,7 @@ iframe{
 .mani__meisa{
     display: block;
     margin: auto;
-    margin-top: 7rem !important;
+    margin-top: 13rem !important;
     padding: 4rem;
 }
 @media screen and (max-width:1400px){
@@ -1284,7 +1323,7 @@ strong{
 }
 /*five sectioon of plantaz*/
 .meisa__manifon__plan{
-    background:linear-gradient(100.91deg, #000000 0%, rgba(0, 0, 0, 0) 83.81%), url(../img/bg/plan/22planfon78979584789.svg);
+    background:linear-gradient(100.91deg, #000000 0%, rgba(0, 0, 0, 0) 83.81%), url(../img/bg/plan/047849395345345.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1298,7 +1337,7 @@ strong{
 }
 @media screen and (max-width:1400px) {
     .meisa__manifon__plan{
-        height: 50vh;
+        height: 60vh;
     }
 }
 @media screen and (max-width:900px) {
@@ -1341,7 +1380,7 @@ strong{
     text-shadow: 5px 3px 5px rgba(0, 0, 0, 0.5);
     font-weight: 500;
     line-height: 33px;
-    width: 830px;
+    width: 600px;
     font-size: 1.2rem;
 }
 @media screen and (max-width:900px){
@@ -1558,7 +1597,7 @@ strong{
 }
 @media screen and (max-width:1400px) {
     .margen__maniobras{
-        margin-top: -1rem !important;
+        margin-top: 3rem !important;
     }
 }
 @media screen and (max-width:900px) {
