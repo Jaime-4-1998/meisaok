@@ -72,7 +72,7 @@ html::-webkit-scrollbar-thumb {
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        height: auto !important;
+        height: 80vh !important;
    }
    .head__maniobras{
         background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/bg/mani/28888resp.svg);
