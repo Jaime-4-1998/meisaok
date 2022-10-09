@@ -12,7 +12,8 @@
       <link rel="preload" href="../../assets/css/btn.css" as="style" onload="this.rel='stylesheet'">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" as="style" onload="this.rel='stylesheet'"> 
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" as="style" onload="this.rel='stylesheet'">
+      <?php include_once "../../assets/components/boot.php"; ?> 
     </head>
 <body>
     <header>
