@@ -12,7 +12,7 @@ if (isset($_POST["action"])) {
     if (isset($_POST["brand"])) {
         $brand_filter = implode("','", $_POST["brand"]);
         $query .= "
-         AND inve_catego IN('" . $brand_filter . "')
+         AND inve_category IN('" . $brand_filter . "')
         ";
     }
     $statement = $connect->prepare($query);
@@ -26,13 +26,13 @@ if (isset($_POST["action"])) {
                     <div class="flex__1">
                         <div class="card__flex">
                             <div class="card__flex__head">
-                                <img loading="lazy" src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $result['inve_img'];?>" alt="<?php echo str_replace("-", " ", $result['inve_nombre']); ?>" title="<?php echo str_replace("-", " ", $result['inve_nombre']); ?>" width="100" height="100" / >
-                                <h2><?php echo str_replace("-", " ", $result['inve_nombre']); ?></h2>
+                                <img loading="lazy" src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $result['inve_img'];?>" alt="<?php echo str_replace("-", " ", $result['inve_nombreingles']); ?>" title="<?php echo str_replace("-", " ", $result['inve_nombreingles']); ?>" width="100" height="100" / >
+                                <h2><?php echo str_replace("-", " ", $result['inve_nombreingles']); ?></h2>
                             </div>
                             <div class="card__flex__body">
                                     <!--<p>Modelo: <strong>< echo $inve_modelo;></strong></p>-->
                                     <p><?php echo $inve_desc; ?></p>
-                                    <a href="../Machine/<?php echo strtolower($result['inve_nombre']);?>/" title="click for more">View More</a>
+                                    <a href="../Machine/<?php echo strtolower($result['inve_nombreingles']);?>/" title="click for more">View More</a>
                                     <div class="esp__inv"></div>
                             </div>
                         </div>

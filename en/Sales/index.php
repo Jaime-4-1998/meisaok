@@ -60,7 +60,7 @@
                             <h2>Categories</h2>
                                         <?php
                                             $connect = new PDO("mysql:host=localhost;dbname=u557675164_titulacion", "root", "");
-                                            $query = "SELECT DISTINCT(inve_catego) FROM inventario WHERE inve_estatus = 'Disponible' ORDER BY inve_id DESC";
+                                            $query = "SELECT DISTINCT(inve_category) FROM inventario WHERE inve_estatus = 'Disponible' ORDER BY inve_id DESC";
                                             $statement = $connect->prepare($query);
                                             $statement->execute();
                                             $result = $statement->fetchAll();
@@ -68,9 +68,9 @@
                                             {
                                         ?>
                                             <div class="checkbox">
-                                                    <input type="checkbox" class="common_selector brand" id="<?php echo $row['inve_catego']; ?>" value="<?php echo $row['inve_catego']; ?>"  />
-                                                    <label for="<?php echo $row['inve_catego']; ?>">
-                                                        <span class="text"><?php echo $row['inve_catego']; ?></span>
+                                                    <input type="checkbox" class="common_selector brand" id="<?php echo $row['inve_category']; ?>" value="<?php echo $row['inve_category']; ?>"  />
+                                                    <label for="<?php echo $row['inve_category']; ?>">
+                                                        <span class="text"><?php echo $row['inve_category']; ?></span>
                                                     </label>
                                             </div>
                                         <?php

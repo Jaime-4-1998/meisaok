@@ -16,7 +16,7 @@
       ?>
       <?php
             $maquina = $_GET['maquina'];
-            $stmt = $mbd->prepare("SELECT * FROM inventario WHERE inve_nombre = '$maquina' ");
+            $stmt = $mbd->prepare("SELECT * FROM inventario WHERE inve_nombreingles = '$maquina' ");
             $stmt->execute();
             if($stmt->rowCount() > 0)
             {
@@ -25,7 +25,7 @@
             extract($row);
       ?>
       <meta name="description" content="<?php echo $inve_desc; ?>" />
-      <title>Meisa - <?php echo str_replace("-", " ", $row['inve_nombre']); ?></title>
+      <title>Meisa - <?php echo str_replace("-", " ", $row['inve_nombreingles']); ?></title>
       <?php } } else { ?>
          Datos no encontrados ... 
       <?php } ?>
@@ -107,7 +107,7 @@
          ?>
          <?php
             $maquina = $_GET['maquina'];
-            $stmt = $mbd->prepare("SELECT * FROM inventario WHERE inve_nombre = '$maquina' ");
+            $stmt = $mbd->prepare("SELECT * FROM inventario WHERE inve_nombreingles = '$maquina' ");
             $stmt->execute();
             if($stmt->rowCount() > 0)
             {
@@ -116,7 +116,7 @@
             extract($row);
          ?>
          <div class="productdetails__meisa">
-            <h1><?php echo str_replace("-", " ", $row['inve_nombre']); ?></h1>
+            <h1><?php echo str_replace("-", " ", $row['inve_nombreingles']); ?></h1>
             <h2><?php echo $inve_desc; ?></h2>
          </div>
       <div class="props__prod">
@@ -125,16 +125,16 @@
             <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
                               <div class="swiper-wrapper">
                               <div class="swiper-slide img__inveget">
-                                 <img data-enlargable src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_img; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
+                                 <img data-enlargable src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_img; ?>" loading="lazy" alt="<?php echo $inve_nombreingles; ?>" title="<?php echo $inve_nombreingles; ?>" />
                               </div>
                               <div class="swiper-slide img__inveget">
-                                 <img data-enlargable src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_imgtrasera; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
+                                 <img data-enlargable src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_imgtrasera; ?>" loading="lazy" alt="<?php echo $inve_nombreingles; ?>" title="<?php echo $inve_nombreingles; ?>" />
                               </div>
                               <div class="swiper-slide img__inveget">
-                                 <img data-enlargable src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_imgldderecho; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
+                                 <img data-enlargable src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_imgldderecho; ?>" loading="lazy" alt="<?php echo $inve_nombreingles; ?>" title="<?php echo $inve_nombreingles; ?>" />
                               </div>
                               <div class="swiper-slide img__inveget">
-                                 <img data-enlargable src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_imgldizq; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
+                                 <img data-enlargable src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_imgldizq; ?>" loading="lazy" alt="<?php echo $inve_nombreingles; ?>" title="<?php echo $inve_nombreingles; ?>" />
                               </div>
                               </div>
                               <div class="swiper-button-next"></div>
@@ -143,16 +143,16 @@
             <div thumbsSlider="" class="swiper mySwiper">
                               <div class="swiper-wrapper">
                               <div class="swiper-slide">
-                                 <img src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_img; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
+                                 <img src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_img; ?>" loading="lazy" alt="<?php echo $inve_nombreingles; ?>" title="<?php echo $inve_nombreingles; ?>" />
                               </div>
                               <div class="swiper-slide">
-                                 <img src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_imgtrasera; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
+                                 <img src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_imgtrasera; ?>" loading="lazy" alt="<?php echo $inve_nombreingles; ?>" title="<?php echo $inve_nombreingles; ?>" />
                               </div>
                               <div class="swiper-slide">
-                                 <img src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_imgldderecho; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
+                                 <img src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_imgldderecho; ?>" loading="lazy" alt="<?php echo $inve_nombreingles; ?>" title="<?php echo $inve_nombreingles; ?>" />
                               </div>
                               <div class="swiper-slide">
-                                 <img src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_imgldizq; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
+                                 <img src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_imgldizq; ?>" loading="lazy" alt="<?php echo $inve_nombreingles; ?>" title="<?php echo $inve_nombreingles; ?>" />
                               </div>
                               </div>
             </div>
@@ -174,7 +174,7 @@
                   ?>
                </div>
                <div>
-                  <p> <?php echo $inve_catego; ?></p>
+                  <p> <?php echo $inve_category; ?></p>
                   <p> <?php echo $inve_modelo; ?></p>
                   <p> <?php echo $inve_serie; ?></p>
                   <p> <?php echo $inve_year; ?></p>
@@ -186,7 +186,7 @@
                
             <p class="prod__info">
                <strong class="str__prod prod__price">
-                  <?php echo str_replace("-", " ", $row['inve_nombre']); ?>
+                  <?php echo str_replace("-", " ", $row['inve_nombreingles']); ?>
                </strong>
             </p>
             <p class="prod__info"><strong class="str__prod prod__price">$<?php  echo $number; ?></strong></p>
@@ -226,7 +226,7 @@
                 ?>
                 <?php
                         $maquina = $_GET['maquina'];
-                        $stmt = $mbd->prepare("SELECT * FROM inventario WHERE inve_nombre = '$maquina' ");
+                        $stmt = $mbd->prepare("SELECT * FROM inventario WHERE inve_nombreingles = '$maquina' ");
                         $stmt->execute();
                         if($stmt->rowCount() > 0)
                         {
@@ -236,7 +236,7 @@
                 ?>
                 <form class="form__data" id="forme">
                     <label class="form__label">Maquina</label>
-                    <input class="form__control" type="text" disabled name="" value="Informes sobre: <?php echo str_replace("-", " ", $row['inve_nombre']); ?>" id="name" placeholder="Maquina">
+                    <input class="form__control" type="text" disabled name="" value="Informes sobre: <?php echo str_replace("-", " ", $row['inve_nombreingles']); ?>" id="name" placeholder="Maquina">
                     
                     <label class="form__label">Full name</label>
                     <input class="form__control" type="text" name="" id="names" placeholder="Full name">
