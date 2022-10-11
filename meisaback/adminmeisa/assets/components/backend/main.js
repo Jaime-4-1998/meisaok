@@ -515,11 +515,11 @@ function addColumn(){
                         success:function(response){
                             Swal.fire({
                             icon: 'success',
-                            title: 'Columna Agregada',
+                            title: 'Producto Agregado',
                             confirmButtonColor: '#a20c19',
-                            text: 'Guardaste una Columna, da un clic en "Seguir"',
+                            text: 'Guardaste un Producto, da un clic en "Seguir"',
                             confirmButtonText:
-                                '<a class="text-white" href="http://localhost/meisa/meisaback/adminmeisa/Inventario/Ingresar">SEGUIR</a> '
+                                '<a class="btn text-white" href="http://localhost/meisa/meisaback/adminmeisa/Inventario/Ingresar">SEGUIR</a> '
                             })
                         }
     });
@@ -566,18 +566,18 @@ function editProdu(){
         success:function(response){
             Swal.fire({
             icon: 'success',
-            title: 'Columna Actualizada',
+            title: 'Producto Actualizado',
             confirmButtonColor: '#a20c19',
-            text: 'Editaste una Columna, da un clic en "Seguir"',
+            text: 'Editaste un Producto, da un clic en "Seguir"',
             confirmButtonText:
-                '<a class="text-white" href="http://localhost/meisa/meisaback/adminmeisa/Inventario/Ingresar">SEGUIR</a> '
+                '<a class="btn text-white" href="http://localhost/meisa/meisaback/adminmeisa/Inventario/Ingresar">SEGUIR</a> '
             })
         }
     });
 }
 /*DELETE COLUMNS ENG SiNoColumn*/
 function deleteProd(id){
-	alertify.confirm('Eliminar Datos', '¿Esta seguro de eliminar este columna?', 
+	alertify.confirm('Eliminar Datos', '¿Esta seguro de eliminar este Producto?', 
             function(){ deleteProducto(id) }
         , function(){ alertify.error('Se cancelo')});
 }
@@ -590,11 +590,11 @@ cadena="id=" + id;
         success:function(response){
             Swal.fire({
             icon: 'success',
-            title: 'Columna eliminado',
+            title: 'Producto eliminado',
             confirmButtonColor: '#a20c19',
-            text: 'Eliminaste una Columna, da un clic en "Seguir"',
+            text: 'Eliminaste un Producto, da un clic en "Seguir"',
             confirmButtonText:
-                '<a class="text-white" href="http://localhost/meisa/meisaback/adminmeisa/Inventario/Ingresar">SEGUIR</a> '
+                '<a class="btn text-white" href="http://localhost/meisa/meisaback/adminmeisa/Inventario/Ingresar">SEGUIR</a> '
             })
         }
        
@@ -602,7 +602,7 @@ cadena="id=" + id;
 }
 /*DELETE CATEGO*/
 function deleteCatego(id){
-	alertify.confirm('Eliminar Datos', '¿Esta seguro de eliminar este columna?', 
+	alertify.confirm('Eliminar Datos', '¿Esta seguro de eliminar este Producto?', 
             function(){ deleteCategori(id) }
         , function(){ alertify.error('Se cancelo')});
 }
@@ -663,11 +663,11 @@ function addCat(){
                         success:function(response){
                             Swal.fire({
                             icon: 'success',
-                            title: 'Columna Agregada',
+                            title: 'Categoria Agregada',
                             confirmButtonColor: '#a20c19',
-                            text: 'Guardaste una Columna, da un clic en "Seguir"',
+                            text: 'Guardaste una Categoria, da un clic en "Seguir"',
                             confirmButtonText:
-                                '<a class="text-white" href="http://localhost/meisa/meisaback/adminmeisa/Inventario/Categories">SEGUIR</a> '
+                                '<a class="btn text-white" href="http://localhost/meisa/meisaback/adminmeisa/Inventario/Categories">SEGUIR</a> '
                             })
                         }
     });
@@ -749,3 +749,54 @@ cadena="id=" + id;
     });
 }
 /*END OF BANNERS*/
+/*EDIT Categories*/
+function EdiatarCategoIngles(datos){
+    d=datos.split('||');
+    $('#idbannere').val(d[0]);
+    $('#categoditingles').val(d[1]);
+}
+function editCategoIngles(){
+    var Form = new FormData($('#formEditColIngles')[0]); 
+    $.ajax({
+        url:"http://localhost/meisa/meisaback/adminmeisa/assets/components/backinve/editCateIng.php", 
+        type: 'post',
+        data: Form,
+        processData: false,
+        contentType:false,
+        success:function(response){
+            Swal.fire({
+            icon: 'success',
+            title: 'Categoria Actualizada',
+            confirmButtonColor: '#a20c19',
+            text: 'Editaste una Categoria, da un clic en "Seguir"',
+            confirmButtonText:
+                '<a class="btn text-white" href="http://localhost/meisa/meisaback/adminmeisa/Inventario/Categories">SEGUIR</a> '
+            })
+        }
+    });
+}
+/*DELETE CATEGO*/
+function deleteCategoIngless(id){
+	alertify.confirm('Eliminar Categoria', '¿Esta seguro de eliminar este Categoria?', 
+            function(){ deleteCategoriIngles(id) }
+        , function(){ alertify.error('Se cancelo')});
+}
+function deleteCategoriIngles(id){
+cadena="id=" + id;
+    $.ajax({
+        type:"POST",
+        url:"http://localhost/meisa/meisaback/adminmeisa/assets/components/backinve/deleteInglesCat.php",
+        data:cadena,
+        success:function(response){
+            Swal.fire({
+            icon: 'success',
+            title: 'Categoria en Inglés eliminada',
+            confirmButtonColor: '#a20c19',
+            text: 'Eliminaste una Categoria en Inglés, da un clic en "Seguir"',
+            confirmButtonText:
+                '<a class="btn text-white" href="http://localhost/meisa/meisaback/adminmeisa/Inventario/Categories">SEGUIR</a> '
+            })
+        }
+       
+    });
+}

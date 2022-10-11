@@ -55,7 +55,7 @@ session_start();
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-meisa-red">Dashboard for the Component "Four Columns"</h1>
-                        <button class="btn btn-meisa" data-toggle="modal" data-target="#modalColumn"><i class="fas fa-plus"></i> Agregar Equipo</button>
+                        <button class="btn btn-meisa" data-toggle="modal" data-target="#modalColumn"><i class="fas fa-plus"></i> Agregar Categoria</button>
                     </div>
                     <div class="card-body">
                                 <div class="table-responsive">
@@ -102,8 +102,52 @@ session_start();
                                         <tbody>
                                         </tbody>
                                     </table>
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr class="text-center">
+                                                <th>Seguridad</th>
+                                                <th>Categoria</th>
+                                                <th>Eliminar</th>
+                                                <th>Editar</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr class="text-center">
+                                                <th>Seguridad</th>
+                                                <th>Categoria</th>
+                                                <th>Eliminar</th>
+                                                <th>Editar</th>
+                                                
+                                            </tr>
+                                        </tfoot>
+                                        <?php
+                                        include '../assets/components/backend/conexion.php';
+                                        $sql = "SELECT id,nameingles
+                                        FROM categoriainven ORDER BY id ASC"; 
+                                        $query = $mbd -> prepare($sql); 
+                                        $query -> execute(); 
+                                        $results = $query -> fetchAll(PDO::FETCH_OBJ); 
+                                            if($query -> rowCount() > 0){ 
+                                                foreach($results as $result) { 
+                                                    $datos = $result -> id."||".
+                                                    $result -> nameingles; 
+                                                ?>
+                                        <tr class="text-center">
+                                            <td><?php echo $result -> id; ?></td>
+                                            <td><?php echo $result -> nameingles; ?></td>
+                                            <td><button class="btn btn-meisa" type="button" onclick="deleteCategoIngless('<?php echo $result -> id; ?>')"><i class="fas fa-trash"></i></button></td>
+                                            <td><button class="btn btn-warning" type="button" data-toggle="modal" data-target="#modalColuEditarIngles" onclick="EdiatarCategoIngles('<?php echo $datos ?>')"><i class="fas fa-edit"></i></button></td>
+                                            <?php
+                                                    }
+                                                }
+                                            ?>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
                                 </div>
-                            </div>
+                    </div>
+                   
                 </div>
             </div>
             <!-- Footer -->
@@ -126,8 +170,12 @@ session_start();
             <div class="modal-body">
                 <form class="formBanner" id="formBanner"  method="POST" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label class="text-meisa">Categoria</label>
-                        <input class="form-control" type="text" placeholder="Categoria Nueva" name="categodit" id="categodit" requiered>
+                        <label class="text-meisa">Categoria Nueva en Español</label>
+                        <input class="form-control" type="text" placeholder="Categoria Nueva en Español" name="categodit" id="categodit" requiered>
+                    </div>
+                    <div class="form-group">
+                        <label class="text-meisa">Categoria Nueva es Ingles</label>
+                        <input class="form-control" type="text" placeholder="Categoria Nueva en Inglés" name="categoditert" id="categoditert" requiered>
                     </div>
                 </form>
             </div>
@@ -162,7 +210,31 @@ session_start();
             </div>
         </div>
     </div>
-    
+    <!--Modal de editar numero 1-->
+    <div class="modal fade" id="modalColuEditarIngles" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+            <div class="modal-header bg-meisaa">
+                <h5 class="modal-title text-light" id="exampleModalLabel">Editar Categoria en Ingles</h5>
+                <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="formBanner" id="formEditColIngles"  method="POST" enctype="multipart/form-data">
+                <input type="hidden" id="idbannere" name="idbannere">
+                    <div class="form-group">
+                        <label class="text-meisa">Categoria</label>
+                        <input class="form-control" type="text" placeholder="Categoria Nueva" name="categoditingles" id="categoditingles" requiered>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" id="btnEditColuIngles" class="btn btn-meisa">Guardar</button>
+            </div>
+            </div>
+        </div>
+    </div>
     <script src="../assets/vendor/jquery/jquery.min.js"></script>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -181,6 +253,9 @@ session_start();
             });
             $("#btnEditColu").click(function(e) {
                 editCategor();
+            });
+            $("#btnEditColuIngles").click(function(e) {
+                editCategoIngles();
             });
         });
     </script>

@@ -8,7 +8,9 @@ $itemlote=$_POST['itemlote'];
 $itemventa=$_POST['itemventa'];
 $itemrenta=$_POST['itemrenta'];
 $itemcatego=$_POST['itemcatego'];
+$itemcategory=$_POST['itemcategory'];
 $itemnombre=$_POST['itemnombre'];
+$itemnombrein=$_POST['itemnombrein'];
 $itemdesc=$_POST['itemdesc'];
 $itemmarca=$_POST['itemmarca'];
 $itemmodelo=$_POST['itemmodelo'];
@@ -58,7 +60,7 @@ if($imgizq["type"] == "image/jpeg" || $imgizq["type"] == "image/png"){
 }
 
     $consulta = "UPDATE inventario SET inve_itemfoto = '$itemfoto', inve_itemmeisa = '$itemmeisa', inve_lote = '$itemlote',
-     inve_venre = '$itemventa', inve_renve = '$itemrenta', inve_catego = '$itemcatego', inve_nombre = '$itemnombre', inve_desc = '$itemdesc', inve_marca = '$itemmarca', inve_modelo = '$itemmodelo',
+     inve_venre = '$itemventa', inve_renve = '$itemrenta', inve_catego = '$itemcatego', inve_category = '$itemcategory', inve_nombre = '$itemnombre', inve_nombreingles = '$itemnombrein',inve_desc = '$itemdesc', inve_marca = '$itemmarca', inve_modelo = '$itemmodelo',
     inve_serie = '$itemserie', inve_year = '$itemyear', inve_corriente = '$itemcorr', inve_motor = '$itemmotor', inve_capacidad = '$itemcapa', inve_observaciones = '$itemobser', 
     inve_img = '$rutaimg', inve_imgtrasera = '$rutaimg1', inve_imgldderecho = '$rutaimg2', inve_imgldizq = '$rutaimg3',
     inve_precio = '$itemprecio', inve_estatus = '$itemestatus', inve_fbmeisamex = '$itemefbmx', inve_fbmeisaequip = '$itemefbequip',
