@@ -25,6 +25,7 @@
             extract($row);
       ?>
       <meta name="description" content="<?php echo $inve_desc; ?>" />
+     
       <title>Meisa - <?php echo str_replace("-", " ", $row['inve_nombre']); ?></title>
       <?php } } else { ?>
          Datos no encontrados ... 
@@ -104,7 +105,8 @@
          ?>
          <?php
             $maquina = $_GET['maquina'];
-            $stmt = $mbd->prepare("SELECT * FROM inventario WHERE inve_nombre = '$maquina' ");
+            $seguridad = $_GET['seguridad'];
+            $stmt = $mbd->prepare("SELECT * FROM inventario WHERE inve_nombre = '$maquina' AND inve_seguridad = '$seguridad'");
             $stmt->execute();
             if($stmt->rowCount() > 0)
             {
@@ -186,19 +188,58 @@
                   <?php echo str_replace("-", " ", $row['inve_nombre']); ?>
                </strong>
             </p>
-            <p class="prod__info"><strong class="str__prod prod__price">$<?php  echo $number; ?></strong></p>
+            <p class="prod__info">
+                <?php 
+                    if($number == '0'){
+                        echo ' ';
+                    }else{
+                        $output = '<strong class="str__prod prod__price"><?php echo $number; ?></div>';
+                        echo $output;
+                    }
+                ?>
+            </p>
 
             </div>
             <div class="liena"></div>
                <div class="form__pro">
                               <div>
-                                 <?php 
-                                       if($inve_youtube == '0'){
-                                             echo ' ';
+                                    <?php 
+                                 
+                                       if($inve_youtube == 'N/A'){
+                                            $nam = str_replace("-", " ", $row["inve_nombre"]);
+                                             $formu = '<form class="form__data" id="forme">
+                                             <label class="form__label">Nombre Completo</label>
+                                             
+                                             <input class="form__control" type="text" disabled name="" value="Informes sobre: '.$nam.'" id="name" placeholder="Nombre Completo">
+                                             
+                                             <label class="form__label">Nombre Completo</label>
+                                             <input class="form__control" type="text" name="" id="names" placeholder="Nombre Completo">
+                                             
+                         
+                                             <label class="form__label">Correo</label>
+                                             <input class="form__control" type="email" name="" id="mail" placeholder="corre@example.com">
+                                             
+                                             <label class="form__label">Telefono</label>
+                                             <input class="form__control" type="text" name="" id="tel" placeholder="Telefono de contacto">
+                                             
+                                             <label class="form__label">Comentarios</label>
+                                             <textarea class="form__control" name="" id="tema" placeholder="Comentarios" rows="5" cols="12" ></textarea>
+                                             <small class="form__error ok fail" id="respuesta"></small>
+                                             <button id="submit" type="submit" class="buton__form">Enviar</button>
+                                         </form>';
+                                         echo $formu;
                                        }else{
-                                             $output = '<div class="frame__youtube">'. $row['inve_youtube'] .'</div>'; echo $output;
+                                                $you=$row['inve_youtube'];
+                                                $str = str_replace("watch?v=", "embed/", $row['inve_youtube']);
+                                                $stre = str_replace("?v=", "/", $str);
+                                                $ctr = '?controls=0'; 
+                                                $output = '<div class="frame__youtube">
+                                                            <iframe src="'.$str.''.$ctr.'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+                                                        </div>'; 
+                                               
+                                                echo $output;
                                        }
-                                 ?>
+                                    ?>
                               </div>
                </div>
          </div>
@@ -223,7 +264,8 @@
                 ?>
                 <?php
                         $maquina = $_GET['maquina'];
-                        $stmt = $mbd->prepare("SELECT * FROM inventario WHERE inve_nombre = '$maquina' ");
+                        $seguridad = $_GET['seguridad'];
+                        $stmt = $mbd->prepare("SELECT * FROM inventario WHERE inve_nombre = '$maquina' AND inve_seguridad = '$seguridad'");
                         $stmt->execute();
                         if($stmt->rowCount() > 0)
                         {
@@ -231,25 +273,37 @@
                         {
                         extract($row);
                 ?>
-                <form class="form__data" id="forme">
-                    <label class="form__label">Nombre Completo</label>
-                    <input class="form__control" type="text" disabled name="" value="Informes sobre: <?php echo str_replace("-", " ", $row['inve_nombre']); ?>" id="name" placeholder="Nombre Completo">
-                    
-                    <label class="form__label">Nombre Completo</label>
-                    <input class="form__control" type="text" name="" id="names" placeholder="Nombre Completo">
-                    
+                 <?php 
+                                 
+                                if($inve_youtube == 'N/A' ){
+                                echo "";
+                                 }else{
+                                    $namr = str_replace("-", " ", $row["inve_nombre"]);
+                                    $formur = '<form class="form__data" id="forme">
+                                    <label class="form__label">Nombre Completo</label>
+                                    
+                                    <input class="form__control" type="text" disabled name="" value="Informes sobre: '.$namr.'" id="name" placeholder="Nombre Completo">
+                                    
+                                    <label class="form__label">Nombre Completo</label>
+                                    <input class="form__control" type="text" name="" id="names" placeholder="Nombre Completo">
+                                    
+                
+                                    <label class="form__label">Correo</label>
+                                    <input class="form__control" type="email" name="" id="mail" placeholder="corre@example.com">
+                                    
+                                    <label class="form__label">Telefono</label>
+                                    <input class="form__control" type="text" name="" id="tel" placeholder="Telefono de contacto">
+                                    
+                                    <label class="form__label">Comentarios</label>
+                                    <textarea class="form__control" name="" id="tema" placeholder="Comentarios" rows="5" cols="12" ></textarea>
+                                    <small class="form__error ok fail" id="respuesta"></small>
+                                    <button id="submit" type="submit" class="buton__form">Enviar</button>
+                                </form>';
+                                    echo $formur;
+                                 }
+                            ?>
 
-                    <label class="form__label">Correo</label>
-                    <input class="form__control" type="email" name="" id="mail" placeholder="corre@example.com">
-                    
-                    <label class="form__label">Telefono</label>
-                    <input class="form__control" type="text" name="" id="tel" placeholder="Telefono de contacto">
-                    
-                    <label class="form__label">Comentarios</label>
-                    <textarea class="form__control" name="" id="tema" placeholder="Comentarios" rows="5" cols="12" ></textarea>
-                    <small class="form__error ok fail" id="respuesta"></small>
-                    <button id="submit" type="submit" class="buton__form">Enviar</button>
-                </form>
+
                 <?php } } else { ?>
                     Datos no encontrados ... 
                 <?php } ?>

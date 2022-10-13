@@ -26,13 +26,14 @@ if (isset($_POST["action"])) {
                     <div class="flex__1">
                         <div class="card__flex">
                             <div class="card__flex__head">
-                                <img loading="lazy" src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $result['inve_img'];?>" alt="<?php echo str_replace("-", " ", $result['inve_nombre']); ?>" title="<?php echo str_replace("-", " ", $result['inve_nombre']); ?>" width="100" height="100" / >
-                                <h2><?php echo str_replace("-", " ", $result['inve_nombre']); ?></h2>
+                                <img loading="lazy" src="https://meisamex.com.mx/meisaback/adminmeisa/assets/<?php echo $result['inve_img'];?>" alt="<?php echo str_replace("-", " ", $result['inve_nombre']); ?>" title="<?php echo str_replace("-", " ", $result['inve_nombre']); ?>" width="100" height="100" / >
+                                 <?php require_once '../assets/func/acent.php'; ?>
+                                <h2><?php echo str_replace("-", " ", utf8_encode($result['inve_nombre'])); ?></h2>
                             </div>
                             <div class="card__flex__body">
                                     <!--<p>Modelo: <strong>< echo $inve_modelo;></strong></p>-->
-                                    <p><?php echo $inve_desc; ?></p>
-                                    <a href="../Maquina/<?php echo strtolower($result['inve_nombre']);?>/" title="click para ver más">Ver Más</a>
+                                    <p><?php echo utf8_encode($inve_desc); ?></p>
+                                    <a href="../Maquina/<?php echo strtolower(eliminar_tildes($result['inve_nombre']));?>/<?php echo ($result['inve_seguridad']);?>/" title="click para ver más">Ver Más</a>
                                     <div class="esp__inv"></div>
                             </div>
                         </div>
