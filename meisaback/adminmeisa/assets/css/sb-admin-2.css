@@ -1835,10 +1835,10 @@ pre code {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #6e707e;
+  color: #000;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #d1d3e2;
+  border: 1px solid #a20c19;
   border-radius: 0.35rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -1860,7 +1860,7 @@ pre code {
 }
 
 .form-control:focus {
-  color: #6e707e;
+  color: #000;
   background-color: #fff;
   border-color: #bac8f3;
   outline: 0;
@@ -2341,7 +2341,7 @@ textarea.form-control {
 
 .btn:focus, .btn.focus {
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+  box-shadow: 0 0 0 0.2rem #000 !important;
 }
 
 .btn.disabled, .btn:disabled {
@@ -3197,7 +3197,7 @@ input[type="button"].btn-block {
   padding: 0.25rem 1.5rem;
   clear: both;
   font-weight: 400;
-  color: #3a3b45;
+  color: #fff !important;
   text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
@@ -3205,15 +3205,16 @@ input[type="button"].btn-block {
 }
 
 .dropdown-item:hover, .dropdown-item:focus {
-  color: #2e2f37;
+  color: #fff !important;
   text-decoration: none;
-  background-color: #eaecf4;
+  background-color: #000 !important;
+  cursor: pointer;
 }
 
 .dropdown-item.active, .dropdown-item:active {
-  color: #fff;
+  color: #fff !important;
   text-decoration: none;
-  background-color: #4e73df;
+  background-color: transparent !important;
 }
 
 .dropdown-item.disabled, .dropdown-item:disabled {
@@ -3583,11 +3584,11 @@ input[type="button"].btn-block {
 }
 
 .custom-control-input:focus ~ .custom-control-label::before {
-  box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+  box-shadow: 0 0 0 0.2rem #a20c19 !important;
 }
 
 .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
-  border-color: #bac8f3;
+  border-color: #a20c19 !important;
 }
 
 .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
@@ -3791,8 +3792,8 @@ input[type="button"].btn-block {
 }
 
 .custom-file-input:focus ~ .custom-file-label {
-  border-color: #bac8f3;
-  box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+  border-color: #a20c19 !important;
+  box-shadow: 0 0 0 0.2rem #000;
 }
 
 .custom-file-input[disabled] ~ .custom-file-label,
@@ -5746,7 +5747,7 @@ a.close.disabled {
   pointer-events: auto;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: none !important;
   border-radius: 0.3rem;
   outline: 0;
 }
@@ -9917,6 +9918,10 @@ a:focus {
   100% {
     opacity: 1;
   }
+}
+
+.str_meisa{
+  font-weight: bold !important;
 }
 
 .animated--fade-in {

@@ -145,23 +145,53 @@ session_start();
             <div class="modal-body">
                 <form class="formBanner" id="formBanner"  method="POST" enctype="multipart/form-data">
                     <div class="form-row">
+                        <!--Itemfoto-->
                         <div class="form-group col-md-4">
-                            <label class="text-meisa">Item Fotografico</label>
-                            <input class="form-control" type="text" placeholder="Item Fotografico" name="itemfoto" id="itemfoto">
+                            <label class="text-meisa str_meisa" id="itmfot">Item Fotografico</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-meisa text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">¿Este Item Aplica?</button>
+                                    <div class="dropdown-menu bg-meisaa">
+                                        <p class="dropdown-item" id="not">No Aplica</p>
+                                        <p class="dropdown-item" id="nat">Si Aplica</p>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" name="itemfoto" id="itemfoto" >
+                            </div>
                         </div>
+                        <!--Item Meisa-->
                         <div class="form-group col-md-4">
-                            <label class="text-meisa">Item Meisa</label>
-                            <input class="form-control" type="text" placeholder="Item Meisa" name="itemmeisa" id="itemmeisa">
+                            <label class="text-meisa str_meisa" id="itmmei">Item Meisa</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-meisa text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">¿Este Item Aplica?</button>
+                                    <div class="dropdown-menu bg-meisaa">
+                                        <p class="dropdown-item" id="mei">No Aplica</p>
+                                        <p class="dropdown-item" id="mse">Si Aplica</p>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" name="itemmeisa" id="itemmeisa" >
+                            </div>
                         </div>
+                        <!--Item Lote-->
                         <div class="form-group col-md-4">
-                            <label class="text-meisa">Item Lote</label>
-                            <input class="form-control" type="text" placeholder="Item Lote" name="itemlote" id="itemlote">
+                            <label class="text-meisa str_meisa" id="itlot">Item Lote</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-meisa text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">¿Este Item Aplica?</button>
+                                    <div class="dropdown-menu bg-meisaa">
+                                        <p class="dropdown-item" id="lot">No Aplica</p>
+                                        <p class="dropdown-item" id="lte">Si Aplica</p>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" name="itemlote" id="itemlote" >
+                            </div>
                         </div>
                     </div>
                      <!--Modal sepa-->
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label class="text-meisa">Categoría en Español</label>
+                            <label class="text-meisa str_meisa">Categoría en Español</label>
                             <select class="form-control" name="itemcatego" id="itemcatego">
                                           <option selected >Elije una categoria es español</option>
                                           <?php
@@ -174,7 +204,7 @@ session_start();
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <label class="text-meisa">Categoreía en Inglés</label>
+                            <label class="text-meisa str_meisa">Categoreía en Inglés</label>
                             <select class="form-control" name="itemcategory" id="itemcategory">
                                           <option selected >Elije una categoria inglés</option>
                                           <?php
@@ -189,17 +219,17 @@ session_start();
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label class="text-meisa">Nombre en Español</label>
+                            <label class="text-meisa str_meisa">Nombre en Español</label>
                             <input class="form-control" type="text" placeholder="Nombre en Español" name="itemnombre" id="itemnombre" requiered>
                         </div>
                         <div class="form-group col-md-6">
-                            <label class="text-meisa">Nombre en Inglés</label>
+                            <label class="text-meisa str_meisa">Nombre en Inglés</label>
                             <input class="form-control" type="text" placeholder="Nombre en Inglés" name="itemnombrein" id="itemnombrein" requiered>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label class="text-meisa">¿El Producto esta en Venta?</label>
+                            <label class="text-meisa str_meisa">¿El Producto esta en Venta?</label>
                             <select class="form-control" name="itemventa" id="itemventa">
                                 <option selected >Elije el estatus</option>
                                 <option value="Si">Si</option>
@@ -207,7 +237,7 @@ session_start();
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <label class="text-meisa">¿El Producto esta en Renta?</label>
+                            <label class="text-meisa str_meisa">¿El Producto esta en Renta?</label>
                             <select class="form-control" name="itemrenta" id="itemrenta">
                                 <option selected >Elije el estatus</option>
                                 <option value="Si">Si</option>
@@ -217,71 +247,161 @@ session_start();
                     </div>
                      <!--Modal sepa-->
                     <div class="form-group">
-                            <label class="text-meisa">Descripción del Producto</label>
+                            <label class="text-meisa str_meisa">Descripción del Producto</label>
                             <textarea class="form-control" name="itemdesc" id="itemdesc" cols="30" rows="10"></textarea>
                     </div>  
                      <!--Modal sepa-->
                     <div class="form-row">
+                        <!--Marca del Producto-->
                         <div class="form-group col-md-6">
-                            <label class="text-meisa">Marca del Producto</label>
-                            <input class="form-control" type="text" placeholder="Marca del Producto" name="itemmarca" id="itemmarca" requiered>
+                            <label class="text-meisa str_meisa" id="modpr">Marca del Producto</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-meisa text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Marca del Aplica?</button>
+                                    <div class="dropdown-menu bg-meisaa">
+                                        <p class="dropdown-item" id="mrp">No Aplica</p>
+                                        <p class="dropdown-item" id="mar">Si Aplica</p>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" name="itemmarca" id="itemmarca" >
+                            </div>
                         </div>
-                        <div class="form-group col-md-6">
-                            <label class="text-meisa">Modelo del Producto</label>
-                            <input class="form-control" type="text" placeholder="Modelo del Producto" name="itemmodelo" id="itemmodelo" requiered>
+                         <!--Modelo del Producto-->
+                         <div class="form-group col-md-6">
+                            <label class="text-meisa str_meisa" id="mop">Modelo del Producto</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-meisa text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">¿Modelo del Producto Aplica?</button>
+                                    <div class="dropdown-menu bg-meisaa">
+                                        <p class="dropdown-item" id="mdp">No Aplica</p>
+                                        <p class="dropdown-item" id="mpp">Si Aplica</p>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" name="itemmodelo" id="itemmodelo" >
+                            </div>
                         </div>
                     </div>     
                      <!--Modal sepa-->
                      <div class="form-row">
+                        <!--Número de Serie-->
                         <div class="form-group col-md-4">
-                            <label class="text-meisa">Número de Serie</label>
-                            <input class="form-control" type="text" placeholder="Número de Serie" name="itemserie" id="itemserie" requiered>
+                            <label class="text-meisa str_meisa" id="numer">Número de Serie</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-meisa text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">¿Número de Serie Aplica?</button>
+                                    <div class="dropdown-menu bg-meisaa">
+                                        <p class="dropdown-item" id="nus">No Aplica</p>
+                                        <p class="dropdown-item" id="nds">Si Aplica</p>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" name="itemserie" id="itemserie" >
+                            </div>
                         </div>
+                        <!--Año del Producto-->
                         <div class="form-group col-md-4">
-                            <label class="text-meisa">Año del Producto</label>
-                            <input class="form-control" type="text" placeholder="Ejemplo: 2022" name="itemyear" id="itemyear" requiered>
+                            <label class="text-meisa str_meisa" id="anp">Año del Producto</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-meisa text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">¿Año del Producto Aplica?</button>
+                                    <div class="dropdown-menu bg-meisaa">
+                                        <p class="dropdown-item" id="adpy">No Aplica</p>
+                                        <p class="dropdown-item" id="ydpa">Si Aplica</p>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" name="itemyear" id="itemyear" >
+                            </div>
                         </div>
-                        <div class="form-group col-md-4">
-                            <label class="text-meisa">Correiente del Producto</label>
-                            <input class="form-control" type="text" placeholder="Correiente del Producto" name="itemcorr" id="itemcorr" requiered>
+                         <!--Correiente del Producto-->
+                         <div class="form-group col-md-4">
+                            <label class="text-meisa str_meisa" id="corr">Correiente del Producto</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-meisa text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">¿Correiente del Producto Aplica?</button>
+                                    <div class="dropdown-menu bg-meisaa">
+                                        <p class="dropdown-item" id="corre">No Aplica</p>
+                                        <p class="dropdown-item" id="crrp">Si Aplica</p>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" name="itemcorr" id="itemcorr" >
+                            </div>
                         </div>
                     </div>     
                        <!--Modal sepa-->
                     <div class="form-row">
+                        <!--Motor del Producto-->
                         <div class="form-group col-md-6">
-                            <label class="text-meisa">Motor del Producto</label>
-                            <input class="form-control" type="text" placeholder="Motor del Producto" name="itemmotor" id="itemmotor" requiered>
+                            <label class="text-meisa str_meisa" id="mtp">Motor del Producto</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-meisa text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">¿Motor del Producto Aplica?</button>
+                                    <div class="dropdown-menu bg-meisaa">
+                                        <p class="dropdown-item" id="pmt">No Aplica</p>
+                                        <p class="dropdown-item" id="tmp">Si Aplica</p>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" name="itemmotor" id="itemmotor" >
+                            </div>
                         </div>
+                        <!--Capacidad del Producto-->
                         <div class="form-group col-md-6">
-                            <label class="text-meisa">Capacidad del Producto</label>
-                            <input class="form-control" type="text" placeholder="Capacidad del Producto" name="itemcapa" id="itemcapa" requiered>
+                            <label class="text-meisa str_meisa" id="cap">Capacidad del Producto</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-meisa text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">¿La Capacidad Aplica?</button>
+                                    <div class="dropdown-menu bg-meisaa">
+                                        <p class="dropdown-item" id="capi">No Aplica</p>
+                                        <p class="dropdown-item" id="capa">Si Aplica</p>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" name="itemcapa" id="itemcapa" >
+                            </div>
                         </div>
                     </div>                
                     <!--Modal sepa-->
+                        <!--Observaciones del Producto-->
                         <div class="form-group">
-                            <label class="text-meisa">Observaciones del Producto</label>
-                            <input class="form-control" type="text" placeholder="Observaciones del Producto" name="itemobser" id="itemobser" requiered>
-                        </div>
-                     <!--Modal sepa-->
-                     <div class="form-row">
-                        <div class="form-group col-md-3">
-                            <label class="text-meisa">Imagen Principal</label>
-                            <div class="custom-file">
-                                    <label for="exampleFormControlFile1">Elige tu imagen</label>
-                                    <input type="file" class="form-control-file" name="imgBanner" />
+                            <label class="text-meisa str_meisa" id="odp">Observaciones del Producto</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-meisa text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">¿Las Observaciones Aplican?</button>
+                                    <div class="dropdown-menu bg-meisaa">
+                                        <p class="dropdown-item" id="obdp">No Aplica</p>
+                                        <p class="dropdown-item" id="pod">Si Aplica</p>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" name="itemobser" id="itemobser" >
                             </div>
                         </div>
-                        
+                     <!--Modal sepa-->
+                      <!--Imagen del Producto-->
+                     <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label class="text-meisa str_meisa">Imagen Principal</label>
+                            <div class="custom-file">
+   				<label for="exampleFormControlFile1">Elige tu imagen</label>
+                                <input type="file" class="form-control-file" name="imgBanner" />
+                            </div>
+                        </div>
                      </div>
-                    
                     <!--Modal sepa-->
                     <div class="form-row">
+                        <!--Precio del Producto-->
                         <div class="form-group col-md-6">
-                            <label class="text-meisa">Precio del Producto</label>
-                            <input class="form-control" type="number" placeholder="Ejemplo: 23456" name="itemprecio" id="itemprecio" requiered>
+                            <label class="text-meisa str_meisa" id="prec">Precio del Producto</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-meisa text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">¿El Precio Aplica?</button>
+                                    <div class="dropdown-menu bg-meisaa">
+                                        <p class="dropdown-item" id="prep">No Aplica</p>
+                                        <p class="dropdown-item" id="preci">Si Aplica</p>
+                                    </div>
+                                </div>
+                                <input type="number" class="form-control" name="itemprecio" id="itemprecio" >
+                            </div>
                         </div>
+                        <!--¿El Producto esta a la Venta o D-->
                         <div class="form-group col-md-6">
-                            <label class="text-meisa">¿El Producto esta a la Venta o Disponible?</label>
+                            <label class="text-meisa str_meisa">¿El Producto esta a la Vendido o Disponible?</label>
                             <select class="form-control" name="itemestatus" id="itemestatus">
                                 <option selected >Elije el estatus</option>
                                 <option value="Vendido">Vendido</option>
@@ -292,71 +412,82 @@ session_start();
                     <!--Modal sepa-->
                     <div class="form-row">
                         <div class="form-group col-md-3">
-                            <label class="text-meisa">¿Existe el FaceBook?</label>
+                            <label class="text-meisa str_meisa">¿Existe el FaceBook?</label>
                             <select class="form-control" name="itemefbmx" id="itemefbmx">
                                 <option selected >Elije el estatus</option>
                                 <option value="Existe">Existe</option>
-                                <option value="No Existe">No Existe</option>
+                                <option value="N/A">No Aplica</option>
                             </select>
                         </div>
                         <div class="form-group col-md-3">
-                            <label class="text-meisa">¿Hay Publicación en FB?</label>
+                            <label class="text-meisa str_meisa">¿Hay Publicación en FB?</label>
                             <select class="form-control" name="itemefbequip" id="itemefbequip">
                                 <option selected >Elije el estatus</option>
                                 <option value="Existe">Existe</option>
-                                <option value="No Existe">No Existe</option>
+                                <option value="N/A">No Aplica</option>
                             </select>
                         </div>
-
                         <div class="form-group col-md-3">
-                            <label class="text-meisa">¿Existe en Segunda?</label>
+                            <label class="text-meisa str_meisa">¿Existe en Segunda?</label>
                             <select class="form-control" name="itemsegun" id="itemsegun">
                                 <option selected >Elije el estatus</option>
                                 <option value="Existe">Existe</option>
-                                <option value="No Existe">No Existe</option>
+                                <option value="N/A">No Aplica</option>
                             </select>
                         </div>
                         <div class="form-group col-md-3">
-                            <label class="text-meisa">¿Existe en LinkedIn?</label>
+                            <label class="text-meisa str_meisa">¿Existe en LinkedIn?</label>
                             <select class="form-control" name="itemlink" id="itemlink">
                                 <option selected >Elije el estatus</option>
                                 <option value="Existe">Existe</option>
-                                <option value="No Existe">No Existe</option>
+                                <option value="N/A">No Aplica</option>
                             </select>
                         </div>
                     </div>     
                     <!--Modal sepa-->
                     <div class="form-row">
                         <div class="form-group col-md-3">
-                            <label class="text-meisa">¿Existe en Mercado Libre?</label>
+                            <label class="text-meisa str_meisa">¿Existe en Mercado Libre?</label>
                             <select class="form-control" name="itemercado" id="itemercado">
                                 <option selected >Elije el estatus</option>
                                 <option value="Existe">Existe</option>
-                                <option value="No Existe">No Existe</option>
+                                <option value="N/A">No Aplica</option>
                             </select>
                         </div>
                         <div class="form-group col-md-3">
-                            <label class="text-meisa">¿Existe en Twitter?</label>
+                            <label class="text-meisa str_meisa">¿Existe en Twitter?</label>
                             <select class="form-control" name="itemtw" id="itemtw">
                                 <option selected >Elije el estatus</option>
                                 <option value="Existe">Existe</option>
-                                <option value="No Existe">No Existe</option>
+                                <option value="N/A">No Aplica</option>
                             </select>
                         </div>
 
                         <div class="form-group col-md-3">
-                            <label class="text-meisa">¿Existe en Instagram?</label>
+                            <label class="text-meisa str_meisa">¿Existe en Instagram?</label>
                             <select class="form-control" name="itemins" id="itemins">
                                 <option selected >Elije el estatus</option>
                                 <option value="Existe">Existe</option>
-                                <option value="No Existe">No Existe</option>
+                                <option value="N/A">No Aplica</option>
                             </select>
                         </div>
-                        <div class="form-group col-md-3">
-                            <label class="text-meisa">¿Existe en Youtube?</label>
-                            <input class="form-control" type="text" name="itemyou" id="itemyou">
+                    </div>    
+                    <div class="form-group">
+                        <!--¿Existe en Youtube?-->
+                        <div class="form-group">
+                            <label class="text-meisa str_meisa" id="vide">¿Existe en Youtube?</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-meisa text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">¿Esta dato Aplica?</button>
+                                    <div class="dropdown-menu bg-meisaa">
+                                        <p class="dropdown-item" id="you">No Aplica</p>
+                                        <p class="dropdown-item" id="tube">Si Aplica</p>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" name="itemyou" id="itemyou" >
+                            </div>
                         </div>
-                    </div>        
+                    </div>    
                 </form>
             </div>
             <div class="modal-footer">
@@ -620,6 +751,7 @@ session_start();
             });
         });
     </script>
+    <script src="../assets/js/apply.js"></script>
 </body>
 
 </html>

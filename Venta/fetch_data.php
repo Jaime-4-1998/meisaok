@@ -26,7 +26,7 @@ if (isset($_POST["action"])) {
                     <div class="flex__1">
                         <div class="card__flex">
                             <div class="card__flex__head">
-                                <img loading="lazy" src="https://meisamex.com.mx/meisaback/adminmeisa/assets/<?php echo $result['inve_img'];?>" alt="<?php echo str_replace("-", " ", $result['inve_nombre']); ?>" title="<?php echo str_replace("-", " ", $result['inve_nombre']); ?>" width="100" height="100" / >
+                                <img loading="lazy" src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $result['inve_img'];?>" alt="<?php echo str_replace("-", " ", $result['inve_nombre']); ?>" title="<?php echo str_replace("-", " ", $result['inve_nombre']); ?>" width="100" height="100" / >
                                  <?php require_once '../assets/func/acent.php'; ?>
                                 <h2><?php echo str_replace("-", " ", utf8_encode($result['inve_nombre'])); ?></h2>
                             </div>
