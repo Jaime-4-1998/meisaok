@@ -16,7 +16,8 @@
       ?>
       <?php
             $maquina = $_GET['maquina'];
-            $stmt = $mbd->prepare("SELECT * FROM inventario WHERE inve_nombreingles = '$maquina' ");
+            $seguridad = $_GET['seguridad'];
+            $stmt = $mbd->prepare("SELECT * FROM inventario WHERE inve_nombreingles = '$maquina'  AND inve_seguridad = '$seguridad'");
             $stmt->execute();
             if($stmt->rowCount() > 0)
             {
@@ -107,7 +108,8 @@
          ?>
          <?php
             $maquina = $_GET['maquina'];
-            $stmt = $mbd->prepare("SELECT * FROM inventario WHERE inve_nombreingles = '$maquina' ");
+            $seguridad = $_GET['seguridad'];
+            $stmt = $mbd->prepare("SELECT * FROM inventario WHERE inve_nombreingles = '$maquina'  AND inve_seguridad = '$seguridad'");
             $stmt->execute();
             if($stmt->rowCount() > 0)
             {
@@ -117,7 +119,13 @@
          ?>
          <div class="productdetails__meisa">
             <h1><?php echo str_replace("-", " ", $row['inve_nombreingles']); ?></h1>
-            <h2><?php echo $inve_desc; ?></h2>
+            <?php
+                if($inve_desc === 'N/A'){
+                    echo '<br/></br>';
+                }else{
+                    echo '<h2>'.$inve_desc.'</h2>';
+                }
+            ?>
          </div>
       <div class="props__prod">
          <div class="products__especific__miesa">
@@ -162,24 +170,83 @@
             <div class="liena"></div>
             <span class="pord__disp"><?php echo $inve_estatus; ?></span>
             <div class="two__col__prod">
-               <div class="two__col__prod__title">
-                  <p><strong class="str__prod">Category</strong></p>
-                  <p><strong class="str__prod">Brand</strong></p>
-                  <p><strong class="str__prod">Model</strong></p>
-                  <p><strong class="str__prod"># Series</strong></p>
-                  <p><strong class="str__prod">Year</strong></p>
-                  <p><strong class="str__prod">Stream</strong></p>
-                  <?php 
-                     $number = number_format($inve_precio,2,'.',',');
-                  ?>
+            <div class="two__col__prod__title">
+                    <?php 
+                        if($inve_category === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p><strong class="str__prod">Category</strong></p>';
+                        }
+                        if($inve_marca === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p><strong class="str__prod">Brand</strong></p>';
+                        }
+                        if($inve_modelo === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p><strong class="str__prod">Model</strong></p>';
+                        }
+                        if($inve_serie === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p><strong class="str__prod"># Serie</strong></p>';
+                        }
+                        if($inve_year === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p><strong class="str__prod">Year</strong></p>';
+                        }
+                        if($inve_corriente === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p><strong class="str__prod">Stream</strong></p>';
+                        }
+                        if($inve_motor === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p><strong class="str__prod">Motor</strong></p>';
+                        }
+                    ?>
                </div>
                <div>
-                  <p> <?php echo $inve_category; ?></p>
-                  <p> <?php echo $inve_modelo; ?></p>
-                  <p> <?php echo $inve_serie; ?></p>
-                  <p> <?php echo $inve_year; ?></p>
-                  <p> <?php echo $inve_corriente; ?></p>
-                  <p> <?php echo $inve_motor; ?></p>
+                    <?php 
+                        if($inve_category === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p>'.$inve_category.'</p>';
+                        }
+                        if($inve_marca === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p>'.$inve_marca.'</p>';
+                        }
+                        if($inve_modelo === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p>'.$inve_modelo.'</p>';
+                        }
+                        if($inve_serie === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p>'.$inve_serie.'</p>';
+                        }
+                        if($inve_year === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p>'.$inve_year.'</p>';
+                        }
+                        if($inve_corriente === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p>'.$inve_corriente.'</p>';
+                        }
+                        if($inve_motor === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p>'.$inve_motor.'</p>';
+                        }
+                    ?>
                </div>
             </div>
             <div class="flex__priceinfo">
@@ -189,19 +256,57 @@
                   <?php echo str_replace("-", " ", $row['inve_nombreingles']); ?>
                </strong>
             </p>
-            <p class="prod__info"><strong class="str__prod prod__price">$<?php  echo $number; ?></strong></p>
-
+            <p class="prod__info">
+                <?php 
+                    $number = number_format($inve_precio,2,'.',',');
+                    if($inve_precio === '0000'){
+                        echo '';
+                    }else{
+                        echo '<strong class="str__prod prod__price">'.$number.' MXN</strong>';
+                    }
+                ?>
+            </p>
             </div>
             <div class="liena"></div>
                <div class="form__pro">
                               <div>
-                                 <?php 
-                                       if($inve_youtube == '0'){
-                                             echo ' ';
-                                       }else{
-                                             $output = '<div class="frame__youtube">'. $row['inve_youtube'] .'</div>'; echo $output;
-                                       }
-                                 ?>
+                                <?php 
+                                 
+                                    if($inve_youtube == 'N/A'){
+                                        $nam = str_replace("-", " ", $row["inve_nombreingles"]);
+                                        $formu = '<form class="form__data" id="forme">
+                                        <label class="form__label">Nombre Completo</label>
+                                        
+                                        <input class="form__control" type="text" disabled name="" value="Informes sobre: '.$nam.'" id="name" placeholder="Nombre Completo">
+                                        
+                                        <label class="form__label">Nombre Completo</label>
+                                        <input class="form__control" type="text" name="" id="names" placeholder="Nombre Completo">
+                                        
+                    
+                                        <label class="form__label">Correo</label>
+                                        <input class="form__control" type="email" name="" id="mail" placeholder="corre@example.com">
+                                        
+                                        <label class="form__label">Telefono</label>
+                                        <input class="form__control" type="text" name="" id="tel" placeholder="Telefono de contacto">
+                                        
+                                        <label class="form__label">Comentarios</label>
+                                        <textarea class="form__control" name="" id="tema" placeholder="Comentarios" rows="5" cols="12" ></textarea>
+                                        <small class="form__error ok fail" id="respuesta"></small>
+                                        <button id="submit" type="submit" class="buton__form">Enviar</button>
+                                    </form>';
+                                    echo $formu;
+                                    }else{
+                                            $you=$row['inve_youtube'];
+                                            $str = str_replace("watch?v=", "embed/", $row['inve_youtube']);
+                                            $stre = str_replace("?v=", "/", $str);
+                                            $ctr = '?controls=0'; 
+                                            $output = '<div class="frame__youtube">
+                                                        <iframe src="'.$str.''.$ctr.'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+                                                    </div>'; 
+                                            
+                                            echo $output;
+                                    }
+                              ?>
                               </div>
                </div>
          </div>
@@ -226,7 +331,8 @@
                 ?>
                 <?php
                         $maquina = $_GET['maquina'];
-                        $stmt = $mbd->prepare("SELECT * FROM inventario WHERE inve_nombreingles = '$maquina' ");
+                        $seguridad = $_GET['seguridad'];
+                        $stmt = $mbd->prepare("SELECT * FROM inventario WHERE inve_nombreingles = '$maquina' AND inve_seguridad = '$seguridad' ");
                         $stmt->execute();
                         if($stmt->rowCount() > 0)
                         {
@@ -234,25 +340,35 @@
                         {
                         extract($row);
                 ?>
-                <form class="form__data" id="forme">
-                    <label class="form__label">Maquina</label>
-                    <input class="form__control" type="text" disabled name="" value="Informes sobre: <?php echo str_replace("-", " ", $row['inve_nombreingles']); ?>" id="name" placeholder="Maquina">
-                    
-                    <label class="form__label">Full name</label>
-                    <input class="form__control" type="text" name="" id="names" placeholder="Full name">
-                    
-
-                    <label class="form__label">Email</label>
-                    <input class="form__control" type="email" name="" id="mail" placeholder="corre@example.com">
-                    
-                    <label class="form__label">Phone Number</label>
-                    <input class="form__control" type="text" name="" id="tel" placeholder="Phone Number">
-                    
-                    <label class="form__label">Comments</label>
-                    <textarea class="form__control" name="" id="tema" placeholder="Comentarios" rows="5" cols="12" ></textarea>
-                    <small class="form__error ok fail" id="respuesta"></small>
-                    <button id="submit" type="submit" class="buton__form">Send</button>
-                </form>
+                <?php 
+                                 
+                                 if($inve_youtube == 'N/A' ){
+                                 echo "";
+                                  }else{
+                                     $namr = str_replace("-", " ", $row["inve_nombre"]);
+                                     $formur = '<form class="form__data" id="forme">
+                                     <label class="form__label">Nombre Completo</label>
+                                     
+                                     <input class="form__control" type="text" disabled name="" value="Informes sobre: '.$namr.'" id="name" placeholder="Nombre Completo">
+                                     
+                                     <label class="form__label">Nombre Completo</label>
+                                     <input class="form__control" type="text" name="" id="names" placeholder="Nombre Completo">
+                                     
+                 
+                                     <label class="form__label">Correo</label>
+                                     <input class="form__control" type="email" name="" id="mail" placeholder="corre@example.com">
+                                     
+                                     <label class="form__label">Telefono</label>
+                                     <input class="form__control" type="text" name="" id="tel" placeholder="Telefono de contacto">
+                                     
+                                     <label class="form__label">Comentarios</label>
+                                     <textarea class="form__control" name="" id="tema" placeholder="Comentarios" rows="5" cols="12" ></textarea>
+                                     <small class="form__error ok fail" id="respuesta"></small>
+                                     <button id="submit" type="submit" class="buton__form">Enviar</button>
+                                 </form>';
+                                     echo $formur;
+                                  }
+                             ?>
                 <?php } } else { ?>
                     Datos no encontrados ... 
                 <?php } ?>

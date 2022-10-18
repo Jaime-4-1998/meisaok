@@ -1,9 +1,3 @@
-
-
-
-
-
-
 $(document).ready(function(){
     //Itemfoto
     $("#not").click(function(e) {
@@ -121,5 +115,14 @@ $(document).ready(function(){
     $("#tube").click(function(e) {
         $("#itemyou").val("").attr("placeholder","Escribe el link de Youtube").focus();
         $("#vide").text("¿Existe en Youtube?");
+    });
+    //Observaciones del Producto
+    $("#d").click(function(e) {
+        $("#itemdesc").val("N/A");
+        $("#descipcion").text("Dato de Descripción No Aplicable");
+    });
+    $("#proddes").click(function(e) {
+        $("#itemdesc").val("").attr("placeholder","Escribe la Descripción del Producto").focus();
+        $("#descipcion").text("Descripción del Producto");
     });
 });

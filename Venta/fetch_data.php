@@ -31,8 +31,13 @@ if (isset($_POST["action"])) {
                                 <h2><?php echo str_replace("-", " ", utf8_encode($result['inve_nombre'])); ?></h2>
                             </div>
                             <div class="card__flex__body">
-                                    <!--<p>Modelo: <strong>< echo $inve_modelo;></strong></p>-->
-                                    <p><?php echo utf8_encode($inve_desc); ?></p>
+                                    <?php
+                                        if($inve_desc === 'N/A'){
+                                            echo '<br/></br>';
+                                        }else{
+                                            echo '<p>'.utf8_encode($inve_desc).'</p>';
+                                        }
+                                    ?>
                                     <a href="../Maquina/<?php echo strtolower(eliminar_tildes($result['inve_nombre']));?>/<?php echo ($result['inve_seguridad']);?>/" title="click para ver más">Ver Más</a>
                                     <div class="esp__inv"></div>
                             </div>

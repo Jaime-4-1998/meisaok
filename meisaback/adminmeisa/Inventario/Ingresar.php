@@ -247,9 +247,18 @@ session_start();
                     </div>
                      <!--Modal sepa-->
                     <div class="form-group">
-                            <label class="text-meisa str_meisa">Descripción del Producto</label>
-                            <textarea class="form-control" name="itemdesc" id="itemdesc" cols="30" rows="10"></textarea>
-                    </div>  
+                            <label class="text-meisa str_meisa" id="descipcion">Descripción del Producto</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-meisa text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">¿La Descripcion Aplica?</button>
+                                    <div class="dropdown-menu bg-meisaa">
+                                        <p class="dropdown-item" id="d">No Aplica</p>
+                                        <p class="dropdown-item" id="proddes">Si Aplica</p>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" name="itemdesc" id="itemdesc"></input>
+                            </div>
+                        </div>  
                      <!--Modal sepa-->
                     <div class="form-row">
                         <!--Marca del Producto-->
@@ -378,7 +387,7 @@ session_start();
                         <div class="form-group col-md-6">
                             <label class="text-meisa str_meisa">Imagen Principal</label>
                             <div class="custom-file">
-   				<label for="exampleFormControlFile1">Elige tu imagen</label>
+   				                <label for="exampleFormControlFile1">Elige tu imagen</label>
                                 <input type="file" class="form-control-file" name="imgBanner" />
                             </div>
                         </div>
@@ -645,7 +654,7 @@ session_start();
                             <input class="form-control" type="text" placeholder="Ejemplo: 23456" name="itemprecio" id="itemprecio" requiered>
                         </div>
                         <div class="form-group col-md-6">
-                            <label class="text-meisa">¿El Producto esta a la Venta o Disponible?</label>
+                            <label class="text-meisa">¿El Producto se Vendio o sigue Disponible?</label>
                             <select class="form-control" name="itemestatus" id="itemestatus">
                                 <option selected >Elije el estatus</option>
                                 <option value="Vendido">Vendido</option>

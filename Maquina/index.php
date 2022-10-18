@@ -116,7 +116,13 @@
          ?>
          <div class="productdetails__meisa">
             <h1><?php echo str_replace("-", " ", $row['inve_nombre']); ?></h1>
-            <h2><?php echo $inve_desc; ?></h2>
+                <?php
+                    if($inve_desc === 'N/A'){
+                        echo '<br/></br>';
+                    }else{
+                        echo '<h2>'.$inve_desc.'</h2>';
+                    }
+                ?>
          </div>
       <div class="props__prod">
          <div class="products__especific__miesa">
@@ -162,23 +168,82 @@
             <span class="pord__disp"><?php echo $inve_estatus; ?></span>
             <div class="two__col__prod">
                <div class="two__col__prod__title">
-                  <p><strong class="str__prod">Categoria</strong></p>
-                  <p><strong class="str__prod">Marca</strong></p>
-                  <p><strong class="str__prod">Modelo</strong></p>
-                  <p><strong class="str__prod"># Serie</strong></p>
-                  <p><strong class="str__prod">Año</strong></p>
-                  <p><strong class="str__prod">Corriente</strong></p>
-                  <?php 
-                     $number = number_format($inve_precio,2,'.',',');
-                  ?>
+                    <?php 
+                        if($inve_catego === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p><strong class="str__prod">Categoria</strong></p>';
+                        }
+                        if($inve_marca === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p><strong class="str__prod">Marca</strong></p>';
+                        }
+                        if($inve_modelo === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p><strong class="str__prod">Modelo</strong></p>';
+                        }
+                        if($inve_serie === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p><strong class="str__prod"># Serie</strong></p>';
+                        }
+                        if($inve_year === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p><strong class="str__prod">Año</strong></p>';
+                        }
+                        if($inve_corriente === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p><strong class="str__prod">Corriente</strong></p>';
+                        }
+                        if($inve_motor === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p><strong class="str__prod">Motor</strong></p>';
+                        }
+                    ?>
                </div>
                <div>
-                  <p> <?php echo $inve_catego; ?></p>
-                  <p> <?php echo $inve_modelo; ?></p>
-                  <p> <?php echo $inve_serie; ?></p>
-                  <p> <?php echo $inve_year; ?></p>
-                  <p> <?php echo $inve_corriente; ?></p>
-                  <p> <?php echo $inve_motor; ?></p>
+                    <?php 
+                        if($inve_catego === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p>'.$inve_catego.'</p>';
+                        }
+                        if($inve_marca === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p>'.$inve_marca.'</p>';
+                        }
+                        if($inve_modelo === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p>'.$inve_modelo.'</p>';
+                        }
+                        if($inve_serie === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p>'.$inve_serie.'</p>';
+                        }
+                        if($inve_year === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p>'.$inve_year.'</p>';
+                        }
+                        if($inve_corriente === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p>'.$inve_corriente.'</p>';
+                        }
+                        if($inve_motor === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p>'.$inve_motor.'</p>';
+                        }
+                    ?>
                </div>
             </div>
             <div class="flex__priceinfo">
@@ -190,15 +255,14 @@
             </p>
             <p class="prod__info">
                 <?php 
-                    if($number == '0'){
-                        echo ' ';
+                    $number = number_format($inve_precio,2,'.',',');
+                    if($inve_precio === '0000'){
+                        echo '';
                     }else{
-                        $output = '<strong class="str__prod prod__price"><?php echo $number; ?></div>';
-                        echo $output;
+                        echo '<strong class="str__prod prod__price">'.$number.' MXN</strong>';
                     }
                 ?>
             </p>
-
             </div>
             <div class="liena"></div>
                <div class="form__pro">

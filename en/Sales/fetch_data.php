@@ -23,16 +23,22 @@ if (isset($_POST["action"])) {
 		?>
        		
                
-                    <div class="flex__1">
+               <div class="flex__1">
                         <div class="card__flex">
                             <div class="card__flex__head">
                                 <img loading="lazy" src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $result['inve_img'];?>" alt="<?php echo str_replace("-", " ", $result['inve_nombreingles']); ?>" title="<?php echo str_replace("-", " ", $result['inve_nombreingles']); ?>" width="100" height="100" / >
-                                <h2><?php echo str_replace("-", " ", $result['inve_nombreingles']); ?></h2>
+                                 <?php require_once 'acent.php'; ?>
+                                <h2><?php echo str_replace("-", " ", utf8_encode($result['inve_nombreingles'])); ?></h2>
                             </div>
                             <div class="card__flex__body">
-                                    <!--<p>Modelo: <strong>< echo $inve_modelo;></strong></p>-->
-                                    <p><?php echo $inve_desc; ?></p>
-                                    <a href="../Machine/<?php echo strtolower($result['inve_nombreingles']);?>/" title="click for more">View More</a>
+                                    <?php
+                                        if($inve_desc === 'N/A'){
+                                            echo '<br/></br>';
+                                        }else{
+                                            echo '<p>'.utf8_encode($inve_desc).'</p>';
+                                        }
+                                    ?>                                    
+                                    <a href="../Machine/<?php echo strtolower(eliminar_tildes($result['inve_nombreingles']));?>/<?php echo ($result['inve_seguridad']);?>/" title="click for more">View More</a>
                                     <div class="esp__inv"></div>
                             </div>
                         </div>

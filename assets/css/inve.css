@@ -159,7 +159,7 @@
 }
 .card__flex__head img{
     width: 100%;
-    height: auto;
+    height: 45vh;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
 }
