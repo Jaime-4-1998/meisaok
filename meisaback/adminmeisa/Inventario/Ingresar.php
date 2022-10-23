@@ -63,7 +63,7 @@ session_start();
                                         <thead>
                                             <tr class="text-center">
                                                
-                                                <th>Categoria</th>
+                                                <th>Categoria Español</th>
                                                 <th>Nombre</th>
                                                 <th>Marca</th>
                                                 <th>Modelo</th>
@@ -77,7 +77,7 @@ session_start();
                                         <tfoot>
                                             <tr class="text-center">
                                                
-                                                <th>Categoria</th>
+                                                <th>Categoria Español</th>
                                                 <th>Nombre</th>
                                                 <th>Marca</th>
                                                 <th>Modelo</th>
@@ -90,20 +90,46 @@ session_start();
                                         </tfoot>
                                         <?php
                                         include '../assets/components/backend/conexion.php';
-                                        $sql = "SELECT inve_id, inve_seguridad, inve_catego, inve_nombre, inve_desc, inve_marca, inve_modelo, inve_observaciones, inve_estatus
+                                        $sql = "SELECT inve_id,inve_seguridad,inve_itemfoto,inve_itemmeisa,inve_lote,
+                                        inve_venre,inve_renve,inve_catego,inve_category,inve_nombre,inve_nombreingles,
+                                        inve_desc,inve_marca,inve_modelo,inve_serie,inve_year,inve_corriente,inve_motor,
+                                        inve_capacidad,inve_observaciones,inve_precio,inve_estatus,
+                                        inve_fbmeisamex,inve_fbmeisaequip,inve_segunda,inve_linke,inve_mercado,inve_tw,inve_ins,inve_youtube
                                         FROM inventario ORDER BY inve_id ASC"; 
                                         $query = $mbd -> prepare($sql); 
                                         $query -> execute(); 
                                         $results = $query -> fetchAll(PDO::FETCH_OBJ); 
                                             if($query -> rowCount() > 0){ 
                                                 foreach($results as $result) { 
-                                                    $datos = $result -> inve_id."||".
+                                                    $datos = $result -> inve_seguridad."||".
+                                                    $result -> inve_itemfoto."||".
+                                                    $result -> inve_itemmeisa."||".
+                                                    $result -> inve_lote."||".
+                                                    $result -> inve_venre."||".
+                                                    $result -> inve_renve."||".
                                                     $result -> inve_catego."||".
+                                                    $result -> inve_category."||".
                                                     $result -> inve_nombre."||".
+                                                    $result -> inve_nombreingles."||".
+                                                    $result -> inve_desc."||".
                                                     $result -> inve_marca."||".  
                                                     $result -> inve_modelo."||".
+                                                    $result -> inve_serie."||".
+                                                    $result -> inve_year."||".
+                                                    $result -> inve_corriente."||".
+                                                    $result -> inve_motor."||".
+                                                    $result -> inve_capacidad."||".
                                                     $result -> inve_observaciones."||".
-                                                    $result -> inve_estatus; 
+                                                    $result -> inve_precio."||".
+                                                    $result -> inve_estatus."||". 
+                                                    $result -> inve_fbmeisamex."||".
+                                                    $result -> inve_fbmeisaequip."||".
+                                                    $result -> inve_segunda."||".
+                                                    $result -> inve_linke."||".
+                                                    $result -> inve_mercado."||".
+                                                    $result -> inve_tw."||".
+                                                    $result -> inve_ins."||".
+                                                    $result -> inve_youtube;
                                                 ?>
                                         <tr class="text-center">
                                             <td><?php echo $result -> inve_catego; ?></td>
@@ -112,8 +138,8 @@ session_start();
                                             <td><?php echo $result -> inve_modelo; ?></td>
                                             <td><?php echo $result -> inve_observaciones; ?></td>
                                             <td class="<?php echo $result -> inve_estatus; ?>"><?php echo $result -> inve_estatus; ?></td>
-                                            <td><button class="btn btn-meisa" type="button" onclick="deleteProd('<?php echo $result -> inve_id; ?>')"><i class="fas fa-trash"></i></button></td>
-                                            <td><button class="btn btn-warning" type="button" data-toggle="modal" data-target="#modalColuEditar" onclick="EdiatarProd('<?php echo $datos ?>')"><i class="fas fa-edit"></i></button></td>
+                                            <td><button class="btn btn-meisa" type="button" onclick="deleteProd('<?php echo $result -> inve_seguridad; ?>')"><i class="fas fa-trash"></i></button></td>
+                                            <td><button class="btn btn-warning" type="button" data-toggle="modal" data-target="#modalColuEditarprod" onclick="EditProdin('<?php echo $datos ?>')"><i class="fas fa-edit"></i></button></td>
                                             <?php
                                                     }
                                                 }
@@ -410,7 +436,7 @@ session_start();
                         </div>
                         <!--¿El Producto esta a la Venta o D-->
                         <div class="form-group col-md-6">
-                            <label class="text-meisa str_meisa">¿El Producto esta a la Vendido o Disponible?</label>
+                            <label class="text-meisa str_meisa">¿El Producto esta Vendido o Disponible?</label>
                             <select class="form-control" name="itemestatus" id="itemestatus">
                                 <option selected >Elije el estatus</option>
                                 <option value="Vendido">Vendido</option>
@@ -506,7 +532,7 @@ session_start();
         </div>
     </div>
     <!--Modal de editar-->
-    <div class="modal fade" id="modalColuEditar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalColuEditarprod" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
             <div class="modal-header bg-warning">
@@ -516,27 +542,27 @@ session_start();
                 </button>
             </div>
             <div class="modal-body">
-                <form class="formBanner" id="formEditCol"  method="POST" enctype="multipart/form-data">
-                <input type="hidden" id="idbanner" name="idbanner">
+                <form class="formBanner" id="formEditpr"  method="POST" enctype="multipart/form-data">
+                <input type="hidden" id="seg" name="seg">
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label class="text-meisa">Item Fotografico</label>
-                            <input class="form-control" type="text" placeholder="Item Fotografico" name="itemfoto" id="itemfoto">
+                            <input class="form-control" type="text" placeholder="Item Fotografico" name="itemfotor" id="itemfotor">
                         </div>
                         <div class="form-group col-md-4">
                             <label class="text-meisa">Item Meisa</label>
-                            <input class="form-control" type="text" placeholder="Item Meisa" name="itemmeisa" id="itemmeisa">
+                            <input class="form-control" type="text" placeholder="Item Meisa" name="itemmeisar" id="itemmeisar">
                         </div>
                         <div class="form-group col-md-4">
                             <label class="text-meisa">Item Lote</label>
-                            <input class="form-control" type="text" placeholder="Item Lote" name="itemlote" id="itemlote">
+                            <input class="form-control" type="text" placeholder="Item Lote" name="itemloter" id="itemloter">
                         </div>
                     </div>
                      <!--Modal sepa-->
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label class="text-meisa">Categoría en Español</label>
-                            <select class="form-control" name="itemcatego" id="itemcatego">
+                            <select class="form-control" name="itemcategor" id="itemcategor">
                                           <option selected >Elije una categoria es español</option>
                                           <?php
                                              $conexion=mysqli_connect('localhost','root','','u557675164_titulacion');
@@ -549,7 +575,7 @@ session_start();
                         </div>
                         <div class="form-group col-md-6">
                             <label class="text-meisa">Categoreía en Inglés</label>
-                            <select class="form-control" name="itemcategory" id="itemcategory">
+                            <select class="form-control" name="itemcategoryr" id="itemcategoryr">
                                           <option selected >Elije una categoria inglés</option>
                                           <?php
                                              $conexion=mysqli_connect('localhost','root','','u557675164_titulacion');
@@ -564,17 +590,17 @@ session_start();
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label class="text-meisa">Nombre en Español</label>
-                            <input class="form-control" type="text" placeholder="Nombre en Español" name="itemnombre" id="itemnombre" requiered>
+                            <input class="form-control" type="text" placeholder="Nombre en Español" name="itemnombrer" id="itemnombrer" requiered>
                         </div>
                         <div class="form-group col-md-6">
                             <label class="text-meisa">Nombre en Inglés</label>
-                            <input class="form-control" type="text" placeholder="Nombre en Inglés" name="itemnombrein" id="itemnombrein" requiered>
+                            <input class="form-control" type="text" placeholder="Nombre en Inglés" name="itemnombreinr" id="itemnombreinr" requiered>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label class="text-meisa">¿El Producto esta en Venta?</label>
-                            <select class="form-control" name="itemventa" id="itemventa">
+                            <select class="form-control" name="itemventar" id="itemventar">
                                 <option selected >Elije el estatus</option>
                                 <option value="Si">Si</option>
                                 <option value="No">No</option>
@@ -582,7 +608,7 @@ session_start();
                         </div>
                         <div class="form-group col-md-6">
                             <label class="text-meisa">¿El Producto esta en Renta?</label>
-                            <select class="form-control" name="itemrenta" id="itemrenta">
+                            <select class="form-control" name="itemrentar" id="itemrentar">
                                 <option selected >Elije el estatus</option>
                                 <option value="Si">Si</option>
                                 <option value="No">No</option>
@@ -592,49 +618,49 @@ session_start();
                      <!--Modal sepa-->
                     <div class="form-group">
                             <label class="text-meisa">Descripción del Producto</label>
-                            <textarea class="form-control" name="itemdesc" id="itemdesc" cols="30" rows="10"></textarea>
+                            <textarea class="form-control" name="itemdescr" id="itemdescr" cols="30" rows="10"></textarea>
                     </div>  
                      <!--Modal sepa-->
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label class="text-meisa">Marca del Producto</label>
-                            <input class="form-control" type="text" placeholder="Marca del Producto" name="itemmarca" id="itemmarca" requiered>
+                            <input class="form-control" type="text" placeholder="Marca del Producto" name="itemmarcar" id="itemmarcar" requiered>
                         </div>
                         <div class="form-group col-md-6">
                             <label class="text-meisa">Modelo del Producto</label>
-                            <input class="form-control" type="text" placeholder="Modelo del Producto" name="itemmodelo" id="itemmodelo" requiered>
+                            <input class="form-control" type="text" placeholder="Modelo del Producto" name="itemmodelor" id="itemmodelor" requiered>
                         </div>
                     </div>     
                      <!--Modal sepa-->
                      <div class="form-row">
                         <div class="form-group col-md-4">
                             <label class="text-meisa">Número de Serie</label>
-                            <input class="form-control" type="text" placeholder="Número de Serie" name="itemserie" id="itemserie" requiered>
+                            <input class="form-control" type="text" placeholder="Número de Serie" name="itemserier" id="itemserier" requiered>
                         </div>
                         <div class="form-group col-md-4">
                             <label class="text-meisa">Año del Producto</label>
-                            <input class="form-control" type="text" placeholder="Ejemplo: 2022" name="itemyear" id="itemyear" requiered>
+                            <input class="form-control" type="text" placeholder="Ejemplo: 2022" name="itemyearr" id="itemyearr" requiered>
                         </div>
                         <div class="form-group col-md-4">
                             <label class="text-meisa">Correiente del Producto</label>
-                            <input class="form-control" type="text" placeholder="Correiente del Producto" name="itemcorr" id="itemcorr" requiered>
+                            <input class="form-control" type="text" placeholder="Correiente del Producto" name="itemcorrr" id="itemcorrr" requiered>
                         </div>
                     </div>     
                        <!--Modal sepa-->
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label class="text-meisa">Motor del Producto</label>
-                            <input class="form-control" type="text" placeholder="Motor del Producto" name="itemmotor" id="itemmotor" requiered>
+                            <input class="form-control" type="text" placeholder="Motor del Producto" name="itemmotorr" id="itemmotorr" requiered>
                         </div>
                         <div class="form-group col-md-6">
                             <label class="text-meisa">Capacidad del Producto</label>
-                            <input class="form-control" type="text" placeholder="Capacidad del Producto" name="itemcapa" id="itemcapa" requiered>
+                            <input class="form-control" type="text" placeholder="Capacidad del Producto" name="itemcapar" id="itemcapar" requiered>
                         </div>
                     </div>                
                     <!--Modal sepa-->
                         <div class="form-group">
                             <label class="text-meisa">Observaciones del Producto</label>
-                            <input class="form-control" type="text" placeholder="Observaciones del Producto" name="itemobser" id="itemobser" requiered>
+                            <input class="form-control" type="text" placeholder="Observaciones del Producto" name="itemobserr" id="itemobserr" requiered>
                         </div>
                      <!--Modal sepa-->
                      <div class="form-row">
@@ -642,7 +668,7 @@ session_start();
                             <label class="text-meisa">Imagen Principal</label>
                             <div class="custom-file">
                                     <label for="exampleFormControlFile1">Elige tu imagen</label>
-                                    <input type="file" class="form-control-file" name="imgBanner" />
+                                    <input type="file" class="form-control-file" name="imgBannerr" />
                             </div>
                         </div>
                      </div>
@@ -651,11 +677,11 @@ session_start();
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label class="text-meisa">Precio del Producto</label>
-                            <input class="form-control" type="text" placeholder="Ejemplo: 23456" name="itemprecio" id="itemprecio" requiered>
+                            <input class="form-control" type="text" placeholder="Ejemplo: 23456" name="itemprecior" id="itemprecior" requiered>
                         </div>
                         <div class="form-group col-md-6">
                             <label class="text-meisa">¿El Producto se Vendio o sigue Disponible?</label>
-                            <select class="form-control" name="itemestatus" id="itemestatus">
+                            <select class="form-control" name="itemestatusr" id="itemestatusr">
                                 <option selected >Elije el estatus</option>
                                 <option value="Vendido">Vendido</option>
                                 <option value="Disponible">Disponible</option>
@@ -666,35 +692,35 @@ session_start();
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label class="text-meisa">¿Existe el FaceBook?</label>
-                            <select class="form-control" name="itemefbmx" id="itemefbmx">
+                            <select class="form-control" name="itemefbmxr" id="itemefbmxr">
                                 <option selected >Elije el estatus</option>
                                 <option value="Existe">Existe</option>
-                                <option value="No Existe">No Existe</option>
+                                <option value="N/A">No Aplica</option>
                             </select>
                         </div>
                         <div class="form-group col-md-3">
                             <label class="text-meisa">¿Hay Publicación en FB?</label>
-                            <select class="form-control" name="itemefbequip" id="itemefbequip">
+                            <select class="form-control" name="itemefbequipr" id="itemefbequipr">
                                 <option selected >Elije el estatus</option>
                                 <option value="Existe">Existe</option>
-                                <option value="No Existe">No Existe</option>
+                                <option value="N/A">No Aplica</option>
                             </select>
                         </div>
 
                         <div class="form-group col-md-3">
                             <label class="text-meisa">¿Existe en Segunda?</label>
-                            <select class="form-control" name="itemsegun" id="itemsegun">
+                            <select class="form-control" name="itemsegunr" id="itemsegunr">
                                 <option selected >Elije el estatus</option>
                                 <option value="Existe">Existe</option>
-                                <option value="No Existe">No Existe</option>
+                                <option value="N/A">No Aplica</option>
                             </select>
                         </div>
                         <div class="form-group col-md-3">
                             <label class="text-meisa">¿Existe en LinkedIn?</label>
-                            <select class="form-control" name="itemlink" id="itemlink">
+                            <select class="form-control" name="itemlinkr" id="itemlinkr">
                                 <option selected >Elije el estatus</option>
                                 <option value="Existe">Existe</option>
-                                <option value="No Existe">No Existe</option>
+                                <option value="N/A">No Aplica</option>
                             </select>
                         </div>
                     </div>     
@@ -702,38 +728,38 @@ session_start();
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label class="text-meisa">¿Existe en Mercado Libre?</label>
-                            <select class="form-control" name="itemercado" id="itemercado">
+                            <select class="form-control" name="itemercador" id="itemercador">
                                 <option selected >Elije el estatus</option>
                                 <option value="Existe">Existe</option>
-                                <option value="No Existe">No Existe</option>
+                                <option value="N/A">No Aplica</option>
                             </select>
                         </div>
                         <div class="form-group col-md-3">
                             <label class="text-meisa">¿Existe en Twitter?</label>
-                            <select class="form-control" name="itemtw" id="itemtw">
+                            <select class="form-control" name="itemtwr" id="itemtwr">
                                 <option selected >Elije el estatus</option>
                                 <option value="Existe">Existe</option>
-                                <option value="No Existe">No Existe</option>
+                                <option value="N/A">No Aplica</option>
                             </select>
                         </div>
 
                         <div class="form-group col-md-3">
                             <label class="text-meisa">¿Existe en Instagram?</label>
-                            <select class="form-control" name="itemins" id="itemins">
+                            <select class="form-control" name="iteminsr" id="iteminsr">
                                 <option selected >Elije el estatus</option>
                                 <option value="Existe">Existe</option>
-                                <option value="No Existe">No Existe</option>
+                                <option value="N/A">No Aplica</option>
                             </select>
                         </div>
                         <div class="form-group col-md-3">
                             <label class="text-meisa">¿Existe en Youtube?</label>
-                            <input class="form-control" type="text" name="itemyou" id="itemyou">
+                            <input class="form-control" type="text" name="itemyour" id="itemyour">
                         </div>
                     </div>        
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="submit" id="btnEditColu" class="btn btn-meisa">Guardar</button>
+                <button type="submit" id="btnEditColuProd" class="btn btn-meisa">Guardar</button>
             </div>
             </div>
         </div>
@@ -755,8 +781,8 @@ session_start();
             $("#btnAddColum").click(function(e) {
                 addColumn();
             });
-            $("#btnEditColu").click(function(e) {
-                editProdu();
+            $("#btnEditColuProd").click(function(e) {
+                editProduinvent();
             });
         });
     </script>

@@ -1,73 +1,52 @@
 <?php
 include 'conexion.php';
 
-$idcoll = $_POST['idbanner'];
-$itemfoto=$_POST['itemfoto'];
-$itemmeisa=$_POST['itemmeisa'];
-$itemlote=$_POST['itemlote'];
-$itemventa=$_POST['itemventa'];
-$itemrenta=$_POST['itemrenta'];
-$itemcatego=$_POST['itemcatego'];
-$itemcategory=$_POST['itemcategory'];
-$itemnombre=$_POST['itemnombre'];
-$itemnombrein=$_POST['itemnombrein'];
-$itemdesc=$_POST['itemdesc'];
-$itemmarca=$_POST['itemmarca'];
-$itemmodelo=$_POST['itemmodelo'];
-$itemserie=$_POST['itemserie'];
-$itemyear=$_POST['itemyear'];
-$itemcorr=$_POST['itemcorr'];
-$itemmotor=$_POST['itemmotor'];
-$itemcapa=$_POST['itemcapa'];
-$itemobser=$_POST['itemobser'];
-$imgBaner= $_FILES['imgBanner'];
-$imgtrasera=$_FILES['imgtrasera'];
-$imgdere=$_FILES['imgdere'];
-$imgizq=$_FILES['imgizq'];
-$itemprecio=$_POST['itemprecio'];
-$itemestatus=$_POST['itemestatus'];
-$itemefbmx=$_POST['itemefbmx'];
-$itemefbequip=$_POST['itemefbequip'];
-$itemsegun=$_POST['itemsegun'];
-$itemlink=$_POST['itemlink'];
-$itemercado=$_POST['itemercado'];
-$itemtw=$_POST['itemtw'];
-$itemins=$_POST['itemins'];
-$itemyou=$_POST['itemyou'];
+$seg = $_POST['seg'];
+$itemfotor=$_POST['itemfotor'];
+$itemmeisar=$_POST['itemmeisar'];
+$itemloter=$_POST['itemloter'];
+$itemventar=$_POST['itemventar'];
+$itemrentar=$_POST['itemrentar'];
+$itemcategor=$_POST['itemcategor'];
+$itemcategoryr=$_POST['itemcategoryr'];
+$itemnombrer=$_POST['itemnombrer'];
+    $convertidor = str_replace(" ", "-", $itemnombrer);
+$itemnombreinr=$_POST['itemnombreinr'];
+    $contr = str_replace(" ","-",$itemnombreinr);
+$itemdescr=$_POST['itemdescr'];
+$itemmarcar=$_POST['itemmarcar'];
+$itemmodelor=$_POST['itemmodelor'];
+$itemserier=$_POST['itemserier'];
+$itemyearr=$_POST['itemyearr'];
+$itemcorrr=$_POST['itemcorrr'];
+$itemmotorr=$_POST['itemmotorr'];
+$itemcapar=$_POST['itemcapar'];
+$itemobserr=$_POST['itemobserr'];
+$imgBanerr= $_FILES['imgBannerr'];
+$itemprecior=$_POST['itemprecior'];
+$itemestatusr=$_POST['itemestatusr'];
+$itemefbmxr=$_POST['itemefbmxr'];
+$itemefbequipr=$_POST['itemefbequipr'];
+$itemsegunr=$_POST['itemsegunr'];
+$itemlinkr=$_POST['itemlinkr'];
+$itemercador=$_POST['itemercador'];
+$itemtwr=$_POST['itemtwr'];
+$iteminsr=$_POST['iteminsr'];
+$itemyour=$_POST['itemyour'];
 
-if($imgBaner["type"] == "image/jpeg" || $imgBaner["type"] == "image/png"){
-    $nomencri=md5($imgBaner["tmp_name"]);
+if($imgBanerr["type"] == "image/jpeg" || $imgBanerr["type"] == "image/png"){
+    $nomencri=md5($imgBanerr["tmp_name"]);
     $ruta = "../../img/inve/".$nomencri.".jpg";
-    move_uploaded_file($imgBaner["tmp_name"], $ruta);
-    $rutaimg = "img/inve/".$nomencri.".jpg";
-if($imgtrasera["type"] == "image/jpeg" || $imgtrasera["type"] == "image/png"){
-    $nomencri1=md5($imgtrasera["tmp_name"]);
-    $ruta1 = "../../img/inve/tras/".$nomencri1.".jpg";
-    move_uploaded_file($imgtrasera["tmp_name"], $ruta1);
-    $rutaimg1 = "img/inve/tras/".$nomencri1.".jpg";
-}
-if($imgdere["type"] == "image/jpeg" || $imgdere["type"] == "image/png"){
-    $nomencri2=md5($imgdere["tmp_name"]);
-    $ruta2 = "../../img/inve/dere/".$nomencri2.".jpg";
-    move_uploaded_file($imgdere["tmp_name"], $ruta2);
-    $rutaimg2 = "img/inve/dere/".$nomencri2.".jpg";
-}
-if($imgizq["type"] == "image/jpeg" || $imgizq["type"] == "image/png"){
-    $nomencri3=md5($imgizq["tmp_name"]);
-    $ruta3 = "../../img/inve/izq/".$nomencri3.".jpg";
-    move_uploaded_file($imgizq["tmp_name"], $ruta3);
-    $rutaimg3 = "img/inve/izq/".$nomencri3.".jpg";
-}
+    move_uploaded_file($imgBanerr["tmp_name"], $ruta);
+    $rutaimg = "img/inve/".$nomencri.".jpg";}
 
-    $consulta = "UPDATE inventario SET inve_itemfoto = '$itemfoto', inve_itemmeisa = '$itemmeisa', inve_lote = '$itemlote',
-     inve_venre = '$itemventa', inve_renve = '$itemrenta', inve_catego = '$itemcatego', inve_category = '$itemcategory', inve_nombre = '$itemnombre', inve_nombreingles = '$itemnombrein',inve_desc = '$itemdesc', inve_marca = '$itemmarca', inve_modelo = '$itemmodelo',
-    inve_serie = '$itemserie', inve_year = '$itemyear', inve_corriente = '$itemcorr', inve_motor = '$itemmotor', inve_capacidad = '$itemcapa', inve_observaciones = '$itemobser', 
-    inve_img = '$rutaimg', inve_imgtrasera = '$rutaimg1', inve_imgldderecho = '$rutaimg2', inve_imgldizq = '$rutaimg3',
-    inve_precio = '$itemprecio', inve_estatus = '$itemestatus', inve_fbmeisamex = '$itemefbmx', inve_fbmeisaequip = '$itemefbequip',
-    inve_segunda = '$itemsegun', inve_linke = '$itemlink', inve_mercado = '$itemercado', inve_tw = '$itemtw', 
-    inve_ins = '$itemins', inve_youtube = '$itemyou' WHERE inve_id = '$idcoll' "; 
+    $consulta = "UPDATE inventario SET inve_itemfoto = '$itemfotor', inve_itemmeisa = '$itemmeisar', inve_lote = '$itemloter',
+     inve_venre = '$itemventar', inve_renve = '$itemrentar', inve_catego = '$itemcategor', inve_category = '$itemcategoryr', inve_nombre = '$convertidor', inve_nombreingles = '$contr',inve_desc = '$itemdescr', inve_marca = '$itemmarcar', inve_modelo = '$itemmodelor',
+    inve_serie = '$itemserier', inve_year = '$itemyearr', inve_corriente = '$itemcorrr', inve_motor = '$itemmotorr', inve_capacidad = '$itemcapar', inve_observaciones = '$itemobserr', 
+    inve_img = '$rutaimg',
+    inve_precio = '$itemprecior', inve_estatus = '$itemestatusr', inve_fbmeisamex = '$itemefbmxr', inve_fbmeisaequip = '$itemefbequipr',
+    inve_segunda = '$itemsegunr', inve_linke = '$itemlinkr', inve_mercado = '$itemercador', inve_tw = '$itemtwr', 
+    inve_ins = '$iteminsr', inve_youtube = '$itemyour' WHERE inve_seguridad = '$seg' "; 
 
     $eject = $mbd -> prepare($consulta); 
     $eject -> execute(); 
-    echo 1;
-}

@@ -525,38 +525,41 @@ function addColumn(){
     });
 }
 /*EDIT COLUMN*/
-function EdiatarProd(datos){
+function EditProdin(datos){
     d=datos.split('||');
-    $('#idbanner').val(d[0]);
-    $('#itemfoto').val(d[2]);
-    $('#itemmeisa').val(d[3]);
-    $('#itemlote').val(d[4]);
-    $('#itemcatego').val(d[5]);
-    $('#itemnombre').val(d[6]);
-    $('#itemventa').val(d[7]);
-    $('#itemrenta').val(d[8]);
-    $('#itemdesc').val(d[9]);
-    $('#itemmarca').val(d[10]);
-    $('#itemmodelo').val(d[11]);
-    $('#itemserie').val(d[12]);
-    $('#itemyear').val(d[13]);
-    $('#itemcorr').val(d[14]);
-    $('#itemmotor').val(d[15]);
-    $('#itemcapa').val(d[15]);
-    $('#itemobser').val(d[16]);
-    $('#itemprecio').val(d[22]);
-    $('#itemestatus').val(d[23]);
-    $('#itemefbmx').val(d[24]);
-    $('#itemefbequip').val(d[25]);
-    $('#itemsegun').val(d[26]);
-    $('#itemlink').val(d[27]);
-    $('#itemercado').val(d[28]);
-    $('#itemtw').val(d[29]);
-    $('#itemins').val(d[30]);
-    $('#itemyou').val(d[31]);
+    $('#seg').val(d[0]);
+    $('#itemfotor').val(d[1]);
+    $('#itemmeisar').val(d[2]);
+    $('#itemloter').val(d[3]);
+    $('#itemventar').val(d[4]);
+    $('#itemrentar').val(d[5]);
+    $('#itemcategor').val(d[6]);
+    $('#itemcategoryr').val(d[7]);
+    $('#itemnombrer').val(d[8]);
+    $('#itemnombreinr').val(d[9]);
+    $('#itemdescr').val(d[10]);
+    $('#itemmarcar').val(d[11]);
+    $('#itemmodelor').val(d[12]);
+    $('#itemserier').val(d[13]);
+    $('#itemyearr').val(d[14]);
+    $('#itemcorrr').val(d[15]);
+    $('#itemmotorr').val(d[16]);
+    $('#itemcapar').val(d[17]);
+    $('#itemobserr').val(d[18]);
+    $('#itemprecior').val(d[19]);
+    $('#itemestatusr').val(d[20]);
+    $('#itemefbmxr').val(d[21]);
+    $('#itemefbequipr').val(d[22]);
+    $('#itemsegunr').val(d[23]);
+    $('#itemlinkr').val(d[24]);
+    $('#itemercador').val(d[25]);
+    $('#itemtwr').val(d[26]);
+    $('#iteminsr').val(d[27]);
+    $('#itemyour').val(d[28]);
+    console.log(d);
 }
-function editProdu(){
-    var Form = new FormData($('#formEditCol')[0]); 
+function editProduinvent(){
+    var Form = new FormData($('#formEditpr')[0]); 
     $.ajax({
         url:"http://localhost/meisa/meisaback/adminmeisa/assets/components/backinve/editColGr.php", 
         type: 'post',
