@@ -204,6 +204,11 @@
                         }else{
                             echo '<p><strong class="str__prod">Motor</strong></p>';
                         }
+                        if($inve_capacidad === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p><strong class="str__prod">Capacidad</strong></p>';
+                        }
                     ?>
                </div>
                <div>
@@ -242,6 +247,11 @@
                             echo '';
                         }else{
                             echo '<p>'.$inve_motor.'</p>';
+                        }
+                        if($inve_capacidad === 'N/A'){
+                            echo '';
+                        }else{
+                            echo '<p>'.$inve_capacidad.'</p>';
                         }
                     ?>
                </div>
