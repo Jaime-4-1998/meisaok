@@ -71,6 +71,7 @@ session_start();
                                                 <th>Estatus</th>
                                                 <th>Eliminar</th>
                                                 <th>Editar</th>
+                                                <th>Imagenes Multiples</th>
                                                 
                                             </tr>
                                         </thead>
@@ -85,6 +86,7 @@ session_start();
                                                 <th>Estatus</th>
                                                 <th>Eliminar</th>
                                                 <th>Editar</th>
+                                                <th>Imagenes Multiples</th>
                                                 
                                             </tr>
                                         </tfoot>
@@ -140,7 +142,9 @@ session_start();
                                             <td class="<?php echo $result -> inve_estatus; ?>"><?php echo $result -> inve_estatus; ?></td>
                                             <td><button class="btn btn-meisa" type="button" onclick="deleteProd('<?php echo $result -> inve_seguridad; ?>')"><i class="fas fa-trash"></i></button></td>
                                             <td><button class="btn btn-warning" type="button" data-toggle="modal" data-target="#modalColuEditarprod" onclick="EditProdin('<?php echo $datos ?>')"><i class="fas fa-edit"></i></button></td>
-                                            <?php
+                                            <td><button class="btn btn-info" type="button" data-toggle="modal" data-target="#modalPhoto" onclick="EditProdPhoto('<?php echo $datos ?>')"><i class="fas fa-camera"></i></button></td>
+
+                                           <?php
                                                     }
                                                 }
                                             ?>
@@ -169,7 +173,7 @@ session_start();
                 </button>
             </div>
             <div class="modal-body">
-                <form class="formBanner" id="formBanner"  method="POST" enctype="multipart/form-data">
+                <form class="formproduc" id="formproduc"  method="POST" enctype="multipart/form-data">
                     <div class="form-row">
                         <!--Itemfoto-->
                         <div class="form-group col-md-4">
@@ -672,7 +676,6 @@ session_start();
                             </div>
                         </div>
                      </div>
-                    
                     <!--Modal sepa-->
                     <div class="form-row">
                         <div class="form-group col-md-6">
@@ -764,7 +767,45 @@ session_start();
             </div>
         </div>
     </div>
-    
+    <!--Modal de fotos-->
+    <div class="modal fade" id="modalPhoto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+            <div class="modal-header bg-meisaa">
+                <h5 class="modal-title text-light" id="exampleModalLabel">Agregar Imagenes</h5>
+                <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true text-light">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="formphoto" id="formphoto"  method="POST" enctype="multipart/form-data">
+                <input type="hidden" id="set" name="set">
+                     <!--Modal sepa-->
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label class="text-meisa">La Categoria por cuestiones de seguridad es solamente de lectura</label>
+                            <input class="form-control" type="text" readonly name="itemcatphoto" id="itemcatphoto" requiered>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label class="text-meisa">El Nombre por cuestiones de seguridad es solamente de lectura</label>
+                            <input class="form-control" type="text" readonly name="itemnombrerphoto" id="itemnombrerphoto" requiered>
+                        </div>
+                    </div>
+                        <div class="form-group col-md-12">
+                            <label class="text-meisa str_meisa">Imagenes</label>
+                            <div class="custom-file">
+   				                <label for="exampleFormControlFile11">Elige las imagene</label>
+                                <input type="file" name="files[]" multiple />
+                            </div>
+                        </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" id="btnEditPhoto" class="btn btn-meisa">Guardar</button>
+            </div>
+            </div>
+        </div>
+    </div>
     <script src="../assets/vendor/jquery/jquery.min.js"></script>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -779,10 +820,13 @@ session_start();
     <script>
         $(document).ready(function(){
             $("#btnAddColum").click(function(e) {
-                addColumn();
+                addprod();
             });
             $("#btnEditColuProd").click(function(e) {
                 editProduinvent();
+            });
+            $("#btnEditPhoto").click(function(e) {
+                editPhoto();
             });
         });
     </script>

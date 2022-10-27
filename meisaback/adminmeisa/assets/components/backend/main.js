@@ -504,8 +504,8 @@ cadena="id=" + id;
 }
 /*EN ESTA PARTE EMPIEZA LA PARTE DEL INVENTARIO DE LAS MAQUINA*/
 /*ADD COLUMNS ESP*/
-function addColumn(){
-    var Form = new FormData($('#formBanner')[0]); 
+function addprod(){
+    var Form = new FormData($('#formproduc')[0]); 
     $.ajax({
         url:"http://localhost/meisa/meisaback/adminmeisa/assets/components/backinve/addProd.php", 
         type: 'post',
@@ -801,5 +801,37 @@ cadena="id=" + id;
             })
         }
        
+    });
+}
+
+
+
+
+/*EDIT photosss*/
+function EditProdPhoto(datos){
+    get=datos.split('||');
+    $('#set').val(get[0]);
+    $('#itemnombrerphoto').val(get[8]);
+    $('#itemcatphoto').val(get[6]);
+    console.log(get);
+}
+function editPhoto(){
+    var Form = new FormData($('#formphoto')[0]); 
+    $.ajax({
+        url:"http://localhost/meisa/meisaback/adminmeisa/assets/components/backinve/addPhoto.php", 
+        type: 'post',
+        data: Form,
+        processData: false,
+        contentType:false,
+        success:function(response){
+            Swal.fire({
+            icon: 'success',
+            title: 'Producto Actualizado',
+            confirmButtonColor: '#a20c19',
+            text: 'Editaste un Producto, da un clic en "Seguir"',
+            confirmButtonText:
+                '<a class="btn text-white" href="http://localhost/meisa/meisaback/adminmeisa/Inventario/Ingresar">SEGUIR</a> '
+            })
+        }
     });
 }
