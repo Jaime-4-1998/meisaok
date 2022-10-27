@@ -60,7 +60,7 @@
                             <h2>Categories</h2>
                                         <?php
                                             $connect = new PDO("mysql:host=localhost;dbname=u557675164_titulacion", "root", "");
-                                            $query = "SELECT DISTINCT(inve_category) FROM inventario WHERE inve_estatus = 'Disponible' ORDER BY inve_id DESC";
+                                            $query = "SELECT DISTINCT(inve_category) FROM inventario WHERE inve_estatus = 'Disponible' ORDER BY inve_category";
                                             $statement = $connect->prepare($query);
                                             $statement->execute();
                                             $result = $statement->fetchAll();
