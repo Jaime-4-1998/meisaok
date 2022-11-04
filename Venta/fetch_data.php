@@ -2,17 +2,12 @@
 $connect = new PDO("mysql:host=localhost;dbname=u557675164_titulacion", "root", "");
 if (isset($_POST["action"])) {
     $query = "
-        SELECT * FROM inventario WHERE inve_estatus = 'Disponible'
+        SELECT * FROM inventario  WHERE inve_estatus = 'Disponible'
     ";
-    if (isset($_POST["minimum_price"], $_POST["maximum_price"]) && !empty($_POST["minimum_price"]) && !empty($_POST["maximum_price"])) {
-        $query .= "
-         AND inve_precio BETWEEN '" . $_POST["minimum_price"] . "' AND '" . $_POST["maximum_price"] . "'
-        ";
-    }
     if (isset($_POST["brand"])) {
         $brand_filter = implode("','", $_POST["brand"]);
         $query .= "
-         AND inve_catego IN('" . $brand_filter . "')
+         AND inve_catego IN('" . $brand_filter . "') ORDER BY inve_nombre ASC
         ";
     }
     $statement = $connect->prepare($query);
@@ -38,7 +33,7 @@ if (isset($_POST["action"])) {
                                             echo '<p>'.utf8_encode($inve_desc).'</p>';
                                         }
                                     ?>
-                                    <a href="../Maquina/<?php echo strtolower(eliminar_tildes($result['inve_nombre']));?>/<?php echo ($result['inve_seguridad']);?>/" title="click para ver más">Ver Más</a>
+                                    <a href="../Maquina/<?php echo strtolower(eliminar_tildes($result['inve_catego']));?>/<?php echo ($result['inve_seguridad']);?>/" title="click para ver más">Ver Más</a>
                                     <div class="esp__inv"></div>
                             </div>
                         </div>

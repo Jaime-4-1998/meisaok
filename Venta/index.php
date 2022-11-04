@@ -71,7 +71,7 @@
                                                  <?php require_once '../assets/func/acent.php'; ?>
                                                     <input type="checkbox" class="common_selector brand" id="<?php echo utf8_encode(eliminar_tildes($row['inve_catego'])); ?>" value="<?php echo utf8_encode(eliminar_tildes($row['inve_catego'])); ?>"  />
                                                     <label for="<?php echo utf8_encode(eliminar_tildes($row['inve_catego'])); ?>">
-                                                        <span class="text"><?php echo utf8_encode($row['inve_catego']); ?></span>
+                                                        <span class="text"><?php echo str_replace("-", " ",utf8_encode($row['inve_catego']));?></span>
                                                     </label>
                                             </div>
                                         <?php

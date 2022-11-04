@@ -16,7 +16,7 @@
       ?>
       <?php
             $maquina = $_GET['maquina'];
-            $stmt = $mbd->prepare("SELECT * FROM inventario WHERE inve_nombre = '$maquina' ");
+            $stmt = $mbd->prepare("SELECT * FROM inventario WHERE inve_catego = '$maquina' ");
             $stmt->execute();
             if($stmt->rowCount() > 0)
             {
@@ -106,7 +106,7 @@
          <?php
             $maquina = $_GET['maquina'];
             $seguridad = $_GET['seguridad'];
-            $stmt = $mbd->prepare("SELECT * FROM inventario WHERE inve_nombre = '$maquina' AND inve_seguridad = '$seguridad'");
+            $stmt = $mbd->prepare("SELECT * FROM inventario WHERE inve_catego = '$maquina' AND inve_seguridad = '$seguridad'");
             $stmt->execute();
             if($stmt->rowCount() > 0)
             {
@@ -132,15 +132,6 @@
                               <div class="swiper-slide img__inveget">
                                  <img data-enlargable src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_img; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
                               </div>
-                              <div class="swiper-slide img__inveget">
-                                 <img data-enlargable src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_imgtrasera; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
-                              </div>
-                              <div class="swiper-slide img__inveget">
-                                 <img data-enlargable src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_imgldderecho; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
-                              </div>
-                              <div class="swiper-slide img__inveget">
-                                 <img data-enlargable src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_imgldizq; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
-                              </div>
                               </div>
                               <div class="swiper-button-next"></div>
                               <div class="swiper-button-prev"></div>
@@ -149,15 +140,6 @@
                               <div class="swiper-wrapper">
                               <div class="swiper-slide">
                                  <img src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_img; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
-                              </div>
-                              <div class="swiper-slide">
-                                 <img src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_imgtrasera; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
-                              </div>
-                              <div class="swiper-slide">
-                                 <img src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_imgldderecho; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
-                              </div>
-                              <div class="swiper-slide">
-                                 <img src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_imgldizq; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
                               </div>
                               </div>
             </div>
@@ -216,7 +198,8 @@
                         if($inve_catego === 'N/A'){
                             echo '';
                         }else{
-                            echo '<p>'.$inve_catego.'</p>';
+                            $spaces=str_replace("-", " ", $inve_catego);
+                            echo '<p>'.$spaces.'</p>';
                         }
                         if($inve_marca === 'N/A'){
                             echo '';
@@ -284,7 +267,7 @@
                                              $formu = '<form class="form__data" id="forme">
                                              <label class="form__label">Nombre Completo</label>
                                              
-                                             <input class="form__control" type="text" disabled name="" value="Informes sobre: '.$nam.'" id="name" placeholder="Nombre Completo">
+                                             <input class="form__control" type="text" readonly="" name="" value="Informes sobre: '.$nam.'" id="name" placeholder="Nombre Completo">
                                              
                                              <label class="form__label">Nombre Completo</label>
                                              <input class="form__control" type="text" name="" id="names" placeholder="Nombre Completo">
@@ -325,7 +308,41 @@
    <section>
     <div class="apartado__rel">
         <div class="prod__rela">
-            <h2>Aprtado de Relaciones</h2>
+            <h2>Equipos Relacionados</h2>
+            <div class="grid__relation">
+                    <?php
+                            try {
+                                $mbd = new PDO('mysql:host=localhost;dbname=u557675164_titulacion; charset=UTF8','root','');
+                            } catch (exception $e) {
+                                print "¡Error!: " . $e->getMessage() . "<br/>";
+                                die();
+                            }
+                    ?>
+                    <?php
+                            $maquina = $_GET['maquina'];
+                            $seguridad = $_GET['seguridad'];
+                            $stmt = $mbd->prepare("SELECT inve_id,inve_nombre,inve_seguridad,inve_catego,inve_img FROM inventario WHERE inve_catego = '$maquina'  ORDER BY inve_seguridad DESC LIMIT 3 ");
+                            $stmt->execute();
+                            if($stmt->rowCount() > 0)
+                            {
+                            while($row=$stmt->fetch(PDO::FETCH_ASSOC))
+                            {
+                            extract($row);
+                    ?>
+                    <div class="card__relation__desing">
+                    <?php require_once 'acent.php'; ?>
+                        <a href="http://localhost/meisa/Maquina/<?php echo strtolower(eliminar_tildes($row['inve_catego']));?>/<?php echo ($row['inve_seguridad']);?>/">
+                            <img src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_img; ?>" class="img__relation" loading="lazy" alt="<?php echo str_replace("-", " ", $row['inve_nombre']);  ?>" title="<?php echo str_replace("-", " ", $row['inve_nombre']);  ?>" />
+                            <h3 class="name__relation">
+                                    <?php echo str_replace("-", " ", $row['inve_nombre']); ?>
+                            </h3>
+                            <a href="http://localhost/meisa/Maquina/<?php echo strtolower(eliminar_tildes($row['inve_catego']));?>/<?php echo ($row['inve_seguridad']);?>/" class="link__relation" title="click para ver más">Ver Más</a>
+                        </a>
+                    </div>
+                    <?php } } else { ?>
+                        <span class="">Este Equipo es Unico</span>
+                    <?php } ?>
+            </div>
         </div>
         <div class="form__rel">
                 <?php
@@ -339,7 +356,7 @@
                 <?php
                         $maquina = $_GET['maquina'];
                         $seguridad = $_GET['seguridad'];
-                        $stmt = $mbd->prepare("SELECT * FROM inventario WHERE inve_nombre = '$maquina' AND inve_seguridad = '$seguridad'");
+                        $stmt = $mbd->prepare("SELECT * FROM inventario WHERE inve_catego = '$maquina' AND inve_seguridad = '$seguridad'");
                         $stmt->execute();
                         if($stmt->rowCount() > 0)
                         {
@@ -356,7 +373,7 @@
                                     $formur = '<form class="form__data" id="forme">
                                     <label class="form__label">Nombre Completo</label>
                                     
-                                    <input class="form__control" type="text" disabled name="" value="Informes sobre: '.$namr.'" id="name" placeholder="Nombre Completo">
+                                    <input class="form__control" type="text" readonly="" name="" value="Informes sobre: '.$namr.'" id="name" placeholder="Nombre Completo">
                                     
                                     <label class="form__label">Nombre Completo</label>
                                     <input class="form__control" type="text" name="" id="names" placeholder="Nombre Completo">

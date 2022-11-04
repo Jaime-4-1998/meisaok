@@ -7,6 +7,7 @@ $itemlote=$_POST['itemlote'];
 $itemventa=$_POST['itemventa'];
 $itemrenta=$_POST['itemrenta'];
 $itemcatego=$_POST['itemcatego'];
+    $convertidocat = str_replace(" ", "-", $itemcatego);   
 $itemcategory=$_POST['itemcategory'];
 $itemnombre=$_POST['itemnombre'];
     $convertido = str_replace(" ", "-", $itemnombre);
@@ -49,7 +50,7 @@ if(empty($itemfoto)){
         $direcejec -> bindParam(':inve_lote',$itemlote);
         $direcejec -> bindParam(':inve_venre',$itemventa);
         $direcejec -> bindParam(':inve_renve',$itemrenta);
-        $direcejec -> bindParam(':inve_catego',$itemcatego);
+        $direcejec -> bindParam(':inve_catego',$convertidocat);
         $direcejec -> bindParam(':inve_category',$itemcategory);
         $direcejec -> bindParam(':inve_nombre',$convertido);
         $direcejec -> bindParam(':inve_nombreingles',$cont);
