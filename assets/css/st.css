@@ -188,3 +188,35 @@
     width: 100%;
   }
 }
+.grid__relation{
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  gap: 2rem;
+  justify-content: space-around;
+}
+.card__relation{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.card__relation__desing{
+  display: flex;
+  flex-direction: column;
+}
+.img__relation{
+  width: 100% !important;
+  object-fit: cover;
+  height: auto !important;
+}
+.name__relation{
+  margin-top: 1rem;
+  text-align: center;
+  color: #000;
+}
+.link__relation{
+  text-decoration: none;
+  color: var(--red);
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+}
