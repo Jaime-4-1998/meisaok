@@ -62,7 +62,7 @@ session_start();
                                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                         <thead>
                                             <tr class="text-center">
-                                               
+                                                <th>ID</th>
                                                 <th>Categoria Español</th>
                                                 <th>Nombre</th>
                                                 <th>Marca</th>
@@ -72,12 +72,13 @@ session_start();
                                                 <th>Eliminar</th>
                                                 <th>Editar</th>
                                                 <th>Imagenes Multiples</th>
+                                                <th>Editar Imagen Principal</th>
                                                 
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr class="text-center">
-                                               
+                                                <th>ID</th>
                                                 <th>Categoria Español</th>
                                                 <th>Nombre</th>
                                                 <th>Marca</th>
@@ -87,6 +88,7 @@ session_start();
                                                 <th>Eliminar</th>
                                                 <th>Editar</th>
                                                 <th>Imagenes Multiples</th>
+                                                <th>Editar Imagen Principal</th>
                                                 
                                             </tr>
                                         </tfoot>
@@ -103,7 +105,7 @@ session_start();
                                         $results = $query -> fetchAll(PDO::FETCH_OBJ); 
                                             if($query -> rowCount() > 0){ 
                                                 foreach($results as $result) { 
-                                                    $datos = $result -> inve_seguridad."||".
+                                                    $datos = $result -> inve_id."||".
                                                     $result -> inve_itemfoto."||".
                                                     $result -> inve_itemmeisa."||".
                                                     $result -> inve_lote."||".
@@ -134,16 +136,17 @@ session_start();
                                                     $result -> inve_youtube;
                                                 ?>
                                         <tr class="text-center">
+                                            <td><?php echo $result -> inve_id; ?></td>
                                             <td><?php echo $result -> inve_catego; ?></td>
                                             <td><?php echo $result -> inve_nombre; ?></td>
                                             <td><?php echo $result -> inve_marca; ?></td>
                                             <td><?php echo $result -> inve_modelo; ?></td>
                                             <td><?php echo $result -> inve_observaciones; ?></td>
                                             <td class="<?php echo $result -> inve_estatus; ?>"><?php echo $result -> inve_estatus; ?></td>
-                                            <td><button class="btn btn-meisa" type="button" onclick="deleteProd('<?php echo $result -> inve_seguridad; ?>')"><i class="fas fa-trash"></i></button></td>
+                                            <td><button class="btn btn-meisa" type="button" onclick="deleteProd('<?php echo $result -> inve_id; ?>')"><i class="fas fa-trash"></i></button></td>
                                             <td><button class="btn btn-warning" type="button" data-toggle="modal" data-target="#modalColuEditarprod" onclick="EditProdin('<?php echo $datos ?>')"><i class="fas fa-edit"></i></button></td>
                                             <td><button class="btn btn-info" type="button" data-toggle="modal" data-target="#modalPhoto" onclick="EditProdPhoto('<?php echo $datos ?>')"><i class="fas fa-camera"></i></button></td>
-
+                                            <td><button class="btn btn-dark" type="button" data-toggle="modal" data-target="#modalUniquePhoto" onclick="PhotoUn('<?php echo $datos ?>')"><i class="fas fa-image"></i></button></td>
                                            <?php
                                                     }
                                                 }
@@ -666,16 +669,6 @@ session_start();
                             <label class="text-meisa">Observaciones del Producto</label>
                             <input class="form-control" type="text" placeholder="Observaciones del Producto" name="itemobserr" id="itemobserr" requiered>
                         </div>
-                     <!--Modal sepa-->
-                     <div class="form-row">
-                        <div class="form-group col-md-3">
-                            <label class="text-meisa">Imagen Principal</label>
-                            <div class="custom-file">
-                                    <label for="exampleFormControlFile1">Elige tu imagen</label>
-                                    <input type="file" class="form-control-file" name="imgBannerr" />
-                            </div>
-                        </div>
-                     </div>
                     <!--Modal sepa-->
                     <div class="form-row">
                         <div class="form-group col-md-6">
@@ -806,6 +799,44 @@ session_start();
             </div>
         </div>
     </div>
+    <!--Modal de unique photo-->
+    <div class="modal fade" id="modalUniquePhoto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+            <div class="modal-header bg-dark">
+                <h5 class="modal-title text-light" id="exampleModalLabel">Editar Imagen Principal</h5>
+                <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true text-light">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="formphotounique" id="formphotounique"  method="POST" enctype="multipart/form-data">
+                    <input type="hidden" id="seto" name="seto">
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label class="text-meisa">La Categoria por cuestiones de seguridad es solamente de lectura</label>
+                            <input class="form-control" type="text" readonly name="itemcatphoto" id="itemcatphotox" requiered>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label class="text-meisa">El Nombre por cuestiones de seguridad es solamente de lectura</label>
+                            <input class="form-control" type="text" readonly name="itemnombrerphoto" id="itemnombrerphotox" requiered>
+                        </div>
+                    </div>
+                        <div class="form-group col-md-12">
+                            <label class="text-meisa str_meisa">Imagenes</label>
+                            <div class="custom-file">
+   				                <label for="exampleFormControlFile11">Elige las imagene</label>
+                                <input type="file" name="filesx" />
+                            </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" id="btnEditPhotoUnique" class="btn btn-dark">Actualizar</button>
+            </div>
+            </div>
+        </div>
+    </div>
     <script src="../assets/vendor/jquery/jquery.min.js"></script>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -824,6 +855,9 @@ session_start();
             });
             $("#btnEditColuProd").click(function(e) {
                 editProduinvent();
+            });
+            $("#btnEditPhotoUnique").click(function(e) {
+                editPhoUn();
             });
             $("#btnEditPhoto").click(function(e) {
                 editPhoto();

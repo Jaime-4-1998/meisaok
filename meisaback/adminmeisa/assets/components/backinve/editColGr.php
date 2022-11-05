@@ -22,7 +22,6 @@ $itemcorrr=$_POST['itemcorrr'];
 $itemmotorr=$_POST['itemmotorr'];
 $itemcapar=$_POST['itemcapar'];
 $itemobserr=$_POST['itemobserr'];
-$imgBanerr= $_FILES['imgBannerr'];
 $itemprecior=$_POST['itemprecior'];
 $itemestatusr=$_POST['itemestatusr'];
 $itemefbmxr=$_POST['itemefbmxr'];
@@ -34,19 +33,11 @@ $itemtwr=$_POST['itemtwr'];
 $iteminsr=$_POST['iteminsr'];
 $itemyour=$_POST['itemyour'];
 
-if($imgBanerr["type"] == "image/jpeg" || $imgBanerr["type"] == "image/png"){
-    $nomencri=md5($imgBanerr["tmp_name"]);
-    $ruta = "../../img/inve/".$nomencri.".jpg";
-    move_uploaded_file($imgBanerr["tmp_name"], $ruta);
-    $rutaimg = "img/inve/".$nomencri.".jpg";}
-
     $consulta = "UPDATE inventario SET inve_itemfoto = '$itemfotor', inve_itemmeisa = '$itemmeisar', inve_lote = '$itemloter',
      inve_venre = '$itemventar', inve_renve = '$itemrentar', inve_catego = '$itemcategor', inve_category = '$itemcategoryr', inve_nombre = '$convertidor', inve_nombreingles = '$contr',inve_desc = '$itemdescr', inve_marca = '$itemmarcar', inve_modelo = '$itemmodelor',
-    inve_serie = '$itemserier', inve_year = '$itemyearr', inve_corriente = '$itemcorrr', inve_motor = '$itemmotorr', inve_capacidad = '$itemcapar', inve_observaciones = '$itemobserr', 
-    inve_img = '$rutaimg',
-    inve_precio = '$itemprecior', inve_estatus = '$itemestatusr', inve_fbmeisamex = '$itemefbmxr', inve_fbmeisaequip = '$itemefbequipr',
+    inve_serie = '$itemserier', inve_year = '$itemyearr', inve_corriente = '$itemcorrr', inve_motor = '$itemmotorr', inve_capacidad = '$itemcapar', inve_observaciones = '$itemobserr',inve_precio = '$itemprecior', inve_estatus = '$itemestatusr', inve_fbmeisamex = '$itemefbmxr', inve_fbmeisaequip = '$itemefbequipr',
     inve_segunda = '$itemsegunr', inve_linke = '$itemlinkr', inve_mercado = '$itemercador', inve_tw = '$itemtwr', 
-    inve_ins = '$iteminsr', inve_youtube = '$itemyour' WHERE inve_seguridad = '$seg' "; 
+    inve_ins = '$iteminsr', inve_youtube = '$itemyour' WHERE inve_id = '$seg' "; 
 
     $eject = $mbd -> prepare($consulta); 
     $eject -> execute(); 

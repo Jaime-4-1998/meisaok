@@ -240,7 +240,7 @@
                </div>
             </div>
             <div class="flex__priceinfo">
-               
+            
             <p class="prod__info">
                <strong class="str__prod prod__price">
                   <?php echo str_replace("-", " ", $row['inve_nombre']); ?>
@@ -257,8 +257,25 @@
                 ?>
             </p>
             </div>
+            <?php 
+                if($inve_observaciones === 'N/A'){
+                    echo '';
+                }else{
+                    $obs= utf8_encode($inve_observaciones);
+                    echo '<p class="more__information">Información adicional</p>';
+                }
+            ?>
             <div class="liena"></div>
+            <?php 
+                if($inve_observaciones === 'N/A'){
+                    echo '';
+                }else{
+                    $obs= utf8_encode($inve_observaciones);
+                    echo '<p class="more__inf__obs">'.$obs.'</p>';
+                }
+            ?>
                <div class="form__pro">
+                <p class="title__form">Requiere más Información</p>
                               <div>
                                     <?php 
                                  

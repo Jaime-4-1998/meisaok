@@ -835,3 +835,33 @@ function editPhoto(){
         }
     });
 }
+
+
+/*EDIT COLUMN*/
+function PhotoUn(datos){
+    geto=datos.split('||');
+    $('#seto').val(geto[0]);
+    $('#itemnombrerphotox').val(geto[8]);
+    $('#itemcatphotox').val(geto[6]);
+    console.log(geto);
+}
+function editPhoUn(){
+    var Form = new FormData($('#formphotounique')[0]); 
+    $.ajax({
+        url:"http://localhost/meisa/meisaback/adminmeisa/assets/components/backinve/editUniqueImg.php", 
+        type: 'post',
+        data: Form,
+        processData: false,
+        contentType:false,
+        success:function(response){
+            Swal.fire({
+            icon: 'success',
+            title: 'Imagen Principal Actualizada',
+            confirmButtonColor: '#a20c19',
+            text: 'Editaste una Imagen Principal, da un clic en "Seguir"',
+            confirmButtonText:
+                '<a class="btn text-white" href="http://localhost/meisa/meisaback/adminmeisa/Inventario/Ingresar">SEGUIR</a> '
+            })
+        }
+    });
+}

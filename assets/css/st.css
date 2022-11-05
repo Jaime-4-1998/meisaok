@@ -12,7 +12,7 @@
   text-align: center;
   font-size: 2rem;
   margin-top: 2rem;
-  margin-bottom: -1rem;
+  margin-bottom: 1rem;
   color: #000;
 }
 .productdetails__meisa h2{
@@ -219,4 +219,24 @@
   font-weight: bold;
   text-align: center;
   margin-top: 1rem;
+}
+.more__information{
+  font-weight: bold !important;
+  font-size: 1.5rem !important;
+}
+.more__inf__obs{
+  font-size: 1.2rem !important;
+  margin-top: -1rem !important;
+}
+@media screen and (max-width:900px) {
+  .more__information{
+    font-size: 1.2rem !important;
+  }
+}
+.title__form{
+  text-transform: uppercase;
+  color: var(--red) !important;
+  font-weight: bold !important;
+  text-align: center;
+  margin-top: 3rem !important;
 }
