@@ -50,14 +50,14 @@
             <div class="meisa__productos">
                 <div class="meisa__prod__one">
                     <div class="navbar">
-                        <h2 class="mob__text">Categorías</h2>
+                        <h2 class="mob__text">Inventario</h2>
                         <div class="navbar__toggle" id="mobile-menu">
                             <span class="bar"></span>
                             <span class="bar"></span>
                             <span class="bar"></span>
                         </div>
                         <div class="navbar__menu">
-                            <h2>Categorías</h2>
+                            <h2>Inventario</h2>
                                         <?php
                                             $connect = new PDO("mysql:host=localhost;dbname=u557675164_titulacion", "root", "");
                                             $query = "SELECT DISTINCT(inve_catego) FROM inventario WHERE inve_estatus = 'Disponible' ORDER BY inve_catego";
