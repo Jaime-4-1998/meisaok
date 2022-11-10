@@ -50,49 +50,21 @@
             <!--End-->
             </div>
         </header>
-        <!--Cards-->
         <section>
-            <div class="cards__com">
-                <div class="content__cards__com">
-                     <?php
-                        include '../meisaback/adminmeisa/assets/components/backend/conexion.php';
-                        $sql = "SELECT id_col,prioridad,img,title,content
-                        FROM columntwo ORDER BY prioridad ASC"; 
-                        $query = $mbd -> prepare($sql); 
-                        $query -> execute(); 
-                        $results = $query -> fetchAll(PDO::FETCH_OBJ); 
-                           if($query -> rowCount() > 0){ 
-                                 foreach($results as $result) { 
-                                    $data = $result -> id_col."||".
-                                    $result -> prioridad."||".
-                                    $result -> img."||".
-                                    $result -> title."||".
-                                    $result -> content; 
-                     ?>
-                    <div class="cards__comt">
-                        <div class="card__data__com">
-                            <div class="card__img__data__com">
-                                <img src="../meisaback/adminmeisa/assets/<?php echo $result -> img; ?>" loading="lazy" alt="Meisa Mex <?php echo $result -> title; ?>" title="Meisa Mex <?php echo $result -> title; ?>" width="100" height="100">
-                            </div>
-                            <div class="card__data__text__com">
-                                <h2>
-                                    <?php echo $result -> title; ?>
-                                </h2>
-                                <p>
-                                <?php echo $result -> content; ?>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <?php }} ?>
+           <div class="sect__compras__new">
+                <div class="sect__sales__container">
+                    <h2>Compra de Maquinaria</h2>
+                    <p>Nueva, seminueva, en regular estado y desecho ferroso.</p>
+                    <p>Contamos con una gran variedad de maquinaria para la industria.</p>
+                    <p>Motores, moto reductores, bombas, compresores, plantas de luz, maquinas de inyección, compresores de enfriamiento, montacargas, etc.</p>
                 </div>
-            </div>
+           </div>
         </section>
         <!--Atención-->
         <section>
-            <div class="atencion__meisa">
+            <div class="atencion__meisa atenttion__meisa">
                 <div class="atencion__meisa__textos">
-                    <h2>TE COMPRAMOS TU MAQUINARÍA</h2>
+                    <h2>TE COMPRAMOS TU MAQUINARIA</h2>
                     <p>
                         Contáctanos para consultas de Compras de maquinaria en desuso, supervisamos a detalle para ofrecer una compra. 
                     </p>
@@ -105,7 +77,7 @@
                     </form>
                 </div>
             </div>
-         </section>
+        </section>
         <!--fondo-->
         <section>
             <div class="meisa__manifon__comp">        

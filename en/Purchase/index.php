@@ -50,43 +50,15 @@
             <!--End-->
             </div>
         </header>
-        <!--Cards-->
         <section>
-            <div class="cards__com">
-                <div class="content__cards__com">
-                     <?php
-                        include '../../meisaback/adminmeisa/assets/components/backend/conexion.php';
-                        $sql = "SELECT id_col,prioridad,img,engtitle,engcont
-                        FROM columntwo ORDER BY prioridad ASC"; 
-                        $query = $mbd -> prepare($sql); 
-                        $query -> execute(); 
-                        $results = $query -> fetchAll(PDO::FETCH_OBJ); 
-                           if($query -> rowCount() > 0){ 
-                                 foreach($results as $result) { 
-                                    $data = $result -> id_col."||".
-                                    $result -> prioridad."||".
-                                    $result -> img."||".
-                                    $result -> engtitle."||".
-                                    $result -> engcont; 
-                     ?>
-                    <div class="cards__comt">
-                        <div class="card__data__com">
-                            <div class="card__img__data__com">
-                                <img src="../../meisaback/adminmeisa/assets/<?php echo $result -> img; ?>" loading="lazy" alt="Meisa Mex <?php echo $result -> engtitle; ?>" title="Meisa Mex <?php echo $result -> engtitle; ?>" width="100" height="100">
-                            </div>
-                            <div class="card__data__text__com">
-                                <h2>
-                                    <?php echo $result -> engtitle; ?>
-                                </h2>
-                                <p>
-                                <?php echo $result -> engcont; ?>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <?php }} ?>
+           <div class="sect__compras__new">
+                <div class="sect__sales__container">
+                    <h2>Purchase of machinery</h2>
+                    <p>New, semi-new, in fair condition and ferrous waste.</p>
+                    <p>We have a wide variety of machinery for the industry.</p>
+                    <p>Motors, motor reducers, pumps, compressors, power plants, injection machines, cooling compressors, forklifts, etc.</p>
                 </div>
-            </div>
+           </div>
         </section>
         <!--Atención-->
         <section>
