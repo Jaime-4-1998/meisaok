@@ -102,35 +102,6 @@
                 </div>
             </div>
         </section>
-         <!--3 images-->
-         <section>
-            <div class="meisa__vent__text">
-                <h2>GREAT VARIETY <strong><span class="subrayado__meisa">OF EQUIPMENT</span></strong></h2>
-            </div>
-            <div class="meisa__vent__imgs">
-                
-                    <?php
-                        include '../../meisaback/adminmeisa/assets/components/backend/conexion.php';
-                        $sql = "SELECT id_imgven,prioridad,img,titleeng
-                        FROM imgvt ORDER BY prioridad ASC"; 
-                        $query = $mbd -> prepare($sql); 
-                        $query -> execute(); 
-                        $results = $query -> fetchAll(PDO::FETCH_OBJ); 
-                           if($query -> rowCount() > 0){ 
-                                 foreach($results as $result) { 
-                                    $data = $result -> id_imgven."||".
-                                    $result -> prioridad."||".
-                                    $result -> img."||".
-                                    $result -> titleeng;
-                    ?>
-                <div class="meisa__contenedor">
-                    <img src="../../meisaback/adminmeisa/assets/<?php echo $result -> img; ?>" loading="lazy" alt="Meisa Mex <?php echo $result -> titleeng; ?>" title="Meisa Mex <?php echo $result -> titleeng; ?>" width="100">
-                    <span><div class="hast">#</div>Meisa</span>
-                    <p><?php echo $result -> titleeng; ?></p>
-                </div>
-                <?php }} ?>
-            </div>
-         </section>
          <!--wh-->
          <section>
             <?php
