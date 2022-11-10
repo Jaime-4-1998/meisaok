@@ -8,6 +8,7 @@
     <meta name="description" content="Meisa ofrece un amplio catálogo de productos de maquinaria, equipo y accesorios de cualquier ramo de la industria" />
     <title>Meisa - Purchase</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/lg/meisa/sh.png">
+    <link rel="preload" href="../../assets/css/margins.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="../../assets/css/style.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="../../assets/css/btn.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,7 +52,7 @@
             </div>
         </header>
         <section>
-           <div class="sect__compras__new">
+           <div class="sect__compras__new margin__home__meisa">
                 <div class="sect__sales__container">
                     <h2>Purchase of machinery</h2>
                     <p>New, semi-new, in fair condition and ferrous waste.</p>
@@ -62,7 +63,7 @@
         </section>
         <!--Atención-->
         <section>
-            <div class="atencion__meisa">
+            <div class="atencion__meisa margin__home__meisa">
                 <div class="atencion__meisa__textos">
                     <h2>WE BUY YOUR MACHINERY</h2>
                     <p>

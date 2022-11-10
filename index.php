@@ -9,6 +9,7 @@
     <title>Meisa</title>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/lg/meisa/sh.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="preload" href="assets/css/margins.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="assets/css/style.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="assets/css/swpcarr.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="assets/css/btn.css" as="style" onload="this.rel='stylesheet'">
@@ -93,7 +94,7 @@
         </header>
         <!--Acerca-->
         <section>
-            <div class="acerca__meisa">
+            <div class="acerca__meisa margin__home__meisa">
                 <div class="acerca__meisa__text">
                     <?php
                         include 'meisaback/adminmeisa/assets/components/backend/conexion.php';
@@ -151,7 +152,7 @@
         </section>
         <!--Servicios-->
         <section>
-            <div class="row">
+            <div class="row margin__home__meisa">
                 <div class="ih-item square effect10 left_to_right">
                     <span class="meisa__hover">
                         <div class="img">
@@ -216,7 +217,7 @@
                     }
                 ?>
             </div>
-            <div class="logos__clientes__meisa">
+            <div class="logos__clientes__meisa margin__home__meisa">
                 <div class="clientes__filas__logos">
                     <div class="logos__cards">
                         <img src="assets/img/clie/22lg1.svg" loading="lazy" alt="Gates Cliente de Meisa Mex" title="Gates Cliente de Meisa Mex" width="100" height="100"/>
@@ -310,7 +311,7 @@
         </section>
         <!--Atención-->
         <section>
-            <div class="atencion__meisa">
+            <div class="atencion__meisa margin__home__meisa margin__home__meisa__resp">
                 <div class="atencion__meisa__textos">
                     <h2>Atención al cliente</h2>
                     <p>

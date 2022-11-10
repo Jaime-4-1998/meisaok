@@ -8,6 +8,7 @@
     <meta name="description" content="Meisa ofrece un amplio catálogo de productos de maquinaria, equipo y accesorios de cualquier ramo de la industria" />
     <title>Meisa - Compras</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/lg/meisa/sh.png">
+    <link rel="preload" href="../assets/css/margins.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="../assets/css/style.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="../assets/css/btn.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,7 +52,7 @@
             </div>
         </header>
         <section>
-           <div class="sect__compras__new">
+           <div class="sect__compras__new margin__home__meisa">
                 <div class="sect__sales__container">
                     <h2>Compra de Maquinaria</h2>
                     <p>Nueva, seminueva, en regular estado y desecho ferroso.</p>
@@ -59,10 +60,10 @@
                     <p>Motores, moto reductores, bombas, compresores, plantas de luz, maquinas de inyección, compresores de enfriamiento, montacargas, etc.</p>
                 </div>
            </div>
-        </section>
+       </section>
         <!--Atención-->
         <section>
-            <div class="atencion__meisa atenttion__meisa">
+            <div class="atencion__meisa atenttion__meisa margin__home__meisa">
                 <div class="atencion__meisa__textos">
                     <h2>TE COMPRAMOS TU MAQUINARIA</h2>
                     <p>
