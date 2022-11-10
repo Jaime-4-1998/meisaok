@@ -127,42 +127,36 @@
                 ?>
             </div>
          </section>
-         <section>
+        <section>
             <div class="row">
                 <div class="ih-item square effect10 left_to_right">
                     <span class="meisa__hover">
                         <div class="img">
                             <img loading="lazy" src="../assets/img/bg/home/Ventas.jpg" alt="Purchase" title="Purchase" width="100" />
                         </div>
-                        <div class="info cam">
-                            <h3>
-                                <a href="https://meisamex.com.mx/Purchase/" class="link__meisa__nuevo">Purchase / Sales</a>                            
-                            </h3>
-                        </div>
+                        <a href="https://meisamex.com.mx/Purchase/" class="info cam">
+                            <h3 class="link__meisa__nuevo">Purchase / Sales</h3>
+                        </a>
                     </span>
                 </div>
-                                <div class="ih-item square effect10 left_to_right">
+                <div class="ih-item square effect10 left_to_right">
                     <span class="meisa__hover">
                         <div class="img">
                             <img loading="lazy" src="../assets/img/bg/home/PlantasdeLuz.jpg" alt="Lightplants" title="Lightplants" width="100" />
                         </div>
-                        <div class="info plant">
-                            <h3>
-                                <a href="https://meisamex.com.mx/Lightplants/" class="link__meisa__nuevo">Light plants</a>                         
-                            </h3>
-                        </div>
+                        <a href="https://meisamex.com.mx/Lightplants/" class="info plant">
+                            <h3 class="link__meisa__nuevo">Light plants</h3>
+                        </a>
                     </span>
                 </div>
-                                <div class="ih-item square effect10 left_to_right">
+                <div class="ih-item square effect10 left_to_right">
                     <span class="meisa__hover">
                         <div class="img">
                             <img loading="lazy" src="../assets/img/bg/home/Inventario.jpg" alt="Sales" title="Sales" width="100" />
                         </div>
-                        <div class="info invet">
-                            <h3>
-                                <a href="https://meisamex.com.mx/Sales/" class="link__meisa__nuevo">Sales</a>                         
-                            </h3>
-                        </div>
+                        <a href="https://meisamex.com.mx/Sales/" class="info invet">
+                            <h3 class="link__meisa__nuevo">Sales</h3>
+                        </a>
                     </span>
                 </div>
                 <div class="ih-item square effect10 left_to_right">
@@ -170,14 +164,12 @@
                             <div class="img">
                                 <img loading="lazy" src="../assets/img/bg/home/Maniobra.jpg" alt="Maneuvers" title="Maneuvers" width="100" />
                             </div>
-                            <div class="info manit">
-                                <h3>
-                                    <a href="https://meisamex.com.mx/Maneuvers/" class="link__meisa__nuevo">Maneuvers</a>                            
-                                </h3>
-                            </div>
+                            <a href="https://meisamex.com.mx/Maneuvers/" class="info manit">
+                                <h3 class="link__meisa__nuevo">Maneuvers</h3>
+                            </a>
                         </span>
-                    </div>
                 </div>
+            </div>
         </section>
         <!--Clientes-->
         <section>

@@ -155,50 +155,42 @@
                         <div class="img">
                             <img loading="lazy" src="assets/img/bg/colu/f06f3d4c37bedd0757668288ec801620.jpg" alt="Compra / Venta" title="Compra / Venta" width="100" />
                         </div>
-                        <div class="info cam">
-                            <h3>
-                                <a href="https://meisamex.com.mx/Compra/" class="link__meisa__nuevo">Compra / Venta</a>                            
-                            </h3>
-                        </div>
+                        <a href="https://meisamex.com.mx/Compra/" class="info cam">
+                            <h3 class="link__meisa__nuevo">Compra / Venta</h3>
+                        </a>
                     </span>
                 </div>
-                                <div class="ih-item square effect10 left_to_right">
+                <div class="ih-item square effect10 left_to_right">
                     <span class="meisa__hover">
                         <div class="img">
                             <img loading="lazy" src="assets/img/bg/colu/12bffcd155e95d3297f271d34190a378.jpg" alt="Plantas de Luz" title="Plantas de Luz" width="100" />
                         </div>
-                        <div class="info plant">
-                            <h3>
-                                <a href="https://meisamex.com.mx/PlantasdeLuz/" class="link__meisa__nuevo">Plantas de Luz</a>                         
-                            </h3>
-                        </div>
+                        <a href="https://meisamex.com.mx/PlantasdeLuz/" class="info plant">
+                            <h3 class="link__meisa__nuevo">Plantas de Luz</h3>
+                        </a>
                     </span>
                 </div>
-                                <div class="ih-item square effect10 left_to_right">
+                <div class="ih-item square effect10 left_to_right">
                     <span class="meisa__hover">
                         <div class="img">
                             <img loading="lazy" src="assets/img/bg/colu/c61623eb5c366d767e5ce2178a7ea5ac.jpg" alt="Inventario" title="Inventario" width="100" />
                         </div>
-                        <div class="info invet">
-                            <h3>
-                                <a href="https://meisamex.com.mx/Venta/" class="link__meisa__nuevo">Inventario</a>                         
-                            </h3>
-                        </div>
+                        <a href="https://meisamex.com.mx/Venta/"  class="info invet">
+                            <h3 class="link__meisa__nuevo">Inventario</h3>
+                        </a>
                     </span>
                 </div>
                 <div class="ih-item square effect10 left_to_right">
-                        <span class="meisa__hover">
+                    <span class="meisa__hover">
                             <div class="img">
                                 <img loading="lazy" src="assets/img/bg/colu/7b80e8f58347b0448a23998458e88c0c.jpg" alt="Maniobra" title="Maniobra" width="100" />
                             </div>
-                            <div class="info manit">
-                                <h3>
-                                    <a href="https://meisamex.com.mx/Maniobras/" class="link__meisa__nuevo">Maniobra</a>                            
-                                </h3>
-                            </div>
-                        </span>
-                    </div>
+                            <a href="https://meisamex.com.mx/Maniobras/" class="info manit">
+                                <h3 class="link__meisa__nuevo">Maniobra</h3>
+                            </a>
+                    </span>
                 </div>
+            </div>
         </section>
         <!--Clientes-->
         <section>
