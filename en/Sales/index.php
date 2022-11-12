@@ -67,10 +67,10 @@
                                             foreach($result as $row)
                                             {
                                         ?>
-                                            <div class="checkbox">
-                                                    <input type="checkbox" class="common_selector brand" id="<?php echo $row['inve_category']; ?>" value="<?php echo $row['inve_category']; ?>"  />
-                                                    <label for="<?php echo $row['inve_category']; ?>">
-                                                        <span class="text"><?php echo $row['inve_category']; ?></span>
+                                             <div class="checkbox">
+                                                   <label  for="<?php echo utf8_encode($row['inve_category']); ?>" class="container"><?php echo str_replace("-", " ",utf8_encode($row['inve_category']));?>
+                                                        <input type="radio" name="radio" class="common_selector brand" id="<?php echo utf8_encode($row['inve_category']); ?>" value="<?php echo utf8_encode($row['inve_category']); ?>">
+                                                        <span class="checkmark"></span>
                                                     </label>
                                             </div>
                                         <?php

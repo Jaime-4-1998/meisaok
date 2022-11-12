@@ -69,9 +69,9 @@
                                         ?>
                                             <div class="checkbox">
                                                  <?php require_once '../assets/func/acent.php'; ?>
-                                                    <input type="checkbox" class="common_selector brand" id="<?php echo utf8_encode(eliminar_tildes($row['inve_catego'])); ?>" value="<?php echo utf8_encode(eliminar_tildes($row['inve_catego'])); ?>"  />
-                                                    <label for="<?php echo utf8_encode(eliminar_tildes($row['inve_catego'])); ?>">
-                                                        <span class="text"><?php echo str_replace("-", " ",utf8_encode($row['inve_catego']));?></span>
+                                                    <label  for="<?php echo utf8_encode(eliminar_tildes($row['inve_catego'])); ?>" class="container"><?php echo str_replace("-", " ",utf8_encode($row['inve_catego']));?>
+                                                        <input type="radio" name="radio" class="common_selector brand" id="<?php echo utf8_encode(eliminar_tildes($row['inve_catego'])); ?>" value="<?php echo utf8_encode(eliminar_tildes($row['inve_catego'])); ?>">
+                                                        <span class="checkmark"></span>
                                                     </label>
                                             </div>
                                         <?php

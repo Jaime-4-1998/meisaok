@@ -5,6 +5,8 @@ $(document).ready(function(){
     function filter_data()
     {
         $('.filter_data').html('<div id="loading" style="" ></div>');
+        $('.filter_data').hide();
+        $('.ar').prop('disabled',false);
         var action = 'fetch_data';
         var minimum_price = $('#hidden_minimum_price').val();
         var maximum_price = $('#hidden_maximum_price').val();
@@ -26,27 +28,16 @@ $(document).ready(function(){
         var filter = [];
         $('.'+class_name+':checked').each(function(){
             filter.push($(this).val());
+            $('.filter_data').show();
+            $('#mobile-menu').addClass('is-active')
         });
         return filter;
     }
 
     $('.common_selector').click(function(){
         filter_data();
+        $('#mobile-menu').removeClass('is-active')
+        $('.navbar__menu').removeClass('active')
+        window.scrollTo(0, 400)
     });
-
-    $('#price_range').slider({
-        range:true,
-        min:100,
-        max:65000,
-        values:[100, 65000],
-        step:500,
-        stop:function(event, ui)
-        {
-            $('#price_show').html(ui.values[0] + ' - ' + ui.values[1]);
-            $('#hidden_minimum_price').val(ui.values[0]);
-            $('#hidden_maximum_price').val(ui.values[1]);
-            filter_data();
-        }
-    });
-
 });

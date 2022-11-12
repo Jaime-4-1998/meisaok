@@ -21,7 +21,6 @@
 <body>
     <main>
         <header>
-            <div class="headere">
                 <?php
                     include 'assets/components/nav.php';
                 ?>
@@ -52,46 +51,50 @@
 						</div>
                     </div>
                 </div>
-                <!--Carrusel-->
-                <?php include_once "assets/func/func.php"; ?>
-                <section>
-                    <!-- Swiper -->
-                    <div class="swi__carr__container">
-                        <div class="swiper mySwiper" id="swpi">
-                            <div class="swiper-wrapper">
-                                <?php $banners =  obtenerBanners(); ?>
-                                    <?php
-                                        $i=0;
-                                        foreach ($banners as $banerresult) { 
-                                            if($i === 0){
+        </header>
+        <!--Carrusel-->
+        <?php include_once "assets/func/func.php"; ?>
+        <div class="headere margin__home__meisa">
+            <section>
+                <div class="interno">
+
+                        <!-- Swiper -->
+                        <div class="swi__carr__container">
+                            <div class="swiper mySwiper" id="swpi">
+                                <div class="swiper-wrapper">
+                                    <?php $banners =  obtenerBanners(); ?>
+                                        <?php
+                                            $i=0;
+                                            foreach ($banners as $banerresult) { 
+                                                if($i === 0){
+                                        ?>
+                                            <div class="swiper-slide">
+                                                <img src="meisaback/adminmeisa/assets/<?php echo $banerresult['img'] ?>" loading="lazy" title="<?php echo $banerresult['seo']?>" alt="<?php echo $banerresult['seo']?>" width="100" height="100" />
+                                            </div>
+                                        <?php
+                                            }else{
                                     ?>
-                                        <div class="swiper-slide">
-                                            <img src="meisaback/adminmeisa/assets/<?php echo $banerresult['img'] ?>" loading="lazy" title="<?php echo $banerresult['seo']?>" alt="<?php echo $banerresult['seo']?>" width="100" height="100" />
-                                        </div>
-                                    <?php
-                                        }else{
-                                ?>
-                                        <div class="swiper-slide">
-                                            <img src="meisaback/adminmeisa/assets/<?php echo $banerresult['img'] ?>" loading="lazy" title="<?php echo $banerresult['seo']?>" alt="<?php echo $banerresult['seo']?>" width="100" height="100" />
-                                        </div>
-                                    <?php
-                                        }        
-                                            $i++;
-                                        }
-                                    ?>
-                            </div>
-                            <div class="swiper-button-next">
-                                <img src="assets/img/lg/meisa/22arrow3890890.svg" loading="lazy" alt="Meisa Mex" title="Meisa Mex">
-                            </div>
-                            <div class="swiper-button-prev">
-                                <img src="assets/img/lg/meisa/22rrow54897423789.svg" loading="lazy" alt="Meisa Mex" title="Meisa Mex">
+                                            <div class="swiper-slide">
+                                                <img src="meisaback/adminmeisa/assets/<?php echo $banerresult['img'] ?>" loading="lazy" title="<?php echo $banerresult['seo']?>" alt="<?php echo $banerresult['seo']?>" width="100" height="100" />
+                                            </div>
+                                        <?php
+                                            }        
+                                                $i++;
+                                            }
+                                        ?>
+                                </div>
+                                <div class="swiper-button-next">
+                                    <img src="assets/img/lg/meisa/22arrow3890890.svg" loading="lazy" alt="Meisa Mex" title="Meisa Mex">
+                                </div>
+                                <div class="swiper-button-prev">
+                                    <img src="assets/img/lg/meisa/22rrow54897423789.svg" loading="lazy" alt="Meisa Mex" title="Meisa Mex">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-            <!--End-->
-            </div>
-        </header>
+                </div>
+            </section>
+        </div>
+        <!--End-->
         <!--Acerca-->
         <section>
             <div class="acerca__meisa margin__home__meisa">

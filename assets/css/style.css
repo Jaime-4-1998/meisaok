@@ -30,16 +30,38 @@ html::-webkit-scrollbar-thumb {
 	color: #000;
 	background-color: var(--red);
 }
-/* ========== header developed by Lamm Solucionaes Digitales Jaime Ramirez ========== */
+/* ========== header developed by Lamm Solucionaes Digitales Jaime Ramirez
+background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/bg/2968231432678.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    margin-top: -10rem !important;
+========== */
 .headere{
     background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/bg/2968231432678.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    height: 70vh;
+    position: relative;
+    z-index: 0;
+}
+.interno {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+}
+@media screen and (max-width:1400px) {
+    .interno {
+        top: 25%;
+    }
 }
 .head__maniobras{
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/bg/mani/29786237861238.jpg);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../img/bg/mani/0911202234895798243.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -57,7 +79,7 @@ html::-webkit-scrollbar-thumb {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 60 !important;
+    height: 60vh !important;
 }
 .head__venta{
     background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/bg/ven/43876543895.jpg);
@@ -72,7 +94,7 @@ html::-webkit-scrollbar-thumb {
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        height: 80vh !important;
+        height: 58vh !important;
    }
    .head__maniobras{
         background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/bg/mani/28888resp.svg);
@@ -315,7 +337,6 @@ a.big-btn {
     flex-direction: row;
 }
 .acerca__meisa__text{
-    padding: 3rem;
     width: 60%;
 }
 /*Text first of about*/
@@ -441,18 +462,18 @@ a.big-btn {
     font-size: 2rem;
 }
 .logos__clientes__meisa{
-    padding: 2rem;
+    padding: 0rem;
     margin-top: 3rem;
 }
 .clientes__filas__logos{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 0.5rem;
+    padding: 0rem;
     gap: 4rem;
 }
 .logos__cards{
-    width: 180px !important;
+    width: 130px !important;
     display: block;
     margin: auto;
 }
@@ -490,10 +511,12 @@ a.big-btn {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    padding: 3rem;
+    padding: 0rem;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
 }
 .atencion__meisa__textos{
-    width: 45%;
+    width: 60%;
 }
 .atencion__meisa__textos h2{
     color: var(--red);
@@ -681,7 +704,7 @@ footer {
     justify-content: center;
     margin-bottom: 4rem;
 }
-.ih-item {
+.ih-item{
     position: relative;
     -webkit-transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
@@ -867,6 +890,7 @@ footer {
 /*Pagina de Contacto*/
 .head__black__miesa{
     background-color: var(--black);
+    position: relative; z-index: 1;
 }
 /*Contacto Flex*/
 .meisa_contact{
@@ -1761,4 +1785,51 @@ strong{
 .link__external{
     width: 2%;
     margin-left: 1rem;
+}
+/****new section sales**/
+.sect__compras__new{
+    max-width: 100%;
+}
+.sect__sales__container{
+    max-width: 1150px;
+    display: block;
+    margin: auto;
+}
+@media screen and (max-width:1370px) {
+    .sect__sales__container{
+        max-width: 1000px;
+    }
+}
+.sect__sales__container h2{
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    color: var(--black);
+    font-size: 1.6rem;
+}
+.sect__sales__container p{
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--black);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+@media screen and (max-width:1100px) {
+    .sect__sales__container{
+        max-width: 100% !important;
+        padding: 3rem;
+    }
+    .sect__sales__container h2{
+        text-align: left;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+    }
+    .sect__sales__container p{
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+    .atenttion__meisa{
+        margin-top: -4rem;
+    }
 }

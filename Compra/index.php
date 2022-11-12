@@ -63,7 +63,7 @@
        </section>
         <!--Atención-->
         <section>
-            <div class="atencion__meisa atenttion__meisa margin__home__meisa">
+            <div class="atencion__meisa atenttion__meisa margin__home__meisa margin__home__meisa__resp">
                 <div class="atencion__meisa__textos">
                     <h2>TE COMPRAMOS TU MAQUINARIA</h2>
                     <p>

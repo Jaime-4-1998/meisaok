@@ -1,8 +1,13 @@
 /* Carrusel */
+.swi__carr__container{
+    max-width: 95%;
+    display: block;
+    margin: auto;
+}
 .swiper {
     width: 100%;
     height: 100%;
-    margin-top: 10rem !important;
+    margin-top: 0rem !important;
 }
 @media screen and (max-width:1400px) {
     .swiper {
@@ -13,6 +18,9 @@
     .swiper {
         margin-top: 1rem !important;
    }
+   .swi__carr__container{
+    max-width: 95%;
+    }
 }
 .swiper-slide {
     display: grid;
@@ -23,11 +31,10 @@
     height: auto !important;
     object-fit: cover !important;
     border-radius: 2% !important;
-    height: 90vh;
 }
 @media screen and (max-width:900px) {
     .swiper-slide img {
-        height: 100vh;
+        height: 49vh !important;
     }
 }
 .swiper-button-next, .swiper-button-prev {

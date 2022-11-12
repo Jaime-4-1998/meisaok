@@ -240,3 +240,8 @@
   text-align: center;
   margin-top: 3rem !important;
 }
+.two__col{
+  background: red;
+  display: flex;
+  flex-direction: row;
+}
