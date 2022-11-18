@@ -84,10 +84,12 @@
     </section>
 
     <footer>
-        <?php
-            include '../../assets/components/footereng.php';
-        ?>
-    </footer>
+            <div class="sec__cont__foot">
+                <?php
+                    include '../../assets/components/footereng.php';
+                ?>
+            </div>
+        </footer>
     <?php
         include '../../assets/components/btn.php';
     ?>

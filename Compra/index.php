@@ -105,9 +105,11 @@
             ?>
         </section>
         <footer>
-            <?php
-                include '../assets/components/footer.php';
-            ?>
+            <div class="sec__cont__foot">
+                <?php
+                    include '../assets/components/footer.php';
+                ?>
+            </div>
         </footer>
     </main>
     <?php

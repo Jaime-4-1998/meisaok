@@ -28,7 +28,8 @@
                     <a href="https://meisamex.com.mx/">Inicio</a>
                     <a href="https://meisamex.com.mx/Compra/">Compra</a>
                     <a href="https://meisamex.com.mx/Venta/">Venta</a>
-                    <a href="https://meisamex.com.mx/PlantasdeLuz/">Plantas de Luz</a>
+                    <a href="https://meisamex.com.mx/PlantasdeLuz-Nuevas/">Plantas de Luz Nuevas</a>
+                    <a href="https://meisamex.com.mx/PlantasdeLuz-Usadas/">Plantas de Luz Usadas</a>
                     <a href="https://meisamex.com.mx/Maniobras/">Maniobras</a>
                     <a href="https://meisamex.com.mx/Contacto/">Contacto</a>
                 </div>

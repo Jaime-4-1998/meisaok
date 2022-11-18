@@ -606,10 +606,34 @@ footer {
     flex-direction: row;
     gap: 8rem;
     justify-content: space-around;
+    border: 1px solid blue;
 }
-@media screen and (max-width:1400px) {
+.sec__cont__foot{
+    border: 1px solid transparent;
+    max-width: 90% !important;
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+}
+@media screen and (max-width:1450px) {
     footer {
         gap: 4rem;
+        padding: 2rem;
+    }
+    .sec__cont__foot{
+        border: 1px solid transparent;
+        max-width: 85% !important;
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .logo__foter img{
+        width: 80% !important;
+    }
+    .link__footer__lg p {
+        color: var(--whi);
+        margin-left: 1rem;
+        width: 15rem !important;
     }
 }
 .logo__foter{
@@ -692,9 +716,21 @@ footer {
         gap: 5rem;
         justify-content:center;
    }
+    .sec__cont__foot{
+        border: 1px solid transparent;
+        max-width: 90% !important;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
     .head__footer__two{
         margin-bottom: 3rem;
    }
+   .link__footer__lg p {
+    color: var(--whi);
+    margin-left: 1rem;
+    width: 16rem !important;
+}
 }
 /* Parte de los servicios desarrollado por lamm soluciones digitales Jaime Ramirez*/
 .row{

@@ -190,9 +190,11 @@
             ?>
         </section>
         <footer>
-            <?php
-                include '../../assets/components/footereng.php';
-            ?>
+            <div class="sec__cont__foot">
+                <?php
+                    include '../../assets/components/footereng.php';
+                ?>
+            </div>
         </footer>
     </main>
     <?php
