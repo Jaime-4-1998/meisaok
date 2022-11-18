@@ -225,9 +225,19 @@ session_start();
             </div>
             <div class="modal-body">
                 <form class="formBanner" id="formBannertwo"  method="POST" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label class="text-meisa">Poscision</label>
-                        <input class="form-control" type="number" placeholder="Prioridad" name="prioridad" id="prioridad" requiered>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label class="text-meisa">Poscision</label>
+                            <input class="form-control" type="number" placeholder="Prioridad" name="prioridad" id="prioridad" requiered>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="text-meisa">Estado de la Planta</label>
+                            <select class="form-control" name="estadouso" id="estadouso">
+                                <option selected >Elije el estatus</option>
+                                <option value="1">Nueva</option>
+                                <option value="0">Usada</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">

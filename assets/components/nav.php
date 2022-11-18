@@ -32,9 +32,21 @@
                             </div>
                             </div>
                         </li>
+
                         <li>
-                            <a href="https://meisamex.com.mx/PlantasdeLuz/" class="link__text__menu">Plantas de Luz</a>
+                            <div class="drpdwn-box">
+                            <div class="drpdwn-btn" id="drpdwn-btn">
+                                <a href="#" class="link__text__menu">Plantas de Luz</a> <span class="drpdwn-icon"><i class="fa"><img src="https://meisamex.com.mx/assets/img/lg/meisa/icon-arrow-light.svg" alt="Meisa Mex" title="Meisa Mex" /></i></span>
+                            </div>
+                            <div class="drpdwn">
+                                <ul class="drpdwn-list">
+                                <li><a href="https://meisamex.com.mx/PlantasdeLuz-Nuevas/">Nuevas</a></li>
+                                <li><a href="https://meisamex.com.mx/PlantasdeLuz-Usadas/">Usadas</a></li>
+                                </ul>
+                            </div>
+                            </div>
                         </li>
+
                         <li>
                            <a href="https://meisamex.com.mx/Maniobras/" class="link__text__menu">Maniobras</a>
                         </li>

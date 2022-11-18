@@ -1302,7 +1302,14 @@ strong{
     margin-top: -4rem;
 }
 .content__cards__plan{
-    display: grid;grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr !important;
+}
+@media screen and (max-width:900px) {
+    .content__cards__plan{
+        display: grid;
+        grid-template-columns:1fr !important;
+    }
 }
 .cards__plant{
     display: flex;
