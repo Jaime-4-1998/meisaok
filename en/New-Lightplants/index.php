@@ -8,6 +8,7 @@
     <meta name="description" content="Meisa ofrece un amplio catálogo de productos de maquinaria, equipo y accesorios de cualquier ramo de la industria" />
     <title>Meisa - Light plants</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/lg/meisa/sh.png">
+    <link rel="preload" href="../../assets/css/margins.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="../../assets/css/style.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="../../assets/css/btn.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,21 +19,22 @@
 <body>
     <main>
         <header>
-            <div class="head__plan">
-                <?php
-                    include '../../assets/components/naveng.php';
-                ?>
+            <?php
+                include '../../assets/components/naveng.php';
+            ?>
+        </header>
+            <div class="head__plan margin__home__meisa">
+                
                  <!--First Text-->
                 <section>
                    <div class="plan__meisa">
                         <h1>
-                        LIGHT PLANTS
+                        NEW LIGHT PLANTS
                         </h1>
                    </div>
                 </section>
             <!--End-->
             </div>
-        </header>
         <section>
             <div class="planta__meisa">
                         <?php

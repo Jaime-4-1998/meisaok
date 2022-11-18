@@ -21,10 +21,12 @@
 <body>
     <main>
         <header>
-            <div class="headere">
+            
             <?php
                 include '../assets/components/naveng.php';
             ?>
+        </header>
+        <div class="headere margin__home__meisa">
             <!--Carrusel-->
             <?php 
                 function obtenerBanners(){
@@ -36,6 +38,7 @@
             ?>
                 <section>
                     <!-- Swiper -->
+                    <div class="interno">
                     <div class="swi__carr__container">
                         <div class="swiper mySwiper" id="swpi">
                             <div class="swiper-wrapper">
@@ -68,10 +71,11 @@
                             </div>
                         </div>
                     </div>
+                    </div>
+                    
                 </section>
             <!--End-->
             </div>
-        </header>
          <!--Acerca-->
          <section>
             <div class="acerca__meisa margin__home__meisa">

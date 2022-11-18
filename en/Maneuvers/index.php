@@ -8,6 +8,7 @@
     <meta name="description" content="Meisa ofrece un amplio catálogo de productos de maquinaria, equipo y accesorios de cualquier ramo de la industria" />
     <title>Meisa - Maneuvers</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/lg/meisa/sh.png">
+    <link rel="preload" href="../../assets/css/margins.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="../../assets/css/style.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="../../assets/css/btn.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,13 +19,15 @@
 <body>
     <main>
         <header>
-            <div class="head__maniobras">
-                <?php
-                    include '../../assets/components/naveng.php';
-                ?>
+            <?php
+                include '../../assets/components/naveng.php';
+            ?>
+        </header>
+            <div class="head__maniobras margin__home__meisa">
+               
                  <!--First Text-->
                 <section>
-                   <div class="mani__meisa">
+                   <div class="mani__meisa margen__maniobras">
                         <?php
                             include '../../meisaback/adminmeisa/assets/components/backend/conexion.php';
                             $sql = "SELECT id_mani,titlemanieng,contentmanieng
@@ -49,7 +52,6 @@
                 </section>
             <!--End-->
             </div>
-        </header>
         <!--Cards-->
         <section>
             <div class="cards__mani">

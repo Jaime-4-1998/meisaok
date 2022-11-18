@@ -8,6 +8,7 @@
     <meta name="description" content="Meisa ofrece un amplio catálogo de productos de maquinaria, equipo y accesorios de cualquier ramo de la industria" />
     <title>Meisa - Venta</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/lg/meisa/sh.png">
+    <link rel="preload" href="../assets/css/margins.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="../assets/css/style.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="../assets/css/inve.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="../assets/css/btn.css" as="style" onload="this.rel='stylesheet'">
@@ -20,10 +21,11 @@
 <body>
     <main>
         <header>
-            <div class="head__venta">
-                <?php
-                    include '../assets/components/nav.php';
-                ?>
+            <?php
+                include '../assets/components/nav.php';
+            ?>
+        </header>
+        <div class="head__venta margin__home__meisa">
                  <!--First Text-->
                 <section>
                    <div class="mani__meisa">
@@ -43,11 +45,10 @@
                    </div>
                 </section>
             <!--End-->
-            </div>
-        </header>
+        </div>
         <!--Venta-->
         <section>
-            <div class="meisa__productos">
+            <div class="meisa__productos margin__home__meisa">
                 <div class="meisa__prod__one">
                     <div class="navbar">
                         <h2 class="mob__text">Inventario</h2>
@@ -114,7 +115,7 @@
         <footer>
             <div class="sec__cont__foot">
                 <?php
-                    include 'assets/components/footer.php';
+                    include '../assets/components/footer.php';
                 ?>
             </div>
         </footer>

@@ -65,7 +65,9 @@ background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), u
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 70vh;
+    height: 60vh;
+    position: relative;
+    z-index: 0;
 }
 .head__plan{
     background: linear-gradient(18.21deg, rgba(0, 0, 0, 0.5) 13.87%, rgba(0, 0, 0, 0) 72.55%),url(../img/bg/plan/297846387234678.jpg);
@@ -86,7 +88,7 @@ background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), u
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: auto;
+    height: 60vh;
 }
 @media screen and (max-width:900px) {
     .headere{
@@ -101,7 +103,6 @@ background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), u
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        height: auto !important;
     }
     .head__plan{
         background: linear-gradient(18.21deg, rgba(0, 0, 0, 0.5) 13.87%, rgba(0, 0, 0, 0) 72.55%),url(../img/bg/plan/3504545454543uky32678.svg);
@@ -109,11 +110,11 @@ background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), u
         background-position: center;
         background-size: cover;
         height: 40vh !important;
+        margin-top: -1rem !important;
     }
     .head__com{
         background-image: none;
         background: #000 !important;
-        height: auto !important;
     }
     .head__mani{
         background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/bg/ven/22vent890432809423089342.svg);
@@ -184,6 +185,11 @@ a{
         display: block;
         text-align: center !important;
    }
+   ul.drpdwn-lists a {
+    color: var(--whi) !important;
+    display: block;
+    text-align: center !important;
+}
 }
 .nave{
     display: none;
@@ -233,6 +239,26 @@ ul.drpdwn-list li {
     margin-bottom: 16px;
 }
 ul.drpdwn-list li:last-of-type {
+    margin-bottom: 0;
+}
+.drpdwns {
+    display: none;
+}
+ul.drpdwn-lists {
+    padding:2rem;
+    margin-top:2rem;
+    background-color: var(--red) !important;
+    border-radius: 17px;
+}
+ul.drpdwn-lists a {
+    color: var(--whi) !important;
+    display: block;
+    text-align: start;
+}
+ul.drpdwn-lists li {
+    margin-bottom: 16px;
+}
+ul.drpdwn-lists li:last-of-type {
     margin-bottom: 0;
 }
 a.big-btn {
@@ -330,6 +356,43 @@ a.big-btn {
     .drpdwn-list li a:hover {
         text-decoration: none;
    }
+   .drpdwn-box:hover .drpdwn {
+    display: block;
+}
+.drpdwn-boxs:hover > a {
+    border-bottom: 2px solid black;
+}
+.drpdwn-icons {
+    cursor: pointer;
+}
+.drpdwns {
+    display: none;
+    position: absolute;
+    padding-top:1rem;
+}
+ul.drpdwn-lists {
+    display: block;
+    min-width: 168px;
+    margin: 0;
+    padding: 36px 24px;
+    background-color: var(--whi);
+    border-radius: 8px;
+    box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.5);
+    z-index: 99;
+}
+ul.drpdwn-lists a {
+    color:#fff;
+    display: block;
+}
+ul.drpdwn-lists li {
+    margin-bottom: 1em;
+}
+ul.drpdwn-lists li:last-of-type {
+    margin-bottom: 0;
+}
+.drpdwn-lists li a:hover {
+    text-decoration: none;
+}
 }
 /* ========== acerca developed by Lamm Solucionaes Digitales Jaime Ramirez ========== */
 .acerca__meisa{
@@ -606,7 +669,7 @@ footer {
     flex-direction: row;
     gap: 8rem;
     justify-content: space-around;
-    border: 1px solid blue;
+    border: 1px solid transparent;
 }
 .sec__cont__foot{
     border: 1px solid transparent;
@@ -1058,8 +1121,9 @@ iframe{
 .mani__meisa{
     display: block;
     margin: auto;
-    margin-top: 13rem !important;
+    margin-top: 10rem !important;
     padding: 4rem;
+    position: absolute;
 }
 @media screen and (max-width:1400px){
     .mani__meisa{
@@ -1080,6 +1144,7 @@ iframe{
     line-height: 64px;
     display: flex;
     align-items: center;
+    
 }
 .mani__parr{
     color: var(--whi);
@@ -1261,7 +1326,7 @@ iframe{
 .plan__meisa{
     display: block;
     margin: auto;
-    margin-top: 3rem !important;
+    margin-top: 0rem !important;
     padding: 11rem;
 }
 @media screen and (max-width:1400px){
@@ -1281,8 +1346,13 @@ iframe{
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 64px;
-    text-align: center;
-    margin-top: -6rem;
+    text-align: center; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 50%;
+    transform: translate(-50%, -50%);
 }
 @media screen and (max-width:900px){
     .plan__meisa h1{
@@ -1496,9 +1566,6 @@ strong{
     font-size: 1.1rem;
     font-weight: 500;
     margin-top: 0.5rem;
-}
-.com__margin{
-    margin-top: 4rem !important;
 }
 .meisa__manifon__comp{
     background:linear-gradient(100.91deg, #000000 0%, rgba(0, 0, 0, 0) 83.81%), url(../img/bg/com/22inve8905348904334.svg);

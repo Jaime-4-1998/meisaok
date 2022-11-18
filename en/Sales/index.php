@@ -8,6 +8,7 @@
     <meta name="description" content="Meisa ofrece un amplio catálogo de productos de maquinaria, equipo y accesorios de cualquier ramo de la industria" />
     <title>Meisa - Sales</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/lg/meisa/sh.png">
+    <link rel="preload" href="../../assets/css/margins.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="../../assets/css/style.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="../../assets/css/inve.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="../../assets/css/btn.css" as="style" onload="this.rel='stylesheet'">
@@ -20,10 +21,11 @@
 <body>
     <main>
         <header>
-            <div class="head__venta">
-                <?php
-                    include '../../assets/components/naveng.php';
-                ?>
+            <?php
+                include '../../assets/components/naveng.php';
+            ?>
+        </header>
+        <div class="head__venta margin__home__meisa">
                  <!--First Text-->
                 <section>
                    <div class="mani__meisa">
@@ -32,22 +34,21 @@
                         </h1>
                         <p>
                             <div class="mani__parr">
-                                Wide range of machinery for the industry (New, Semi-new).
+                            Wide range of machinery for the industry (New, Semi-new). 
                             </div>
                         </p>
                         <p>
                             <div class="mani__parr">
-                                Buy 100% safe, we have the best quality and prices on the market. 
+                            Buy 100% safe, we have the best quality and prices on the market. 
                             </div>
                         </p>
                    </div>
                 </section>
             <!--End-->
-            </div>
-        </header>
+        </div>
         <!--Venta-->
         <section>
-            <div class="meisa__productos">
+            <div class="meisa__productos margin__home__meisa">
                 <div class="meisa__prod__one">
                     <div class="navbar">
                         <h2 class="mob__text">Inventory</h2>

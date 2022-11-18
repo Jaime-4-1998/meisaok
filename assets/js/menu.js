@@ -29,5 +29,24 @@ drpdwnBtns.addEventListener('click',()=>{
     {
         drpdwns.style.display = 'none'
         isShown = false;
+        drpdwnss.style.display = 'none'
+        isShown = false;
+    }
+})
+
+const drpdwnBtnss = document.getElementById("drpdwn-btns");
+const drpdwnss = document.querySelector(".drpdwns");
+drpdwnBtnss.addEventListener('click',()=>{
+    if (!isShown) 
+    {
+        drpdwnss.style.display = 'block'
+        isShown = true;
+    } 
+    else if (isShown)
+    {
+        drpdwnss.style.display = 'none'
+        isShown = false;
+        drpdwns.style.display = 'none'
+        isShown = false;
     }
 })

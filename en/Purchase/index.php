@@ -19,13 +19,15 @@
 <body>
     <main>
         <header>
-            <div class="head__com">
-                <?php
-                    include '../../assets/components/naveng.php';
-                ?>
+            <?php
+                include '../../assets/components/naveng.php';
+            ?>
+        </header>
+            <div class="head__com margin__home__meisa">
+               
                  <!--First Text-->
                 <section>
-                   <div class="mani__meisa com__margin">
+                   <div class="mani__meisa">
                         <?php
                             include '../../meisaback/adminmeisa/assets/components/backend/conexion.php';
                             $sql = "SELECT id_rent,titlerenteng,contentrenteng
@@ -50,7 +52,6 @@
                 </section>
             <!--End-->
             </div>
-        </header>
         <section>
            <div class="sect__compras__new margin__home__meisa">
                 <div class="sect__sales__container">
