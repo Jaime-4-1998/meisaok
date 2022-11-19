@@ -53,7 +53,7 @@
         </div>
         <!--Cards-->
         <section>
-            <div class="cards__mani">
+            <div class="cards__mani margin__home__meisa">
                 <div class="content__cards">
                     <div class="cards__manis">
                         <div class="card__data">

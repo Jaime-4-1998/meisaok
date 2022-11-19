@@ -60,7 +60,7 @@
         </section>
         <!--Cards-->
         <section>
-            <div class="cards__plan">
+            <div class="cards__plan margin__home__meisa">
                 <div class="content__cards__plan">
                      <?php
                         include '../meisaback/adminmeisa/assets/components/backend/conexion.php';
