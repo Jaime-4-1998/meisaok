@@ -1,0 +1,232 @@
+.meisa__head__title{
+  text-align: center;
+}
+.meisa__head__title h1{
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.meisa__head__title h2{
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.meisa__products__wrapp{
+  max-width: 80%;
+  display: block;
+  margin: auto;
+}
+.meisa__prod__first__col{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.meisa__prod__first__col__child{
+  width: 50%;
+}
+.meisa__prod__second__col__child{
+  width: 50%;
+}
+.meisa__two__col__details{
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width:1000px) {
+  .meisa__prod__first__col{
+      flex-direction: column;
+  }
+  .meisa__prod__first__col__child{
+      width: 100%;
+  }
+   .meisa__prod__second__col__child{
+      width: 100%;
+  }
+}
+/****Details of the rwo coluumns******/
+.meisa__two__col__details__child p{
+  margin-top: 0.5rem;
+  color: #000;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.meisa__two__col__details__child__first p{
+  margin-top: 0.5rem;
+  color: #000;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+/***More information***/
+.meisa__prod__third__col__child{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.meisa__prod__third__col__child p{
+  margin-top: 0.5rem;
+  margin-bottom: 1rem !important;
+  color: #000;
+  font-weight: 400;
+  font-size: 2.2rem;
+}
+.meisa__prod__disp{
+  background: #BE0412;
+  color: #fff;
+  font-weight: 900;
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+/***DEtails for UI***/
+.more__inft{
+  font-size: 1.6rem;
+  margin-bottom: 0rem;
+}
+.more__inft__prod{
+  margin-top: -1rem;
+  font-size: 1.2rem;
+}
+.str__prod{
+  font-weight: bold;
+  color: #000 !important;
+}
+.prod__info {
+  margin-bottom: 0.5rem !important;
+}
+.meisa__linea__prod__wrap {
+  border: 2px solid #BE0412;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  width: 99%;
+}
+/******Details for Form or Youtube***/
+.meisa__dom__yout__fomr{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.meisa__dom__child{
+  width: 50%;
+}
+.meisa__dom__child h2{
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.meisa__dom__child__fitsr{
+  width: 50%;
+}
+.espaciado__na{
+  margin-top: 0rem !important;
+}
+@media screen and (max-width:1000px) {
+  .meisa__dom__yout__fomr{
+      margin-top: 2rem;
+      flex-direction: column;
+  }
+  .meisa__dom__child{
+      width: 100%;
+      order: 1;
+  }
+  .meisa__dom__child__fitsr{
+      width: 100%;
+  }
+}
+.img__inveget img{
+width: 80% !important;
+display: block;
+margin: auto;
+object-fit: cover;
+cursor: pointer;
+margin-bottom: 2rem;
+}
+.swiper-slide {
+background-size: cover;
+background-position: center;
+}
+.mySwiper .swiper-slide {
+width: 25%;
+height: 100%;
+opacity: 0.4;
+}
+.mySwiper .swiper-slide-thumb-active {
+opacity: 1;
+}
+.swiper-slide img {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 3%;
+}
+.frame__youtube{
+width: 100% !important;
+height: auto !important;
+display: block;
+margin: auto;
+margin-top: 2rem !important;
+border-radius: 5px !important;
+background: red;
+}
+.frame__youtube iframe{
+border-radius: 1rem;
+height: 30rem;
+}
+.form__rel{
+width: 50%;
+}
+@media screen and (max-width:900px) {
+.form__rel{
+  width: 100%;
+}
+}
+.grid__relation{
+display: flex;
+flex-direction: row;
+margin-top: 1rem;
+gap: 2rem;
+justify-content: space-around;
+}
+.card__relation{
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+.card__relation__desing{
+display: flex;
+flex-direction: column;
+}
+.img__relation{
+width: 50% !important;
+object-fit: cover;
+height: auto !important;
+}
+.name__relation{
+margin-top: 1rem;
+text-align: center;
+color: #000;
+}
+.link__relation{
+text-decoration: none;
+color: var(--red);
+font-weight: bold;
+text-align: center;
+margin-top: 1rem;
+}
+.title__form{
+text-transform: uppercase;
+color: var(--red) !important;
+font-weight: bold !important;
+text-align: center;
+margin-top: 3rem !important;
+margin-bottom: 2rem !important;
+}
+@media screen and (max-width:900px) {
+.title__form{
+text-transform: uppercase;
+color: var(--red) !important;
+font-weight: bold !important;
+text-align: center;
+margin-top: 0rem !important;
+margin-bottom: 2rem !important;
+}
+}

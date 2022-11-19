@@ -356,43 +356,43 @@ a.big-btn {
     .drpdwn-list li a:hover {
         text-decoration: none;
    }
-   .drpdwn-box:hover .drpdwn {
+   .drpdwn-boxs:hover .drpdwns {
     display: block;
-}
-.drpdwn-boxs:hover > a {
-    border-bottom: 2px solid black;
-}
-.drpdwn-icons {
-    cursor: pointer;
-}
-.drpdwns {
-    display: none;
-    position: absolute;
-    padding-top:1rem;
-}
-ul.drpdwn-lists {
-    display: block;
-    min-width: 168px;
-    margin: 0;
-    padding: 36px 24px;
-    background-color: var(--whi);
-    border-radius: 8px;
-    box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.5);
-    z-index: 99;
-}
-ul.drpdwn-lists a {
-    color:#fff;
-    display: block;
-}
-ul.drpdwn-lists li {
-    margin-bottom: 1em;
-}
-ul.drpdwn-lists li:last-of-type {
-    margin-bottom: 0;
-}
-.drpdwn-lists li a:hover {
-    text-decoration: none;
-}
+    }
+    .drpdwn-boxs:hover > a {
+        border-bottom: 2px solid black;
+    }
+    .drpdwn-icons {
+        cursor: pointer;
+    }
+    .drpdwns {
+        display: none;
+        position: absolute;
+        padding-top:1rem;
+    }
+    ul.drpdwn-lists {
+        display: block;
+        min-width: 168px;
+        margin: 0;
+        padding: 36px 24px;
+        background-color: var(--whi);
+        border-radius: 8px;
+        box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.5);
+        z-index: 99;
+    }
+    ul.drpdwn-lists a {
+        color:#fff;
+        display: block;
+    }
+    ul.drpdwn-lists li {
+        margin-bottom: 1em;
+    }
+    ul.drpdwn-lists li:last-of-type {
+        margin-bottom: 0;
+    }
+    .drpdwn-lists li a:hover {
+        text-decoration: none;
+    }
 }
 /* ========== acerca developed by Lamm Solucionaes Digitales Jaime Ramirez ========== */
 .acerca__meisa{

@@ -1,0 +1,130 @@
+.meisa__head__title{
+   text-align: center;
+}
+.meisa__products__wrapp{
+    background: #000;
+    max-width: 80%;
+    display: block;
+    margin: auto;
+}
+.meisa__prod__first__col{
+    background: orangered;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.meisa__prod__first__col__child{
+    background: blue;
+    width: 50%;
+}
+.meisa__prod__second__col__child{
+    background: green;
+    width: 50%;
+}
+.meisa__two__col__details{
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+@media screen and (max-width:1000px) {
+    .meisa__prod__first__col{
+        flex-direction: column;
+    }
+    .meisa__prod__first__col__child{
+        background: blue;
+        width: 100%;
+    }
+    .meisa__prod__second__col__child{
+        background: green;
+        width: 100%;
+    }
+}
+/****Details of the rwo coluumns******/
+.meisa__two__col__details__child p{
+    margin-top: 0.5rem;
+    color: #000;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.meisa__two__col__details__child__first p{
+    margin-top: 0.5rem;
+    color: #000;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+/***More information***/
+.meisa__prod__third__col__child{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.meisa__prod__third__col__child p{
+    margin-top: 0.5rem;
+    margin-bottom: -1rem !important;
+    color: #000;
+    font-weight: 400;
+    font-size: 2.2rem;
+}
+.meisa__prod__disp{
+    color: #fff;
+    font-weight: 900;
+    background: red;
+    padding: 1rem;
+    font-size: 1.3rem;
+}
+/***DEtails for UI***/
+.more__inft{
+    font-size: 1.6rem;
+    margin-bottom: 0rem;
+}
+.more__inft__prod{
+    margin-top: -1rem;
+    font-size: 1.2rem;
+}
+.str__prod{
+    font-weight: bold;
+    color: #000 !important;
+}
+.prod__info {
+    margin-bottom: 0.5rem !important;
+    text-align: end;
+}
+.meisa__linea__prod__wrap {
+    border: 2px solid palevioletred;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    width: 99%;
+}
+/******Details for Form or Youtube***/
+.meisa__dom__yout__fomr{
+    background: pink;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.meisa__dom__child{
+    background: green;
+    width: 50%;
+}
+.meisa__dom__child__fitsr{
+    background: blue;
+    width: 50%;
+}
+@media screen and (max-width:1000px) {
+    .meisa__dom__yout__fomr{
+        margin-top: 2rem;
+        flex-direction: column;
+    }
+    .meisa__dom__child{
+        background: blue;
+        width: 100%;
+    }
+    .meisa__dom__child__fitsr{
+        background: green;
+        width: 100%;
+    }
+}
