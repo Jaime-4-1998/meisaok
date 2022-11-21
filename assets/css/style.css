@@ -1420,6 +1420,9 @@ strong{
         display: grid;
         grid-template-columns:1fr !important;
     }
+    .cards__plan{
+        padding: 2rem !important;
+    }
 }
 .cards__plant{
     display: flex;
