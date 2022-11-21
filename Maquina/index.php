@@ -152,18 +152,53 @@
                                 <!-- Swiper JS -->
                                 <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
                                     <div class="swiper-wrapper">
-                                        <div class="swiper-slide img__inveget">
-                                            <img data-enlargable src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_img; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
-                                        </div>
+                                        <?php 
+                                            function obtenerBanners(){
+                                                try {
+                                                    $mbd = new PDO('mysql:host=localhost;dbname=u557675164_titulacion; charset=UTF8','root','');
+                                                } catch (exception $e) {
+                                                    print "¡Error!: " . $e->getMessage() . "<br/>";
+                                                    die();
+                                                }
+                                                $maquina = $_GET['maquina'];
+                                                $seguridad = $_GET['seguridad'];
+                                                $consulta = $mbd->prepare("SELECT id,inve_seg,inve_category,inve_nombre,image FROM images WHERE inve_category='$maquina' AND inve_seg='$seguridad' ORDER BY id ASC");
+                                                $consulta->execute();
+                                                return $consulta->fetchAll();
+                                            }
+                                        ?>
+                                        <?php $banners =  obtenerBanners(); ?>
+                                        <?php
+                                            $i=0;
+                                            foreach ($banners as $banerresult) { 
+                                                if($i === 0){
+                                        ?>
+                                            <div class="swiper-slide img__inveget">
+                                                <img data-enlargable src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $banerresult['image'] ?>" title="<?php echo str_replace("-", " ",$banerresult['inve_nombre'])?>" alt="<?php echo str_replace("-", " ",$banerresult['inve_nombre'])?>" width="100" height="100" />
+                                            </div>
+                                        <?php }  } $i++ ?>
                                     </div>
+                                    <style>
+                                        .swiper-button-next, .swiper-button-prev{
+                                            color: #000 !important;
+                                        }
+                                    </style>
                                     <div class="swiper-button-next"></div>
                                     <div class="swiper-button-prev"></div>
                                 </div>
                                 <div thumbsSlider="" class="swiper mySwiper">
                                     <div class="swiper-wrapper">
+                                        <?php $banners =  obtenerBanners(); ?>
+                                            <?php
+                                                $i=0;
+                                                foreach ($banners as $banerresult) { 
+                                                    if($i === 0){
+                                            ?>
                                         <div class="swiper-slide">
-                                            <img src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $inve_img; ?>" loading="lazy" alt="<?php echo $inve_nombre; ?>" title="<?php echo $inve_nombre; ?>" />
+                                            <img src="http://localhost/meisa/meisaback/adminmeisa/assets/<?php echo $banerresult['image'] ?>" loading="lazy" title="<?php echo str_replace("-", " ",$banerresult['inve_nombre'])?>" alt="<?php echo str_replace("-", " ",$banerresult['inve_nombre'])?>" />
                                         </div>
+                                        <?php } } $i++;
+                                        ?>
                                     </div>
                                 </div>
                                 <!-- Swiper JS -->
