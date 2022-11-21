@@ -105,7 +105,7 @@ session_start();
                                         $results = $query -> fetchAll(PDO::FETCH_OBJ); 
                                             if($query -> rowCount() > 0){ 
                                                 foreach($results as $result) { 
-                                                    $datos = $result -> inve_id."||".
+                                                    $datos = $result -> inve_seguridad."||".
                                                     $result -> inve_itemfoto."||".
                                                     $result -> inve_itemmeisa."||".
                                                     $result -> inve_lote."||".
@@ -133,7 +133,8 @@ session_start();
                                                     $result -> inve_mercado."||".
                                                     $result -> inve_tw."||".
                                                     $result -> inve_ins."||".
-                                                    $result -> inve_youtube;
+                                                    $result -> inve_youtube."||".
+                                                    $result -> inve_id;
                                                 ?>
                                         <tr class="text-center">
                                             <td><?php echo $result -> inve_id; ?></td>

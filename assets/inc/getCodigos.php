@@ -12,7 +12,7 @@ $query = $pdo->prepare($sql);
 $query->execute([$campo . '%', $campo . '%']);
 	$html = "";
 	while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-		$html .= "<a class='link__modal' href='Producto/" . $row["inve_seguridad"] . "/'>" . str_replace("-", " ",utf8_encode($row["inve_catego"])) . " - " . utf8_encode($row["inve_nombre"]) . "<img src='assets/img/lg/meisa/link.svg' class='link__external' loading='lazy'></a> <br/>";
+		$html .= "<a class='link__modal' href='Producto/" . $row["inve_seguridad"] . "/'>" . str_replace("-", " ",$row['inve_catego']) . " - " . str_replace("-"," ",ucfirst(strtolower($row["inve_nombre"]))) . "<img src='assets/img/lg/meisa/link.svg' class='link__external' loading='lazy'></a> <br/>";
 	}
 echo json_encode($html, JSON_UNESCAPED_UNICODE);
 

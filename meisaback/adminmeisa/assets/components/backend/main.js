@@ -527,7 +527,7 @@ function addprod(){
 /*EDIT COLUMN*/
 function EditProdin(datos){
     d=datos.split('||');
-    $('#seg').val(d[0]);
+    $('#seg').val(d[29]);
     $('#itemfotor').val(d[1]);
     $('#itemmeisar').val(d[2]);
     $('#itemloter').val(d[3]);
@@ -840,7 +840,7 @@ function editPhoto(){
 /*EDIT COLUMN*/
 function PhotoUn(datos){
     geto=datos.split('||');
-    $('#seto').val(geto[0]);
+    $('#seto').val(geto[29]);
     $('#itemnombrerphotox').val(geto[8]);
     $('#itemcatphotox').val(geto[6]);
     console.log(geto);
