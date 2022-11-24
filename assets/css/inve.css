@@ -131,7 +131,7 @@
     width: 100%;
     padding: 0rem;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 1.2rem;
 }
 @media screen and (max-width:900px) {

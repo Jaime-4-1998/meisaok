@@ -1,5 +1,5 @@
 .margin__home__meisa{
-    max-width: 80%;
+    max-width: 1200px;
     display: block;
     margin: auto;
 }
@@ -8,7 +8,7 @@
         max-width: 100%;
     }
     .margin__home__meisa__resp{
-        max-width: 85% !important;
+        max-width: 75% !important;
         display: block;
         margin: auto;
     }
