@@ -3,9 +3,14 @@
     display: block;
     margin: auto;
 }
+@media screen and (max-width:1500px) {
+    .margin__home__meisa{
+        max-width: 70% !important;
+    }
+}
 @media screen and (max-width:800px) {
     .margin__home__meisa{
-        max-width: 100%;
+        max-width: 100% !important;
     }
     .margin__home__meisa__resp{
         max-width: 75% !important;

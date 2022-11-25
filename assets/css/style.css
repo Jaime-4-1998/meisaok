@@ -55,6 +55,20 @@ background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), u
     height: 50%;
     transform: translate(-50%, -50%);
 }
+@media screen and (max-width:1500px) {
+    .interno {
+        top: 50%;
+    }
+    .headere{
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/bg/2968231432678.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 65vh;
+        position: relative;
+        z-index: 0;
+    }
+}
 @media screen and (max-width:1400px) {
     .interno {
         top: 25%;
@@ -432,6 +446,7 @@ a.big-btn {
     margin: auto;
     width: 30%;
     margin-top: 5rem !important;
+    margin-bottom: 3rem !important;
     font-weight: 700;
 }
 /*Img of about*/
@@ -468,6 +483,8 @@ a.big-btn {
     }
     .acerca__btn{
         margin-top: 3rem !important;
+        
+        margin-bottom: 3rem !important;
     }
 }
 @media screen and (max-width:900px) {
@@ -522,6 +539,12 @@ a.big-btn {
     display: block;
     margin: auto;
 }
+@media screen and (max-width:1500px) {
+    .clientes__meisa{
+        max-width: 70% !important;
+        margin-top: -3rem;
+    }
+}
 .clientes__meisa h2{
     color: #fff;
     text-align: center;
@@ -556,7 +579,7 @@ a.big-btn {
         padding: 3rem;
         max-width: 100% !important;
         display: block;
-        margin: auto;
+        margin: auto !important;
     }
     .logos__clientes__meisa {
         padding: 0rem !important;
@@ -673,7 +696,7 @@ textarea{
 /* ========== footer developed by Lamm Solucionaes Digitales Jaime Ramirez ========== */
 footer {
     background: var(--black);
-    padding: 4rem;
+    padding: 2rem;
     display: flex;
     flex-direction: row;
     gap: 8rem;
@@ -681,24 +704,23 @@ footer {
     border: 1px solid transparent;
 }
 .sec__cont__foot{
-    
     max-width: 1200px !important;
     border: 1px solid transparent;
     display: flex;
     flex-direction: row;
     gap: 5rem;
 }
-@media screen and (max-width:1450px) {
+@media screen and (max-width:1500px) {
     footer {
         gap: 4rem;
         padding: 2rem;
     }
-    .sec__cont__foot{
+    .sec__cont__foot {
         border: 1px solid transparent;
-        max-width: 85% !important;
+        max-width: 78% !important;
         display: flex;
         flex-direction: row;
-        gap: 2rem;
+        gap: 0rem;
     }
     .logo__foter img{
         width: 80% !important;
@@ -1132,10 +1154,10 @@ iframe{
     display: block;
     margin: auto;
     margin-top: 10rem !important;
-    padding: 4rem;
+    padding: 2rem;
     position: absolute;
 }
-@media screen and (max-width:1400px){
+@media screen and (max-width:1500px){
     .mani__meisa{
         margin-top: 3rem !important;
     }
@@ -1154,7 +1176,6 @@ iframe{
     line-height: 64px;
     display: flex;
     align-items: center;
-    
 }
 .mani__parr{
     color: var(--whi);
@@ -1192,15 +1213,17 @@ iframe{
     justify-content: center;
     flex-direction: column;
 }
-@media screen and (max-width:1400px) {
+@media screen and (max-width:1500px) {
     .meisa__manifon{
         height: 50vh;
+        max-width: 71% !important;
     }
 }
 @media screen and (max-width:900px) {
     .meisa__manifon{
        background: #000 !important;
        height: auto !important;
+       max-width: 100% !important;
     }
     .meisa__centro{
         padding: 2rem;
@@ -1353,6 +1376,9 @@ iframe{
     .card__data__text h2{
         padding: 0.5rem;
     }
+    .content__cards{
+        padding: 0rem;
+    }
 }
 @media screen and (max-width:900px){
     .plan__meisa{
@@ -1498,18 +1524,28 @@ strong{
     justify-content: center;
     flex-direction: column;
 }
-@media screen and (max-width:1400px) {
+
+@media screen and (max-width:1500px) {
     .meisa__manifon__plan{
-        height: 60vh;
+        height: 50vh;
+        max-width: 71% !important;
+    }
+    .meisa__plan__red{
+        max-width: 71% !important;
     }
 }
 @media screen and (max-width:900px) {
     .meisa__manifon__plan{
-       background: #000 !important;
-       height: auto !important;
-       margin-bottom: 4rem;
+        background: #000 !important;
+        height: auto !important;
+        margin-bottom: 4rem;
+        max-width: 100% !important;
+    }
+    .meisa__plan__red{
+        max-width: 100% !important;
     }
     .meisa__centro__plan{
+        max-width: 100% !important;
         padding: 2rem;
     }
 }
@@ -1610,15 +1646,17 @@ strong{
     justify-content: center;
     flex-direction: column;
 }
-@media screen and (max-width:1400px) {
+@media screen and (max-width:1500px) {
     .meisa__manifon__comp{
         height: 50vh;
+        max-width: 71% !important;
     }
 }
 @media screen and (max-width:900px) {
     .meisa__manifon__comp{
        background: #000 !important;
        height: auto !important;
+       width: 100% !important;
     }
     .meisa__centro{
         padding: 2rem;
@@ -1758,23 +1796,36 @@ strong{
     color: var(--whi);
     text-decoration: none;
 }
-@media screen and (max-width:1400px) {
+@media screen and (max-width:1500px) {
     .margen__maniobras{
-        margin-top: 3rem !important;
+        margin-top: 4rem !important;
     }
 }
 @media screen and (max-width:900px) {
     .margen__maniobras{
         margin-top: 0rem !important;
+        padding: 3rem;
+    }
+    .cards__mani {
+        padding: 3rem;
     }
 }
 /***modales**/
+.esp__finder{
+    display: flex;
+    flex-direction: row;
+}
 .finder__img{
-    width: 50%;
-    height: 50%;
+    width: 15%;
+    height: 15%;
+    display: block;
+    margin: auto;
     object-fit: cover;
-    margin-left: 1rem;
     cursor: pointer;
+}
+.finder__but{
+    background: blue !important;
+    width: auto !important;
 }
 @media screen and (max-width:800px) {
     .finder__img{
@@ -1784,146 +1835,39 @@ strong{
     }
 }
 /* The Modal (background) */
-.modalere{
-    display:none;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.70); /* Black w/ opacity */
-  }
-/* Modal Content/Box */
-.modal-contentere{
-    background-color: #fefefe;
-    top:50%;
-    left:50%;
-    color: #4a4a4a;
-    max-width: 100%;
-    position: relative;
-    border-radius:10px;
-    border: 1px solid #ccc;
-    width: 95%;
-    transform: translate(-50% , -50%);
-    scrollbar-width: thin;
-    overflow-y: auto;
-    height: auto;
-    border: none;
-    -webkit-transform: translate(-50% , -50%);
-    -moz-transform: translate(-50% , -50%);
-    -ms-transform: translate(-50% , -50%);
-    -o-transform: translate(-50% , -50%);
-}
-@media screen and (max-width:600px) {
-    .modal-contentere{
-        background-color: #fefefe;
-        top: 45%;
-        left: 50%;
-        color: #4a4a4a;
-        max-width: 80%;
-        position: relative;
-        border-radius: 10px;
-        border: 1px solid #ccc;
-        width: 80%;
-        transform: translate(-50% , -50%);
-        -ms-overflow-style: none;
-        scrollbar-width: thin;
-        overflow-y: scroll !important;
-        height: 30rem;
-    }
-}
-.modal__header{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    border-top: 0px;
-    border-bottom: 1px solid #ccc;
-    background: var(--red);
-}
-.modal__header__title{
-    width: 50%;
-    color: var(--whi);
-    padding: 1rem;
-}
-.modal__header__icon{
-    width: 50%;
-    display: flex;
-    justify-content: end;
-}
-.icon__modal{
-    color: var(--whi);
-    font-size: 2rem;
-    margin-right: 3rem;
-    cursor: pointer;
-}
-#closeer {
-    margin-top: 0rem;
-}
-#modal-contentere.animation-4{
-    animation: animation-1 0.5s forwards;
-}
-.modal-body{
-    padding: 2rem;
-}
-.modal-body p{
-    color: #000;
-}
-.modal__par__tite{
-    color: var(--black) !important;
-    font-weight: 700;
-    margin-bottom: 0.5rem !important;
-    text-shadow: #ccc 0.1em 0.1em 0.1em;
+.finder__form{
+    background: #000 !important;
+    height: 8vh;
 }
 .lista__modal{
     text-align: left;
     margin: 1rem !important;
     color: #000 !important;
 }
-@keyframes animation-1{
-    0% {
-      transform: translate(-50%,-50%) scale(0);
-    }
-    50% {
-      transform: translate(-50%,-50%) scale(1.2);
-    }
-    70% {
-      transform: translate(-50%,-50%) scale(0.9);
-    }
-    100% {
-      transform: translate(-50%,-50%) scale(1);
-    }
-}
 .label__campo{
-    color: #000;
+    color: #fff;
     font-weight: 700;
 }
 .campo__modal{
     border: 2px solid #000;
     border-radius: 5px;
-    width: 50%;
+    width: 35%;
     height: 5vh;
+    display: block;
+    margin: auto;
     color: #000;
 }
 .swiper {
     z-index: 0;
 }
-.list__modal{
-    list-style-type: none;
-	width: auto;
-	height: auto;
-	margin-top: 1rem;
-	z-index: 1;
-}
+
 .link__modal{
     color: #000;
     font-style: italic;
+    padding: 0.8rem;
 }
 .link__external{
     width: 2%;
-    margin-left: 1rem;
 }
 /****new section sales**/
 .sect__compras__new{
@@ -1972,3 +1916,91 @@ strong{
         margin-top: -2rem;
     }
 }
+/****Search bar *****/
+.seacr__fat__bl{
+    background: #000 !important;
+    height: 8vh;
+}
+@media screen and (max-width:1500px) {
+    .seacr__fat__bl{
+        height: 10vh;
+    }
+}
+.search__meisa {
+    position: relative;
+    max-width: 100%;
+    width: 50%;
+    background: #fff;
+    border-radius: 8px 8px 0px 0px;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 10%);
+    display: block;
+    margin: auto;
+}
+.search__meisa .button {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+.search__meisa input {
+    height: 5vh;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    padding: 1rem;
+    background-color: transparent;
+}
+@media screen and (max-width:1500px) {
+    .search__meisa input {
+        height: 7vh;
+    }
+}
+.search__meisa .button {
+    right: 1rem;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    border: none;
+    padding: 0.3rem;
+    border-radius: 10px;
+    background-color: var(--red);
+    cursor: pointer;
+    width: 15%;
+}
+.search__meisa .button.clicked {
+    transform: translateY(-50%) scale(0.98);
+}
+.list__modal {
+    list-style-type: none;
+    margin-top: 0rem;
+    z-index: 1;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+}
+  /* Responsive */
+  @media screen and (max-width: 800px) {
+    .search__meisa {
+        width: 80%;
+    }
+    .finder__img{
+        width: 100% !important;
+    }
+    .search__meisa input {
+        padding: 1rem;
+        height: 5vh;
+    }
+    .seacr__fat__bl {
+        height: 7vh;
+    }
+    .search__meisa .button {
+      right: 12px;
+      font-size: 14px;
+      padding: 8px 18px;
+    }
+    .link__external{
+        width: 2%;
+    }
+  }

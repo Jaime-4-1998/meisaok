@@ -53,9 +53,6 @@
                         <li>
                             <a href="https://meisamex.com.mx/Contacto/" class="link__text__menu">Contacto</a>
                         </li>
-                        <li>
-                            <img src="https://meisamex.com.mx/assets/img/lg/meisa/find.svg" class="finder__img" loading="lazy" id="opene-modale" alt="Buscador de Meisa Mex" title="Buscador de Meisa Mex">
-                        </li>
                     </ul>
                   </nav>
                   <div id="rght-nav">

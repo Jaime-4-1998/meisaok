@@ -23,34 +23,8 @@
         <header>
                 <?php
                     include 'assets/components/nav.php';
+                    include 'assets/components/search.php';
                 ?>
-                <div id="myModalere" class="modalere">
-                    <div id="modal-contentere" class="modal-contentere animation-4">
-                      <!-- Modal header -->
-						<div class="modal__header">
-                            <div class="modal__header__title">
-                                Buscador de Equipos en Meisa Mex
-                            </div>
-                            <div class="modal__header__icon">
-                                <div id="closeere" class="modal__header__icon">
-                                    <span class="icon__modal">
-                                        x
-                                    </span>
-                                </div>
-                            </div>
-						</div>
-						<!-- Modal body -->
-						<div class="modal-body">
-							<form action="" method="post" autocomplete="off">
-								<div>
-									<label for="campo" class="label__campo">Buscar el equipo</label>
-									<input type="text" name="campo" id="campo" class="campo__modal">
-									<ul class="list__modal" id="lista"></ul>
-								</div>
-							</form>
-						</div>
-                    </div>
-                </div>
         </header>
         <!--Carrusel-->
         <?php include_once "assets/func/func.php"; ?>

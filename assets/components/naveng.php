@@ -50,7 +50,7 @@
                             <a href="https://meisamex.com.mx/en/Maneuvers/" class="link__text__menu">Maneuvers</a>
                             </li>
                             <li>
-                                <a href="https://meisamex.com.mx/en/Contac/" class="link__text__menu">Contac</a>
+                                <a href="https://meisamex.com.mx/en/Contact/" class="link__text__menu">Contact</a>
                             </li>
                         </ul>
                     </nav>
