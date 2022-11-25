@@ -1652,16 +1652,6 @@ strong{
         max-width: 71% !important;
     }
 }
-@media screen and (max-width:900px) {
-    .meisa__manifon__comp{
-       background: #000 !important;
-       height: auto !important;
-       width: 100% !important;
-    }
-    .meisa__centro{
-        padding: 2rem;
-    }
-}
 .meisa__manifon__comp h2{
     color: var(--whi);
     font-size: 2rem;
@@ -1699,6 +1689,14 @@ strong{
     .meisa__img__com{
         width: 80%;
     }
+    .meisa__manifon__comp{
+        background: #000 !important;
+        height: auto !important;
+        max-width: 100% !important;
+     }
+     .meisa__centro{
+         padding: 2rem;
+     }
 }
 /*Wh contact*/
 .meisa__whatsapp{
@@ -2001,6 +1999,6 @@ strong{
       padding: 8px 18px;
     }
     .link__external{
-        width: 2%;
+        width: 5%;
     }
   }
